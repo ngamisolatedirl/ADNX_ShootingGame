@@ -22,24 +22,24 @@ public class LevelSelectManager : MonoBehaviour
         if (unlockedLevel >= 2)
         {
             level2Button.interactable = true;
-            level2Text.text = "Level 2";
+            //level2Text.text = "Level 2";
         }
         else
         {
             level2Button.interactable = false;
-            level2Text.text = "Level 2 🔒";
+            //level2Text.text = "Level 2 🔒";
         }
 
         // Level 3
         if (unlockedLevel >= 3)
         {
             level3Button.interactable = true;
-            level3Text.text = "Level 3";
+            //level3Text.text = "Level 3";
         }
         else
         {
             level3Button.interactable = false;
-            level3Text.text = "Level 3 🔒";
+            //level3Text.text = "Level 3 🔒";
         }
     }
 

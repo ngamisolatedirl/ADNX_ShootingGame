@@ -30,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
     public void Die()
     {
         currentHealth = 0;
+        GetComponent<PlayerAnimator>().PlayDeath();
         gameManager.GameOver();
     }
 

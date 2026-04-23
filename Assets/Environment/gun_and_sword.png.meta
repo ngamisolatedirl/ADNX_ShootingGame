@@ -1,0 +1,756 @@
+fileFormatVersion: 2
+guid: 341f8beff92c2844abe17691d258158b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7562979954747586452
+    second: gun_and_sword_0
+  - first:
+      213: -1326186906846505025
+    second: gun_and_sword_1
+  - first:
+      213: -2865616737963688633
+    second: gun_and_sword_2
+  - first:
+      213: 3263102528794812903
+    second: gun_and_sword_3
+  - first:
+      213: 1439830592575848701
+    second: gun_and_sword_4
+  - first:
+      213: 5002476411296728096
+    second: gun_and_sword_5
+  - first:
+      213: -7609746593204549018
+    second: gun_and_sword_6
+  - first:
+      213: 6087713977872867746
+    second: gun_and_sword_7
+  - first:
+      213: 1506978532981927093
+    second: gun_and_sword_8
+  - first:
+      213: -2774970690577152343
+    second: gun_and_sword_9
+  - first:
+      213: 8529081490628074940
+    second: gun_and_sword_10
+  - first:
+      213: -413621961563964832
+    second: gun_and_sword_11
+  - first:
+      213: 909028520314682702
+    second: gun_and_sword_12
+  - first:
+      213: 9154822992390369215
+    second: gun_and_sword_13
+  - first:
+      213: -572575624089008662
+    second: gun_and_sword_14
+  - first:
+      213: 7674094777772680256
+    second: gun_and_sword_15
+  - first:
+      213: -3465073610459081917
+    second: gun_and_sword_16
+  - first:
+      213: -2914151501387663216
+    second: gun_and_sword_17
+  - first:
+      213: -7133154642059370934
+    second: gun_and_sword_18
+  - first:
+      213: 9085175416224539044
+    second: gun_and_sword_19
+  - first:
+      213: 1190220626445024130
+    second: gun_and_sword_20
+  - first:
+      213: -7003360040798137327
+    second: gun_and_sword_21
+  - first:
+      213: 6680612854496754102
+    second: gun_and_sword_22
+  - first:
+      213: 1208215635992942644
+    second: gun_and_sword_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gun_and_sword_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 332
+        width: 184
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 497312ec23a15f860800000000000000
+      internalID: 7562979954747586452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_1
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 324
+        width: 127
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7d3afd800789de0800000000000000
+      internalID: -1326186906846505025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainGun
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 236
+        width: 129
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74db24f62c84b38d0800000000000000
+      internalID: -2865616737963688633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_3
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 245
+        width: 158
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e16e76167ed84d20800000000000000
+      internalID: 3263102528794812903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_4
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 203
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df0493f9b4e4bf310800000000000000
+      internalID: 1439830592575848701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_5
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 160
+        width: 117
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 024cc94bacd5c6540800000000000000
+      internalID: 5002476411296728096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_6
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 208
+        width: 112
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66acd49aacfb46690800000000000000
+      internalID: -7609746593204549018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainSword
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 22
+        width: 39
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a1ea49db97eb7450800000000000000
+      internalID: 6087713977872867746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_8
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 24
+        width: 121
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bce68ecdfcd9e410800000000000000
+      internalID: 1506978532981927093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_9
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 32
+        width: 154
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a6470efbd25d79d0800000000000000
+      internalID: -2774970690577152343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_10
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 110
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbdde3d3d626d5670800000000000000
+      internalID: 8529081490628074940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_11
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 105
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06afda57405824af0800000000000000
+      internalID: -413621961563964832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_12
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 77
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4d3e0c7f948d9c00800000000000000
+      internalID: 909028520314682702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_13
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 87
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbfa10bd1077c0f70800000000000000
+      internalID: 9154822992390369215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_14
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 71
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae58027e08dcd08f0800000000000000
+      internalID: -572575624089008662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_15
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 86
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04422d19a8cdf7a60800000000000000
+      internalID: 7674094777772680256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_16
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 77
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3439108f8e599efc0800000000000000
+      internalID: -3465073610459081917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_17
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 73
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 098fd1a36aade87d0800000000000000
+      internalID: -2914151501387663216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_18
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 40
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e5f1865a1f10d90800000000000000
+      internalID: -7133154642059370934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_19
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 37
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a1ec2ed7e6051e70800000000000000
+      internalID: 9085175416224539044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_20
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 48
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28b399b8a53848010800000000000000
+      internalID: 1190220626445024130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_21
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 40
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 114df06f5211fce90800000000000000
+      internalID: -7003360040798137327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_22
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 17
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b9ff2aeefd46bc50800000000000000
+      internalID: 6680612854496754102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gun_and_sword_23
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 23
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4389e6338b174c010800000000000000
+      internalID: 1208215635992942644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 91fa5ccc464ffbe44b532566946d1fb2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      MainGun: -2865616737963688633
+      MainSword: 6087713977872867746
+      gun_and_sword_0: 7562979954747586452
+      gun_and_sword_1: -1326186906846505025
+      gun_and_sword_10: 8529081490628074940
+      gun_and_sword_11: -413621961563964832
+      gun_and_sword_12: 909028520314682702
+      gun_and_sword_13: 9154822992390369215
+      gun_and_sword_14: -572575624089008662
+      gun_and_sword_15: 7674094777772680256
+      gun_and_sword_16: -3465073610459081917
+      gun_and_sword_17: -2914151501387663216
+      gun_and_sword_18: -7133154642059370934
+      gun_and_sword_19: 9085175416224539044
+      gun_and_sword_20: 1190220626445024130
+      gun_and_sword_21: -7003360040798137327
+      gun_and_sword_22: 6680612854496754102
+      gun_and_sword_23: 1208215635992942644
+      gun_and_sword_3: 3263102528794812903
+      gun_and_sword_4: 1439830592575848701
+      gun_and_sword_5: 5002476411296728096
+      gun_and_sword_6: -7609746593204549018
+      gun_and_sword_8: 1506978532981927093
+      gun_and_sword_9: -2774970690577152343
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

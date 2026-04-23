@@ -5,20 +5,27 @@ public class MovePlayer : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 15f;
-    public Transform groundCheck;
-    public float groundCheckRadius = 0.1f;
     public LayerMask groundLayer;
 
     private Rigidbody2D rb;
     private bool isFacingRight = true;
+    private float rayDistance = 1.8f;
 
-    bool isGrounded => Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+    bool isGrounded =>
+        Physics2D.Raycast(transform.position, Vector2.down, rayDistance, groundLayer) ||
+        Physics2D.Raycast(transform.position + new Vector3(0.4f, 0, 0), Vector2.down, rayDistance, groundLayer) ||
+        Physics2D.Raycast(transform.position + new Vector3(-0.4f, 0, 0), Vector2.down, rayDistance, groundLayer);
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+
+        Physics2D.IgnoreLayerCollision(
+            LayerMask.NameToLayer("Player"),
+            LayerMask.NameToLayer("Enemy")
+        );
     }
 
     void Update()
@@ -67,5 +74,18 @@ public class MovePlayer : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+    }
+
+    public bool IsGrounded()
+    {
+        return isGrounded;
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position, Vector2.down * rayDistance);
+        Gizmos.DrawRay(transform.position + new Vector3(0.4f, 0, 0), Vector2.down * rayDistance);
+        Gizmos.DrawRay(transform.position + new Vector3(-0.4f, 0, 0), Vector2.down * rayDistance);
     }
 }

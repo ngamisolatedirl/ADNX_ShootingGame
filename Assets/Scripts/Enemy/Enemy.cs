@@ -16,6 +16,12 @@ public class Enemy : MonoBehaviour
         currentHealth = maxHealth;
         player = GameObject.FindWithTag("Player").transform;
         uiManager = FindFirstObjectByType<UIManager>();
+
+        // Không đẩy nhau
+        Collider2D playerCol = player.GetComponent<Collider2D>();
+        Collider2D enemyCol = GetComponent<Collider2D>();
+        if (playerCol != null && enemyCol != null)
+            Physics2D.IgnoreCollision(enemyCol, playerCol);
     }
 
     void Update()

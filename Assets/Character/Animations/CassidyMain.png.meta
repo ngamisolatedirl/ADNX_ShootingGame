@@ -1,0 +1,1534 @@
+fileFormatVersion: 2
+guid: 8162ffd90f4c004479e43c1865acae51
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8446727283312583319
+    second: CassidyMain_0
+  - first:
+      213: 5176362042961333690
+    second: CassidyMain_1
+  - first:
+      213: 1160612345969372128
+    second: CassidyMain_2
+  - first:
+      213: 7887760003799297940
+    second: CassidyMain_3
+  - first:
+      213: -6035045144578732686
+    second: CassidyMain_4
+  - first:
+      213: 675579439104872298
+    second: CassidyMain_5
+  - first:
+      213: 6072760271551141328
+    second: CassidyMain_6
+  - first:
+      213: -5560683472246528142
+    second: CassidyMain_7
+  - first:
+      213: -1926216843145152472
+    second: CassidyMain_8
+  - first:
+      213: 8583866899739983739
+    second: CassidyMain_9
+  - first:
+      213: -4299188599598372524
+    second: CassidyMain_10
+  - first:
+      213: 6406806489260262912
+    second: CassidyMain_11
+  - first:
+      213: 3462935892012178769
+    second: CassidyMain_12
+  - first:
+      213: -643302044965404313
+    second: CassidyMain_13
+  - first:
+      213: -341611108416206555
+    second: CassidyMain_14
+  - first:
+      213: -2063644095976313636
+    second: CassidyMain_15
+  - first:
+      213: 2545753957462025405
+    second: CassidyMain_16
+  - first:
+      213: -7298812509339886778
+    second: CassidyMain_17
+  - first:
+      213: 8399003596395669290
+    second: CassidyMain_18
+  - first:
+      213: -8799643141817355699
+    second: CassidyMain_19
+  - first:
+      213: 6552555529483356805
+    second: CassidyMain_20
+  - first:
+      213: -6459801126137042556
+    second: CassidyMain_21
+  - first:
+      213: -7829726572396628566
+    second: CassidyMain_22
+  - first:
+      213: -4038401350560203655
+    second: CassidyMain_23
+  - first:
+      213: -5868090803157345596
+    second: CassidyMain_24
+  - first:
+      213: -5763526655334280090
+    second: CassidyMain_25
+  - first:
+      213: -8691156609977137081
+    second: CassidyMain_26
+  - first:
+      213: -2703899431390531970
+    second: CassidyMain_27
+  - first:
+      213: -6302778094667704423
+    second: CassidyMain_28
+  - first:
+      213: 9144642397153853962
+    second: CassidyMain_29
+  - first:
+      213: 4499332797079349045
+    second: CassidyMain_30
+  - first:
+      213: -5180185628393874982
+    second: CassidyMain_31
+  - first:
+      213: -8996977540562252696
+    second: CassidyMain_32
+  - first:
+      213: 6154240176698459071
+    second: CassidyMain_33
+  - first:
+      213: -7931557932549904759
+    second: CassidyMain_34
+  - first:
+      213: -9088066804932796044
+    second: CassidyMain_35
+  - first:
+      213: -6487194541066009684
+    second: CassidyMain_36
+  - first:
+      213: 5716883647214531879
+    second: CassidyMain_37
+  - first:
+      213: 878028288029229142
+    second: CassidyMain_38
+  - first:
+      213: -3415141236581381566
+    second: CassidyMain_39
+  - first:
+      213: -1378725048430967578
+    second: CassidyMain_40
+  - first:
+      213: -6767518897534840454
+    second: CassidyMain_41
+  - first:
+      213: -1522179667426434099
+    second: CassidyMain_42
+  - first:
+      213: -7705031032748170532
+    second: CassidyMain_43
+  - first:
+      213: -4750344803421246593
+    second: CassidyMain_44
+  - first:
+      213: -2099034543042526571
+    second: CassidyMain_45
+  - first:
+      213: 7758660658461139870
+    second: CassidyMain_46
+  - first:
+      213: 2790576211591820766
+    second: CassidyMain_47
+  - first:
+      213: -657529755068284521
+    second: CassidyMain_48
+  - first:
+      213: 5061263110486174029
+    second: CassidyMain_49
+  - first:
+      213: -9019641330061180204
+    second: CassidyMain_50
+  - first:
+      213: 3631323738025639194
+    second: CassidyMain_51
+  - first:
+      213: 6881193914206946571
+    second: CassidyMain_52
+  - first:
+      213: 1215036494063948549
+    second: CassidyMain_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Idle1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 328
+        width: 64
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792627426bdc83570800000000000000
+      internalID: 8446727283312583319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 391
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abd868f3ad126d740800000000000000
+      internalID: 5176362042961333690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_2
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 391
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ebef6b87c25b1010800000000000000
+      internalID: 1160612345969372128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: I2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 327
+        width: 70
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49fadfbaee3f67d60800000000000000
+      internalID: 7887760003799297940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 313
+        width: 47
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27d40f18a663f3ca0800000000000000
+      internalID: -6035045144578732686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Run
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 249
+        width: 49
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6f4765abe3206900800000000000000
+      internalID: 675579439104872298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_6
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 313
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d519e7ca47c64450800000000000000
+      internalID: 6072760271551141328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 250
+        width: 50
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2772c5008db74d2b0800000000000000
+      internalID: -5560683472246528142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R3
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 248
+        width: 46
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82875f79cf3b445e0800000000000000
+      internalID: -1926216843145152472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R4
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 249
+        width: 50
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7f3c3e4775002770800000000000000
+      internalID: 8583866899739983739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R5
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 248
+        width: 54
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 459a78a2fb63654c0800000000000000
+      internalID: -4299188599598372524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R6
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 249
+        width: 47
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0068609ae8c89e850800000000000000
+      internalID: 6406806489260262912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R7
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 249
+        width: 51
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15d165ba8d1de0030800000000000000
+      internalID: 3462935892012178769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_13
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 257
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7610e8ec2388217f0800000000000000
+      internalID: -643302044965404313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_14
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 259
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 529468fb18a524bf0800000000000000
+      internalID: -341611108416206555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_15
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 261
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdcef7cd0a67c53e0800000000000000
+      internalID: -2063644095976313636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_16
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 256
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db4a1108cb5545320800000000000000
+      internalID: 2545753957462025405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_17
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 263
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64b5e9a81b865ba90800000000000000
+      internalID: -7298812509339886778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_18
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 252
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a27646665414f8470800000000000000
+      internalID: 8399003596395669290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_19
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 252
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4236cd5f2361e580800000000000000
+      internalID: -8799643141817355699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_20
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 255
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58a80e1898a5fea50800000000000000
+      internalID: 6552555529483356805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_21
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 250
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 489eeece91d2a56a0800000000000000
+      internalID: -6459801126137042556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_22
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 231
+        width: 34
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa5bcd38a29375390800000000000000
+      internalID: -7829726572396628566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 165
+        width: 47
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97cb6673e57b4f7c0800000000000000
+      internalID: -4038401350560203655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: J2
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 172
+        width: 50
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cad118418a509ea0800000000000000
+      internalID: -5868090803157345596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_25
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 233
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6641e4f1b07d300b0800000000000000
+      internalID: -5763526655334280090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: J3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 172
+        width: 55
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74846076c1fc26780800000000000000
+      internalID: -8691156609977137081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_27
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 233
+        width: 36
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e26930bc1d97ad0800000000000000
+      internalID: -2703899431390531970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shoot1
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 168
+        width: 71
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997d73967b80888a0800000000000000
+      internalID: -6302778094667704423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shoot2
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 168
+        width: 101
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0205505fcb48ee70800000000000000
+      internalID: 9144642397153853962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: J4_down
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 168
+        width: 80
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 537ed282757d07e30800000000000000
+      internalID: 4499332797079349045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shoot3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 168
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9dff4ed984c18b0800000000000000
+      internalID: -5180185628393874982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_32
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 153
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86c8e9a4890542380800000000000000
+      internalID: -8996977540562252696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_33
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 153
+        width: 37
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb38c8a85d0486550800000000000000
+      internalID: 6154240176698459071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunShoot2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 87
+        width: 76
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9866ee265127de190800000000000000
+      internalID: -7931557932549904759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunShoot3
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 86
+        width: 82
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47126fc3463b0e180800000000000000
+      internalID: -9088066804932796044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Runshoot1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 86
+        width: 75
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca348ee7fead8f5a0800000000000000
+      internalID: -6487194541066009684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunShoot4
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 86
+        width: 75
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72536764363765f40800000000000000
+      internalID: 5716883647214531879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_38
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 86
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6500ab273126f2c00800000000000000
+      internalID: 878028288029229142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_39
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 75
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24a47c7b32bfa90d0800000000000000
+      internalID: -3415141236581381566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 13
+        width: 66
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e4c65d8fd8cddce0800000000000000
+      internalID: -1378725048430967578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 13
+        width: 65
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7151b52b61f412a0800000000000000
+      internalID: -6767518897534840454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death3
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 14
+        width: 75
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc3a9b648a120eae0800000000000000
+      internalID: -1522179667426434099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_43
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 49
+        width: 38
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd22fa5491b321590800000000000000
+      internalID: -7705031032748170532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_44
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 45
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7b2477d192631eb0800000000000000
+      internalID: -4750344803421246593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_45
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 41
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5920daa443bbed2e0800000000000000
+      internalID: -2099034543042526571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_46
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 47
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93ef5003cc4cab60800000000000000
+      internalID: 7758660658461139870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_47
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 46
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed5f592874e1ab620800000000000000
+      internalID: 2790576211591820766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beingshot
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 13
+        width: 48
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 791c7e7eb2cffd6f0800000000000000
+      internalID: -657529755068284521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_49
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 13
+        width: 56
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d492157bbf73d3640800000000000000
+      internalID: 5061263110486174029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_50
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 13
+        width: 47
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d285489ffbc3d280800000000000000
+      internalID: -9019641330061180204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death4
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 13
+        width: 73
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1d367d33bd056230800000000000000
+      internalID: 3631323738025639194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_52
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 30
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0582e62869ee7f50800000000000000
+      internalID: 6881193914206946571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CassidyMain_53
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 13
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50351d9f04dacd010800000000000000
+      internalID: 1215036494063948549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: dd4da9d68dc477e4ba52a9ac45d0026f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CassidyMain_1: 5176362042961333690
+      CassidyMain_13: -643302044965404313
+      CassidyMain_14: -341611108416206555
+      CassidyMain_15: -2063644095976313636
+      CassidyMain_16: 2545753957462025405
+      CassidyMain_17: -7298812509339886778
+      CassidyMain_18: 8399003596395669290
+      CassidyMain_19: -8799643141817355699
+      CassidyMain_2: 1160612345969372128
+      CassidyMain_20: 6552555529483356805
+      CassidyMain_21: -6459801126137042556
+      CassidyMain_22: -7829726572396628566
+      CassidyMain_25: -5763526655334280090
+      CassidyMain_27: -2703899431390531970
+      CassidyMain_32: -8996977540562252696
+      CassidyMain_33: 6154240176698459071
+      CassidyMain_38: 878028288029229142
+      CassidyMain_39: -3415141236581381566
+      CassidyMain_43: -7705031032748170532
+      CassidyMain_44: -4750344803421246593
+      CassidyMain_45: -2099034543042526571
+      CassidyMain_46: 7758660658461139870
+      CassidyMain_47: 2790576211591820766
+      CassidyMain_49: 5061263110486174029
+      CassidyMain_50: -9019641330061180204
+      CassidyMain_52: 6881193914206946571
+      CassidyMain_53: 1215036494063948549
+      CassidyMain_6: 6072760271551141328
+      Death1: -1378725048430967578
+      Death2: -6767518897534840454
+      Death3: -1522179667426434099
+      Death4: 3631323738025639194
+      I2: 7887760003799297940
+      Idle1: 8446727283312583319
+      J2: -5868090803157345596
+      J3: -8691156609977137081
+      J4_down: 4499332797079349045
+      Jump1: -4038401350560203655
+      R2: -5560683472246528142
+      R3: -1926216843145152472
+      R4: 8583866899739983739
+      R5: -4299188599598372524
+      R6: 6406806489260262912
+      R7: 3462935892012178769
+      Run: 675579439104872298
+      Run1: -6035045144578732686
+      RunShoot2: -7931557932549904759
+      RunShoot3: -9088066804932796044
+      RunShoot4: 5716883647214531879
+      Runshoot1: -6487194541066009684
+      Shoot1: -6302778094667704423
+      Shoot2: 9144642397153853962
+      Shoot3: -5180185628393874982
+      beingshot: -657529755068284521
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
