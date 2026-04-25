@@ -1,0 +1,622 @@
+fileFormatVersion: 2
+guid: 70013c9ed328ff44990f5c1e5a244aa2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5153627780028568404
+    second: Standing_Stone_0
+  - first:
+      213: 6942341403931419701
+    second: Standing_Stone_1
+  - first:
+      213: 7089612763270030062
+    second: Standing_Stone_2
+  - first:
+      213: -4270978692883273504
+    second: Standing_Stone_3
+  - first:
+      213: -4881660802254423060
+    second: Standing_Stone_4
+  - first:
+      213: -3326784859140040410
+    second: Standing_Stone_5
+  - first:
+      213: -1698581915917739521
+    second: Standing_Stone_6
+  - first:
+      213: -8814211407682128290
+    second: Standing_Stone_7
+  - first:
+      213: -3793605410586058243
+    second: Standing_Stone_8
+  - first:
+      213: -4866355335275622813
+    second: Standing_Stone_9
+  - first:
+      213: 4323696048576997740
+    second: Standing_Stone_10
+  - first:
+      213: 3829650418678679227
+    second: Standing_Stone_11
+  - first:
+      213: -2935260227013632416
+    second: Standing_Stone_12
+  - first:
+      213: -8699988376833731704
+    second: Standing_Stone_13
+  - first:
+      213: -340083482836253714
+    second: Standing_Stone_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: S0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 584
+        width: 774
+        height: 440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -316, y: -16}
+        - {x: -238, y: -136}
+        - {x: -172, y: -174}
+        - {x: 20, y: -175}
+        - {x: 198, y: -142}
+        - {x: 225, y: -128}
+        - {x: 286, y: -16}
+      - - {x: -27, y: -131}
+        - {x: -29, y: -125}
+        - {x: -22, y: -131}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cacefc2d6d2aa78b0800000000000000
+      internalID: -5153627780028568404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S6
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 317
+        width: 395
+        height: 347
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 88.5, y: -75.5}
+        - {x: 107.5, y: -25.5}
+        - {x: 150.5, y: 56.5}
+        - {x: -156.5, y: 52.5}
+        - {x: -99.5, y: -111.5}
+        - {x: -27.5, y: -111.5}
+        - {x: 46.5, y: -115.5}
+      - - {x: 120.5, y: -47.5}
+        - {x: 119.5, y: -46.5}
+        - {x: 120.5, y: -44.5}
+        - {x: 122.5, y: -47.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534a1da89b6285060800000000000000
+      internalID: 6942341403931419701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S2
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 714
+        width: 620
+        height: 310
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 294, y: 18}
+        - {x: -289, y: 9}
+        - {x: -236, y: -88}
+        - {x: -72, y: -121}
+        - {x: 181, y: -102}
+      - - {x: 283, y: -72}
+        - {x: 280, y: -70}
+        - {x: 284, y: -69}
+        - {x: 284, y: -73}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee229cdee3d536260800000000000000
+      internalID: 7089612763270030062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Standing_Stone_3
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 695
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e82e67e18f6ab4c0800000000000000
+      internalID: -4270978692883273504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S7
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 378
+        width: 274
+        height: 274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -131}
+        - {x: 96, y: -32}
+        - {x: 116, y: 10}
+        - {x: -124, y: 11}
+        - {x: -114, y: -21}
+        - {x: -40, y: -103}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb3daf4d5bd04cb0800000000000000
+      internalID: -4881660802254423060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 305
+        width: 411
+        height: 218
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 88.5, y: 0}
+        - {x: 120.5, y: 32}
+        - {x: 132.5, y: 68}
+        - {x: -173.5, y: 66}
+        - {x: -143.5, y: 25}
+        - {x: -71.5, y: -48}
+        - {x: -3.5, y: -27}
+        - {x: 37.5, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6295fc2fbc2e4d1d0800000000000000
+      internalID: -3326784859140040410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S5
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 16
+        width: 385
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 94.5, y: 11.5}
+        - {x: 151.5, y: 98.5}
+        - {x: -184.5, y: 95.5}
+        - {x: -123.5, y: 7.5}
+        - {x: -63.5, y: -27.5}
+        - {x: 43.5, y: -18.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff912d73fbc6d68e0800000000000000
+      internalID: -1698581915917739521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S4
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 318
+        width: 356
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 84, y: -14}
+        - {x: 142, y: 72}
+        - {x: -134, y: 70}
+        - {x: -94, y: 7}
+        - {x: -14, y: -45}
+        - {x: 46, y: -44}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5639e5ac61ada580800000000000000
+      internalID: -8814211407682128290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Standing_Stone_8
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 57
+        width: 347
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 78.5, y: -3.5}
+        - {x: 120.5, y: 66.5}
+        - {x: -162.5, y: 70.5}
+        - {x: -146.5, y: 47.5}
+        - {x: -122.5, y: 32.5}
+        - {x: -88.5, y: -31.5}
+        - {x: -40.5, y: -29.5}
+        - {x: 19.5, y: -30.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1a40c7af76a5bc0800000000000000
+      internalID: -3793605410586058243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Standing_Stone_9
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 75
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ec11a0b9b377cb0800000000000000
+      internalID: -4866355335275622813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S8
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 42
+        width: 327
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 141.5, y: -85}
+        - {x: 157.5, y: -72}
+        - {x: 157.5, y: 96}
+        - {x: 148.5, y: 115}
+        - {x: 94.5, y: 115}
+        - {x: 90.5, y: 106}
+        - {x: 87.5, y: 32}
+        - {x: 31.5, y: 58}
+        - {x: -84.5, y: 101}
+        - {x: -157.5, y: -11}
+        - {x: -157.5, y: -60}
+        - {x: -117.5, y: -110}
+        - {x: -88.5, y: -112}
+        - {x: 48.5, y: -112}
+      - - {x: 75.5, y: -60}
+        - {x: 76.5, y: -57}
+        - {x: 78.5, y: -57}
+        - {x: 77.5, y: -58}
+        - {x: 76.5, y: -60}
+        - {x: 77.5, y: -61}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c692134f5aad00c30800000000000000
+      internalID: 4323696048576997740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Standing_Stone_11
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 43
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6c443f3c6a52530800000000000000
+      internalID: 3829650418678679227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Standing_Stone_12
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 35
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e158d006cd347d0800000000000000
+      internalID: -2935260227013632416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Standing_Stone_13
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1
+        width: 113
+        height: 368
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 35.5, y: -86}
+        - {x: 35.5, y: 16}
+        - {x: 33.5, y: 26}
+        - {x: 7.5, y: 179}
+        - {x: -5.5, y: 179}
+        - {x: -11.5, y: 172}
+        - {x: -31.5, y: 21}
+        - {x: -31.5, y: -87}
+        - {x: 29.5, y: -87}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8835cc07aae634780800000000000000
+      internalID: -8699988376833731704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Standing_Stone_14
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 17
+        width: 154
+        height: 298
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 18, y: -75}
+        - {x: 18, y: -59}
+        - {x: 17, y: -57}
+        - {x: 3, y: 137}
+        - {x: -54, y: 137}
+        - {x: -65, y: 130}
+        - {x: -73, y: 106}
+        - {x: -73, y: -78}
+        - {x: 11, y: -78}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee3419bcfd7c74bf0800000000000000
+      internalID: -340083482836253714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 072215e4ef2af8146ac413010b898521
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      S0: -5153627780028568404
+      S2: 7089612763270030062
+      S3: -3326784859140040410
+      S4: -8814211407682128290
+      S5: -1698581915917739521
+      S6: 6942341403931419701
+      S7: -4881660802254423060
+      S8: 4323696048576997740
+      Standing_Stone_11: 3829650418678679227
+      Standing_Stone_12: -2935260227013632416
+      Standing_Stone_13: -8699988376833731704
+      Standing_Stone_14: -340083482836253714
+      Standing_Stone_3: -4270978692883273504
+      Standing_Stone_8: -3793605410586058243
+      Standing_Stone_9: -4866355335275622813
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

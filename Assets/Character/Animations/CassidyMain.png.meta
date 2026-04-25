@@ -210,7 +210,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -294,50 +294,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CassidyMain_1
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 391
-        width: 15
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: abd868f3ad126d740800000000000000
-      internalID: 5176362042961333690
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CassidyMain_2
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 391
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0ebef6b87c25b1010800000000000000
-      internalID: 1160612345969372128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: I2
       rect:
         serializedVersion: 2
@@ -360,28 +316,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run1
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 313
-        width: 47
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 27d40f18a663f3ca0800000000000000
-      internalID: -6035045144578732686
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Run
       rect:
         serializedVersion: 2
@@ -399,28 +333,6 @@ TextureImporter:
       bones: []
       spriteID: a6f4765abe3206900800000000000000
       internalID: 675579439104872298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CassidyMain_6
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 313
-        width: 11
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0d519e7ca47c64450800000000000000
-      internalID: 6072760271551141328
       vertices: []
       indices: 
       edges: []
@@ -756,28 +668,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CassidyMain_22
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 231
-        width: 34
-        height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aa5bcd38a29375390800000000000000
-      internalID: -7829726572396628566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Jump1
       rect:
         serializedVersion: 2
@@ -822,28 +712,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CassidyMain_25
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 233
-        width: 22
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6641e4f1b07d300b0800000000000000
-      internalID: -5763526655334280090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: J3
       rect:
         serializedVersion: 2
@@ -861,28 +729,6 @@ TextureImporter:
       bones: []
       spriteID: 74846076c1fc26780800000000000000
       internalID: -8691156609977137081
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CassidyMain_27
-      rect:
-        serializedVersion: 2
-        x: 332
-        y: 233
-        width: 36
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e7e26930bc1d97ad0800000000000000
-      internalID: -2703899431390531970
       vertices: []
       indices: 
       edges: []
@@ -976,50 +822,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CassidyMain_32
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 153
-        width: 25
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 86c8e9a4890542380800000000000000
-      internalID: -8996977540562252696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CassidyMain_33
-      rect:
-        serializedVersion: 2
-        x: 47
-        y: 153
-        width: 37
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fb38c8a85d0486550800000000000000
-      internalID: 6154240176698459071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: RunShoot2
       rect:
         serializedVersion: 2
@@ -1103,28 +905,6 @@ TextureImporter:
       bones: []
       spriteID: 72536764363765f40800000000000000
       internalID: 5716883647214531879
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CassidyMain_38
-      rect:
-        serializedVersion: 2
-        x: 392
-        y: 86
-        width: 28
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6500ab273126f2c00800000000000000
-      internalID: 878028288029229142
       vertices: []
       indices: 
       edges: []

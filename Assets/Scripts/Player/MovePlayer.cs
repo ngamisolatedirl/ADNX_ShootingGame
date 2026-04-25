@@ -9,7 +9,7 @@ public class MovePlayer : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isFacingRight = true;
-    private float rayDistance = 1.8f;
+    private float rayDistance = 1.7f;
 
     bool isGrounded =>
         Physics2D.Raycast(transform.position, Vector2.down, rayDistance, groundLayer) ||
