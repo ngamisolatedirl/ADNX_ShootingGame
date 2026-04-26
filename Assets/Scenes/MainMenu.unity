@@ -1432,11 +1432,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b39af4648c75a946a84c641850e9daf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OptionsManager
-  brightnessSlider: {fileID: 570598891}
-  colorAdjustments: {fileID: 0}
-  brightnessOverlay: {fileID: 1833196784}
+  btnDark: {fileID: 0}
+  btnNormal: {fileID: 0}
+  btnBright: {fileID: 0}
   volumeSlider: {fileID: 758753623}
-  musicSource: {fileID: 0}
 --- !u!4 &1576479169
 Transform:
   m_ObjectHideFlags: 0
@@ -1534,7 +1533,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1594832890}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1987759727}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: OpenCredits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1594832890
 MonoBehaviour:
   m_ObjectHideFlags: 0

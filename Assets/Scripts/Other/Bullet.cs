@@ -53,5 +53,11 @@ public class Bullet : MonoBehaviour
             hasHit = true;
             Destroy(gameObject);
         }
+        else if (collision.CompareTag("ShootingEnemy"))
+        {
+            hasHit = true;
+            collision.GetComponent<ShootingEnemy>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
     }
 }
