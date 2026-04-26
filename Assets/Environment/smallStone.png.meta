@@ -1,0 +1,564 @@
+fileFormatVersion: 2
+guid: 500c79636c4c8f84d8c57a9174fc072c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5962787388850792720
+    second: smallStone_0
+  - first:
+      213: 7017195003628757149
+    second: smallStone_1
+  - first:
+      213: 3476371740720271738
+    second: smallStone_2
+  - first:
+      213: 5143873012318019394
+    second: smallStone_3
+  - first:
+      213: -7540823540787482625
+    second: smallStone_4
+  - first:
+      213: 4545245245495679127
+    second: smallStone_5
+  - first:
+      213: 6798172332398569745
+    second: smallStone_6
+  - first:
+      213: -8241700597364108934
+    second: smallStone_7
+  - first:
+      213: -1887289963006881754
+    second: smallStone_8
+  - first:
+      213: 783228534513414048
+    second: smallStone_9
+  - first:
+      213: 5797678096345816318
+    second: smallStone_10
+  - first:
+      213: -5927371948155287667
+    second: smallStone_11
+  - first:
+      213: 8323698611817221645
+    second: smallStone_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: smallStone_0
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 243
+        width: 184
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 87, y: -39.5}
+        - {x: 87, y: 8.5}
+        - {x: -82, y: 8.5}
+        - {x: -82, y: -24.5}
+        - {x: -51, y: -47.5}
+        - {x: 73, y: -48.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f69e58467cef3da0800000000000000
+      internalID: -5962787388850792720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smallStone_1
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 269
+        width: 115
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 50.5, y: -19.5}
+        - {x: 50.5, y: 16.5}
+        - {x: -53.5, y: 16.5}
+        - {x: -53.5, y: 2.5}
+        - {x: -35.5, y: -20.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9020f65da5126160800000000000000
+      internalID: 7017195003628757149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smallStone_2
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 271
+        width: 66
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 30, y: 17.5}
+        - {x: 19, y: 25.5}
+        - {x: -29, y: 25.5}
+        - {x: -29, y: 0.5}
+        - {x: -15, y: -15.5}
+        - {x: 30, y: -6.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7196d8fdad8e3030800000000000000
+      internalID: 3476371740720271738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smallStone_3
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 154
+        width: 88
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 36, y: -14}
+        - {x: 36, y: 16}
+        - {x: 0, y: 16}
+        - {x: 0, y: 25}
+        - {x: -40, y: 25}
+        - {x: -40, y: 4}
+        - {x: -22, y: -19}
+        - {x: 9, y: -21}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f1fe45045b26740800000000000000
+      internalID: 5143873012318019394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smallStone_4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 152
+        width: 76
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 31, y: -17.5}
+        - {x: 32, y: 24.5}
+        - {x: 18, y: 24.5}
+        - {x: 18, y: 20.5}
+        - {x: 16, y: 20.5}
+        - {x: -3, y: 20.5}
+        - {x: -3, y: 26.5}
+        - {x: -35, y: 26.5}
+        - {x: -35, y: 5.5}
+        - {x: -25, y: -8.5}
+        - {x: -18, y: -20.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff657151fc995790800000000000000
+      internalID: -7540823540787482625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smallStone_5
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 137
+        width: 99
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 48.5, y: -39.5}
+        - {x: 48.5, y: 23.5}
+        - {x: 40.5, y: 46.5}
+        - {x: -45.5, y: 46.5}
+        - {x: -48.5, y: 30.5}
+        - {x: -48.5, y: -39.5}
+        - {x: -31.5, y: -46.5}
+        - {x: 35.5, y: -46.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7989dc21874f31f30800000000000000
+      internalID: 4545245245495679127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smallStone_6
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 147
+        width: 74
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 34, y: -27}
+        - {x: 34, y: 5}
+        - {x: -34, y: 5}
+        - {x: -34, y: -4}
+        - {x: -12, y: -36}
+        - {x: 17, y: -34}
+      - - {x: 11, y: 13}
+        - {x: 10, y: 16}
+        - {x: 14, y: 13}
+        - {x: 11, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1196182d7b5f75e50800000000000000
+      internalID: 6798172332398569745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smallStone_7
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 52
+        width: 75
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 25.5, y: -11}
+        - {x: 33.5, y: 19}
+        - {x: -36.5, y: 19}
+        - {x: -36.5, y: 11}
+        - {x: -15.5, y: -17}
+        - {x: 13.5, y: -14}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a71dcfc19f89f9d80800000000000000
+      internalID: -8241700597364108934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smallStone_8
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 53
+        width: 74
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 22, y: -15.5}
+        - {x: 34, y: -3.5}
+        - {x: 34, y: 16.5}
+        - {x: -34, y: 16.5}
+        - {x: -34, y: 9.5}
+        - {x: -16, y: -13.5}
+        - {x: -10, y: -16.5}
+        - {x: 12, y: -16.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62090d627cffec5e0800000000000000
+      internalID: -1887289963006881754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smallStone_9
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 49
+        width: 57
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 22.5, y: -15}
+        - {x: 22.5, y: 6}
+        - {x: -23.5, y: 6}
+        - {x: -23.5, y: -8}
+        - {x: -13.5, y: -20}
+        - {x: 2.5, y: -23}
+        - {x: 12.5, y: -20}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af2f91d3369eda00800000000000000
+      internalID: 783228534513414048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smallStone_10
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 54
+        width: 27
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 12.5, y: -28}
+        - {x: 12.5, y: -24}
+        - {x: 11.5, y: 29}
+        - {x: -4.5, y: 29}
+        - {x: -12.5, y: 25}
+        - {x: -12.5, y: -29}
+        - {x: 7.5, y: -29}
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc51ced28d757050800000000000000
+      internalID: 5797678096345816318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smallStone_11
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 54
+        width: 24
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 11, y: 4.5}
+        - {x: 7, y: 37.5}
+        - {x: -3, y: 37.5}
+        - {x: -11, y: -0.5}
+        - {x: -11, y: -36.5}
+        - {x: 11, y: -36.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87c6922e9ebdbda0800000000000000
+      internalID: -5927371948155287667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smallStone_12
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 53
+        width: 29
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 13.5, y: 30.5}
+        - {x: 6.5, y: 33.5}
+        - {x: -10.5, y: 33.5}
+        - {x: -13.5, y: 32.5}
+        - {x: -13.5, y: -28.5}
+        - {x: -11.5, y: -31.5}
+        - {x: -10.5, y: -32.5}
+        - {x: 13.5, y: -32.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e07ce59c7b38370800000000000000
+      internalID: 8323698611817221645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ee762a3ffb653524d936b6bf865bcc12
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      smallStone_0: -5962787388850792720
+      smallStone_1: 7017195003628757149
+      smallStone_10: 5797678096345816318
+      smallStone_11: -5927371948155287667
+      smallStone_12: 8323698611817221645
+      smallStone_2: 3476371740720271738
+      smallStone_3: 5143873012318019394
+      smallStone_4: -7540823540787482625
+      smallStone_5: 4545245245495679127
+      smallStone_6: 6798172332398569745
+      smallStone_7: -8241700597364108934
+      smallStone_8: -1887289963006881754
+      smallStone_9: 783228534513414048
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

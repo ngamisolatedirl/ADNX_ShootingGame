@@ -14,8 +14,12 @@ public class PlayerHealth : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") ||
+            collision.gameObject.CompareTag("Enemy2") ||
+            collision.gameObject.CompareTag("MeleeEnemy"))
+        {
             TakeDamage(5f * Time.deltaTime);
+        }
     }
 
     public void TakeDamage(float damage)

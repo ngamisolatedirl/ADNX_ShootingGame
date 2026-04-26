@@ -1,10 +1,76 @@
 fileFormatVersion: 2
-guid: a7dff848578f8094c803a14ef1c87ae2
+guid: e4f669b4b6dad5f4bb0a33dd77751ccf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7472359499438446608
-    second: GraphicDesign2_0
+      213: -1264772288087964892
+    second: healthBar_0
+  - first:
+      213: -1246487339369159825
+    second: healthBar_1
+  - first:
+      213: -6581021228822345160
+    second: healthBar_2
+  - first:
+      213: 5235216049511467275
+    second: healthBar_3
+  - first:
+      213: -7552136332903361755
+    second: healthBar_4
+  - first:
+      213: -3237176403118713384
+    second: healthBar_5
+  - first:
+      213: -8378351623246559817
+    second: healthBar_6
+  - first:
+      213: 2862982656841944581
+    second: healthBar_7
+  - first:
+      213: -2023636800237536137
+    second: healthBar_8
+  - first:
+      213: 8808383841745980431
+    second: healthBar_9
+  - first:
+      213: 414827086452463265
+    second: healthBar_10
+  - first:
+      213: -5786970126868546575
+    second: healthBar_11
+  - first:
+      213: -1423263115028918313
+    second: healthBar_12
+  - first:
+      213: -359513789824062384
+    second: healthBar_13
+  - first:
+      213: 3844360508017135398
+    second: healthBar_14
+  - first:
+      213: -1098014403684719551
+    second: healthBar_15
+  - first:
+      213: -8621514044222295271
+    second: healthBar_16
+  - first:
+      213: 650260410921965367
+    second: healthBar_17
+  - first:
+      213: -1325766947718872528
+    second: healthBar_18
+  - first:
+      213: 3271644845406831567
+    second: healthBar_19
+  - first:
+      213: 2329678398548753427
+    second: healthBar_20
+  - first:
+      213: 1026016876486930836
+    second: healthBar_21
+  - first:
+      213: 8752144785423681729
+    second: healthBar_22
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,560 +179,507 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Play
+      name: healthBar_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 841
-        width: 350
-        height: 142
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 4}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f7a4f120a8dc4890800000000000000
-      internalID: -7472359499438446608
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Options
-      rect:
-        serializedVersion: 2
-        x: 442
-        y: 841
-        width: 333
-        height: 135
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 2, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52283b71744081946bca73d5c617b327
-      internalID: 386075668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GraphicDesign2_2
-      rect:
-        serializedVersion: 2
-        x: 614
-        y: 820
-        width: 307
-        height: 204
+        x: 3
+        y: 0
+        width: 86
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 893af69e9f118b24ea2c155134fb38c6
-      internalID: -1417784892
+      spriteID: 42342c61e40a27ee0800000000000000
+      internalID: -1264772288087964892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Credits
+      name: healthBar_1
       rect:
         serializedVersion: 2
-        x: 801
-        y: 842
-        width: 321
-        height: 136
+        x: 79
+        y: 815
+        width: 10
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 653c1bf8b1eedcc46b1b06318b23846d
-      internalID: -760836749
+      spriteID: f6321e77e5693bee0800000000000000
+      internalID: -1246487339369159825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Quit
+      name: healthBar_2
       rect:
         serializedVersion: 2
-        x: 1153
-        y: 844
-        width: 333
-        height: 134
+        x: 79
+        y: 604
+        width: 10
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1c3fd88f66467ba4d85c46fb885f5755
-      internalID: 1372786738
+      spriteID: 83a4db46f048ba4a0800000000000000
+      internalID: -6581021228822345160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level 1
+      name: healthBar_3
       rect:
         serializedVersion: 2
-        x: 167
-        y: 478
-        width: 308
-        height: 119
+        x: 81
+        y: 723
+        width: 8
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 38a85be0b84b44543b618e807e3355b7
-      internalID: -608645212
+      spriteID: b090e89724937a840800000000000000
+      internalID: 5235216049511467275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Resume
+      name: healthBar_4
       rect:
         serializedVersion: 2
-        x: 273
-        y: 653
-        width: 356
-        height: 131
+        x: 81
+        y: 710
+        width: 8
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0e44c06f311f7e4488b9a2e61ff6695e
-      internalID: -2051920094
+      spriteID: 52359f5a40c613790800000000000000
+      internalID: -7552136332903361755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MainMenu
+      name: healthBar_5
       rect:
         serializedVersion: 2
-        x: 665
-        y: 651
-        width: 363
-        height: 135
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline:
-      - - {x: 181.5, y: 9.5}
-        - {x: 147.5, y: 34.5}
-        - {x: -120.5, y: 38.5}
-        - {x: -167.5, y: 15.5}
-        - {x: -181.5, y: -10.5}
-        - {x: -170.5, y: -51.5}
-        - {x: -149.5, y: -61.5}
-        - {x: 149.5, y: -61.5}
-        - {x: 178.5, y: -42.5}
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5db8643b28b6acd44b2d4f6e802d365f
-      internalID: 1565466671
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GraphicDesign2_8
-      rect:
-        serializedVersion: 2
-        x: 921
-        y: 616
-        width: 307
-        height: 204
+        x: 81
+        y: 648
+        width: 8
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: aeddf8de56889bf46bc1efa255fedee0
-      internalID: 1467167964
+      spriteID: 8d515d0763d3313d0800000000000000
+      internalID: -3237176403118713384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GraphicDesign2_9
+      name: healthBar_6
       rect:
         serializedVersion: 2
-        x: 1228
-        y: 616
-        width: 307
-        height: 204
+        x: 81
+        y: 479
+        width: 8
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8c89e828a25be244dae6b19809c47098
-      internalID: -1677214885
+      spriteID: 7b5421dc69d1abb80800000000000000
+      internalID: -8378351623246559817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GraphicDesign2_10
+      name: healthBar_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 412
-        width: 307
-        height: 204
+        x: 81
+        y: 390
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fe9d261c83a3dc14f91d778a9fef37a6
-      internalID: -1195413703
+      spriteID: 50e0b23ce8b5bb720800000000000000
+      internalID: 2862982656841944581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level 2
+      name: healthBar_8
       rect:
         serializedVersion: 2
-        x: 509
-        y: 481
-        width: 295
-        height: 115
+        x: 81
+        y: 336
+        width: 8
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b35c712ef8ac3624ca5d0dcff41eb9f5
-      internalID: 128380323
+      spriteID: 77cfe674d099ae3e0800000000000000
+      internalID: -2023636800237536137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level3
+      name: healthBar_9
       rect:
         serializedVersion: 2
-        x: 848
-        y: 480
-        width: 285
-        height: 119
+        x: 81
+        y: 326
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7b468f44dfa77854ea34e43619f08921
-      internalID: 938007617
+      spriteID: f0c4f8c6f6aad3a70800000000000000
+      internalID: 8808383841745980431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GraphicDesign2_13
+      name: healthBar_10
       rect:
         serializedVersion: 2
-        x: 986
-        y: 191
-        width: 307
-        height: 204
+        x: 81
+        y: 279
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a5388aa99f32eeb4d94845d16b1f8a2f
-      internalID: 1534529404
+      spriteID: 1a6953b8903c1c500800000000000000
+      internalID: 414827086452463265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GraphicDesign2_14
+      name: healthBar_11
       rect:
         serializedVersion: 2
-        x: 1228
-        y: 412
-        width: 307
-        height: 204
+        x: 82
+        y: 798
+        width: 7
+        height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f3dcc3f73bddaad4797116a5e75df0c9
-      internalID: 822289237
+      spriteID: 1fbf33e845d80bfa0800000000000000
+      internalID: -5786970126868546575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GraphicDesign2_15
+      name: healthBar_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 208
-        width: 307
-        height: 204
+        x: 82
+        y: 534
+        width: 7
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0d896dfd231108e4587121ceeb87c985
-      internalID: -524256883
+      spriteID: 7df09c6dcbd8f3ce0800000000000000
+      internalID: -1423263115028918313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LevelSelect
+      name: healthBar_13
       rect:
         serializedVersion: 2
-        x: 58
-        y: 94
-        width: 864
-        height: 349
+        x: 82
+        y: 526
+        width: 7
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7b5c3c4a5f9a12c45a6c4fbe2578a75f
-      internalID: -1808322187
+      spriteID: 05caea9ec10c20bf0800000000000000
+      internalID: -359513789824062384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GraphicDesign2_17
+      name: healthBar_14
       rect:
         serializedVersion: 2
-        x: 614
-        y: 208
-        width: 307
-        height: 204
+        x: 82
+        y: 428
+        width: 7
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f654f8720666cbf4bbf3292c4c8336aa
-      internalID: 372947816
+      spriteID: 62fc6e48389e95530800000000000000
+      internalID: 3844360508017135398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GraphicDesign2_18
+      name: healthBar_15
       rect:
         serializedVersion: 2
-        x: 921
-        y: 208
-        width: 307
-        height: 204
+        x: 82
+        y: 398
+        width: 7
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4272d4aee5846a7489a367caff58b9fb
-      internalID: -1898545875
+      spriteID: 1442c16a7b113c0f0800000000000000
+      internalID: -1098014403684719551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GraphicDesign2_19
+      name: healthBar_16
       rect:
         serializedVersion: 2
-        x: 1228
-        y: 208
-        width: 307
-        height: 204
+        x: 83
+        y: 543
+        width: 6
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2041ce6dae513164bac2612f27b76381
-      internalID: 681492781
+      spriteID: 913b610d7aa3a5880800000000000000
+      internalID: -8621514044222295271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GraphicDesign2_20
+      name: healthBar_17
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4
-        width: 307
-        height: 204
+        x: 83
+        y: 406
+        width: 6
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 15eedc15076f96e47a75ec45ef4538f7
-      internalID: 934164136
+      spriteID: 737d0840660360900800000000000000
+      internalID: 650260410921965367
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GraphicDesign2_21
+      name: healthBar_18
       rect:
         serializedVersion: 2
-        x: 307
-        y: 4
-        width: 307
-        height: 204
+        x: 94
+        y: 0
+        width: 1428
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9902f23a0ef345249b6b7e62ba7df3c3
-      internalID: 567700691
+      spriteID: 032434a3cfde99de0800000000000000
+      internalID: -1325766947718872528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GraphicDesign2_22
+      name: HealthBarBG
       rect:
         serializedVersion: 2
-        x: 614
-        y: 4
-        width: 307
-        height: 204
+        x: 223
+        y: 164
+        width: 1099
+        height: 363
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3bb6b061e5e14dc4ea605f36a8f09666
-      internalID: -19733675
+      spriteID: fc346b927a7376d20800000000000000
+      internalID: 3271644845406831567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GraphicDesign2_23
+      name: healthBar_20
       rect:
         serializedVersion: 2
-        x: 921
-        y: 4
-        width: 307
-        height: 204
+        x: 994
+        y: 152
+        width: 7
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d85051cedb6128445bd0e1234753d966
-      internalID: 850437641
+      spriteID: 31c366a092ea45020800000000000000
+      internalID: 2329678398548753427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GraphicDesign2_24
+      name: healthBar_21
       rect:
         serializedVersion: 2
-        x: 1228
-        y: 4
-        width: 307
-        height: 204
+        x: 995
+        y: 547
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6384331d0ff8b6d4e8c626391eb36b4f
-      internalID: -1121447431
+      spriteID: 4913f80c9e42d3e00800000000000000
+      internalID: 1026016876486930836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: healthBar_22
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 535
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c847fdbf4dd57970800000000000000
+      internalID: 8752144785423681729
       vertices: []
       indices: 
       edges: []
@@ -675,7 +688,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 470b5247990f38545963c999512c9de9
+    spriteID: 50712cc03250b554ab6443663d2f7175
     internalID: 0
     vertices: []
     indices: 
@@ -683,35 +696,31 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":5.0},"gridSpriteSize":{"x":307.0,"y":204.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Credits: -760836749
-      GraphicDesign2_10: -1195413703
-      GraphicDesign2_13: 1534529404
-      GraphicDesign2_14: 822289237
-      GraphicDesign2_15: -524256883
-      GraphicDesign2_17: 372947816
-      GraphicDesign2_18: -1898545875
-      GraphicDesign2_19: 681492781
-      GraphicDesign2_2: -1417784892
-      GraphicDesign2_20: 934164136
-      GraphicDesign2_21: 567700691
-      GraphicDesign2_22: -19733675
-      GraphicDesign2_23: 850437641
-      GraphicDesign2_24: -1121447431
-      GraphicDesign2_8: 1467167964
-      GraphicDesign2_9: -1677214885
-      Level 1: -608645212
-      Level 2: 128380323
-      Level3: 938007617
-      LevelSelect: -1808322187
-      MainMenu: 1565466671
-      Options: 386075668
-      Play: -7472359499438446608
-      Quit: 1372786738
-      Resume: -2051920094
+      HealthBarBG: 3271644845406831567
+      healthBar_0: -1264772288087964892
+      healthBar_1: -1246487339369159825
+      healthBar_10: 414827086452463265
+      healthBar_11: -5786970126868546575
+      healthBar_12: -1423263115028918313
+      healthBar_13: -359513789824062384
+      healthBar_14: 3844360508017135398
+      healthBar_15: -1098014403684719551
+      healthBar_16: -8621514044222295271
+      healthBar_17: 650260410921965367
+      healthBar_18: -1325766947718872528
+      healthBar_2: -6581021228822345160
+      healthBar_20: 2329678398548753427
+      healthBar_21: 1026016876486930836
+      healthBar_22: 8752144785423681729
+      healthBar_3: 5235216049511467275
+      healthBar_4: -7552136332903361755
+      healthBar_5: -3237176403118713384
+      healthBar_6: -8378351623246559817
+      healthBar_7: 2862982656841944581
+      healthBar_8: -2023636800237536137
+      healthBar_9: 8808383841745980431
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

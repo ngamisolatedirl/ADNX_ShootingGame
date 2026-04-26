@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Boss
   - Enemy2
+  - MeleeEnemy
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Ground
   - Player
   - Enemy
-  - 
+  - MeleeEnemy
   - 
   - 
   - 

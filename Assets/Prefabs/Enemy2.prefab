@@ -249,4 +249,4 @@ MonoBehaviour:
   attackCooldown: 1
   zoneStart: {fileID: 2089700659515419840}
   zoneEnd: {fileID: 4650537944134895011}
-  patrolSpeed: 2
+  patrolSpeed: 1

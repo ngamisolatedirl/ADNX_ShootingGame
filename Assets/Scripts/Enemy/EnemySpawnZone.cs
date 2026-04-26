@@ -13,18 +13,27 @@ public class EnemySpawnZone : MonoBehaviour
     public float spawnY = -2f;
 
     [Header("Activation Settings")]
-    public bool activateOnPlayerEnter = false; 
-    public bool deactivateOnPlayerExit = false; 
+    public bool activateOnPlayerEnter = false;
+    public bool deactivateOnPlayerExit = false;
+    public bool triggerOnlyOnce = false;    // Chỉ trigger 1 lần cả ván
+    public bool spawnOnStart = false;       // Spawn ngay từ đầu trong vùng
 
     private float timer = 0f;
     private int currentEnemies = 0;
     private bool isActive = true;
+    private bool hasTriggered = false;      // Đã trigger chưa
 
     void Start()
     {
-        // Nếu chọn activateOnPlayerEnter thì tắt spawner từ đầu
         if (activateOnPlayerEnter)
             isActive = false;
+
+        // Spawn ngay từ đầu nếu bật
+        if (spawnOnStart)
+        {
+            for (int i = 0; i < maxEnemies; i++)
+                SpawnEnemy();
+        }
     }
 
     void Update()
@@ -49,25 +58,40 @@ public class EnemySpawnZone : MonoBehaviour
 
         GameObject enemy = Instantiate(prefab, spawnPos, Quaternion.identity);
         currentEnemies++;
-        enemy.GetComponent<Enemy>().OnDeath += () => currentEnemies--;
+
+        // Thử lấy Enemy hoặc Enemy2
+        Enemy e = enemy.GetComponent<Enemy>();
+        Enemy2 e2 = enemy.GetComponent<Enemy2>();
+        if (e != null) e.OnDeath += () => currentEnemies--;
+        else if (e2 != null) e2.OnDeath += () => currentEnemies--;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player")) return;
 
-        // Player bước vào → bật spawner
+        // Nếu chỉ trigger 1 lần và đã trigger rồi → bỏ qua
+        if (triggerOnlyOnce && hasTriggered) return;
+
         if (activateOnPlayerEnter)
+        {
             isActive = true;
+            hasTriggered = true;
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player")) return;
 
-        // Player đi qua → tắt spawner
         if (deactivateOnPlayerExit)
+        {
             isActive = false;
+
+            // Nếu trigger liên tục → reset để có thể trigger lại
+            if (!triggerOnlyOnce)
+                hasTriggered = false;
+        }
     }
 
     void OnDrawGizmos()

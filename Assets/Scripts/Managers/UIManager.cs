@@ -24,13 +24,13 @@ public class UIManager : MonoBehaviour
         UpdateHealthBar();
     }
 
+    
     void UpdateHealthBar()
     {
         if (playerHealth == null) return;
-
-        float ratio = playerHealth.GetHealth() / 100f;
+        float ratio = playerHealth.GetHealth() / playerHealth.maxHealth;
         healthBarFill.fillAmount = ratio;
-        healthText.text = Mathf.CeilToInt(playerHealth.GetHealth()) + " / 100";
+        // bỏ dòng healthText
     }
 
     public void AddKill()
