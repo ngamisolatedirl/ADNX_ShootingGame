@@ -1,0 +1,1366 @@
+fileFormatVersion: 2
+guid: e599bd76589da0842a99b9b0cefe3361
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3183986302450874242
+    second: meleeEnemy_0
+  - first:
+      213: 6510013841318429645
+    second: meleeEnemy_1
+  - first:
+      213: 3094266847939905774
+    second: meleeEnemy_2
+  - first:
+      213: -5464670338321466072
+    second: meleeEnemy_3
+  - first:
+      213: -3830020692822991988
+    second: meleeEnemy_4
+  - first:
+      213: 3487129736708570797
+    second: meleeEnemy_5
+  - first:
+      213: -4351611870107438975
+    second: meleeEnemy_6
+  - first:
+      213: 1636142346539420226
+    second: meleeEnemy_7
+  - first:
+      213: 2943169621298036223
+    second: meleeEnemy_8
+  - first:
+      213: -104281336148804821
+    second: meleeEnemy_9
+  - first:
+      213: 8098038480383063780
+    second: meleeEnemy_10
+  - first:
+      213: -7523892332777661559
+    second: meleeEnemy_11
+  - first:
+      213: 8648299386873266881
+    second: meleeEnemy_12
+  - first:
+      213: -2098601617065141166
+    second: meleeEnemy_13
+  - first:
+      213: 7438926605870525418
+    second: meleeEnemy_14
+  - first:
+      213: 1005664918916407931
+    second: meleeEnemy_15
+  - first:
+      213: 904158417239114911
+    second: meleeEnemy_16
+  - first:
+      213: -5611226401659967524
+    second: meleeEnemy_17
+  - first:
+      213: -1201343056342368524
+    second: meleeEnemy_18
+  - first:
+      213: 8434431834357102637
+    second: meleeEnemy_19
+  - first:
+      213: 7680224271846254156
+    second: meleeEnemy_20
+  - first:
+      213: -1177834470273963737
+    second: meleeEnemy_21
+  - first:
+      213: 4109291303753237179
+    second: meleeEnemy_22
+  - first:
+      213: 418096175293132217
+    second: meleeEnemy_23
+  - first:
+      213: -8109231574611508409
+    second: meleeEnemy_24
+  - first:
+      213: -3070215978663239250
+    second: meleeEnemy_25
+  - first:
+      213: -3986024688013183516
+    second: meleeEnemy_26
+  - first:
+      213: 2647266874814964407
+    second: meleeEnemy_27
+  - first:
+      213: 3278692731337472284
+    second: meleeEnemy_28
+  - first:
+      213: -4810460885720071282
+    second: meleeEnemy_29
+  - first:
+      213: -547873590481293777
+    second: meleeEnemy_30
+  - first:
+      213: -6925938262763863129
+    second: meleeEnemy_31
+  - first:
+      213: -59212192069463480
+    second: meleeEnemy_32
+  - first:
+      213: 792485385805563807
+    second: meleeEnemy_33
+  - first:
+      213: -8116889090509807526
+    second: meleeEnemy_34
+  - first:
+      213: -2823420327806820541
+    second: meleeEnemy_35
+  - first:
+      213: 9021825312157676307
+    second: meleeEnemy_36
+  - first:
+      213: 4876044225167131177
+    second: meleeEnemy_37
+  - first:
+      213: -3397765784228210654
+    second: meleeEnemy_38
+  - first:
+      213: -2403723385892181768
+    second: meleeEnemy_39
+  - first:
+      213: -7345256503820034266
+    second: meleeEnemy_40
+  - first:
+      213: -222695223124618460
+    second: meleeEnemy_41
+  - first:
+      213: -2700310127394765280
+    second: meleeEnemy_42
+  - first:
+      213: 7197917637615204800
+    second: meleeEnemy_43
+  - first:
+      213: 2771721581424623583
+    second: meleeEnemy_44
+  - first:
+      213: 6844239038710215069
+    second: meleeEnemy_45
+  - first:
+      213: 4372156025112663225
+    second: meleeEnemy_46
+  - first:
+      213: 7239522596425719522
+    second: meleeEnemy_47
+  - first:
+      213: 6942762445294390234
+    second: meleeEnemy_48
+  - first:
+      213: 1682395091273458258
+    second: meleeEnemy_49
+  - first:
+      213: -9196625693038271511
+    second: meleeEnemy_50
+  - first:
+      213: 6200642851261003939
+    second: meleeEnemy_51
+  - first:
+      213: -5376551716868203009
+    second: meleeEnemy_52
+  - first:
+      213: 8392875273475626643
+    second: meleeEnemy_53
+  - first:
+      213: 8653377085300559601
+    second: meleeEnemy_54
+  - first:
+      213: -5726487203762487167
+    second: meleeEnemy_55
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: meleeEnemy_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 345
+        width: 57
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc349aed817385a50800000000000000
+      internalID: 6510013841318429645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 345
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee8c9b7dd4b01fa20800000000000000
+      internalID: 3094266847939905774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_3
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 293
+        width: 217
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82d3cb5c7479924b0800000000000000
+      internalID: -5464670338321466072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_5
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 292
+        width: 57
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dae373a1506c46030800000000000000
+      internalID: 3487129736708570797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_6
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 293
+        width: 56
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1807fd95f08fb93c0800000000000000
+      internalID: -4351611870107438975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_7
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 293
+        width: 58
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24ac477abceb4b610800000000000000
+      internalID: 1636142346539420226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 243
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2bb5226da48d8ef0800000000000000
+      internalID: -104281336148804821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R2
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 243
+        width: 53
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b908069c3c59790800000000000000
+      internalID: -7523892332777661559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R3
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 243
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c24fc1c87ee40870800000000000000
+      internalID: 8648299386873266881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R4
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 243
+        width: 52
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c95c9b2f440e2e0800000000000000
+      internalID: -2098601617065141166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R5
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 243
+        width: 54
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeb6d1db5506c3760800000000000000
+      internalID: 7438926605870525418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R6
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 243
+        width: 52
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b72a51f5ae6d4fd00800000000000000
+      internalID: 1005664918916407931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R7
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 243
+        width: 53
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9487304a473c8c00800000000000000
+      internalID: 904158417239114911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 182
+        width: 59
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4feb451fad8f35fe0800000000000000
+      internalID: -1201343056342368524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_19
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 257
+        width: 33
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d28f919d01f1d0570800000000000000
+      internalID: 8434431834357102637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A1
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 180
+        width: 55
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb240d63ba2270930800000000000000
+      internalID: 4109291303753237179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 183
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bdeb4a91406dc500800000000000000
+      internalID: 418096175293132217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A4
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 182
+        width: 99
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74346e1f8d8367f80800000000000000
+      internalID: -8109231574611508409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A5
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 179
+        width: 56
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea1ac0885d66465d0800000000000000
+      internalID: -3070215978663239250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A6
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 179
+        width: 56
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e579054aabcea8c0800000000000000
+      internalID: -3986024688013183516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_27
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 190
+        width: 95
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b22103623bfcb420800000000000000
+      internalID: 2647266874814964407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_28
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 152
+        width: 100
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19760bfaa1408d20800000000000000
+      internalID: 3278692731337472284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_29
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 178
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e838eb4bf4fcd3db0800000000000000
+      internalID: -4810460885720071282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_30
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 122
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2e6b894fdf8568f0800000000000000
+      internalID: -547873590481293777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_31
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 126
+        width: 73
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a38caf58df12ef90800000000000000
+      internalID: -6925938262763863129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_32
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 125
+        width: 79
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 842d35533d2ad2ff0800000000000000
+      internalID: -59212192069463480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_34
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 126
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a506be690640b5f80800000000000000
+      internalID: -8116889090509807526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_35
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 107
+        width: 71
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f1575cb2231d8d0800000000000000
+      internalID: -2823420327806820541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_37
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 65
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9228e2e63603ba340800000000000000
+      internalID: 4876044225167131177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_38
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 65
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 228d9197506b8d0d0800000000000000
+      internalID: -3397765784228210654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_39
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 66
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f8e895e05244aed0800000000000000
+      internalID: -2403723385892181768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_40
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 66
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62fdda96028601a90800000000000000
+      internalID: -7345256503820034266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_41
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 68
+        width: 63
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4231b7cdfd3d8ecf0800000000000000
+      internalID: -222695223124618460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_42
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 69
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 026ce39fe32968ad0800000000000000
+      internalID: -2700310127394765280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 10
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf3915d712277620800000000000000
+      internalID: 2771721581424623583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 10
+        width: 50
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d91fe24b42f9bfe50800000000000000
+      internalID: 6844239038710215069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_46
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 43
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b49c6b7db40dac30800000000000000
+      internalID: 4372156025112663225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_47
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 43
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ee5e5fd173f77460800000000000000
+      internalID: 7239522596425719522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D3
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 10
+        width: 58
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adbc1bfd8a5a95060800000000000000
+      internalID: 6942762445294390234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D6
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 11
+        width: 53
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 252273bfb61195710800000000000000
+      internalID: 1682395091273458258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_50
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 36
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e3293278a50f5080800000000000000
+      internalID: -9196625693038271511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D7
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 11
+        width: 53
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a83a7022db1d0650800000000000000
+      internalID: 6200642851261003939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_52
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 24
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffddd8f13b6a265b0800000000000000
+      internalID: -5376551716868203009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D4
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 10
+        width: 63
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3969ca7089b797470800000000000000
+      internalID: 8392875273475626643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 10
+        width: 53
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fe48dc8c98f61870800000000000000
+      internalID: 8653377085300559601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: meleeEnemy_55
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 15
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 180cae87a3e6780b0800000000000000
+      internalID: -5726487203762487167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 363ac44229f9b844389494f75afe0b9e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      A1: 4109291303753237179
+      A2: 418096175293132217
+      A3: -1201343056342368524
+      A4: -8109231574611508409
+      A5: -3070215978663239250
+      A6: -3986024688013183516
+      D1: 2771721581424623583
+      D2: 6844239038710215069
+      D3: 6942762445294390234
+      D4: 8392875273475626643
+      D5: 8653377085300559601
+      D6: 1682395091273458258
+      D7: 6200642851261003939
+      R1: -104281336148804821
+      R2: -7523892332777661559
+      R3: 8648299386873266881
+      R4: -2098601617065141166
+      R5: 7438926605870525418
+      R6: 1005664918916407931
+      R7: 904158417239114911
+      idle: 3094266847939905774
+      meleeEnemy_0: 3183986302450874242
+      meleeEnemy_1: 6510013841318429645
+      meleeEnemy_10: 8098038480383063780
+      meleeEnemy_17: -5611226401659967524
+      meleeEnemy_19: 8434431834357102637
+      meleeEnemy_20: 7680224271846254156
+      meleeEnemy_21: -1177834470273963737
+      meleeEnemy_27: 2647266874814964407
+      meleeEnemy_28: 3278692731337472284
+      meleeEnemy_29: -4810460885720071282
+      meleeEnemy_3: -5464670338321466072
+      meleeEnemy_30: -547873590481293777
+      meleeEnemy_31: -6925938262763863129
+      meleeEnemy_32: -59212192069463480
+      meleeEnemy_33: 792485385805563807
+      meleeEnemy_34: -8116889090509807526
+      meleeEnemy_35: -2823420327806820541
+      meleeEnemy_36: 9021825312157676307
+      meleeEnemy_37: 4876044225167131177
+      meleeEnemy_38: -3397765784228210654
+      meleeEnemy_39: -2403723385892181768
+      meleeEnemy_4: -3830020692822991988
+      meleeEnemy_40: -7345256503820034266
+      meleeEnemy_41: -222695223124618460
+      meleeEnemy_42: -2700310127394765280
+      meleeEnemy_43: 7197917637615204800
+      meleeEnemy_46: 4372156025112663225
+      meleeEnemy_47: 7239522596425719522
+      meleeEnemy_5: 3487129736708570797
+      meleeEnemy_50: -9196625693038271511
+      meleeEnemy_52: -5376551716868203009
+      meleeEnemy_55: -5726487203762487167
+      meleeEnemy_6: -4351611870107438975
+      meleeEnemy_7: 1636142346539420226
+      meleeEnemy_8: 2943169621298036223
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

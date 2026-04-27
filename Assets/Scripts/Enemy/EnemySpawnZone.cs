@@ -59,11 +59,14 @@ public class EnemySpawnZone : MonoBehaviour
         GameObject enemy = Instantiate(prefab, spawnPos, Quaternion.identity);
         currentEnemies++;
 
-        // Thử lấy Enemy hoặc Enemy2
+        // Thử lấy Enemy, Enemy2 hoặc MeleeEnemy
         Enemy e = enemy.GetComponent<Enemy>();
         Enemy2 e2 = enemy.GetComponent<Enemy2>();
+        MeleeEnemy me = enemy.GetComponent<MeleeEnemy>();
+
         if (e != null) e.OnDeath += () => currentEnemies--;
         else if (e2 != null) e2.OnDeath += () => currentEnemies--;
+        else if (me != null) me.OnDeath += () => currentEnemies--;
     }
 
     void OnTriggerEnter2D(Collider2D collision)

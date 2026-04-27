@@ -48,6 +48,12 @@ public class Bullet : MonoBehaviour
             collision.GetComponent<BossEnemy>().TakeDamage(damage);
             Destroy(gameObject);
         }
+        else if (collision.CompareTag("LavaEnemy"))
+        {
+            hasHit = true;
+            collision.GetComponent<LavaEnemy>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
         else if (collision.CompareTag("Ground"))
         {
             hasHit = true;

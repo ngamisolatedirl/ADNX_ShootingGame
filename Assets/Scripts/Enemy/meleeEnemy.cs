@@ -9,20 +9,25 @@ public class MeleeEnemy : MonoBehaviour
     public float damage = 15f;
     public float attackCooldown = 1f;
 
-    [Header("Attack Settings")]
-    public float attackRange = 1.2f;
-    public float detectionRange = 8f;
-
     [Header("Patrol Zone")]
     public Transform zoneStart;
     public Transform zoneEnd;
     public float patrolSpeed = 1.5f;
 
+    [Header("Detection & Attack")]
+    public float detectionRange = 8f;
+    public float attackRange = 1.5f;
+
+    [Header("Behaviour")]
+    public bool isStationary = false;
+
     private float currentHealth;
     private float attackTimer = 0f;
+    private bool movingRight = true;
     private Transform player;
     private UIManager uiManager;
-    private bool movingRight = true;
+    private Animator animator;
+    private Vector3 startPosition;
 
     public Action OnDeath;
 
@@ -34,8 +39,13 @@ public class MeleeEnemy : MonoBehaviour
         currentHealth = maxHealth;
         player = GameObject.FindWithTag("Player").transform;
         uiManager = FindFirstObjectByType<UIManager>();
+        animator = GetComponent<Animator>();
+        startPosition = transform.position;
 
-        // Thêm đoạn này
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
         Collider2D playerCol = player.GetComponent<Collider2D>();
         Collider2D myCol = GetComponent<Collider2D>();
         if (playerCol != null && myCol != null)
@@ -45,6 +55,15 @@ public class MeleeEnemy : MonoBehaviour
     void Update()
     {
         attackTimer += Time.deltaTime;
+
+        if (isStationary)
+        {
+            if (currentState != State.Attack)
+                CheckDetection();
+            else
+                AttackPlayer();
+            return;
+        }
 
         switch (currentState)
         {
@@ -62,6 +81,8 @@ public class MeleeEnemy : MonoBehaviour
                 ReturnToZone();
                 break;
         }
+
+        UpdateAnimation();
     }
 
     void Patrol()
@@ -69,19 +90,27 @@ public class MeleeEnemy : MonoBehaviour
         if (zoneStart == null || zoneEnd == null) return;
 
         float targetX = movingRight ? zoneEnd.position.x : zoneStart.position.x;
-        MoveTowardsX(targetX, patrolSpeed);
+        float diff = targetX - transform.position.x;
 
-        if (movingRight && transform.position.x >= zoneEnd.position.x)
-            movingRight = false;
-        else if (!movingRight && transform.position.x <= zoneStart.position.x)
-            movingRight = true;
+        if (Mathf.Abs(diff) < 0.05f)
+        {
+            movingRight = !movingRight;
+            return;
+        }
+
+        float dirX = Mathf.Sign(diff);
+        transform.position += new Vector3(dirX * patrolSpeed * Time.deltaTime, 0, 0);
+        FlipSprite(dirX);
     }
 
     void CheckDetection()
     {
         if (player == null) return;
-        if (Vector2.Distance(transform.position, player.position) <= detectionRange)
-            currentState = State.Chase;
+        if (currentState != State.Patrol) return;
+
+        float dist = Vector2.Distance(transform.position, player.position);
+        if (dist <= detectionRange)
+            currentState = isStationary ? State.Attack : State.Chase;
     }
 
     void ChasePlayer()
@@ -111,19 +140,24 @@ public class MeleeEnemy : MonoBehaviour
 
         float dist = Vector2.Distance(transform.position, player.position);
 
-        // Player chạy ra xa → đuổi lại
-        if (dist > attackRange * 1.3f)
+        if (!isStationary)
         {
-            currentState = State.Chase;
-            return;
+            if (dist > attackRange * 1.3f) { currentState = State.Chase; return; }
+            if (dist > detectionRange) { currentState = State.ReturnToZone; return; }
+        }
+        else
+        {
+            // Stationary: player ra ngoài detection → về patrol
+            if (dist > detectionRange) { currentState = State.Patrol; return; }
         }
 
-        // Đứng yên, quay mặt về phía player
         FacePlayer();
 
-        // Đánh khi hết cooldown
         if (attackTimer >= attackCooldown)
         {
+            if (animator != null)
+                animator.SetTrigger("Attack");
+
             player.GetComponent<PlayerHealth>().TakeDamage(damage);
             attackTimer = 0f;
         }
@@ -131,7 +165,15 @@ public class MeleeEnemy : MonoBehaviour
 
     void ReturnToZone()
     {
-        if (zoneStart == null || zoneEnd == null) return;
+        if (zoneStart == null || zoneEnd == null)
+        {
+            // isStationary → về vị trí ban đầu
+            MoveTowardsX(startPosition.x, moveSpeed);
+            float diff = Mathf.Abs(startPosition.x - transform.position.x);
+            if (diff < 0.05f)
+                currentState = State.Patrol;
+            return;
+        }
 
         float centerX = (zoneStart.position.x + zoneEnd.position.x) / 2f;
         MoveTowardsX(centerX, moveSpeed);
@@ -149,7 +191,23 @@ public class MeleeEnemy : MonoBehaviour
 
         float dirX = Mathf.Sign(diff);
         transform.position += new Vector3(dirX * speed * Time.deltaTime, 0, 0);
+        FlipSprite(dirX);
+    }
 
+    void UpdateAnimation()
+    {
+        if (animator == null) return;
+
+        bool isMoving = currentState == State.Patrol ||
+                        currentState == State.Chase ||
+                        currentState == State.ReturnToZone;
+
+        animator.SetBool("isWalking", isMoving);
+        animator.SetBool("isAttacking", currentState == State.Attack);
+    }
+
+    void FlipSprite(float dirX)
+    {
         Vector3 scale = transform.localScale;
         scale.x = Mathf.Abs(scale.x) * dirX;
         transform.localScale = scale;
@@ -158,9 +216,7 @@ public class MeleeEnemy : MonoBehaviour
     void FacePlayer()
     {
         float dirX = Mathf.Sign(player.position.x - transform.position.x);
-        Vector3 scale = transform.localScale;
-        scale.x = Mathf.Abs(scale.x) * dirX;
-        transform.localScale = scale;
+        FlipSprite(dirX);
     }
 
     public void TakeDamage(float dmg)
@@ -174,7 +230,11 @@ public class MeleeEnemy : MonoBehaviour
     {
         if (uiManager != null) uiManager.AddKill();
         OnDeath?.Invoke();
-        Destroy(gameObject);
+
+        if (animator != null)
+            animator.SetBool("isDead", true);
+
+        Destroy(gameObject, 1f);
     }
 
     void OnDrawGizmos()
