@@ -8,11 +8,15 @@ public class MovePlayer : MonoBehaviour
     public LayerMask groundLayer;
 
     [Header("Charge Jump")]
-    public float minChargeJump = 10f;   // Nhảy tối thiểu
-    public float maxChargeJump = 30f;   // Nhảy tối đa
-    public float maxChargeTime = 1.5f;  // Thời gian giữ tối đa
+    public float minChargeJump = 10f;
+    public float maxChargeJump = 30f;
+    public float maxChargeTime = 1.5f;
+
+    [Header("Wall Detection")]
+    public float wallRayDistance = 0.55f; // Khoảng cách check tường từ tâm nhân vật
 
     private Rigidbody2D rb;
+    private CapsuleCollider2D col; // Thêm để lấy thông tin chiều cao
     private bool isFacingRight = true;
     private float rayDistance = 1.7f;
     private float chargeTimer = 0f;
@@ -23,9 +27,23 @@ public class MovePlayer : MonoBehaviour
         Physics2D.Raycast(transform.position + new Vector3(0.4f, 0, 0), Vector2.down, rayDistance, groundLayer) ||
         Physics2D.Raycast(transform.position + new Vector3(-0.4f, 0, 0), Vector2.down, rayDistance, groundLayer);
 
+    // Hàm kiểm tra xem có đang đâm đầu vào tường không
+    bool IsHittingWall(float inputX)
+    {
+        if (inputX == 0) return false;
+
+        Vector2 dir = inputX > 0 ? Vector2.right : Vector2.left;
+        // Bắn 2 tia (trên và dưới) để check tường chắc chắn hơn
+        float checkOffset = col != null ? col.size.y * 0.3f : 0.5f;
+
+        return Physics2D.Raycast(transform.position + new Vector3(0, checkOffset, 0), dir, wallRayDistance, groundLayer) ||
+               Physics2D.Raycast(transform.position - new Vector3(0, checkOffset, 0), dir, wallRayDistance, groundLayer);
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<CapsuleCollider2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
@@ -46,7 +64,6 @@ public class MovePlayer : MonoBehaviour
         var keyboard = Keyboard.current;
         if (keyboard == null) return;
 
-        // Đang charge → không di chuyển
         if (isCharging)
         {
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
@@ -64,11 +81,20 @@ public class MovePlayer : MonoBehaviour
         else if (moveInput < 0 && isFacingRight)
             Flip();
 
+        // --- PHẦN CHỐNG DÍNH TƯỜNG ---
+        float finalMoveX = moveInput;
+        if (IsHittingWall(moveInput))
+        {
+            finalMoveX = 0f; // Triệt tiêu lực ép ngang nếu có tường
+        }
+        // -----------------------------
+
+        // Giữ nguyên logic di chuyển cũ nhưng thay moveInput bằng finalMoveX
         if (isGrounded)
-            rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+            rb.linearVelocity = new Vector2(finalMoveX * moveSpeed, rb.linearVelocity.y);
         else
             rb.linearVelocity = new Vector2(
-                Mathf.Lerp(rb.linearVelocity.x, moveInput * moveSpeed, 0.1f),
+                Mathf.Lerp(rb.linearVelocity.x, finalMoveX * moveSpeed, 0.1f),
                 rb.linearVelocity.y
             );
 
@@ -88,7 +114,6 @@ public class MovePlayer : MonoBehaviour
         var keyboard = Keyboard.current;
         if (keyboard == null) return;
 
-        // Bắt đầu charge khi giữ V và đang đứng trên đất
         if (keyboard.vKey.isPressed && isGrounded)
         {
             isCharging = true;
@@ -96,7 +121,6 @@ public class MovePlayer : MonoBehaviour
             chargeTimer = Mathf.Clamp(chargeTimer, 0, maxChargeTime);
         }
 
-        // Thả V → nhảy
         if (keyboard.vKey.wasReleasedThisFrame && isCharging && isGrounded)
         {
             float chargeRatio = chargeTimer / maxChargeTime;
@@ -106,7 +130,6 @@ public class MovePlayer : MonoBehaviour
             isCharging = false;
         }
 
-        // Reset nếu rời đất khi đang charge
         if (!isGrounded && isCharging)
         {
             chargeTimer = 0f;
@@ -132,5 +155,11 @@ public class MovePlayer : MonoBehaviour
         Gizmos.DrawRay(transform.position, Vector2.down * rayDistance);
         Gizmos.DrawRay(transform.position + new Vector3(0.4f, 0, 0), Vector2.down * rayDistance);
         Gizmos.DrawRay(transform.position + new Vector3(-0.4f, 0, 0), Vector2.down * rayDistance);
+
+        // Vẽ tia check tường để bạn dễ căn chỉnh wallRayDistance trong Scene
+        Gizmos.color = Color.blue;
+        Vector3 dir = isFacingRight ? Vector3.right : Vector3.left;
+        Gizmos.DrawRay(transform.position + new Vector3(0, 0.5f, 0), dir * wallRayDistance);
+        Gizmos.DrawRay(transform.position - new Vector3(0, 0.5f, 0), dir * wallRayDistance);
     }
 }

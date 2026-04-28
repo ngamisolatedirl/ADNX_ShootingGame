@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6400930458485144116
+--- !u!1 &8577301197444557902
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3403144231597671048}
-  - component: {fileID: 2163756127469867221}
-  - component: {fileID: 2450470501615591418}
-  - component: {fileID: 169893264097104288}
-  - component: {fileID: 2602956367579657584}
-  - component: {fileID: 6296903519740222141}
+  - component: {fileID: 2362710259286101317}
+  - component: {fileID: 6727962259994150078}
+  - component: {fileID: 672930071742402399}
+  - component: {fileID: 1523774106773419028}
+  - component: {fileID: 3211735408943843884}
+  - component: {fileID: 4322158609333398885}
   m_Layer: 0
-  m_Name: MeleeEnemy
-  m_TagString: Untagged
+  m_Name: MeleeEnemy 1
+  m_TagString: MeleeEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3403144231597671048
+--- !u!4 &2362710259286101317
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6400930458485144116}
+  m_GameObject: {fileID: 8577301197444557902}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.08, y: -2.94, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.3801403, y: 1.4972754, z: 0}
   m_LocalScale: {x: 3, y: 3.5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2163756127469867221
+--- !u!212 &6727962259994150078
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6400930458485144116}
+  m_GameObject: {fileID: 8577301197444557902}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -95,13 +95,13 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!70 &2450470501615591418
+--- !u!70 &672930071742402399
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6400930458485144116}
+  m_GameObject: {fileID: 8577301197444557902}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -132,14 +132,14 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.56, y: 0.56}
   m_Direction: 0
---- !u!50 &169893264097104288
+--- !u!50 &1523774106773419028
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6400930458485144116}
+  m_GameObject: {fileID: 8577301197444557902}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -159,14 +159,14 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!95 &2602956367579657584
+--- !u!95 &3211735408943843884
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6400930458485144116}
+  m_GameObject: {fileID: 8577301197444557902}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: adc64db14684c8644acb810218b63ad4, type: 2}
@@ -181,13 +181,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6296903519740222141
+--- !u!114 &4322158609333398885
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6400930458485144116}
+  m_GameObject: {fileID: 8577301197444557902}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2575ec29d12a774e8a2d6b9b50fa234, type: 3}
@@ -195,11 +195,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MeleeEnemy
   maxHealth: 50
   moveSpeed: 3
-  damage: 15
-  attackCooldown: 1
+  damage: 20
+  attackCooldown: 2
   zoneStart: {fileID: 0}
   zoneEnd: {fileID: 0}
-  patrolSpeed: 1.5
+  patrolSpeed: 1
   detectionRange: 8
-  attackRange: 1.5
+  attackRange: 4
   isStationary: 0
