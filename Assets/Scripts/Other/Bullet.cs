@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 direction;
     private bool hasHit = false; // Chống trúng nhiều lần
+    private bool piercing = false;
 
     public void SetDirection(Vector2 dir)
     {
@@ -20,49 +21,52 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, 3f);
     }
 
+
+    
+
+    public void SetStats(float dmg, bool isPiercing)
+    {
+        damage = dmg;
+        piercing = isPiercing;
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (hasHit) return; // Đã trúng rồi thì bỏ qua
+        if (hasHit && !piercing) return;
 
         if (collision.CompareTag("Enemy"))
         {
-            hasHit = true;
             collision.GetComponent<Enemy>().TakeDamage(damage);
-            Destroy(gameObject);
+            if (!piercing) { hasHit = true; Destroy(gameObject); }
         }
         else if (collision.CompareTag("Enemy2"))
         {
-            hasHit = true;
             collision.GetComponent<Enemy2>().TakeDamage(damage);
-            Destroy(gameObject);
+            if (!piercing) { hasHit = true; Destroy(gameObject); }
         }
         else if (collision.CompareTag("MeleeEnemy"))
         {
-            hasHit = true;
             collision.GetComponent<MeleeEnemy>().TakeDamage(damage);
-            Destroy(gameObject);
+            if (!piercing) { hasHit = true; Destroy(gameObject); }
         }
         else if (collision.CompareTag("Boss"))
         {
-            hasHit = true;
             collision.GetComponent<BossEnemy>().TakeDamage(damage);
-            Destroy(gameObject);
+            if (!piercing) { hasHit = true; Destroy(gameObject); }
         }
         else if (collision.CompareTag("LavaEnemy"))
         {
-            hasHit = true;
             collision.GetComponent<LavaEnemy>().TakeDamage(damage);
-            Destroy(gameObject);
+            if (!piercing) { hasHit = true; Destroy(gameObject); }
+        }
+        else if (collision.CompareTag("ShootingEnemy"))
+        {
+            collision.GetComponent<ShootingEnemy>().TakeDamage(damage);
+            if (!piercing) { hasHit = true; Destroy(gameObject); }
         }
         else if (collision.CompareTag("Ground"))
         {
             hasHit = true;
-            Destroy(gameObject);
-        }
-        else if (collision.CompareTag("ShootingEnemy"))
-        {
-            hasHit = true;
-            collision.GetComponent<ShootingEnemy>().TakeDamage(damage);
             Destroy(gameObject);
         }
     }

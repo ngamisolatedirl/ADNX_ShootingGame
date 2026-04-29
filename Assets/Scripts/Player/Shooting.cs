@@ -6,38 +6,43 @@ public class Shooting : MonoBehaviour
     public Transform shootingPoint;
     public GameObject bulletPrefab;
 
+    [Header("Fire Rate")]
+    public float fireRate = 3f; // Số phát mỗi giây
+    private float fireTimer = 0f;
+
+    [Header("Gun Stats (set by GunApplier)")]
+    public float damage = 10f;
+    public bool piercing = false;
     void Update()
     {
         var keyboard = Keyboard.current;
         if (keyboard == null) return;
 
-        // Bắn thẳng (space)
-        if (keyboard.spaceKey.wasPressedThisFrame)
+        fireTimer += Time.deltaTime;
+
+        bool canShoot = fireTimer >= 1f / fireRate;
+
+        if (keyboard.spaceKey.wasPressedThisFrame && canShoot)
         {
             ShootHorizontal();
+            ResetTimer();
         }
-
-        // Bắn xuống thẳng (phím S hoặc DownArrow)
-        if ((keyboard.sKey.wasPressedThisFrame || keyboard.downArrowKey.wasPressedThisFrame))
+        else if ((keyboard.sKey.wasPressedThisFrame || keyboard.downArrowKey.wasPressedThisFrame) && canShoot)
         {
             ShootDown();
+            ResetTimer();
         }
-
-        // Bắn chéo xuống (phím X hoặc Ctrl)
-        if (keyboard.xKey.wasPressedThisFrame || keyboard.ctrlKey.wasPressedThisFrame)
+        else if ((keyboard.xKey.wasPressedThisFrame || keyboard.ctrlKey.wasPressedThisFrame) && canShoot)
         {
             ShootDiagonalDown();
+            ResetTimer();
         }
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            GameObject bullet = Instantiate(bulletPrefab, shootingPoint.position, Quaternion.identity);
-            Bullet bulletScript = bullet.GetComponent<Bullet>();
-            float dirX = transform.root.localScale.x > 0 ? 1f : -1f;
-            bulletScript.SetDirection(new Vector2(dirX, 0));
+    }
 
-            // Gọi animation bắn
-            GetComponent<PlayerAnimator>().PlayShoot();
-        }
+    void ResetTimer()
+    {
+        fireTimer = 0f;
+        GetComponent<PlayerAnimator>().PlayShoot();
     }
 
     void ShootHorizontal()
@@ -54,8 +59,7 @@ public class Shooting : MonoBehaviour
     void ShootDiagonalDown()
     {
         float dirX = transform.root.localScale.x > 0 ? 1f : -1f;
-        Vector2 diagonalDir = new Vector2(dirX, -1f).normalized; // góc 45 độ
-        SpawnBullet(diagonalDir);
+        SpawnBullet(new Vector2(dirX, -1f).normalized);
     }
 
     void SpawnBullet(Vector2 dir)
@@ -63,5 +67,6 @@ public class Shooting : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, shootingPoint.position, Quaternion.identity);
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         bulletScript.SetDirection(dir);
+        bulletScript.SetStats(damage, piercing);
     }
 }

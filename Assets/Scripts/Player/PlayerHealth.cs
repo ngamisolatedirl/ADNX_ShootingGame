@@ -37,6 +37,10 @@ public class PlayerHealth : MonoBehaviour
         GetComponent<PlayerAnimator>().PlayDeath();
         gameManager.GameOver();
     }
+    public void ResetHealth()
+    {
+        currentHealth = maxHealth;
+    }
 
     public float GetHealth() => currentHealth;
 }

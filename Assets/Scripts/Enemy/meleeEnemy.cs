@@ -28,6 +28,7 @@ public class MeleeEnemy : MonoBehaviour
     private UIManager uiManager;
     private Animator animator;
     private Vector3 startPosition;
+    private bool isDead = false;
 
     public Action OnDeath;
 
@@ -221,6 +222,7 @@ public class MeleeEnemy : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
+        if (isDead) return;
         currentHealth -= dmg;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         if (currentHealth <= 0) Die();
@@ -228,13 +230,17 @@ public class MeleeEnemy : MonoBehaviour
 
     void Die()
     {
+        if (isDead) return;  
+        isDead = true;
+
         if (uiManager != null) uiManager.AddKill();
+        CurrencyManager.Instance?.AddCoins(10);
         OnDeath?.Invoke();
 
         if (animator != null)
             animator.SetBool("isDead", true);
 
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 0.2f);
     }
 
     void OnDrawGizmos()

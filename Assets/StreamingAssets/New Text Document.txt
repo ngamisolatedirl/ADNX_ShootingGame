@@ -1,0 +1,22 @@
+{
+  "coins": 0,
+  "activeCharacterId": "cowboy",
+  "activeGunId": "pistol",
+  "purchasedGuns": ["pistol"],
+  "characters": [
+    {
+      "id": "cowboy",
+      "isPurchased": true,
+      "activeCostumeId": "cowboy_default",
+      "purchasedCostumes": ["cowboy_default"],
+      "upgradeLevels": { "hp": 0, "speed": 0, "critRate": 0, "critDamage": 0 }
+    },
+    {
+      "id": "ranger",
+      "isPurchased": false,
+      "activeCostumeId": "ranger_default",
+      "purchasedCostumes": ["ranger_default"],
+      "upgradeLevels": { "hp": 0, "speed": 0, "critRate": 0, "critDamage": 0 }
+    }
+  ]
+}

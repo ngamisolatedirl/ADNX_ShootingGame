@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "id": "cowboy",
+      "name": "Cowboy",
+      "price": 0,
+      "baseStats": {
+        "hp": 100,
+        "speed": 5,
+        "critRate": 0.05,
+        "critDamage": 1.75
+      },
+      "upgrades": {
+        "hp": { "maxLevel": 10, "costPerLevel": [50,60,70,80,90,100,120,140,160,200], "increasePerLevel": 10 },
+        "speed": { "maxLevel": 10, "costPerLevel": [50,60,70,80,90,100,120,140,160,200], "increasePerLevel": 0.2 },
+        "critRate": { "maxLevel": 10, "costPerLevel": [80,90,100,110,120,140,160,180,200,250], "increasePerLevel": 0.02 },
+        "critDamage": { "maxLevel": 10, "costPerLevel": [80,90,100,110,120,140,160,180,200,250], "increasePerLevel": 0.05 }
+      },
+      "costumes": [
+        { "id": "cowboy_default", "name": "Mặc định", "price": 0 },
+        { "id": "cowboy_skin1", "name": "Skin 1", "price": 150 }
+      ]
+    },
+    {
+      "id": "ranger",
+      "name": "Ranger",
+      "price": 300,
+      "baseStats": {
+        "hp": 80,
+        "speed": 6,
+        "critRate": 0.08,
+        "critDamage": 1.75
+      },
+      "upgrades": {
+        "hp": { "maxLevel": 10, "costPerLevel": [60,70,80,90,100,110,130,150,170,210], "increasePerLevel": 8 },
+        "speed": { "maxLevel": 10, "costPerLevel": [60,70,80,90,100,110,130,150,170,210], "increasePerLevel": 0.25 },
+        "critRate": { "maxLevel": 10, "costPerLevel": [90,100,110,120,130,150,170,190,210,260], "increasePerLevel": 0.025 },
+        "critDamage": { "maxLevel": 10, "costPerLevel": [90,100,110,120,130,150,170,190,210,260], "increasePerLevel": 0.06 }
+      },
+      "costumes": [
+        { "id": "ranger_default", "name": "Mặc định", "price": 0 },
+        { "id": "ranger_skin1", "name": "Skin 1", "price": 150 }
+      ]
+    }
+  ]
+}

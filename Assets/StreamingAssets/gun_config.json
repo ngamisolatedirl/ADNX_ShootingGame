@@ -1,0 +1,40 @@
+{
+  "guns": [
+    {
+      "id": "pistol",
+      "name": "Pistol",
+      "damage": 10,
+      "fireRate": 5,
+      "price": 0,
+      "bulletType": "normal",
+      "piercing": false
+    },
+    {
+      "id": "rifle",
+      "name": "Rifle",
+      "damage": 20,
+      "fireRate": 3,
+      "price": 200,
+      "bulletType": "normal",
+      "piercing": false
+    },
+    {
+      "id": "shotgun",
+      "name": "Shotgun",
+      "damage": 35,
+      "fireRate": 1,
+      "price": 350,
+      "bulletType": "spread",
+      "piercing": false
+    },
+    {
+      "id": "sniper",
+      "name": "Sniper",
+      "damage": 60,
+      "fireRate": 0.5,
+      "price": 500,
+      "bulletType": "normal",
+      "piercing": true
+    }
+  ]
+}

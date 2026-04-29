@@ -13,27 +13,28 @@ public class MovePlayer : MonoBehaviour
     public float maxChargeTime = 1.5f;
 
     [Header("Wall Detection")]
-    public float wallRayDistance = 0.55f; // Khoảng cách check tường từ tâm nhân vật
+    public float wallRayDistance = 0.55f;
+
+    [Header("One Way Platform")]
+    public LayerMask oneWayLayer;
 
     private Rigidbody2D rb;
-    private CapsuleCollider2D col; // Thêm để lấy thông tin chiều cao
+    private CapsuleCollider2D col;
+    private Collider2D oneWayCollider;
     private bool isFacingRight = true;
     private float rayDistance = 1.7f;
     private float chargeTimer = 0f;
     private bool isCharging = false;
 
     bool isGrounded =>
-        Physics2D.Raycast(transform.position, Vector2.down, rayDistance, groundLayer) ||
-        Physics2D.Raycast(transform.position + new Vector3(0.4f, 0, 0), Vector2.down, rayDistance, groundLayer) ||
-        Physics2D.Raycast(transform.position + new Vector3(-0.4f, 0, 0), Vector2.down, rayDistance, groundLayer);
-
-    // Hàm kiểm tra xem có đang đâm đầu vào tường không
+    Physics2D.Raycast(transform.position, Vector2.down, rayDistance, groundLayer | oneWayLayer) ||
+    Physics2D.Raycast(transform.position + new Vector3(0.4f, 0, 0), Vector2.down, rayDistance, groundLayer | oneWayLayer) ||
+    Physics2D.Raycast(transform.position + new Vector3(-0.4f, 0, 0), Vector2.down, rayDistance, groundLayer | oneWayLayer);
     bool IsHittingWall(float inputX)
     {
         if (inputX == 0) return false;
 
         Vector2 dir = inputX > 0 ? Vector2.right : Vector2.left;
-        // Bắn 2 tia (trên và dưới) để check tường chắc chắn hơn
         float checkOffset = col != null ? col.size.y * 0.3f : 0.5f;
 
         return Physics2D.Raycast(transform.position + new Vector3(0, checkOffset, 0), dir, wallRayDistance, groundLayer) ||
@@ -51,12 +52,18 @@ public class MovePlayer : MonoBehaviour
             LayerMask.NameToLayer("Player"),
             LayerMask.NameToLayer("Enemy")
         );
+
+        // Tìm OneWay Tilemap
+        GameObject oneWay = GameObject.Find("Tilemap_OneWay");
+        if (oneWay != null)
+            oneWayCollider = oneWay.GetComponent<Collider2D>();
     }
 
     void Update()
     {
         Move();
         ChargeJump();
+        HandleOneWayPlatform();
     }
 
     void Move()
@@ -81,15 +88,10 @@ public class MovePlayer : MonoBehaviour
         else if (moveInput < 0 && isFacingRight)
             Flip();
 
-        // --- PHẦN CHỐNG DÍNH TƯỜNG ---
         float finalMoveX = moveInput;
         if (IsHittingWall(moveInput))
-        {
-            finalMoveX = 0f; // Triệt tiêu lực ép ngang nếu có tường
-        }
-        // -----------------------------
+            finalMoveX = 0f;
 
-        // Giữ nguyên logic di chuyển cũ nhưng thay moveInput bằng finalMoveX
         if (isGrounded)
             rb.linearVelocity = new Vector2(finalMoveX * moveSpeed, rb.linearVelocity.y);
         else
@@ -107,6 +109,27 @@ public class MovePlayer : MonoBehaviour
             rb.gravityScale = 2f;
         else
             rb.gravityScale = 1f;
+    }
+
+    void HandleOneWayPlatform()
+    {
+        if (oneWayCollider == null || col == null) return;
+
+        // Chỉ ignore collision khi player đang ở DƯỚI platform VÀ đang bay lên
+        bool playerBelowPlatform = col.bounds.max.y < oneWayCollider.bounds.min.y;
+        bool playerAbovePlatform = col.bounds.min.y >= oneWayCollider.bounds.min.y;
+
+        if (rb.linearVelocity.y > 0 && playerBelowPlatform)
+        {
+            // Đang bay lên từ dưới → xuyên qua
+            Physics2D.IgnoreCollision(col, oneWayCollider, true);
+        }
+        else if (playerAbovePlatform)
+        {
+            // Đã lên trên platform → bật lại collision
+            Physics2D.IgnoreCollision(col, oneWayCollider, false);
+        }
+        // Nếu đang ở giữa platform → giữ nguyên trạng thái ignore, không làm gì
     }
 
     void ChargeJump()
@@ -156,7 +179,6 @@ public class MovePlayer : MonoBehaviour
         Gizmos.DrawRay(transform.position + new Vector3(0.4f, 0, 0), Vector2.down * rayDistance);
         Gizmos.DrawRay(transform.position + new Vector3(-0.4f, 0, 0), Vector2.down * rayDistance);
 
-        // Vẽ tia check tường để bạn dễ căn chỉnh wallRayDistance trong Scene
         Gizmos.color = Color.blue;
         Vector3 dir = isFacingRight ? Vector3.right : Vector3.left;
         Gizmos.DrawRay(transform.position + new Vector3(0, 0.5f, 0), dir * wallRayDistance);
