@@ -1,5 +1,6 @@
-using UnityEngine;
 using System;
+using Unity.VisualScripting;
+using UnityEngine;
 
 public class MeleeEnemy : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class MeleeEnemy : MonoBehaviour
     public float moveSpeed = 3f;
     public float damage = 15f;
     public float attackCooldown = 1f;
-
+    public int coinDrop = 10;
     [Header("Patrol Zone")]
     public Transform zoneStart;
     public Transform zoneEnd;
@@ -234,7 +235,7 @@ public class MeleeEnemy : MonoBehaviour
         isDead = true;
 
         if (uiManager != null) uiManager.AddKill();
-        CurrencyManager.Instance?.AddCoins(10);
+        DataManager.Instance?.AddCoins(coinDrop);
         OnDeath?.Invoke();
 
         if (animator != null)

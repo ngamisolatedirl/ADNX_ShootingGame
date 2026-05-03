@@ -20,76 +20,48 @@ public class GunItemUI : MonoBehaviour
         statsText.text = $"DMG: {data.damage} | Rate: {data.fireRate}";
         priceText.text = data.price == 0 ? "Miễn phí" : $"🪙 {data.price}";
 
-        UpdateButton();
+        actionButton.onClick.RemoveAllListeners(); // tránh duplicate listener
         actionButton.onClick.AddListener(OnButtonClick);
+
+        UpdateButton();
     }
 
     void UpdateButton()
     {
-        SaveData save = DataManager.Instance.GetSaveData();
-
-        if (save.activeGunId == gunData.id)
+        if (DataManager.Instance.IsGunActive(gunData.id))
         {
             buttonText.text = "Đang dùng";
             actionButton.interactable = false;
         }
-        else if (save.purchasedGuns.Contains(gunData.id))
+        else if (DataManager.Instance.IsGunPurchased(gunData.id))
         {
             buttonText.text = "Trang bị";
             actionButton.interactable = true;
         }
         else
         {
-            buttonText.text = "Mua";
+            buttonText.text = $"Mua 🪙{gunData.price}";
             actionButton.interactable = true;
         }
     }
 
     void OnButtonClick()
     {
-        SaveData save = DataManager.Instance.GetSaveData();
-
-        if (save.purchasedGuns.Contains(gunData.id))
+        if (DataManager.Instance.IsGunPurchased(gunData.id))
         {
-            // Trang bị
-            EquipGun();
+            DataManager.Instance.EquipGun(gunData.id);
         }
         else
         {
-            // Mua
-            BuyGun();
+            if (!DataManager.Instance.SpendCoins(gunData.price))
+            {
+                Debug.Log("Không đủ coins!");
+                return;
+            }
+            DataManager.Instance.PurchaseGun(gunData.id);
+            DataManager.Instance.EquipGun(gunData.id); // tự động equip sau khi mua
         }
 
-        UpdateButton();
-    }
-
-    void BuyGun()
-    {
-        if (!DataManager.Instance.SpendCoins(gunData.price))
-        {
-            Debug.Log("Không đủ coins!");
-            return;
-        }
-
-        SaveData save = DataManager.Instance.GetSaveData();
-        save.purchasedGuns.Add(gunData.id);
-        DataManager.Instance.SaveGame();
-
-        Debug.Log("Đã mua: " + gunData.name);
-
-        // Tự động trang bị luôn sau khi mua
-        EquipGun();
-    }
-
-    void EquipGun()
-    {
-        SaveData save = DataManager.Instance.GetSaveData();
-        save.activeGunId = gunData.id;
-        DataManager.Instance.SaveGame();
-
-        Debug.Log("Đã trang bị: " + gunData.name);
-
-        // Refresh toàn bộ list để update button
         FindFirstObjectByType<ShopGunsManager>().RefreshList();
     }
 }

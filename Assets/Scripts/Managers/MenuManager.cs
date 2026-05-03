@@ -10,11 +10,15 @@ public class MenuManager : MonoBehaviour
     public Button cuaHangButton;
     public Button caiDatButton;
     public Button creditsButton;
-
+    //public Button GunShopButton;
+    //public Button CharactersShopButton;
+    //public Button CostumesShopButton;
+    //public Button UpgradesShopButton;
+    //public Button BackButton;
     void Start()
     {
-        // Cửa hàng, Cài đặt, Credits chưa làm nên tạm disable
-        if (cuaHangButton != null) cuaHangButton.interactable = false;
+        
+        
     }
 
     //public void OpenPlay() => SceneManager.LoadScene("LevelSelect");
@@ -31,4 +35,17 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+    public void OpenShop()
+    {
+        SceneManager.LoadScene("Shop");
+    }
+    //public void OpenGunShop()
+    //{
+    //    SceneManager.LoadScene("ShopGunsScene");
+    //}
+    //public void BackMenu()
+    //{
+    //    SceneManager.LoadScene("MainMenu");
+    //}
+
 }

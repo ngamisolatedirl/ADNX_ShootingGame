@@ -10,6 +10,8 @@ public class UIManager : MonoBehaviour
 
     [Header("Kill Count")]
     public TextMeshProUGUI killCountText;
+    [Header("Coins")]
+    public TextMeshProUGUI coinsText;
 
     private PlayerHealth playerHealth;
     private int killCount = 0;
@@ -22,6 +24,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         UpdateHealthBar();
+        UpdateCoins();
     }
 
     
@@ -37,5 +40,11 @@ public class UIManager : MonoBehaviour
     {
         killCount++;
         killCountText.text = "Kills: " + killCount;
+    }
+    void UpdateCoins()
+    {
+        if (coinsText == null) return;
+        if (DataManager.Instance == null) return;
+        coinsText.text = "Coins: " + DataManager.Instance.GetCoins();
     }
 }

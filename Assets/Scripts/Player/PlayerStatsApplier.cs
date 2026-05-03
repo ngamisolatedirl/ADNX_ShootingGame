@@ -15,25 +15,23 @@ public class PlayerStatsApplier : MonoBehaviour
 
     public void Apply()
     {
-        if (DataManager.Instance == null) return;
+        if (DataManager.Instance == null) { Debug.LogError("DataManager null!"); return; }
 
         BaseStats stats = DataManager.Instance.GetComputedStats(
             DataManager.Instance.GetSaveData().activeCharacterId
         );
 
-        if (stats == null) return;
+        if (stats == null) { Debug.LogError("Stats null!"); return; }
 
-        // Apply HP
+        Debug.Log($"Applying speed: {stats.speed}");
+
         if (playerHealth != null)
         {
             playerHealth.maxHealth = stats.hp;
-            playerHealth.ResetHealth(); // Cần thêm hàm này vào PlayerHealth
+            playerHealth.ResetHealth();
         }
 
-        // Apply Speed
         if (movePlayer != null)
             movePlayer.moveSpeed = stats.speed;
-
-        Debug.Log($"Applied stats → HP: {stats.hp} | Speed: {stats.speed} | CritRate: {stats.critRate} | CritDmg: {stats.critDamage}");
     }
 }

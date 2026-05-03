@@ -3,10 +3,10 @@
     {
       "id": "cowboy",
       "name": "Cowboy",
-      "price": 0,
+      "price": 10,
       "baseStats": {
         "hp": 100,
-        "speed": 5,
+        "speed": 8,
         "critRate": 0.05,
         "critDamage": 1.75
       },

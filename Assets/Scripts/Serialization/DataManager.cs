@@ -19,6 +19,9 @@ public class DataManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         savePath = Application.persistentDataPath + "/save_data.json";
+
+        
+        Debug.Log("Save path: " + Application.persistentDataPath);
         Init();
     }
 
@@ -172,4 +175,25 @@ public class DataManager : MonoBehaviour
     }
 
     public int GetCoins() => saveData.coins;
+
+    public void PurchaseGun(string id)
+    {
+        if (saveData.purchasedGuns.Contains(id)) return;
+        saveData.purchasedGuns.Add(id);
+        SaveGame();
+    }
+
+    public void EquipGun(string id)
+    {
+        saveData.activeGunId = id;
+        SaveGame();
+    }
+
+    public bool IsGunPurchased(string id)
+        => saveData.purchasedGuns.Contains(id);
+
+    public bool IsGunActive(string id)
+        => saveData.activeGunId == id;
+
+
 }

@@ -4,31 +4,38 @@ using TMPro;
 
 public class ShopGunsManager : MonoBehaviour
 {
-    public Transform content;           // Content trong ScrollView
-    public GameObject gunItemPrefab;    // Prefab GunItem
+    public RectTransform[] slots;       // 4 slot, assign trong Inspector
+    public GameObject gunItemPrefab;
     public TextMeshProUGUI coinsText;
 
     void Start()
     {
         RefreshList();
-        UpdateCoins();
     }
 
     public void RefreshList()
     {
-        foreach (Transform child in content)
-            Destroy(child.gameObject);
+        // Xóa item cũ trong slot
+        foreach (RectTransform slot in slots)
+        {
+            foreach (Transform child in slot)
+                Destroy(child.gameObject);
+        }
 
         GunConfig config = DataManager.Instance.GetGunConfig();
-        Debug.Log("Số súng: " + config.guns.Count);
 
-        foreach (GunData gun in config.guns)
+        for (int i = 0; i < config.guns.Count && i < slots.Length; i++)
         {
-            Debug.Log("Spawn item: " + gun.name);
-            GameObject item = Instantiate(gunItemPrefab, content);
-            GunItemUI ui = item.GetComponent<GunItemUI>();
-            Debug.Log("GunItemUI: " + ui);
-            ui.Setup(gun);
+            GameObject item = Instantiate(gunItemPrefab, slots[i]);
+            RectTransform rt = item.GetComponent<RectTransform>();
+
+            // Stretch full slot
+            rt.anchorMin = Vector2.zero;
+            rt.anchorMax = Vector2.one;
+            rt.offsetMin = Vector2.zero;
+            rt.offsetMax = Vector2.zero;
+
+            item.GetComponent<GunItemUI>().Setup(config.guns[i]);
         }
 
         UpdateCoins();
@@ -44,6 +51,4 @@ public class ShopGunsManager : MonoBehaviour
     {
         SceneManager.LoadScene("Shop");
     }
-
-
 }

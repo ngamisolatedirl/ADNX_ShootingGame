@@ -6,6 +6,7 @@ public class ShootingEnemy : MonoBehaviour
     [Header("Stats")]
     public float maxHealth = 30f;
     public float moveSpeed = 2f;
+    public int coinDrop = 30;
 
     [Header("Patrol Zone")]
     public Transform zoneStart;
@@ -28,7 +29,7 @@ public class ShootingEnemy : MonoBehaviour
     private UIManager uiManager;
 
     public Action OnDeath;
-
+    private bool isDead = false;
     private enum State { Patrol, Chase, Shoot, ReturnToZone }
     private State currentState = State.Patrol;
 
@@ -217,6 +218,7 @@ public class ShootingEnemy : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
+        if (isDead) return;
         currentHealth -= dmg;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         if (currentHealth <= 0) Die();
@@ -224,9 +226,14 @@ public class ShootingEnemy : MonoBehaviour
 
     void Die()
     {
+        if (isDead) return;
+        isDead = true;
+
         if (uiManager != null) uiManager.AddKill();
+        DataManager.Instance?.AddCoins(coinDrop);
         OnDeath?.Invoke();
-        Destroy(gameObject);
+
+        Destroy(gameObject, 0.2f);
     }
 
     void OnDrawGizmos()

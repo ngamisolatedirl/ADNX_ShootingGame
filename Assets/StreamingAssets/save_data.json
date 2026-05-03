@@ -1,5 +1,5 @@
 {
-  "coins": 0,
+  "coins": 999999,
   "activeCharacterId": "cowboy",
   "activeGunId": "pistol",
   "purchasedGuns": ["pistol"],

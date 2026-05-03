@@ -5,6 +5,7 @@ public class LavaEnemy : MonoBehaviour
 {
     [Header("Stats")]
     public float maxHealth = 40f;
+    public int coinDrop = 30;
 
     [Header("Lava Settings")]
     public GameObject lavaPrefab;
@@ -18,7 +19,7 @@ public class LavaEnemy : MonoBehaviour
     private UIManager uiManager;
 
     public Action OnDeath;
-
+    private bool isDead = false;
     void Start()
     {
         currentHealth = maxHealth;
@@ -50,6 +51,7 @@ public class LavaEnemy : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
+        if (isDead) return;
         currentHealth -= dmg;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         if (currentHealth <= 0) Die();
@@ -57,8 +59,13 @@ public class LavaEnemy : MonoBehaviour
 
     void Die()
     {
+        if (isDead) return;
+        isDead = true;
+
         if (uiManager != null) uiManager.AddKill();
+        DataManager.Instance?.AddCoins(coinDrop);
         OnDeath?.Invoke();
-        Destroy(gameObject);
+
+        Destroy(gameObject, 0.2f);
     }
 }
