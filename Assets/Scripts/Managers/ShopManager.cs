@@ -30,4 +30,8 @@ public class ShopManager : MonoBehaviour
     {
         SceneManager.LoadScene("Shop");
     }
+    public void OpenCharacterShop()
+    {
+        SceneManager.LoadScene("ShopCharacters");
+    }
 }

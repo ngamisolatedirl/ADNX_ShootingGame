@@ -195,5 +195,23 @@ public class DataManager : MonoBehaviour
     public bool IsGunActive(string id)
         => saveData.activeGunId == id;
 
+    public void PurchaseCharacter(string id)
+    {
+        CharacterSaveData save = GetCharacterSaveData(id);
+        if (save == null) return;
+        save.isPurchased = true;
+        SaveGame();
+    }
 
+    public void EquipCharacter(string id)
+    {
+        saveData.activeCharacterId = id;
+        SaveGame();
+    }
+
+    public bool IsCharacterPurchased(string id)
+        => GetCharacterSaveData(id)?.isPurchased ?? false;
+
+    public bool IsCharacterActive(string id)
+        => saveData.activeCharacterId == id;
 }

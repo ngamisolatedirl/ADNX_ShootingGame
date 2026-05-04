@@ -7,7 +7,7 @@
       "baseStats": {
         "hp": 100,
         "speed": 8,
-        "critRate": 0.05,
+        "critRate": 1,
         "critDamage": 1.75
       },
       "upgrades": {
