@@ -34,4 +34,8 @@ public class ShopManager : MonoBehaviour
     {
         SceneManager.LoadScene("ShopCharacters");
     }
+    public void OpenUpgradesShop()
+    {
+        SceneManager.LoadScene("ShopUpgrades");
+    }
 }

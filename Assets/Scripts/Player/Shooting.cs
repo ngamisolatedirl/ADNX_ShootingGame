@@ -64,9 +64,21 @@ public class Shooting : MonoBehaviour
 
     void SpawnBullet(Vector2 dir)
     {
+        // Tính crit
+        BaseStats stats = DataManager.Instance.GetComputedStats(
+            DataManager.Instance.GetSaveData().activeCharacterId
+        );
+
+        float finalDamage = damage;
+        if (stats != null && Random.value < stats.critRate)
+        {
+            finalDamage *= stats.critDamage;
+            Debug.Log($"CRIT! Damage: {finalDamage}");
+        }
+
         GameObject bullet = Instantiate(bulletPrefab, shootingPoint.position, Quaternion.identity);
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         bulletScript.SetDirection(dir);
-        bulletScript.SetStats(damage, piercing);
+        bulletScript.SetStats(finalDamage, piercing);
     }
 }

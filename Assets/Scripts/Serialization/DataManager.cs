@@ -214,4 +214,86 @@ public class DataManager : MonoBehaviour
 
     public bool IsCharacterActive(string id)
         => saveData.activeCharacterId == id;
+
+    // STATS UPGRADES
+    public bool UpgradeStat(string characterId, string statType)
+    {
+        CharacterData config = GetCharacterData(characterId);
+        CharacterSaveData save = GetCharacterSaveData(characterId);
+        if (config == null || save == null) return false;
+
+        UpgradeStat stat;
+        int currentLevel;
+
+        switch (statType)
+        {
+            case "hp":
+                stat = config.upgrades.hp;
+                currentLevel = save.upgradeLevels.hp;
+                break;
+            case "speed":
+                stat = config.upgrades.speed;
+                currentLevel = save.upgradeLevels.speed;
+                break;
+            case "critRate":
+                stat = config.upgrades.critRate;
+                currentLevel = save.upgradeLevels.critRate;
+                break;
+            case "critDamage":
+                stat = config.upgrades.critDamage;
+                currentLevel = save.upgradeLevels.critDamage;
+                break;
+            default: return false;
+        }
+
+        // Check max level
+        if (currentLevel >= stat.maxLevel) return false;
+
+        // Check coins
+        int cost = stat.costPerLevel[currentLevel];
+        if (!SpendCoins(cost)) return false;
+
+        // Tăng level
+        switch (statType)
+        {
+            case "hp": save.upgradeLevels.hp++; break;
+            case "speed": save.upgradeLevels.speed++; break;
+            case "critRate": save.upgradeLevels.critRate++; break;
+            case "critDamage": save.upgradeLevels.critDamage++; break;
+        }
+
+        SaveGame();
+        return true;
+    }
+
+    public int GetUpgradeCost(string characterId, string statType)
+    {
+        CharacterData config = GetCharacterData(characterId);
+        CharacterSaveData save = GetCharacterSaveData(characterId);
+        if (config == null || save == null) return -1;
+
+        switch (statType)
+        {
+            case "hp": return save.upgradeLevels.hp >= config.upgrades.hp.maxLevel ? -1 : config.upgrades.hp.costPerLevel[save.upgradeLevels.hp];
+            case "speed": return save.upgradeLevels.speed >= config.upgrades.speed.maxLevel ? -1 : config.upgrades.speed.costPerLevel[save.upgradeLevels.speed];
+            case "critRate": return save.upgradeLevels.critRate >= config.upgrades.critRate.maxLevel ? -1 : config.upgrades.critRate.costPerLevel[save.upgradeLevels.critRate];
+            case "critDamage": return save.upgradeLevels.critDamage >= config.upgrades.critDamage.maxLevel ? -1 : config.upgrades.critDamage.costPerLevel[save.upgradeLevels.critDamage];
+            default: return -1;
+        }
+    }
+
+    public int GetUpgradeLevel(string characterId, string statType)
+    {
+        CharacterSaveData save = GetCharacterSaveData(characterId);
+        if (save == null) return 0;
+
+        switch (statType)
+        {
+            case "hp": return save.upgradeLevels.hp;
+            case "speed": return save.upgradeLevels.speed;
+            case "critRate": return save.upgradeLevels.critRate;
+            case "critDamage": return save.upgradeLevels.critDamage;
+            default: return 0;
+        }
+    }
 }
