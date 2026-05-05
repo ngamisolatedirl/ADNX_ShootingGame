@@ -296,4 +296,34 @@ public class DataManager : MonoBehaviour
             default: return 0;
         }
     }
+
+    public void EquipCostume(string characterId, string costumeId)
+    {
+        CharacterSaveData save = GetCharacterSaveData(characterId);
+        if (save == null) return;
+        save.activeCostumeId = costumeId;
+        SaveGame();
+    }
+
+    public void PurchaseCostume(string characterId, string costumeId)
+    {
+        CharacterSaveData save = GetCharacterSaveData(characterId);
+        if (save == null) return;
+        if (save.purchasedCostumes.Contains(costumeId)) return;
+        save.purchasedCostumes.Add(costumeId);
+        SaveGame();
+    }
+
+    public bool IsCostumePurchased(string characterId, string costumeId)
+    {
+        CharacterSaveData save = GetCharacterSaveData(characterId);
+        return save?.purchasedCostumes.Contains(costumeId) ?? false;
+    }
+
+    public bool IsCostumeActive(string characterId, string costumeId)
+    {
+        CharacterSaveData save = GetCharacterSaveData(characterId);
+        return save?.activeCostumeId == costumeId;
+    }
+
 }

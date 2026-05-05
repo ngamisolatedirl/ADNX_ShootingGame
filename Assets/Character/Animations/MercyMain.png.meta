@@ -1,0 +1,1258 @@
+fileFormatVersion: 2
+guid: 89e06f5f793315542b6c6076bf25ddc2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9207195813703070662
+    second: MercyMain_0
+  - first:
+      213: 3291071965754582601
+    second: MercyMain_1
+  - first:
+      213: 8530347192136611360
+    second: MercyMain_2
+  - first:
+      213: 8326589120473702580
+    second: MercyMain_3
+  - first:
+      213: 2676338549269662269
+    second: MercyMain_4
+  - first:
+      213: 5607876171376282068
+    second: MercyMain_5
+  - first:
+      213: 7871766762124151527
+    second: MercyMain_6
+  - first:
+      213: 607188097259359058
+    second: MercyMain_7
+  - first:
+      213: 2730670357009284077
+    second: MercyMain_8
+  - first:
+      213: 4951980771134399947
+    second: MercyMain_9
+  - first:
+      213: -751074807061051654
+    second: MercyMain_10
+  - first:
+      213: -273906950534254374
+    second: MercyMain_11
+  - first:
+      213: -3680286724166700467
+    second: MercyMain_12
+  - first:
+      213: 6710321445191886835
+    second: MercyMain_13
+  - first:
+      213: -780669578166281382
+    second: MercyMain_14
+  - first:
+      213: -7943724223176382160
+    second: MercyMain_15
+  - first:
+      213: 1194458571179394874
+    second: MercyMain_16
+  - first:
+      213: -6749313708610745614
+    second: MercyMain_17
+  - first:
+      213: 7788696517094190754
+    second: MercyMain_18
+  - first:
+      213: -6818785271818126714
+    second: MercyMain_19
+  - first:
+      213: 6083646389974280785
+    second: MercyMain_20
+  - first:
+      213: -9101276660857213246
+    second: MercyMain_21
+  - first:
+      213: -4208517723203991829
+    second: MercyMain_22
+  - first:
+      213: 7116223544136796086
+    second: MercyMain_23
+  - first:
+      213: -3420632463186613816
+    second: MercyMain_24
+  - first:
+      213: -8555983024859661851
+    second: MercyMain_25
+  - first:
+      213: 6258256461034555677
+    second: MercyMain_26
+  - first:
+      213: -5460249448307722854
+    second: MercyMain_27
+  - first:
+      213: 8702703139685771880
+    second: MercyMain_28
+  - first:
+      213: -7516068353916750297
+    second: MercyMain_29
+  - first:
+      213: 6862485025326850930
+    second: MercyMain_30
+  - first:
+      213: 7733670780330985707
+    second: MercyMain_31
+  - first:
+      213: -2682318581581721723
+    second: MercyMain_32
+  - first:
+      213: -2268749433236681201
+    second: MercyMain_33
+  - first:
+      213: 4499372992929588345
+    second: MercyMain_34
+  - first:
+      213: -5716131742972973131
+    second: MercyMain_35
+  - first:
+      213: -3863516432878409715
+    second: MercyMain_36
+  - first:
+      213: -4780905434066832188
+    second: MercyMain_37
+  - first:
+      213: -1617489095155902210
+    second: MercyMain_38
+  - first:
+      213: -4578223106924801791
+    second: MercyMain_39
+  - first:
+      213: 5962346114299801869
+    second: MercyMain_40
+  - first:
+      213: -8939381753538262311
+    second: MercyMain_41
+  - first:
+      213: 5096511272422017919
+    second: MercyMain_42
+  - first:
+      213: 4303652547213921527
+    second: MercyMain_43
+  - first:
+      213: -1930409302548168361
+    second: MercyMain_44
+  - first:
+      213: 4964414046473002462
+    second: MercyMain_45
+  - first:
+      213: 1672238144414585887
+    second: MercyMain_46
+  - first:
+      213: -2037695556470356369
+    second: MercyMain_47
+  - first:
+      213: 15613503272862620
+    second: MercyMain_48
+  - first:
+      213: -1207571016992145230
+    second: MercyMain_49
+  - first:
+      213: 1165775964206276602
+    second: MercyMain_50
+  - first:
+      213: 5030225212747082860
+    second: MercyMain_51
+  - first:
+      213: -5471272355752228009
+    second: MercyMain_52
+  - first:
+      213: 3105677392063103447
+    second: MercyMain_53
+  - first:
+      213: 4424890295114069135
+    second: MercyMain_54
+  - first:
+      213: -5971467213054482587
+    second: MercyMain_55
+  - first:
+      213: 141386861923311792
+    second: MercyMain_56
+  - first:
+      213: -5444583066846170448
+    second: MercyMain_57
+  - first:
+      213: 778546113476153963
+    second: MercyMain_58
+  - first:
+      213: 720100413209961073
+    second: MercyMain_59
+  - first:
+      213: -4528803736531135148
+    second: MercyMain_60
+  - first:
+      213: -6507224820369915927
+    second: MercyMain_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 140
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: R7
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 637
+        width: 183
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3cc3c27038793080800000000000000
+      internalID: -9207195813703070662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 643
+        width: 139
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9466c09148c3cad20800000000000000
+      internalID: 3291071965754582601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: I1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 826
+        width: 149
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea032be9222e3d60800000000000000
+      internalID: 7871766762124151527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R2
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 639
+        width: 134
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc5e70e4648f8b440800000000000000
+      internalID: 4951980771134399947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: I2
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 824
+        width: 156
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af6816d3175a395f0800000000000000
+      internalID: -751074807061051654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R3
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 633
+        width: 147
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d42357e29befcecc0800000000000000
+      internalID: -3680286724166700467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R4
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 621
+        width: 154
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a378112fdb1939010800000000000000
+      internalID: 1194458571179394874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R5
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 637
+        width: 143
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aea8bc4732071c60800000000000000
+      internalID: 7788696517094190754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R6
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 639
+        width: 185
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce6d0bf815c1b180800000000000000
+      internalID: -9101276660857213246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S2
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 417
+        width: 224
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b78b8a2c97e1c260800000000000000
+      internalID: 7116223544136796086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: J1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 450
+        width: 148
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9a794e5e87780d0800000000000000
+      internalID: -3420632463186613816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: J2
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 447
+        width: 135
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e9b7fa35ca034980800000000000000
+      internalID: -8555983024859661851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: J3
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 433
+        width: 158
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86aa5aa856636c870800000000000000
+      internalID: 8702703139685771880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: J4
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 441
+        width: 178
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 726bc3967af81b790800000000000000
+      internalID: -7516068353916750297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_30
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 457
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2736b0385c17c3f50800000000000000
+      internalID: 6862485025326850930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_31
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 446
+        width: 210
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be842779994835b60800000000000000
+      internalID: 7733670780330985707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_32
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 449
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f446a267d76cad0800000000000000
+      internalID: -2682318581581721723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S1
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 450
+        width: 152
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e0f8b2968c380e0800000000000000
+      internalID: -2268749433236681201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RS1
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 262
+        width: 213
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c436b986dfc6adb0800000000000000
+      internalID: -4780905434066832188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_41
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 217
+        height: 404
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9da4eb478afe0f380800000000000000
+      internalID: -8939381753538262311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_42
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 263
+        width: 36
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7b0d72fff17ab640800000000000000
+      internalID: 5096511272422017919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_43
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 262
+        width: 176
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fc0461a035a9bb30800000000000000
+      internalID: 4303652547213921527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_44
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1
+        width: 195
+        height: 403
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 751c18297fec535e0800000000000000
+      internalID: -1930409302548168361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_45
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 279
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edd9bfdc54425e440800000000000000
+      internalID: 4964414046473002462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_46
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 157
+        width: 282
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1490b18bbbf43710800000000000000
+      internalID: 1672238144414585887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RS2
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 249
+        width: 172
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66413400b6a8b3e0800000000000000
+      internalID: -2037695556470356369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_48
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 263
+        width: 39
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9347440668773000800000000000000
+      internalID: 15613503272862620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_49
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 214
+        width: 81
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b0402bde88dd3fe0800000000000000
+      internalID: -1207571016992145230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_50
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 219
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff143a101bad2010800000000000000
+      internalID: 1165775964206276602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_51
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 214
+        width: 61
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ce0020e23fec540800000000000000
+      internalID: 5030225212747082860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_52
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 64
+        width: 155
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b49fdc7c22214b0800000000000000
+      internalID: -5471272355752228009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_53
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 71
+        width: 226
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d102ec2225991b20800000000000000
+      internalID: 3105677392063103447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D1
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 0
+        width: 157
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f84f852874e586d30800000000000000
+      internalID: 4424890295114069135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 0
+        width: 153
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 567eef93536112da0800000000000000
+      internalID: -5971467213054482587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D3
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 53
+        width: 135
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0a8d01a9e46f100800000000000000
+      internalID: 141386861923311792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_57
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 168
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b2f68e1c84f074b0800000000000000
+      internalID: -5444583066846170448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_58
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 166
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b62d107b093fdca00800000000000000
+      internalID: 778546113476153963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_59
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 73
+        width: 48
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 172edf3b28f4ef900800000000000000
+      internalID: 720100413209961073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_60
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 93
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 455999a0ff47621c0800000000000000
+      internalID: -4528803736531135148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MercyMain_61
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1
+        width: 275
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9effe3ca081b1b5a0800000000000000
+      internalID: -6507224820369915927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9aa55e58335a9fb40a59a32924e5f86e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      D1: 4424890295114069135
+      D2: -5971467213054482587
+      D3: 141386861923311792
+      I1: 7871766762124151527
+      I2: -751074807061051654
+      J1: -3420632463186613816
+      J2: -8555983024859661851
+      J3: 8702703139685771880
+      J4: -7516068353916750297
+      MercyMain_11: -273906950534254374
+      MercyMain_13: 6710321445191886835
+      MercyMain_14: -780669578166281382
+      MercyMain_15: -7943724223176382160
+      MercyMain_17: -6749313708610745614
+      MercyMain_19: -6818785271818126714
+      MercyMain_2: 8530347192136611360
+      MercyMain_20: 6083646389974280785
+      MercyMain_22: -4208517723203991829
+      MercyMain_26: 6258256461034555677
+      MercyMain_27: -5460249448307722854
+      MercyMain_3: 8326589120473702580
+      MercyMain_30: 6862485025326850930
+      MercyMain_31: 7733670780330985707
+      MercyMain_32: -2682318581581721723
+      MercyMain_34: 4499372992929588345
+      MercyMain_35: -5716131742972973131
+      MercyMain_36: -3863516432878409715
+      MercyMain_38: -1617489095155902210
+      MercyMain_39: -4578223106924801791
+      MercyMain_4: 2676338549269662269
+      MercyMain_40: 5962346114299801869
+      MercyMain_41: -8939381753538262311
+      MercyMain_42: 5096511272422017919
+      MercyMain_43: 4303652547213921527
+      MercyMain_44: -1930409302548168361
+      MercyMain_45: 4964414046473002462
+      MercyMain_46: 1672238144414585887
+      MercyMain_48: 15613503272862620
+      MercyMain_49: -1207571016992145230
+      MercyMain_5: 5607876171376282068
+      MercyMain_50: 1165775964206276602
+      MercyMain_51: 5030225212747082860
+      MercyMain_52: -5471272355752228009
+      MercyMain_53: 3105677392063103447
+      MercyMain_57: -5444583066846170448
+      MercyMain_58: 778546113476153963
+      MercyMain_59: 720100413209961073
+      MercyMain_60: -4528803736531135148
+      MercyMain_61: -6507224820369915927
+      MercyMain_7: 607188097259359058
+      MercyMain_8: 2730670357009284077
+      R1: 3291071965754582601
+      R2: 4951980771134399947
+      R3: -3680286724166700467
+      R4: 1194458571179394874
+      R5: 7788696517094190754
+      R6: -9101276660857213246
+      R7: -9207195813703070662
+      RS1: -4780905434066832188
+      RS2: -2037695556470356369
+      S1: -2268749433236681201
+      S2: 7116223544136796086
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

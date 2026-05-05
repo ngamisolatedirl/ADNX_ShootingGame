@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 [System.Serializable]
 public class GunConfig
@@ -33,6 +34,7 @@ public class CharacterData
     public BaseStats baseStats;
     public UpgradeTable upgrades;
     public List<CostumeData> costumes;
+    [System.NonSerialized] public RuntimeAnimatorController animatorOverride;
 }
 
 [System.Serializable]

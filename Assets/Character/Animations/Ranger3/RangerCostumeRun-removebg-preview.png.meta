@@ -1,0 +1,973 @@
+fileFormatVersion: 2
+guid: 0579d565918845b4989a0d80119cbe43
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 99551209457220790
+    second: RangerCostumeRun-removebg-preview_0
+  - first:
+      213: -3389967605351369265
+    second: RangerCostumeRun-removebg-preview_1
+  - first:
+      213: -2533657984610872625
+    second: RangerCostumeRun-removebg-preview_2
+  - first:
+      213: 6513504041986900703
+    second: RangerCostumeRun-removebg-preview_3
+  - first:
+      213: 946330754667568633
+    second: RangerCostumeRun-removebg-preview_4
+  - first:
+      213: -7852815513114498910
+    second: RangerCostumeRun-removebg-preview_5
+  - first:
+      213: -4326497612093930902
+    second: RangerCostumeRun-removebg-preview_6
+  - first:
+      213: 7294733803110547724
+    second: RangerCostumeRun-removebg-preview_7
+  - first:
+      213: -6901131889773096823
+    second: RangerCostumeRun-removebg-preview_8
+  - first:
+      213: 8174045099472919110
+    second: RangerCostumeRun-removebg-preview_9
+  - first:
+      213: 4484724976070111198
+    second: RangerCostumeRun-removebg-preview_10
+  - first:
+      213: -8136287250584220284
+    second: RangerCostumeRun-removebg-preview_11
+  - first:
+      213: 2991500756357445019
+    second: RangerCostumeRun-removebg-preview_12
+  - first:
+      213: 1050447036071234662
+    second: RangerCostumeRun-removebg-preview_13
+  - first:
+      213: 6839034887139641341
+    second: RangerCostumeRun-removebg-preview_14
+  - first:
+      213: 1183813563277042266
+    second: RangerCostumeRun-removebg-preview_15
+  - first:
+      213: 8704023639952063818
+    second: RangerCostumeRun-removebg-preview_16
+  - first:
+      213: 1205957860313315271
+    second: RangerCostumeRun-removebg-preview_17
+  - first:
+      213: 243840131540483373
+    second: RangerCostumeRun-removebg-preview_18
+  - first:
+      213: -1891642909398318977
+    second: RangerCostumeRun-removebg-preview_19
+  - first:
+      213: -6652390766710230113
+    second: RangerCostumeRun-removebg-preview_20
+  - first:
+      213: 6773095109879225360
+    second: RangerCostumeRun-removebg-preview_21
+  - first:
+      213: -5880529209395143907
+    second: RangerCostumeRun-removebg-preview_22
+  - first:
+      213: 2911589196312334957
+    second: RangerCostumeRun-removebg-preview_23
+  - first:
+      213: 8991132858275518358
+    second: RangerCostumeRun-removebg-preview_24
+  - first:
+      213: 2840158252281154736
+    second: RangerCostumeRun-removebg-preview_25
+  - first:
+      213: 2169662375521417653
+    second: RangerCostumeRun-removebg-preview_26
+  - first:
+      213: 7767680743809463242
+    second: RangerCostumeRun-removebg-preview_27
+  - first:
+      213: 8810700847592695726
+    second: RangerCostumeRun-removebg-preview_28
+  - first:
+      213: 6738624777093810333
+    second: RangerCostumeRun-removebg-preview_29
+  - first:
+      213: 2765916782327327535
+    second: RangerCostumeRun-removebg-preview_30
+  - first:
+      213: -4403167448501652834
+    second: RangerCostumeRun-removebg-preview_31
+  - first:
+      213: 4189006721205834749
+    second: RangerCostumeRun-removebg-preview_32
+  - first:
+      213: 6104266627992859479
+    second: RangerCostumeRun-removebg-preview_33
+  - first:
+      213: -1194429844116772496
+    second: RangerCostumeRun-removebg-preview_34
+  - first:
+      213: 4543996693241264019
+    second: RangerCostumeRun-removebg-preview_35
+  - first:
+      213: -2517260450580374747
+    second: RangerCostumeRun-removebg-preview_36
+  - first:
+      213: 7184148745158652089
+    second: RangerCostumeRun-removebg-preview_37
+  - first:
+      213: -6589975883479798158
+    second: RangerCostumeRun-removebg-preview_38
+  - first:
+      213: 445694030262828781
+    second: RangerCostumeRun-removebg-preview_39
+  - first:
+      213: 8046908164288244640
+    second: RangerCostumeRun-removebg-preview_40
+  - first:
+      213: 3590696234684693486
+    second: RangerCostumeRun-removebg-preview_41
+  - first:
+      213: 3440649409924400977
+    second: RangerCostumeRun-removebg-preview_42
+  - first:
+      213: -8423167650883077221
+    second: RangerCostumeRun-removebg-preview_43
+  - first:
+      213: 1042030321397015561
+    second: RangerCostumeRun-removebg-preview_44
+  - first:
+      213: -8028643812135332369
+    second: RangerCostumeRun-removebg-preview_45
+  - first:
+      213: -6854938733225139843
+    second: RangerCostumeRun-removebg-preview_46
+  - first:
+      213: 7695920854819028205
+    second: RangerCostumeRun-removebg-preview_47
+  - first:
+      213: 4455659499183371978
+    second: RangerCostumeRun-removebg-preview_48
+  - first:
+      213: -2500572198950314708
+    second: RangerCostumeRun-removebg-preview_49
+  - first:
+      213: 8353853663622648043
+    second: RangerCostumeRun-removebg-preview_50
+  - first:
+      213: 4360851203401430874
+    second: RangerCostumeRun-removebg-preview_51
+  - first:
+      213: 3013505053660505041
+    second: RangerCostumeRun-removebg-preview_52
+  - first:
+      213: -9045788785435271866
+    second: RangerCostumeRun-removebg-preview_53
+  - first:
+      213: 4838135709994945829
+    second: RangerCostumeRun-removebg-preview_54
+  - first:
+      213: 5191344275912973958
+    second: RangerCostumeRun-removebg-preview_55
+  - first:
+      213: 1098619777719544682
+    second: RangerCostumeRun-removebg-preview_56
+  - first:
+      213: -7999328174210643805
+    second: RangerCostumeRun-removebg-preview_57
+  - first:
+      213: -3094574221208121378
+    second: RangerCostumeRun-removebg-preview_58
+  - first:
+      213: 3292568624592872560
+    second: RangerCostumeRun-removebg-preview_59
+  - first:
+      213: 7774424467154736543
+    second: RangerCostumeRun-removebg-preview_60
+  - first:
+      213: -2423358149465720296
+    second: RangerCostumeRun-removebg-preview_61
+  - first:
+      213: 4674308398172536630
+    second: RangerCostumeRun-removebg-preview_62
+  - first:
+      213: 3909676548749161334
+    second: RangerCostumeRun-removebg-preview_63
+  - first:
+      213: 5316954543608702254
+    second: RangerCostumeRun-removebg-preview_64
+  - first:
+      213: -8372223139715962872
+    second: RangerCostumeRun-removebg-preview_65
+  - first:
+      213: -1994300750206486333
+    second: RangerCostumeRun-removebg-preview_66
+  - first:
+      213: 7958779086135595232
+    second: RangerCostumeRun-removebg-preview_67
+  - first:
+      213: -6918031950167502109
+    second: RangerCostumeRun-removebg-preview_68
+  - first:
+      213: 8546186770753063555
+    second: RangerCostumeRun-removebg-preview_69
+  - first:
+      213: 161714327219214918
+    second: RangerCostumeRun-removebg-preview_70
+  - first:
+      213: -1551038244474997617
+    second: RangerCostumeRun-removebg-preview_71
+  - first:
+      213: 5353838195522931887
+    second: RangerCostumeRun-removebg-preview_72
+  - first:
+      213: -5625320165915332518
+    second: RangerCostumeRun-removebg-preview_73
+  - first:
+      213: 6928513447945345599
+    second: RangerCostumeRun-removebg-preview_74
+  - first:
+      213: 5446951149071039595
+    second: RangerCostumeRun-removebg-preview_75
+  - first:
+      213: 7740881386843238935
+    second: RangerCostumeRun-removebg-preview_76
+  - first:
+      213: -1328362719492081205
+    second: RangerCostumeRun-removebg-preview_77
+  - first:
+      213: 5463065394020233169
+    second: RangerCostumeRun-removebg-preview_78
+  - first:
+      213: -4210278173777270136
+    second: RangerCostumeRun-removebg-preview_79
+  - first:
+      213: 7453227903821067932
+    second: RangerCostumeRun-removebg-preview_80
+  - first:
+      213: -2674443391338588612
+    second: RangerCostumeRun-removebg-preview_81
+  - first:
+      213: -7435906137810640184
+    second: RangerCostumeRun-removebg-preview_82
+  - first:
+      213: -1782219235837422100
+    second: RangerCostumeRun-removebg-preview_83
+  - first:
+      213: 1093518618980332487
+    second: RangerCostumeRun-removebg-preview_84
+  - first:
+      213: 5726482232910945814
+    second: RangerCostumeRun-removebg-preview_85
+  - first:
+      213: -4754923457868548777
+    second: RangerCostumeRun-removebg-preview_86
+  - first:
+      213: -4995796104377667568
+    second: RangerCostumeRun-removebg-preview_87
+  - first:
+      213: 4664131107203173436
+    second: RangerCostumeRun-removebg-preview_88
+  - first:
+      213: -325105751257467638
+    second: RangerCostumeRun-removebg-preview_89
+  - first:
+      213: -7918091452842694256
+    second: RangerCostumeRun-removebg-preview_90
+  - first:
+      213: -4705995269304976885
+    second: RangerCostumeRun-removebg-preview_91
+  - first:
+      213: 4056314704509375236
+    second: RangerCostumeRun-removebg-preview_92
+  - first:
+      213: 3889570145090088875
+    second: RangerCostumeRun-removebg-preview_93
+  - first:
+      213: -5271875196688615089
+    second: RangerCostumeRun-removebg-preview_94
+  - first:
+      213: 6979304769685278033
+    second: RangerCostumeRun-removebg-preview_95
+  - first:
+      213: 8746334918209513732
+    second: RangerCostumeRun-removebg-preview_96
+  - first:
+      213: 9089531346013689864
+    second: RangerCostumeRun-removebg-preview_97
+  - first:
+      213: 5462173053304855480
+    second: RangerCostumeRun-removebg-preview_98
+  - first:
+      213: 1009929718837620397
+    second: RangerCostumeRun-removebg-preview_99
+  - first:
+      213: 4217722471719351056
+    second: RangerCostumeRun-removebg-preview_100
+  - first:
+      213: 5621912931558297313
+    second: RangerCostumeRun-removebg-preview_101
+  - first:
+      213: 6565869166914579424
+    second: RangerCostumeRun-removebg-preview_102
+  - first:
+      213: 6642995167812329473
+    second: RangerCostumeRun-removebg-preview_103
+  - first:
+      213: -6248023362906909548
+    second: RangerCostumeRun-removebg-preview_104
+  - first:
+      213: -2626249396246089092
+    second: RangerCostumeRun-removebg-preview_105
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 60
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: R1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 334
+        width: 52
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2dfe4ac73a6dcd0800000000000000
+      internalID: -2533657984610872625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R2
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 334
+        width: 55
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd243b98a6d946a50800000000000000
+      internalID: 6513504041986900703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 332
+        width: 51
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fddcf7beca022d00800000000000000
+      internalID: 946330754667568633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R4
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 333
+        width: 53
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a62c095385135f3c0800000000000000
+      internalID: -4326497612093930902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R5
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 332
+        width: 56
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c014079aeb91c3560800000000000000
+      internalID: 7294733803110547724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R6
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 333
+        width: 52
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98054f92c114a30a0800000000000000
+      internalID: -6901131889773096823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R7
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 333
+        width: 52
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a1b14c5ba007170800000000000000
+      internalID: 8174045099472919110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R8
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 335
+        width: 52
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edf2bf9ca91fc3e30800000000000000
+      internalID: 4484724976070111198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R9
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 334
+        width: 52
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d436e7ad9161f80800000000000000
+      internalID: -8136287250584220284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangerCostumeRun-removebg-preview_41
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 289
+        width: 31
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eebb6bc7337b4d130800000000000000
+      internalID: 3590696234684693486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangerCostumeRun-removebg-preview_45
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 289
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe5198d8df6849090800000000000000
+      internalID: -8028643812135332369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangerCostumeRun-removebg-preview_52
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 247
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d3674c41ee12d920800000000000000
+      internalID: 3013505053660505041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangerCostumeRun-removebg-preview_53
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 247
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64d1beab607e67280800000000000000
+      internalID: -9045788785435271866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangerCostumeRun-removebg-preview_54
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 248
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d81617bc2842340800000000000000
+      internalID: 4838135709994945829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangerCostumeRun-removebg-preview_55
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 247
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68edc803d1c5b0840800000000000000
+      internalID: 5191344275912973958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangerCostumeRun-removebg-preview_56
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 247
+        width: 47
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6b213afdd41f3f00800000000000000
+      internalID: 1098619777719544682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangerCostumeRun-removebg-preview_57
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 246
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a88666686dacf090800000000000000
+      internalID: -7999328174210643805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RS1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 171
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edf0fcd342ddd05d0800000000000000
+      internalID: -3094574221208121378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangerCostumeRun-removebg-preview_59
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 167
+        width: 246
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 074647328bd81bd20800000000000000
+      internalID: 3292568624592872560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f586b5e83ab6ee449bbfc57363926475
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      R1: -2533657984610872625
+      R2: 6513504041986900703
+      R3: 946330754667568633
+      R4: -4326497612093930902
+      R5: 7294733803110547724
+      R6: -6901131889773096823
+      R7: 8174045099472919110
+      R8: 4484724976070111198
+      R9: -8136287250584220284
+      RS1: -3094574221208121378
+      RangerCostumeRun-removebg-preview_0: 99551209457220790
+      RangerCostumeRun-removebg-preview_1: -3389967605351369265
+      RangerCostumeRun-removebg-preview_100: 4217722471719351056
+      RangerCostumeRun-removebg-preview_101: 5621912931558297313
+      RangerCostumeRun-removebg-preview_102: 6565869166914579424
+      RangerCostumeRun-removebg-preview_103: 6642995167812329473
+      RangerCostumeRun-removebg-preview_104: -6248023362906909548
+      RangerCostumeRun-removebg-preview_105: -2626249396246089092
+      RangerCostumeRun-removebg-preview_106: -1395763712
+      RangerCostumeRun-removebg-preview_12: 2991500756357445019
+      RangerCostumeRun-removebg-preview_13: 1050447036071234662
+      RangerCostumeRun-removebg-preview_14: 6839034887139641341
+      RangerCostumeRun-removebg-preview_15: 1183813563277042266
+      RangerCostumeRun-removebg-preview_16: 8704023639952063818
+      RangerCostumeRun-removebg-preview_17: 1205957860313315271
+      RangerCostumeRun-removebg-preview_18: 243840131540483373
+      RangerCostumeRun-removebg-preview_19: -1891642909398318977
+      RangerCostumeRun-removebg-preview_20: -6652390766710230113
+      RangerCostumeRun-removebg-preview_21: 6773095109879225360
+      RangerCostumeRun-removebg-preview_22: -5880529209395143907
+      RangerCostumeRun-removebg-preview_23: 2911589196312334957
+      RangerCostumeRun-removebg-preview_24: 8991132858275518358
+      RangerCostumeRun-removebg-preview_25: 2840158252281154736
+      RangerCostumeRun-removebg-preview_26: 2169662375521417653
+      RangerCostumeRun-removebg-preview_27: 7767680743809463242
+      RangerCostumeRun-removebg-preview_28: 8810700847592695726
+      RangerCostumeRun-removebg-preview_29: 6738624777093810333
+      RangerCostumeRun-removebg-preview_30: 2765916782327327535
+      RangerCostumeRun-removebg-preview_31: -4403167448501652834
+      RangerCostumeRun-removebg-preview_32: 4189006721205834749
+      RangerCostumeRun-removebg-preview_33: 6104266627992859479
+      RangerCostumeRun-removebg-preview_34: -1194429844116772496
+      RangerCostumeRun-removebg-preview_35: 4543996693241264019
+      RangerCostumeRun-removebg-preview_36: -2517260450580374747
+      RangerCostumeRun-removebg-preview_37: 7184148745158652089
+      RangerCostumeRun-removebg-preview_38: -6589975883479798158
+      RangerCostumeRun-removebg-preview_39: 445694030262828781
+      RangerCostumeRun-removebg-preview_40: 8046908164288244640
+      RangerCostumeRun-removebg-preview_41: 3590696234684693486
+      RangerCostumeRun-removebg-preview_42: 3440649409924400977
+      RangerCostumeRun-removebg-preview_43: -8423167650883077221
+      RangerCostumeRun-removebg-preview_44: 1042030321397015561
+      RangerCostumeRun-removebg-preview_45: -8028643812135332369
+      RangerCostumeRun-removebg-preview_46: -6854938733225139843
+      RangerCostumeRun-removebg-preview_47: 7695920854819028205
+      RangerCostumeRun-removebg-preview_48: 4455659499183371978
+      RangerCostumeRun-removebg-preview_49: -2500572198950314708
+      RangerCostumeRun-removebg-preview_5: -7852815513114498910
+      RangerCostumeRun-removebg-preview_50: 8353853663622648043
+      RangerCostumeRun-removebg-preview_51: 4360851203401430874
+      RangerCostumeRun-removebg-preview_52: 3013505053660505041
+      RangerCostumeRun-removebg-preview_53: -9045788785435271866
+      RangerCostumeRun-removebg-preview_54: 4838135709994945829
+      RangerCostumeRun-removebg-preview_55: 5191344275912973958
+      RangerCostumeRun-removebg-preview_56: 1098619777719544682
+      RangerCostumeRun-removebg-preview_57: -7999328174210643805
+      RangerCostumeRun-removebg-preview_59: 3292568624592872560
+      RangerCostumeRun-removebg-preview_60: 7774424467154736543
+      RangerCostumeRun-removebg-preview_61: -2423358149465720296
+      RangerCostumeRun-removebg-preview_62: 4674308398172536630
+      RangerCostumeRun-removebg-preview_63: 3909676548749161334
+      RangerCostumeRun-removebg-preview_64: 5316954543608702254
+      RangerCostumeRun-removebg-preview_65: -8372223139715962872
+      RangerCostumeRun-removebg-preview_66: -1994300750206486333
+      RangerCostumeRun-removebg-preview_67: 7958779086135595232
+      RangerCostumeRun-removebg-preview_68: -6918031950167502109
+      RangerCostumeRun-removebg-preview_69: 8546186770753063555
+      RangerCostumeRun-removebg-preview_70: 161714327219214918
+      RangerCostumeRun-removebg-preview_71: -1551038244474997617
+      RangerCostumeRun-removebg-preview_72: 5353838195522931887
+      RangerCostumeRun-removebg-preview_73: -5625320165915332518
+      RangerCostumeRun-removebg-preview_74: 6928513447945345599
+      RangerCostumeRun-removebg-preview_75: 5446951149071039595
+      RangerCostumeRun-removebg-preview_76: 7740881386843238935
+      RangerCostumeRun-removebg-preview_77: -1328362719492081205
+      RangerCostumeRun-removebg-preview_78: 5463065394020233169
+      RangerCostumeRun-removebg-preview_79: -4210278173777270136
+      RangerCostumeRun-removebg-preview_80: 7453227903821067932
+      RangerCostumeRun-removebg-preview_81: -2674443391338588612
+      RangerCostumeRun-removebg-preview_82: -7435906137810640184
+      RangerCostumeRun-removebg-preview_83: -1782219235837422100
+      RangerCostumeRun-removebg-preview_84: 1093518618980332487
+      RangerCostumeRun-removebg-preview_85: 5726482232910945814
+      RangerCostumeRun-removebg-preview_86: -4754923457868548777
+      RangerCostumeRun-removebg-preview_87: -4995796104377667568
+      RangerCostumeRun-removebg-preview_88: 4664131107203173436
+      RangerCostumeRun-removebg-preview_89: -325105751257467638
+      RangerCostumeRun-removebg-preview_90: -7918091452842694256
+      RangerCostumeRun-removebg-preview_91: -4705995269304976885
+      RangerCostumeRun-removebg-preview_92: 4056314704509375236
+      RangerCostumeRun-removebg-preview_93: 3889570145090088875
+      RangerCostumeRun-removebg-preview_94: -5271875196688615089
+      RangerCostumeRun-removebg-preview_95: 6979304769685278033
+      RangerCostumeRun-removebg-preview_96: 8746334918209513732
+      RangerCostumeRun-removebg-preview_97: 9089531346013689864
+      RangerCostumeRun-removebg-preview_98: 5462173053304855480
+      RangerCostumeRun-removebg-preview_99: 1009929718837620397
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

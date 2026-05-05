@@ -1,0 +1,1772 @@
+fileFormatVersion: 2
+guid: 2b826844349108143adc6a44264bddbc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2523890471828359000
+    second: DragonRangerCostume-removebg-preview_0
+  - first:
+      213: 1122635603468530105
+    second: DragonRangerCostume-removebg-preview_1
+  - first:
+      213: -1110472132302141180
+    second: DragonRangerCostume-removebg-preview_2
+  - first:
+      213: 6927537284173885362
+    second: DragonRangerCostume-removebg-preview_3
+  - first:
+      213: 1856234074347007619
+    second: DragonRangerCostume-removebg-preview_4
+  - first:
+      213: -9124852017201612662
+    second: DragonRangerCostume-removebg-preview_5
+  - first:
+      213: 2314018238527127689
+    second: DragonRangerCostume-removebg-preview_6
+  - first:
+      213: 7588888645236590983
+    second: DragonRangerCostume-removebg-preview_7
+  - first:
+      213: 8608224044016500795
+    second: DragonRangerCostume-removebg-preview_8
+  - first:
+      213: 1017336589591063529
+    second: DragonRangerCostume-removebg-preview_9
+  - first:
+      213: -5821880998500480859
+    second: DragonRangerCostume-removebg-preview_10
+  - first:
+      213: 6775468323235801773
+    second: DragonRangerCostume-removebg-preview_11
+  - first:
+      213: 1600104919304975258
+    second: DragonRangerCostume-removebg-preview_12
+  - first:
+      213: 7125350993437536192
+    second: DragonRangerCostume-removebg-preview_13
+  - first:
+      213: 5190535896417983155
+    second: DragonRangerCostume-removebg-preview_14
+  - first:
+      213: 3120318142646978454
+    second: DragonRangerCostume-removebg-preview_15
+  - first:
+      213: 6339358222892556536
+    second: DragonRangerCostume-removebg-preview_16
+  - first:
+      213: -8837668719443496581
+    second: DragonRangerCostume-removebg-preview_17
+  - first:
+      213: -26545686624244122
+    second: DragonRangerCostume-removebg-preview_18
+  - first:
+      213: 8523826541196085328
+    second: DragonRangerCostume-removebg-preview_19
+  - first:
+      213: 8097981046914012767
+    second: DragonRangerCostume-removebg-preview_20
+  - first:
+      213: -919403094786499358
+    second: DragonRangerCostume-removebg-preview_21
+  - first:
+      213: -3322171037454137922
+    second: DragonRangerCostume-removebg-preview_22
+  - first:
+      213: 7213221472587839964
+    second: DragonRangerCostume-removebg-preview_23
+  - first:
+      213: -1698762980902986705
+    second: DragonRangerCostume-removebg-preview_24
+  - first:
+      213: 2856230528728125083
+    second: DragonRangerCostume-removebg-preview_25
+  - first:
+      213: 7206875216428112844
+    second: DragonRangerCostume-removebg-preview_26
+  - first:
+      213: 3291810704697708849
+    second: DragonRangerCostume-removebg-preview_27
+  - first:
+      213: -7407243689616876960
+    second: DragonRangerCostume-removebg-preview_28
+  - first:
+      213: 8096182854289519119
+    second: DragonRangerCostume-removebg-preview_29
+  - first:
+      213: -5930835882110878334
+    second: DragonRangerCostume-removebg-preview_30
+  - first:
+      213: 1771030859724743376
+    second: DragonRangerCostume-removebg-preview_31
+  - first:
+      213: 3800337230520413041
+    second: DragonRangerCostume-removebg-preview_32
+  - first:
+      213: 5894037844521611597
+    second: DragonRangerCostume-removebg-preview_33
+  - first:
+      213: 6209827869712955822
+    second: DragonRangerCostume-removebg-preview_34
+  - first:
+      213: -5086690784254623590
+    second: DragonRangerCostume-removebg-preview_35
+  - first:
+      213: -2711997221778088795
+    second: DragonRangerCostume-removebg-preview_36
+  - first:
+      213: -5973957537412851727
+    second: DragonRangerCostume-removebg-preview_37
+  - first:
+      213: -8669755365883848066
+    second: DragonRangerCostume-removebg-preview_38
+  - first:
+      213: -6684383958249518198
+    second: DragonRangerCostume-removebg-preview_39
+  - first:
+      213: -4209120885883678015
+    second: DragonRangerCostume-removebg-preview_40
+  - first:
+      213: -4791640142624040372
+    second: DragonRangerCostume-removebg-preview_41
+  - first:
+      213: -2607668555767040820
+    second: DragonRangerCostume-removebg-preview_42
+  - first:
+      213: 267145312551211166
+    second: DragonRangerCostume-removebg-preview_43
+  - first:
+      213: 2038199031933221619
+    second: DragonRangerCostume-removebg-preview_44
+  - first:
+      213: -6419215566856011049
+    second: DragonRangerCostume-removebg-preview_45
+  - first:
+      213: 7626198093805808355
+    second: DragonRangerCostume-removebg-preview_46
+  - first:
+      213: -2808538315108789248
+    second: DragonRangerCostume-removebg-preview_47
+  - first:
+      213: -1890657154486010440
+    second: DragonRangerCostume-removebg-preview_48
+  - first:
+      213: -2425633959766146270
+    second: DragonRangerCostume-removebg-preview_49
+  - first:
+      213: 4418171038972675479
+    second: DragonRangerCostume-removebg-preview_50
+  - first:
+      213: 7772774785853884095
+    second: DragonRangerCostume-removebg-preview_51
+  - first:
+      213: -6362712353195617771
+    second: DragonRangerCostume-removebg-preview_52
+  - first:
+      213: 832624886134285017
+    second: DragonRangerCostume-removebg-preview_53
+  - first:
+      213: -5008602792349731238
+    second: DragonRangerCostume-removebg-preview_54
+  - first:
+      213: -4817651749575513805
+    second: DragonRangerCostume-removebg-preview_55
+  - first:
+      213: 5241882586148547349
+    second: DragonRangerCostume-removebg-preview_56
+  - first:
+      213: 2624158552605100061
+    second: DragonRangerCostume-removebg-preview_57
+  - first:
+      213: -1454939313846552652
+    second: DragonRangerCostume-removebg-preview_58
+  - first:
+      213: 8267807522202144711
+    second: DragonRangerCostume-removebg-preview_59
+  - first:
+      213: 9025326715423827990
+    second: DragonRangerCostume-removebg-preview_60
+  - first:
+      213: -2835611800182475604
+    second: DragonRangerCostume-removebg-preview_61
+  - first:
+      213: 952989010288087971
+    second: DragonRangerCostume-removebg-preview_62
+  - first:
+      213: -9155000965401534864
+    second: DragonRangerCostume-removebg-preview_63
+  - first:
+      213: -1477076506279813362
+    second: DragonRangerCostume-removebg-preview_64
+  - first:
+      213: 1799409079709308009
+    second: DragonRangerCostume-removebg-preview_65
+  - first:
+      213: 341059372906230261
+    second: DragonRangerCostume-removebg-preview_66
+  - first:
+      213: -8142058901260419290
+    second: DragonRangerCostume-removebg-preview_67
+  - first:
+      213: 3663325553262580155
+    second: DragonRangerCostume-removebg-preview_68
+  - first:
+      213: 3252783668989874310
+    second: DragonRangerCostume-removebg-preview_69
+  - first:
+      213: 366345918021178343
+    second: DragonRangerCostume-removebg-preview_70
+  - first:
+      213: 945038399182843973
+    second: DragonRangerCostume-removebg-preview_71
+  - first:
+      213: 4037656618047030066
+    second: DragonRangerCostume-removebg-preview_72
+  - first:
+      213: 3121331307282347031
+    second: DragonRangerCostume-removebg-preview_73
+  - first:
+      213: 3671417435171857516
+    second: DragonRangerCostume-removebg-preview_74
+  - first:
+      213: 2106371398281890904
+    second: DragonRangerCostume-removebg-preview_75
+  - first:
+      213: 3228591323631563704
+    second: DragonRangerCostume-removebg-preview_76
+  - first:
+      213: -8576697898734912245
+    second: DragonRangerCostume-removebg-preview_77
+  - first:
+      213: -4502964471942333300
+    second: DragonRangerCostume-removebg-preview_78
+  - first:
+      213: 3008488511494472589
+    second: DragonRangerCostume-removebg-preview_79
+  - first:
+      213: 1502417076440322916
+    second: DragonRangerCostume-removebg-preview_80
+  - first:
+      213: 9207154642973125438
+    second: DragonRangerCostume-removebg-preview_81
+  - first:
+      213: 4040109462835982185
+    second: DragonRangerCostume-removebg-preview_82
+  - first:
+      213: 5971053155502175938
+    second: DragonRangerCostume-removebg-preview_83
+  - first:
+      213: 2635908666832048247
+    second: DragonRangerCostume-removebg-preview_84
+  - first:
+      213: 1175630070218539036
+    second: DragonRangerCostume-removebg-preview_85
+  - first:
+      213: -4951848047327423205
+    second: DragonRangerCostume-removebg-preview_86
+  - first:
+      213: -5945871490303674704
+    second: DragonRangerCostume-removebg-preview_87
+  - first:
+      213: -8988447322784208497
+    second: DragonRangerCostume-removebg-preview_88
+  - first:
+      213: -63596459833082601
+    second: DragonRangerCostume-removebg-preview_89
+  - first:
+      213: 5514122979155321013
+    second: DragonRangerCostume-removebg-preview_90
+  - first:
+      213: -7386497146378158813
+    second: DragonRangerCostume-removebg-preview_91
+  - first:
+      213: 754852962085994644
+    second: DragonRangerCostume-removebg-preview_92
+  - first:
+      213: -7065384887992398977
+    second: DragonRangerCostume-removebg-preview_93
+  - first:
+      213: -9207767289510916647
+    second: DragonRangerCostume-removebg-preview_94
+  - first:
+      213: -6230942898556098248
+    second: DragonRangerCostume-removebg-preview_95
+  - first:
+      213: 4635864624425123420
+    second: DragonRangerCostume-removebg-preview_96
+  - first:
+      213: 6618577405288845942
+    second: DragonRangerCostume-removebg-preview_97
+  - first:
+      213: 2378123364156755456
+    second: DragonRangerCostume-removebg-preview_98
+  - first:
+      213: -2059494990683756899
+    second: DragonRangerCostume-removebg-preview_99
+  - first:
+      213: -5546248442976269787
+    second: DragonRangerCostume-removebg-preview_100
+  - first:
+      213: 6003388433292897736
+    second: DragonRangerCostume-removebg-preview_101
+  - first:
+      213: 3619375225543015504
+    second: DragonRangerCostume-removebg-preview_102
+  - first:
+      213: 104664733620605112
+    second: DragonRangerCostume-removebg-preview_103
+  - first:
+      213: -6997584940010193705
+    second: DragonRangerCostume-removebg-preview_104
+  - first:
+      213: 1903108095362342147
+    second: DragonRangerCostume-removebg-preview_105
+  - first:
+      213: -619968148076877155
+    second: DragonRangerCostume-removebg-preview_106
+  - first:
+      213: 3442750613444345485
+    second: DragonRangerCostume-removebg-preview_107
+  - first:
+      213: 3880135143457035377
+    second: DragonRangerCostume-removebg-preview_108
+  - first:
+      213: 4082133828910090555
+    second: DragonRangerCostume-removebg-preview_109
+  - first:
+      213: -3370235263971024391
+    second: DragonRangerCostume-removebg-preview_110
+  - first:
+      213: 1039030110111392141
+    second: DragonRangerCostume-removebg-preview_111
+  - first:
+      213: 6333809743378463352
+    second: DragonRangerCostume-removebg-preview_112
+  - first:
+      213: 7297442950660024643
+    second: DragonRangerCostume-removebg-preview_113
+  - first:
+      213: 2617325369765485286
+    second: DragonRangerCostume-removebg-preview_114
+  - first:
+      213: 7882119437622580896
+    second: DragonRangerCostume-removebg-preview_115
+  - first:
+      213: 8829867458231193019
+    second: DragonRangerCostume-removebg-preview_116
+  - first:
+      213: 4246624104881802048
+    second: DragonRangerCostume-removebg-preview_117
+  - first:
+      213: -6112569391448314510
+    second: DragonRangerCostume-removebg-preview_118
+  - first:
+      213: -1685849632299848052
+    second: DragonRangerCostume-removebg-preview_119
+  - first:
+      213: -5160302925798081506
+    second: DragonRangerCostume-removebg-preview_120
+  - first:
+      213: 9194982907689638275
+    second: DragonRangerCostume-removebg-preview_121
+  - first:
+      213: -7345780099477260150
+    second: DragonRangerCostume-removebg-preview_122
+  - first:
+      213: 8009101025319876126
+    second: DragonRangerCostume-removebg-preview_123
+  - first:
+      213: 1440954827349204540
+    second: DragonRangerCostume-removebg-preview_124
+  - first:
+      213: -3578049510493397483
+    second: DragonRangerCostume-removebg-preview_125
+  - first:
+      213: 840618876264876732
+    second: DragonRangerCostume-removebg-preview_126
+  - first:
+      213: 1062253395430855883
+    second: DragonRangerCostume-removebg-preview_127
+  - first:
+      213: -7335477601041887238
+    second: DragonRangerCostume-removebg-preview_128
+  - first:
+      213: -4084881795942760917
+    second: DragonRangerCostume-removebg-preview_129
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 44
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 401
+        width: 52
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a87daeecf659fcd0800000000000000
+      internalID: -2523890471828359000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 402
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b1b2f42227649f00800000000000000
+      internalID: 1122635603468530105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 402
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 409092daa7fc690f0800000000000000
+      internalID: -1110472132302141180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 402
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bf657fc47e832060800000000000000
+      internalID: 6927537284173885362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 402
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38eed6d4e0ba2c910800000000000000
+      internalID: 1856234074347007619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 402
+        width: 49
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88f0b69f630e5180800000000000000
+      internalID: -9124852017201612662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 402
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9804f27e35b0d1020800000000000000
+      internalID: 2314018238527127689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 402
+        width: 48
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7898253e306215960800000000000000
+      internalID: 7588888645236590983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 402
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b308492e82e867770800000000000000
+      internalID: 8608224044016500795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 333
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f56d7237bdec16070800000000000000
+      internalID: 8097981046914012767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R3
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 333
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec1bd9a1cf9d33f0800000000000000
+      internalID: -919403094786499358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R4
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 335
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb584750b0745e1d0800000000000000
+      internalID: -3322171037454137922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R6
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 335
+        width: 53
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd971d746b28a1460800000000000000
+      internalID: 7213221472587839964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R8
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 333
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c91bdb118cc68e0800000000000000
+      internalID: -1698762980902986705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 333
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccb93cf53d6f30460800000000000000
+      internalID: 7206875216428112844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R5
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 334
+        width: 40
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d417b6f0134dbc150800000000000000
+      internalID: 5894037844521611597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R7
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 334
+        width: 53
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea9bf82eb8dbd2650800000000000000
+      internalID: 6209827869712955822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: R9
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 332
+        width: 41
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac121445ec0d5ad0800000000000000
+      internalID: -2711997221778088795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RS1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 260
+        width: 56
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51219cb63da13b7a0800000000000000
+      internalID: -6362712353195617771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RS2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 260
+        width: 60
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d22f292ce31e8b00800000000000000
+      internalID: 832624886134285017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RS3
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 254
+        width: 65
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a56f6fc0c4edd7ab0800000000000000
+      internalID: -5008602792349731238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RS4
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 260
+        width: 53
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 339230f3243442db0800000000000000
+      internalID: -4817651749575513805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RS5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 260
+        width: 52
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51ba0bd7078eeb840800000000000000
+      internalID: 5241882586148547349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_57
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 259
+        width: 68
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d18845adc42ea6420800000000000000
+      internalID: 2624158552605100061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_58
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 259
+        width: 53
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b7fc6417640fcbe0800000000000000
+      internalID: -1454939313846552652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_59
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 259
+        width: 55
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cf492003272db270800000000000000
+      internalID: 8267807522202144711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RS6
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 259
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6182ea654d6604d70800000000000000
+      internalID: 9025326715423827990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: J3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 190
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 233c2bb3d43a80830800000000000000
+      internalID: 4037656618047030066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: J4
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 192
+        width: 40
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 714bed45942315b20800000000000000
+      internalID: 3121331307282347031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: J5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 188
+        width: 36
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64289d84be73f230800000000000000
+      internalID: 3671417435171857516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: J6
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 190
+        width: 39
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85c82af60a55b3d10800000000000000
+      internalID: 2106371398281890904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: J1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 186
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b3b7f9f3b24ecc20800000000000000
+      internalID: 3228591323631563704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: J2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 184
+        width: 35
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0df010d3b279f880800000000000000
+      internalID: -8576697898734912245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: J7
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 186
+        width: 38
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8c3ca5aba14281c0800000000000000
+      internalID: -4502964471942333300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: J8
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 185
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d83c87e8c5c40c920800000000000000
+      internalID: 3008488511494472589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_90
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 115
+        width: 63
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b02f5c62a9168c40800000000000000
+      internalID: 5514122979155321013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 116
+        width: 50
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d71bf0bf3ed7990800000000000000
+      internalID: -7386497146378158813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 116
+        width: 68
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49089c605c6c97a00800000000000000
+      internalID: 754852962085994644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S3
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 115
+        width: 50
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7bcccdd0e5b2fd90800000000000000
+      internalID: -7065384887992398977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S4
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 116
+        width: 49
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dd8d3e5f60773080800000000000000
+      internalID: -9207767289510916647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_95
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 116
+        width: 65
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83922db527e3789a0800000000000000
+      internalID: -6230942898556098248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_96
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 117
+        width: 49
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5eb8a56056e55040800000000000000
+      internalID: 4635864624425123420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_97
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 115
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6721ba85519e9db50800000000000000
+      internalID: 6618577405288845942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_98
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 115
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ece90999ac00120800000000000000
+      internalID: 2378123364156755456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 36
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f1238932e48a31d0800000000000000
+      internalID: -3370235263971024391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 37
+        width: 50
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d81ef1051606b6e00800000000000000
+      internalID: 1039030110111392141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: D3
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 34
+        width: 65
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a3bf4576636e750800000000000000
+      internalID: 6333809743378463352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_117
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 32
+        width: 65
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04b4712bf1a0fea30800000000000000
+      internalID: 4246624104881802048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_118
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 33
+        width: 75
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27d2cc5368acb2ba0800000000000000
+      internalID: -6112569391448314510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_121
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 31
+        width: 71
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38911a8cc342b9f70800000000000000
+      internalID: 9194982907689638275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DragonRangerCostume-removebg-preview_122
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 31
+        width: 68
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a88368c4beb8e0a90800000000000000
+      internalID: -7345780099477260150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4ec3fdcb896f747428cd4ebcac7672e5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      D1: -3370235263971024391
+      D2: 1039030110111392141
+      D3: 6333809743378463352
+      DragonRangerCostume-removebg-preview_0: -2523890471828359000
+      DragonRangerCostume-removebg-preview_1: 1122635603468530105
+      DragonRangerCostume-removebg-preview_10: -5821880998500480859
+      DragonRangerCostume-removebg-preview_100: -5546248442976269787
+      DragonRangerCostume-removebg-preview_101: 6003388433292897736
+      DragonRangerCostume-removebg-preview_102: 3619375225543015504
+      DragonRangerCostume-removebg-preview_103: 104664733620605112
+      DragonRangerCostume-removebg-preview_104: -6997584940010193705
+      DragonRangerCostume-removebg-preview_105: 1903108095362342147
+      DragonRangerCostume-removebg-preview_106: -619968148076877155
+      DragonRangerCostume-removebg-preview_107: 3442750613444345485
+      DragonRangerCostume-removebg-preview_108: 3880135143457035377
+      DragonRangerCostume-removebg-preview_109: 4082133828910090555
+      DragonRangerCostume-removebg-preview_11: 6775468323235801773
+      DragonRangerCostume-removebg-preview_113: 7297442950660024643
+      DragonRangerCostume-removebg-preview_114: 2617325369765485286
+      DragonRangerCostume-removebg-preview_115: 7882119437622580896
+      DragonRangerCostume-removebg-preview_116: 8829867458231193019
+      DragonRangerCostume-removebg-preview_117: 4246624104881802048
+      DragonRangerCostume-removebg-preview_118: -6112569391448314510
+      DragonRangerCostume-removebg-preview_119: -1685849632299848052
+      DragonRangerCostume-removebg-preview_12: 1600104919304975258
+      DragonRangerCostume-removebg-preview_120: -5160302925798081506
+      DragonRangerCostume-removebg-preview_121: 9194982907689638275
+      DragonRangerCostume-removebg-preview_122: -7345780099477260150
+      DragonRangerCostume-removebg-preview_123: 8009101025319876126
+      DragonRangerCostume-removebg-preview_124: 1440954827349204540
+      DragonRangerCostume-removebg-preview_125: -3578049510493397483
+      DragonRangerCostume-removebg-preview_126: 840618876264876732
+      DragonRangerCostume-removebg-preview_127: 1062253395430855883
+      DragonRangerCostume-removebg-preview_128: -7335477601041887238
+      DragonRangerCostume-removebg-preview_129: -4084881795942760917
+      DragonRangerCostume-removebg-preview_13: 7125350993437536192
+      DragonRangerCostume-removebg-preview_14: 5190535896417983155
+      DragonRangerCostume-removebg-preview_15: 3120318142646978454
+      DragonRangerCostume-removebg-preview_16: 6339358222892556536
+      DragonRangerCostume-removebg-preview_17: -8837668719443496581
+      DragonRangerCostume-removebg-preview_18: -26545686624244122
+      DragonRangerCostume-removebg-preview_19: 8523826541196085328
+      DragonRangerCostume-removebg-preview_2: -1110472132302141180
+      DragonRangerCostume-removebg-preview_25: 2856230528728125083
+      DragonRangerCostume-removebg-preview_27: 3291810704697708849
+      DragonRangerCostume-removebg-preview_28: -7407243689616876960
+      DragonRangerCostume-removebg-preview_29: 8096182854289519119
+      DragonRangerCostume-removebg-preview_3: 6927537284173885362
+      DragonRangerCostume-removebg-preview_30: -5930835882110878334
+      DragonRangerCostume-removebg-preview_31: 1771030859724743376
+      DragonRangerCostume-removebg-preview_32: 3800337230520413041
+      DragonRangerCostume-removebg-preview_35: -5086690784254623590
+      DragonRangerCostume-removebg-preview_37: -5973957537412851727
+      DragonRangerCostume-removebg-preview_38: -8669755365883848066
+      DragonRangerCostume-removebg-preview_39: -6684383958249518198
+      DragonRangerCostume-removebg-preview_4: 1856234074347007619
+      DragonRangerCostume-removebg-preview_40: -4209120885883678015
+      DragonRangerCostume-removebg-preview_41: -4791640142624040372
+      DragonRangerCostume-removebg-preview_42: -2607668555767040820
+      DragonRangerCostume-removebg-preview_43: 267145312551211166
+      DragonRangerCostume-removebg-preview_44: 2038199031933221619
+      DragonRangerCostume-removebg-preview_45: -6419215566856011049
+      DragonRangerCostume-removebg-preview_46: 7626198093805808355
+      DragonRangerCostume-removebg-preview_47: -2808538315108789248
+      DragonRangerCostume-removebg-preview_48: -1890657154486010440
+      DragonRangerCostume-removebg-preview_49: -2425633959766146270
+      DragonRangerCostume-removebg-preview_5: -9124852017201612662
+      DragonRangerCostume-removebg-preview_50: 4418171038972675479
+      DragonRangerCostume-removebg-preview_51: 7772774785853884095
+      DragonRangerCostume-removebg-preview_57: 2624158552605100061
+      DragonRangerCostume-removebg-preview_58: -1454939313846552652
+      DragonRangerCostume-removebg-preview_59: 8267807522202144711
+      DragonRangerCostume-removebg-preview_6: 2314018238527127689
+      DragonRangerCostume-removebg-preview_61: -2835611800182475604
+      DragonRangerCostume-removebg-preview_62: 952989010288087971
+      DragonRangerCostume-removebg-preview_63: -9155000965401534864
+      DragonRangerCostume-removebg-preview_64: -1477076506279813362
+      DragonRangerCostume-removebg-preview_65: 1799409079709308009
+      DragonRangerCostume-removebg-preview_66: 341059372906230261
+      DragonRangerCostume-removebg-preview_67: -8142058901260419290
+      DragonRangerCostume-removebg-preview_68: 3663325553262580155
+      DragonRangerCostume-removebg-preview_69: 3252783668989874310
+      DragonRangerCostume-removebg-preview_7: 7588888645236590983
+      DragonRangerCostume-removebg-preview_70: 366345918021178343
+      DragonRangerCostume-removebg-preview_71: 945038399182843973
+      DragonRangerCostume-removebg-preview_8: 8608224044016500795
+      DragonRangerCostume-removebg-preview_80: 1502417076440322916
+      DragonRangerCostume-removebg-preview_81: 9207154642973125438
+      DragonRangerCostume-removebg-preview_82: 4040109462835982185
+      DragonRangerCostume-removebg-preview_83: 5971053155502175938
+      DragonRangerCostume-removebg-preview_84: 2635908666832048247
+      DragonRangerCostume-removebg-preview_85: 1175630070218539036
+      DragonRangerCostume-removebg-preview_86: -4951848047327423205
+      DragonRangerCostume-removebg-preview_87: -5945871490303674704
+      DragonRangerCostume-removebg-preview_88: -8988447322784208497
+      DragonRangerCostume-removebg-preview_89: -63596459833082601
+      DragonRangerCostume-removebg-preview_9: 1017336589591063529
+      DragonRangerCostume-removebg-preview_90: 5514122979155321013
+      DragonRangerCostume-removebg-preview_95: -6230942898556098248
+      DragonRangerCostume-removebg-preview_96: 4635864624425123420
+      DragonRangerCostume-removebg-preview_97: 6618577405288845942
+      DragonRangerCostume-removebg-preview_98: 2378123364156755456
+      DragonRangerCostume-removebg-preview_99: -2059494990683756899
+      J1: 3228591323631563704
+      J2: -8576697898734912245
+      J3: 4037656618047030066
+      J4: 3121331307282347031
+      J5: 3671417435171857516
+      J6: 2106371398281890904
+      J7: -4502964471942333300
+      J8: 3008488511494472589
+      R1: 7206875216428112844
+      R2: 8097981046914012767
+      R3: -919403094786499358
+      R4: -3322171037454137922
+      R5: 5894037844521611597
+      R6: 7213221472587839964
+      R7: 6209827869712955822
+      R8: -1698762980902986705
+      R9: -2711997221778088795
+      RS1: -6362712353195617771
+      RS2: 832624886134285017
+      RS3: -5008602792349731238
+      RS4: -4817651749575513805
+      RS5: 5241882586148547349
+      RS6: 9025326715423827990
+      S1: -7386497146378158813
+      S2: 754852962085994644
+      S3: -7065384887992398977
+      S4: -9207767289510916647
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

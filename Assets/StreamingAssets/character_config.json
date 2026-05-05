@@ -39,7 +39,7 @@
       },
       "costumes": [
         { "id": "ranger_default", "name": "Mặc định", "price": 0 },
-        { "id": "ranger_skin1", "name": "Skin 1", "price": 150 }
+        { "id": "ranger_skin1", "name": "Skin 1", "price": 1500 }
       ]
     }
   ]

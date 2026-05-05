@@ -1,0 +1,476 @@
+fileFormatVersion: 2
+guid: 01eef1f3b52643843bd597feb31791ef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6789992442704340914
+    second: golden_dragon_ranger-removebg-preview_0
+  - first:
+      213: -7351873116798986193
+    second: golden_dragon_ranger-removebg-preview_1
+  - first:
+      213: -7363493316096813650
+    second: golden_dragon_ranger-removebg-preview_2
+  - first:
+      213: -7670352887210178369
+    second: golden_dragon_ranger-removebg-preview_3
+  - first:
+      213: -2917270011824065083
+    second: golden_dragon_ranger-removebg-preview_4
+  - first:
+      213: 7652898331676113442
+    second: golden_dragon_ranger-removebg-preview_5
+  - first:
+      213: -4950825359946875134
+    second: golden_dragon_ranger-removebg-preview_6
+  - first:
+      213: 480130275982165202
+    second: golden_dragon_ranger-removebg-preview_7
+  - first:
+      213: 7358211808521799238
+    second: golden_dragon_ranger-removebg-preview_8
+  - first:
+      213: -1495751626880968766
+    second: golden_dragon_ranger-removebg-preview_9
+  - first:
+      213: -2054832388453578943
+    second: golden_dragon_ranger-removebg-preview_10
+  - first:
+      213: 4135122749090079702
+    second: golden_dragon_ranger-removebg-preview_11
+  - first:
+      213: 5763087852027782346
+    second: golden_dragon_ranger-removebg-preview_12
+  - first:
+      213: -579677536166806747
+    second: golden_dragon_ranger-removebg-preview_13
+  - first:
+      213: -2763953276461870154
+    second: golden_dragon_ranger-removebg-preview_14
+  - first:
+      213: -4156675295516237053
+    second: golden_dragon_ranger-removebg-preview_15
+  - first:
+      213: 6561904955409449498
+    second: golden_dragon_ranger-removebg-preview_16
+  - first:
+      213: -8519309170294001979
+    second: golden_dragon_ranger-removebg-preview_17
+  - first:
+      213: 4934621364745330493
+    second: golden_dragon_ranger-removebg-preview_18
+  - first:
+      213: 468541037385042911
+    second: golden_dragon_ranger-removebg-preview_19
+  - first:
+      213: 5978918397060623134
+    second: golden_dragon_ranger-removebg-preview_20
+  - first:
+      213: -8807855350477812603
+    second: golden_dragon_ranger-removebg-preview_21
+  - first:
+      213: 1005820743210862653
+    second: golden_dragon_ranger-removebg-preview_22
+  - first:
+      213: -4335036758777849322
+    second: golden_dragon_ranger-removebg-preview_23
+  - first:
+      213: -407469692012532177
+    second: golden_dragon_ranger-removebg-preview_24
+  - first:
+      213: -797594825833557347
+    second: golden_dragon_ranger-removebg-preview_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 60
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: I1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 274
+        width: 174
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f28d3772a56e8f990800000000000000
+      internalID: -7351873116798986193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: I2
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 274
+        width: 178
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c5b35f6166c387d0800000000000000
+      internalID: -2917270011824065083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: I3
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 274
+        width: 170
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22afbb16c7e843a60800000000000000
+      internalID: 7652898331676113442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: I4
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 157
+        width: 179
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c71c87f1d50e3be0800000000000000
+      internalID: -1495751626880968766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: I5
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 160
+        width: 170
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 147c14564d4cb73e0800000000000000
+      internalID: -2054832388453578943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: I6
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 159
+        width: 170
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3a6224b38e26930800000000000000
+      internalID: 4135122749090079702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: I7
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 42
+        width: 169
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 303ec1c77d58056c0800000000000000
+      internalID: -4156675295516237053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: I
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 40
+        width: 175
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a124e0d5ac1901b50800000000000000
+      internalID: 6561904955409449498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: I9
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 40
+        width: 168
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb47005797908600800000000000000
+      internalID: 468541037385042911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golden_dragon_ranger-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 87
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1ba8ddba9269f250800000000000000
+      internalID: 5978918397060623134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: golden_dragon_ranger-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 91
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c0fb9893634c580800000000000000
+      internalID: -8807855350477812603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8340c71ea0e20924f98ed22f31dc748b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      I: 6561904955409449498
+      I1: -7351873116798986193
+      I2: -2917270011824065083
+      I3: 7652898331676113442
+      I4: -1495751626880968766
+      I5: -2054832388453578943
+      I6: 4135122749090079702
+      I7: -4156675295516237053
+      I9: 468541037385042911
+      golden_dragon_ranger-removebg-preview_0: 6789992442704340914
+      golden_dragon_ranger-removebg-preview_12: 5763087852027782346
+      golden_dragon_ranger-removebg-preview_13: -579677536166806747
+      golden_dragon_ranger-removebg-preview_14: -2763953276461870154
+      golden_dragon_ranger-removebg-preview_17: -8519309170294001979
+      golden_dragon_ranger-removebg-preview_18: 4934621364745330493
+      golden_dragon_ranger-removebg-preview_2: -7363493316096813650
+      golden_dragon_ranger-removebg-preview_20: 5978918397060623134
+      golden_dragon_ranger-removebg-preview_21: -8807855350477812603
+      golden_dragon_ranger-removebg-preview_22: 1005820743210862653
+      golden_dragon_ranger-removebg-preview_23: -4335036758777849322
+      golden_dragon_ranger-removebg-preview_24: -407469692012532177
+      golden_dragon_ranger-removebg-preview_25: -797594825833557347
+      golden_dragon_ranger-removebg-preview_3: -7670352887210178369
+      golden_dragon_ranger-removebg-preview_6: -4950825359946875134
+      golden_dragon_ranger-removebg-preview_7: 480130275982165202
+      golden_dragon_ranger-removebg-preview_8: 7358211808521799238
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
