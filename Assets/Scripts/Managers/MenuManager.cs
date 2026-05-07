@@ -10,6 +10,7 @@ public class MenuManager : MonoBehaviour
     public Button cuaHangButton;
     public Button caiDatButton;
     public Button creditsButton;
+    public Button lobbyButton;
     //public Button GunShopButton;
     //public Button CharactersShopButton;
     //public Button CostumesShopButton;
@@ -38,6 +39,10 @@ public class MenuManager : MonoBehaviour
     public void OpenShop()
     {
         SceneManager.LoadScene("Shop");
+    }
+    public void OpenLobby()
+    {
+        SceneManager.LoadScene("Lobby");
     }
     //public void OpenGunShop()
     //{

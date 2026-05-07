@@ -44,7 +44,7 @@ public class ShopGunsManager : MonoBehaviour
     public void UpdateCoins()
     {
         if (coinsText != null)
-            coinsText.text = "🪙 " + DataManager.Instance.GetCoins();
+            coinsText.text = "Coins : " + DataManager.Instance.GetCoins();
     }
 
     public void BackToShop()

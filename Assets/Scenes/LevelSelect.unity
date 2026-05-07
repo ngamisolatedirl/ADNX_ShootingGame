@@ -285,11 +285,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddcff99828e591c41bf7ec28e28b1a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelSelectManager
-  level1Button: {fileID: 1854186340}
-  level2Button: {fileID: 825845301}
-  level3Button: {fileID: 1665173150}
-  level2Text: {fileID: 2038967678}
-  level3Text: {fileID: 874616570}
+  levelButtons:
+  - {fileID: 1854186340}
+  - {fileID: 825845301}
+  - {fileID: 1665173150}
+  levelSceneNames:
+  - Level1
+  - Level2
+  - Level3
+  backButton: {fileID: 1364403525}
+  titleText: {fileID: 0}
+  mainMenuScene: MainMenu
 --- !u!4 &556322714
 Transform:
   m_ObjectHideFlags: 0
@@ -1395,9 +1401,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 556322713}
+      - m_Target: {fileID: 556322712}
         m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
-        m_MethodName: LoadLevel1
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 672930071742402399}
   - component: {fileID: 1523774106773419028}
   - component: {fileID: 3211735408943843884}
+  - component: {fileID: 1150863515708139679}
   - component: {fileID: 4322158609333398885}
   m_Layer: 0
   m_Name: MeleeEnemy 1
@@ -181,6 +182,31 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1150863515708139679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8577301197444557902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
+  GlobalObjectIdHash: 2148049250
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
 --- !u!114 &4322158609333398885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,10 +219,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2575ec29d12a774e8a2d6b9b50fa234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeleeEnemy
+  ShowTopMostFoldoutHeaderGroup: 1
   maxHealth: 50
   moveSpeed: 3
   damage: 20
   attackCooldown: 2
+  coinDrop: 10
   zoneStart: {fileID: 0}
   zoneEnd: {fileID: 0}
   patrolSpeed: 1

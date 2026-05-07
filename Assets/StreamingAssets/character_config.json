@@ -6,8 +6,8 @@
       "price": 10,
       "baseStats": {
         "hp": 100,
-        "speed": 8,
-        "critRate": 1,
+        "speed": 7,
+        "critRate": 0.1,
         "critDamage": 1.75
       },
       "upgrades": {
@@ -27,9 +27,9 @@
       "price": 300,
       "baseStats": {
         "hp": 80,
-        "speed": 6,
-        "critRate": 0.08,
-        "critDamage": 1.75
+        "speed": 8,
+        "critRate": 0.2,
+        "critDamage": 1.9
       },
       "upgrades": {
         "hp": { "maxLevel": 10, "costPerLevel": [60,70,80,90,100,110,130,150,170,210], "increasePerLevel": 8 },

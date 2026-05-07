@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 1599bf7b440ce1d48956efb55910f046
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Credits.unity
     guid: 0d2293d66ffe15c44930dbebd60ee8e7
   - enabled: 1
@@ -41,5 +41,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShopCostumes.unity
     guid: e180dfb10bd0a764382976a773a47d9c
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: e4018782e49497740be90fe3549e6eca
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

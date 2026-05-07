@@ -1,7 +1,8 @@
+using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using TMPro;
 public class ShopManager : MonoBehaviour
 {
     [Header("Shop Buttons")]
@@ -11,7 +12,7 @@ public class ShopManager : MonoBehaviour
     public Button UpgradesShopButton;
     public Button BackButton;
     public Button BackShopButton;
-
+    public TextMeshProUGUI coinsText;
     void Start()
     {
         
@@ -41,5 +42,22 @@ public class ShopManager : MonoBehaviour
     public void OpenCostumesShop()
     {
         SceneManager.LoadScene("ShopCostumes");
+    }
+
+
+
+    public void RefreshList()
+    {
+        
+
+        CharacterConfig config = DataManager.Instance.GetCharacterConfig();
+        UpdateCoins();
+    }
+
+
+    public void UpdateCoins()
+    {
+        if (coinsText != null)
+            coinsText.text = "Coins : " + DataManager.Instance.GetCoins();
     }
 }

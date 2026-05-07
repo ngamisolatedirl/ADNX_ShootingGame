@@ -19,10 +19,17 @@ public class DataManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         savePath = Application.persistentDataPath + "/save_data.json";
-
-        
         Debug.Log("Save path: " + Application.persistentDataPath);
         Init();
+    }
+
+    // Thêm method này để tự tạo nếu chưa có
+    public static void EnsureExists()
+    {
+        if (instance != null) return;
+        GameObject go = new GameObject("DataManager");
+        go.AddComponent<DataManager>();
+        Debug.Log("DataManager tự tạo!");
     }
 
     void Init()

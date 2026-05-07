@@ -1,50 +1,61 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Màn hình chọn level (Offline).
+/// Attach vào LevelSelectScene.
+/// Level unlock theo PlayerPrefs "UnlockedLevel".
+/// </summary>
 public class LevelSelectManager : MonoBehaviour
 {
     [Header("Level Buttons")]
-    public Button level1Button;
-    public Button level2Button;
-    public Button level3Button;
+    public Button[] levelButtons;           // 4 nút Level 1~4
+    public string[] levelSceneNames = { "Level1", "Level2", "Level3", "Level4" };
 
-    [Header("Lock Text")]
-    public TextMeshProUGUI level2Text;
-    public TextMeshProUGUI level3Text;
+    [Header("UI")]
+    public Button backButton;
+    public TextMeshProUGUI titleText;
+
+    [Header("Scenes")]
+    public string mainMenuScene = "MainMenu";
 
     void Start()
     {
+        DataManager.EnsureExists();
+
+        if (SessionData.Instance == null)
+        {
+            var go = new GameObject("SessionData");
+            go.AddComponent<SessionData>();
+        }
+
         int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
 
-        // Level 2
-        if (unlockedLevel >= 2)
+        for (int i = 0; i < levelButtons.Length; i++)
         {
-            level2Button.interactable = true;
-            //level2Text.text = "Level 2";
-        }
-        else
-        {
-            level2Button.interactable = false;
-            //level2Text.text = "Level 2 🔒";
+            int idx = i;
+            bool isUnlocked = (i + 1) <= unlockedLevel;
+
+            levelButtons[i].interactable = isUnlocked;
+            levelButtons[i].onClick.AddListener(() => LoadLevel(idx));
+
+            // Visual feedback: lock icon hoặc text
+            var labelText = levelButtons[i].GetComponentInChildren<TextMeshProUGUI>();
+            if (labelText != null)
+                labelText.text = isUnlocked
+                    ? $"Level {i + 1}"
+                    : $"Level {i + 1} 🔒";
         }
 
-        // Level 3
-        if (unlockedLevel >= 3)
-        {
-            level3Button.interactable = true;
-            //level3Text.text = "Level 3";
-        }
-        else
-        {
-            level3Button.interactable = false;
-            //level3Text.text = "Level 3 🔒";
-        }
+        backButton.onClick.AddListener(() => SceneManager.LoadScene(mainMenuScene));
     }
 
-    public void LoadLevel1() => SceneManager.LoadScene("Level1");
-    public void LoadLevel2() => SceneManager.LoadScene("Level2");
-    public void LoadLevel3() => SceneManager.LoadScene("Level3");
-    public void BackToMenu() => SceneManager.LoadScene("MainMenu");
+    void LoadLevel(int index)
+    {
+        if (index >= levelSceneNames.Length) return;
+        SessionData.Instance?.Reset();
+        SceneManager.LoadScene(levelSceneNames[index]);
+    }
 }

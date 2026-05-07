@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Unity.Netcode;
 
-public class MovePlayer : MonoBehaviour
+public class MovePlayer : NetworkBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 15f;
@@ -27,21 +28,20 @@ public class MovePlayer : MonoBehaviour
     private bool isCharging = false;
 
     bool isGrounded =>
-    Physics2D.Raycast(transform.position, Vector2.down, rayDistance, groundLayer | oneWayLayer) ||
-    Physics2D.Raycast(transform.position + new Vector3(0.4f, 0, 0), Vector2.down, rayDistance, groundLayer | oneWayLayer) ||
-    Physics2D.Raycast(transform.position + new Vector3(-0.4f, 0, 0), Vector2.down, rayDistance, groundLayer | oneWayLayer);
+        Physics2D.Raycast(transform.position, Vector2.down, rayDistance, groundLayer | oneWayLayer) ||
+        Physics2D.Raycast(transform.position + new Vector3(0.4f, 0, 0), Vector2.down, rayDistance, groundLayer | oneWayLayer) ||
+        Physics2D.Raycast(transform.position + new Vector3(-0.4f, 0, 0), Vector2.down, rayDistance, groundLayer | oneWayLayer);
+
     bool IsHittingWall(float inputX)
     {
         if (inputX == 0) return false;
-
         Vector2 dir = inputX > 0 ? Vector2.right : Vector2.left;
         float checkOffset = col != null ? col.size.y * 0.3f : 0.5f;
-
         return Physics2D.Raycast(transform.position + new Vector3(0, checkOffset, 0), dir, wallRayDistance, groundLayer) ||
                Physics2D.Raycast(transform.position - new Vector3(0, checkOffset, 0), dir, wallRayDistance, groundLayer);
     }
 
-    void Start()
+    public override void OnNetworkSpawn()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<CapsuleCollider2D>();
@@ -53,18 +53,85 @@ public class MovePlayer : MonoBehaviour
             LayerMask.NameToLayer("Enemy")
         );
 
-        // Tìm OneWay Tilemap
         GameObject oneWay = GameObject.Find("Tilemap_OneWay");
         if (oneWay != null)
             oneWayCollider = oneWay.GetComponent<Collider2D>();
+
+        // Non-owner client: kinematic để không bị physics local ảnh hưởng
+        if (NetworkUtils.IsOnline && !IsOwner)
+            rb.bodyType = RigidbodyType2D.Kinematic;
+
+        // Đăng ký với CameraFollow
+        CameraFollow.Instance?.RegisterPlayer(GetComponent<PlayerHealth>());
+    }
+
+    // Offline Start fallback
+    void Start()
+    {
+        if (NetworkUtils.IsOnline) return;
+
+        rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<CapsuleCollider2D>();
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+
+        Physics2D.IgnoreLayerCollision(
+            LayerMask.NameToLayer("Player"),
+            LayerMask.NameToLayer("Enemy")
+        );
+
+        GameObject oneWay = GameObject.Find("Tilemap_OneWay");
+        if (oneWay != null)
+            oneWayCollider = oneWay.GetComponent<Collider2D>();
+
+        CameraFollow.Instance?.RegisterPlayer(GetComponent<PlayerHealth>());
     }
 
     void Update()
     {
+        // Online: chỉ owner xử lý input
+        if (NetworkUtils.IsOnline && !IsOwner) return;
+
         Move();
         ChargeJump();
         HandleOneWayPlatform();
+
+        // Online: gửi state lên server để sync
+        if (NetworkUtils.IsOnline && IsOwner)
+            SyncStateServerRpc(transform.position, rb.linearVelocity, isFacingRight);
     }
+
+    // ── Server sync vị trí → broadcast lại cho tất cả client ──────────────
+
+    [ServerRpc]
+    void SyncStateServerRpc(Vector3 pos, Vector2 vel, bool facingRight)
+    {
+        // Server apply
+        transform.position = pos;
+        rb.linearVelocity = vel;
+
+        // Broadcast cho các client khác (không gửi lại owner)
+        SyncStateClientRpc(pos, vel, facingRight);
+    }
+
+    [ClientRpc]
+    void SyncStateClientRpc(Vector3 pos, Vector2 vel, bool facingRight)
+    {
+        if (IsOwner) return;    // owner tự quản lý
+
+        transform.position = pos;
+        rb.linearVelocity = vel;
+
+        if (facingRight != isFacingRight)
+        {
+            isFacingRight = facingRight;
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x) * (facingRight ? 1 : -1);
+            transform.localScale = scale;
+        }
+    }
+
+    // ── Movement (giữ nguyên logic cũ) ────────────────────────────────────
 
     void Move()
     {
@@ -83,14 +150,11 @@ public class MovePlayer : MonoBehaviour
         if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed)
             moveInput = 1f;
 
-        if (moveInput > 0 && !isFacingRight)
-            Flip();
-        else if (moveInput < 0 && isFacingRight)
-            Flip();
+        if (moveInput > 0 && !isFacingRight) Flip();
+        else if (moveInput < 0 && isFacingRight) Flip();
 
         float finalMoveX = moveInput;
-        if (IsHittingWall(moveInput))
-            finalMoveX = 0f;
+        if (IsHittingWall(moveInput)) finalMoveX = 0f;
 
         if (isGrounded)
             rb.linearVelocity = new Vector2(finalMoveX * moveSpeed, rb.linearVelocity.y);
@@ -103,33 +167,21 @@ public class MovePlayer : MonoBehaviour
         if (keyboard.upArrowKey.wasPressedThisFrame && isGrounded)
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
 
-        if (rb.linearVelocity.y < 0)
-            rb.gravityScale = 4f;
-        else if (rb.linearVelocity.y > 0)
-            rb.gravityScale = 2f;
-        else
-            rb.gravityScale = 1f;
+        if (rb.linearVelocity.y < 0) rb.gravityScale = 4f;
+        else if (rb.linearVelocity.y > 0) rb.gravityScale = 2f;
+        else rb.gravityScale = 1f;
     }
 
     void HandleOneWayPlatform()
     {
         if (oneWayCollider == null || col == null) return;
-
-        // Chỉ ignore collision khi player đang ở DƯỚI platform VÀ đang bay lên
         bool playerBelowPlatform = col.bounds.max.y < oneWayCollider.bounds.min.y;
         bool playerAbovePlatform = col.bounds.min.y >= oneWayCollider.bounds.min.y;
 
         if (rb.linearVelocity.y > 0 && playerBelowPlatform)
-        {
-            // Đang bay lên từ dưới → xuyên qua
             Physics2D.IgnoreCollision(col, oneWayCollider, true);
-        }
         else if (playerAbovePlatform)
-        {
-            // Đã lên trên platform → bật lại collision
             Physics2D.IgnoreCollision(col, oneWayCollider, false);
-        }
-        // Nếu đang ở giữa platform → giữ nguyên trạng thái ignore, không làm gì
     }
 
     void ChargeJump()

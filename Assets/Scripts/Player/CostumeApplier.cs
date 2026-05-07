@@ -9,6 +9,12 @@ public class CostumeApplier : MonoBehaviour
 
     void Start()
     {
+        DataManager.EnsureExists(); // ← tự tạo nếu chưa có
+        if (DataManager.Instance == null)
+        {
+            Debug.LogWarning("DataManager costume vẫn null!");
+            return;
+        }
         animator = GetComponent<Animator>();
         Apply();
     }

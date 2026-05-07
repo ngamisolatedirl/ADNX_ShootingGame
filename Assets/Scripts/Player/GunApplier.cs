@@ -6,6 +6,12 @@ public class GunApplier : MonoBehaviour
 
     void Start()
     {
+        DataManager.EnsureExists(); // ← tự tạo nếu chưa có
+        if (DataManager.Instance == null)
+        {
+            Debug.LogWarning("DataManager gunapplier vẫn null!");
+            return;
+        }
         shooting = GetComponent<Shooting>();
         Apply();
     }

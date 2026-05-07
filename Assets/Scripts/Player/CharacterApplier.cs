@@ -8,6 +8,12 @@ public class CharacterApplier : MonoBehaviour
 
     void Start()
     {
+        DataManager.EnsureExists(); // ← tự tạo nếu chưa có
+        if (DataManager.Instance == null)
+        {
+            Debug.LogWarning("DataManager character vẫn null!");
+            return;
+        }
         animator = GetComponent<Animator>();
         Apply();
     }
