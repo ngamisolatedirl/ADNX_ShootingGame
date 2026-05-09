@@ -196,8 +196,15 @@ public class GameManager : NetworkBehaviour
     [ClientRpc]
     void NotifyPlayerDeadClientRpc(ulong clientId)
     {
-        // CameraFollow sẽ tự tìm target mới khi nhận event này
-        CameraFollow.Instance?.OnPlayerDied(clientId);
+        // Tìm Camera cục bộ trên máy này (máy nào cũng có 1 Main Camera)
+        CameraFollow localCam = Camera.main?.GetComponent<CameraFollow>();
+
+        if (localCam != null)
+        {
+            // Thông báo cho camera cục bộ biết có một người chơi (clientId) vừa chết
+            // Nếu camera đang nhìn theo người đó, nó sẽ tự chuyển sang người khác
+            localCam.FindNearestAlivePlayer();
+        }
     }
 
     [ClientRpc]

@@ -4,6 +4,7 @@ using Unity.Netcode;
 
 public class MovePlayer : NetworkBehaviour
 {
+    [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float jumpForce = 15f;
     public LayerMask groundLayer;
@@ -27,6 +28,7 @@ public class MovePlayer : NetworkBehaviour
     private float chargeTimer = 0f;
     private bool isCharging = false;
 
+    // --- Ground Check ---
     bool isGrounded =>
         Physics2D.Raycast(transform.position, Vector2.down, rayDistance, groundLayer | oneWayLayer) ||
         Physics2D.Raycast(transform.position + new Vector3(0.4f, 0, 0), Vector2.down, rayDistance, groundLayer | oneWayLayer) ||
@@ -43,95 +45,61 @@ public class MovePlayer : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<CapsuleCollider2D>();
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        Initialize();
 
-        Physics2D.IgnoreLayerCollision(
-            LayerMask.NameToLayer("Player"),
-            LayerMask.NameToLayer("Enemy")
-        );
+        if (NetworkUtils.IsOnline)
+        {
+            if (IsOwner)
+            {
+                // Owner: Dynamic → tự tính vật lý
+                rb.bodyType = RigidbodyType2D.Dynamic;
 
-        GameObject oneWay = GameObject.Find("Tilemap_OneWay");
-        if (oneWay != null)
-            oneWayCollider = oneWay.GetComponent<Collider2D>();
-
-        // Non-owner client: kinematic để không bị physics local ảnh hưởng
-        if (NetworkUtils.IsOnline && !IsOwner)
-            rb.bodyType = RigidbodyType2D.Kinematic;
-
-        // Đăng ký với CameraFollow
-        CameraFollow.Instance?.RegisterPlayer(GetComponent<PlayerHealth>());
+                // Camera được setup bởi PlayerCameraController trên prefab
+                // KHÔNG gọi SetupLocalCamera ở đây nữa
+            }
+            else
+            {
+                // Non-owner: Kinematic → NetworkTransform (Client Authority) điều khiển vị trí
+                rb.bodyType = RigidbodyType2D.Kinematic;
+                rb.gravityScale = 0f;
+            }
+        }
+        else
+        {
+            // Offline
+            rb.bodyType = RigidbodyType2D.Dynamic;
+        }
     }
 
-    // Offline Start fallback
-    void Start()
+    private void Start()
     {
-        if (NetworkUtils.IsOnline) return;
+        // Fallback cho Offline nếu OnNetworkSpawn chưa chạy
+        if (!NetworkUtils.IsOnline) Initialize();
+    }
 
+    private void Initialize()
+    {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<CapsuleCollider2D>();
+
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
-        Physics2D.IgnoreLayerCollision(
-            LayerMask.NameToLayer("Player"),
-            LayerMask.NameToLayer("Enemy")
-        );
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"));
 
         GameObject oneWay = GameObject.Find("Tilemap_OneWay");
-        if (oneWay != null)
-            oneWayCollider = oneWay.GetComponent<Collider2D>();
-
-        CameraFollow.Instance?.RegisterPlayer(GetComponent<PlayerHealth>());
+        if (oneWay != null) oneWayCollider = oneWay.GetComponent<Collider2D>();
     }
 
     void Update()
     {
-        // Online: chỉ owner xử lý input
+        // Chỉ owner xử lý input
         if (NetworkUtils.IsOnline && !IsOwner) return;
 
         Move();
         ChargeJump();
         HandleOneWayPlatform();
-
-        // Online: gửi state lên server để sync
-        if (NetworkUtils.IsOnline && IsOwner)
-            SyncStateServerRpc(transform.position, rb.linearVelocity, isFacingRight);
     }
-
-    // ── Server sync vị trí → broadcast lại cho tất cả client ──────────────
-
-    [ServerRpc]
-    void SyncStateServerRpc(Vector3 pos, Vector2 vel, bool facingRight)
-    {
-        // Server apply
-        transform.position = pos;
-        rb.linearVelocity = vel;
-
-        // Broadcast cho các client khác (không gửi lại owner)
-        SyncStateClientRpc(pos, vel, facingRight);
-    }
-
-    [ClientRpc]
-    void SyncStateClientRpc(Vector3 pos, Vector2 vel, bool facingRight)
-    {
-        if (IsOwner) return;    // owner tự quản lý
-
-        transform.position = pos;
-        rb.linearVelocity = vel;
-
-        if (facingRight != isFacingRight)
-        {
-            isFacingRight = facingRight;
-            Vector3 scale = transform.localScale;
-            scale.x = Mathf.Abs(scale.x) * (facingRight ? 1 : -1);
-            transform.localScale = scale;
-        }
-    }
-
-    // ── Movement (giữ nguyên logic cũ) ────────────────────────────────────
 
     void Move()
     {
@@ -145,24 +113,18 @@ public class MovePlayer : NetworkBehaviour
         }
 
         float moveInput = 0f;
-        if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed)
-            moveInput = -1f;
-        if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed)
-            moveInput = 1f;
+        if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed) moveInput = -1f;
+        if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed) moveInput = 1f;
 
         if (moveInput > 0 && !isFacingRight) Flip();
         else if (moveInput < 0 && isFacingRight) Flip();
 
-        float finalMoveX = moveInput;
-        if (IsHittingWall(moveInput)) finalMoveX = 0f;
+        float finalMoveX = IsHittingWall(moveInput) ? 0f : moveInput;
 
         if (isGrounded)
             rb.linearVelocity = new Vector2(finalMoveX * moveSpeed, rb.linearVelocity.y);
         else
-            rb.linearVelocity = new Vector2(
-                Mathf.Lerp(rb.linearVelocity.x, finalMoveX * moveSpeed, 0.1f),
-                rb.linearVelocity.y
-            );
+            rb.linearVelocity = new Vector2(Mathf.Lerp(rb.linearVelocity.x, finalMoveX * moveSpeed, 0.1f), rb.linearVelocity.y);
 
         if (keyboard.upArrowKey.wasPressedThisFrame && isGrounded)
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
@@ -170,18 +132,6 @@ public class MovePlayer : NetworkBehaviour
         if (rb.linearVelocity.y < 0) rb.gravityScale = 4f;
         else if (rb.linearVelocity.y > 0) rb.gravityScale = 2f;
         else rb.gravityScale = 1f;
-    }
-
-    void HandleOneWayPlatform()
-    {
-        if (oneWayCollider == null || col == null) return;
-        bool playerBelowPlatform = col.bounds.max.y < oneWayCollider.bounds.min.y;
-        bool playerAbovePlatform = col.bounds.min.y >= oneWayCollider.bounds.min.y;
-
-        if (rb.linearVelocity.y > 0 && playerBelowPlatform)
-            Physics2D.IgnoreCollision(col, oneWayCollider, true);
-        else if (playerAbovePlatform)
-            Physics2D.IgnoreCollision(col, oneWayCollider, false);
     }
 
     void ChargeJump()
@@ -212,6 +162,18 @@ public class MovePlayer : NetworkBehaviour
         }
     }
 
+    void HandleOneWayPlatform()
+    {
+        if (oneWayCollider == null || col == null) return;
+        bool playerBelowPlatform = col.bounds.max.y < oneWayCollider.bounds.min.y;
+        bool playerAbovePlatform = col.bounds.min.y >= oneWayCollider.bounds.min.y;
+
+        if (rb.linearVelocity.y > 0 && playerBelowPlatform)
+            Physics2D.IgnoreCollision(col, oneWayCollider, true);
+        else if (playerAbovePlatform)
+            Physics2D.IgnoreCollision(col, oneWayCollider, false);
+    }
+
     void Flip()
     {
         isFacingRight = !isFacingRight;
@@ -228,12 +190,8 @@ public class MovePlayer : NetworkBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, Vector2.down * rayDistance);
-        Gizmos.DrawRay(transform.position + new Vector3(0.4f, 0, 0), Vector2.down * rayDistance);
-        Gizmos.DrawRay(transform.position + new Vector3(-0.4f, 0, 0), Vector2.down * rayDistance);
-
         Gizmos.color = Color.blue;
         Vector3 dir = isFacingRight ? Vector3.right : Vector3.left;
         Gizmos.DrawRay(transform.position + new Vector3(0, 0.5f, 0), dir * wallRayDistance);
-        Gizmos.DrawRay(transform.position - new Vector3(0, 0.5f, 0), dir * wallRayDistance);
     }
 }

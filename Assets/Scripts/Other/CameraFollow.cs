@@ -1,122 +1,76 @@
-using System.Collections.Generic;
 using UnityEngine;
-using Unity.Netcode;
 
 /// <summary>
-/// Camera follow player.
-/// - Khi player chết → tìm player còn sống gần nhất để follow.
-/// - Offline: follow player duy nhất.
-/// - Online: mỗi client follow player của mình; khi chết chuyển sang người khác.
+/// Đặt Camera này trực tiếp trong scene (không phải prefab, không phải con của player).
+/// Khi player owner spawn xong, PlayerCameraController sẽ gọi SetTarget().
+/// Trước đó camera đứng yên tại vị trí đặt trong scene.
 /// </summary>
 public class CameraFollow : MonoBehaviour
 {
-    public static CameraFollow Instance { get; private set; }
-
     [Header("Follow Settings")]
     public float smoothSpeed = 5f;
     public Vector2 offset = Vector2.zero;
 
-    // Target hiện tại
+    [Header("Bounds (optional)")]
+    public bool useBounds = false;
+    public Vector2 minBounds;
+    public Vector2 maxBounds;
+
     private Transform currentTarget;
-
-    // Cache tất cả PlayerHealth trong scene
-    private List<PlayerHealth> allPlayers = new List<PlayerHealth>();
-
-    void Awake()
-    {
-        if (Instance != null) { Destroy(gameObject); return; }
-        Instance = this;
-    }
-
-    void Start()
-    {
-        RefreshPlayerList();
-        FindOwnerTarget();
-    }
+    private bool isFollowing = false;
 
     void LateUpdate()
     {
-        if (currentTarget == null)
-        {
-            // Target đã bị destroy, tìm lại
-            FindNearestAlivePlayer(transform.position);
-            if (currentTarget == null) return;
-        }
+        // Chưa có target → đứng yên ở vị trí scene
+        if (!isFollowing || currentTarget == null) return;
 
+        // Chỉ follow trục X, Y giữ nguyên vị trí camera đặt trong scene
         Vector3 targetPos = new Vector3(
             currentTarget.position.x + offset.x,
-            transform.position.y + offset.y,   // chỉ follow trục X (hoặc đổi nếu muốn Y)
+            transform.position.y,          // Y cố định
             transform.position.z
         );
+
+        if (useBounds)
+            targetPos.x = Mathf.Clamp(targetPos.x, minBounds.x, maxBounds.x);
 
         transform.position = Vector3.Lerp(transform.position, targetPos, smoothSpeed * Time.deltaTime);
     }
 
-    // ── Setup ──────────────────────────────────────────────────────────────
-
-    void RefreshPlayerList()
+    /// <summary>
+    /// Gọi bởi PlayerCameraController khi player owner spawn xong.
+    /// Snap ngay đến vị trí player rồi bắt đầu follow mượt.
+    /// </summary>
+    public void SetTarget(Transform t)
     {
-        allPlayers.Clear();
-        var all = FindObjectsByType<PlayerHealth>(FindObjectsSortMode.None);
-        allPlayers.AddRange(all);
+        if (t == null) return;
+
+        currentTarget = t;
+
+        // Snap X ngay đến vị trí player, giữ nguyên Y của camera
+        transform.position = new Vector3(
+            t.position.x + offset.x,
+            transform.position.y,          // Y giữ nguyên
+            transform.position.z
+        );
+
+        isFollowing = true;
+        Debug.Log($"[Camera] Bắt đầu follow: {t.name}");
     }
-
-    void FindOwnerTarget()
-    {
-        if (!NetworkUtils.IsOnline)
-        {
-            // Offline: follow player đầu tiên trong scene
-            if (allPlayers.Count > 0)
-                currentTarget = allPlayers[0].transform;
-            return;
-        }
-
-        // Online: tìm player thuộc về local client
-        foreach (var ph in allPlayers)
-        {
-            var nb = ph.GetComponent<NetworkBehaviour>();
-            if (nb != null && nb.IsOwner)
-            {
-                currentTarget = ph.transform;
-                return;
-            }
-        }
-    }
-
-    // ── Khi Player Chết ────────────────────────────────────────────────────
 
     /// <summary>
-    /// Gọi từ GameManager (ClientRpc) khi 1 player chết.
+    /// Gọi khi player chết → spectate người còn sống gần nhất.
     /// </summary>
-    public void OnPlayerDied(ulong deadClientId)
+    public void FindNearestAlivePlayer()
     {
-        if (!NetworkUtils.IsOnline) return;
-
-        // Kiểm tra xem target hiện tại có phải là player vừa chết không
-        if (currentTarget == null) { FindNearestAlivePlayer(transform.position); return; }
-
-        var nb = currentTarget.GetComponent<NetworkBehaviour>();
-        if (nb != null && nb.OwnerClientId == deadClientId)
-        {
-            // Camera đang follow người vừa chết → chuyển sang người khác
-            FindNearestAlivePlayer(currentTarget.position);
-        }
-    }
-
-    void FindNearestAlivePlayer(Vector3 fromPos)
-    {
-        // Refresh list (player mới có thể spawn sau)
-        RefreshPlayerList();
-
+        var allPlayers = FindObjectsByType<PlayerHealth>(FindObjectsSortMode.None);
         Transform nearest = null;
         float minDist = float.MaxValue;
 
         foreach (var ph in allPlayers)
         {
             if (ph == null || ph.IsDead) continue;
-
-            // Online: ưu tiên không follow chính mình nếu mình chết
-            float dist = Vector3.Distance(fromPos, ph.transform.position);
+            float dist = Vector2.Distance(transform.position, ph.transform.position);
             if (dist < minDist)
             {
                 minDist = dist;
@@ -127,17 +81,10 @@ public class CameraFollow : MonoBehaviour
         if (nearest != null)
         {
             currentTarget = nearest;
-            Debug.Log($"[Camera] Chuyển follow sang: {nearest.name}");
+            Debug.Log($"[Camera] Spectating: {nearest.name}");
         }
     }
 
-    // ── Public ─────────────────────────────────────────────────────────────
-
-    public void SetTarget(Transform t) => currentTarget = t;
-
-    public void RegisterPlayer(PlayerHealth ph)
-    {
-        if (!allPlayers.Contains(ph))
-            allPlayers.Add(ph);
-    }
+    public void StopFollowing() => isFollowing = false;
+    public Transform CurrentTarget => currentTarget;
 }

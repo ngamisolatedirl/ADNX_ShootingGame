@@ -2,11 +2,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.Netcode; // THÊM thư viện này
 
 /// <summary>
-/// Màn hình chọn level (Offline).
+/// Màn hình chọn level (Xử lý Offline bằng cơ chế StartHost).
 /// Attach vào LevelSelectScene.
-/// Level unlock theo PlayerPrefs "UnlockedLevel".
 /// </summary>
 public class LevelSelectManager : MonoBehaviour
 {
@@ -23,6 +23,7 @@ public class LevelSelectManager : MonoBehaviour
 
     void Start()
     {
+        // 1. Đảm bảo các Manager cốt lõi tồn tại
         DataManager.EnsureExists();
 
         if (SessionData.Instance == null)
@@ -31,6 +32,7 @@ public class LevelSelectManager : MonoBehaviour
             go.AddComponent<SessionData>();
         }
 
+        // 2. Logic Unlock Level
         int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
 
         for (int i = 0; i < levelButtons.Length; i++)
@@ -41,7 +43,6 @@ public class LevelSelectManager : MonoBehaviour
             levelButtons[i].interactable = isUnlocked;
             levelButtons[i].onClick.AddListener(() => LoadLevel(idx));
 
-            // Visual feedback: lock icon hoặc text
             var labelText = levelButtons[i].GetComponentInChildren<TextMeshProUGUI>();
             if (labelText != null)
                 labelText.text = isUnlocked
@@ -55,7 +56,31 @@ public class LevelSelectManager : MonoBehaviour
     void LoadLevel(int index)
     {
         if (index >= levelSceneNames.Length) return;
+
+        // Reset dữ liệu coin/kill cho màn chơi mới
         SessionData.Instance?.Reset();
-        SceneManager.LoadScene(levelSceneNames[index]);
+
+        // ── CHIẾN THUẬT BOOTSTRAP ──────────────────────────────────────────
+
+        if (NetworkManager.Singleton != null)
+        {
+            // BẮT ĐẦU HOST: Tự biến mình thành server để hệ thống Netcode hoạt động
+            // Điều này giúp Player được Spawn tự động và IsOwner được gán đúng
+            NetworkManager.Singleton.StartHost();
+
+            // SỬ DỤNG SceneManager của Netcode để load màn chơi
+            // LoadSceneMode.Single sẽ xóa sạch scene LevelSelect và thay bằng Level mới
+            NetworkManager.Singleton.SceneManager.LoadScene(levelSceneNames[index], LoadSceneMode.Single);
+
+            Debug.Log($"[LevelSelect] Đang khởi tạo Host cho: {levelSceneNames[index]}");
+        }
+        else
+        {
+            // Trường hợp lỗi: Nếu không thấy NetworkManager (thường do không chạy từ scene Bootstrap)
+            Debug.LogError("KHÔNG TÌM THẤY NETWORKMANAGER! Bạn phải nhấn Play từ scene Bootstrap.");
+
+            // Fallback: Chạy kiểu offline truyền thống (có thể gây lỗi camera/spawn nếu prefab có network)
+            SceneManager.LoadScene(levelSceneNames[index]);
+        }
     }
 }

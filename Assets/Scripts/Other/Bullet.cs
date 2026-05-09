@@ -6,77 +6,73 @@ public class Bullet : NetworkBehaviour
     public float speed = 10f;
     public float damage = 10f;
     private Rigidbody2D rb;
-    private Vector2 direction;
     private bool hasHit = false;
     private bool piercing = false;
 
+    // NetworkVariable để sync direction xuống tất cả client
+    // Server gán trước khi Spawn → client nhận đúng giá trị trong OnNetworkSpawn
+    private NetworkVariable<Vector2> networkDirection = new NetworkVariable<Vector2>(
+        Vector2.zero,
+        NetworkVariableReadPermission.Everyone,
+        NetworkVariableWritePermission.Server
+    );
+
+    // damage và piercing cũng cần sync vì client cần biết để hiển thị đúng
+    // (damage xử lý trên server, nhưng piercing ảnh hưởng visual)
+    private NetworkVariable<bool> networkPiercing = new NetworkVariable<bool>(
+        false,
+        NetworkVariableReadPermission.Everyone,
+        NetworkVariableWritePermission.Server
+    );
+
+    // Gọi từ server TRƯỚC khi netObj.Spawn()
     public void SetDirection(Vector2 dir)
     {
-        direction = dir;
+        networkDirection.Value = dir;
     }
 
     public void SetStats(float dmg, bool isPiercing)
     {
         damage = dmg;
         piercing = isPiercing;
+        networkPiercing.Value = isPiercing;
     }
 
-    // 1. Dùng cho chế độ ONLINE
     public override void OnNetworkSpawn()
-    {
-        InitBullet();
-    }
-
-    // 2. Dùng cho chế độ OFFLINE
-    private void Start()
-    {
-        // Nếu không có kết nối mạng, NetworkManager sẽ không gọi OnNetworkSpawn
-        // nên ta gọi thủ công ở Start
-        if (!NetworkUtils.IsOnline)
-        {
-            InitBullet();
-        }
-    }
-
-    void InitBullet()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        // Gán vận tốc để đạn bay
+        // Lúc này networkDirection đã có giá trị đúng (server gán trước Spawn)
+        // Cả server lẫn client đều chạy đoạn này → đạn bay đúng trên mọi máy
         if (rb != null)
         {
-            rb.linearVelocity = direction * speed;
+            rb.linearVelocity = networkDirection.Value * speed;
         }
 
-        // Tự hủy sau 3 giây để tránh rác bộ nhớ
-        if (NetworkUtils.IsOnline)
+        // Sync piercing từ NetworkVariable (server đã set trước Spawn)
+        piercing = networkPiercing.Value;
+
+        // Chỉ server đếm ngược tự hủy
+        if (IsServer)
         {
-            if (IsServer) Invoke(nameof(DestroyBullet), 3f);
-        }
-        else
-        {
-            Destroy(gameObject, 3f);
+            Invoke(nameof(DestroyBullet), 3f);
         }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // CHÚ Ý: Chỉnh sửa logic check để chạy được cả Offline
-        if (NetworkUtils.IsOnline && !IsServer) return;
-
+        // Chỉ server xử lý va chạm và gây sát thương
+        if (!IsServer) return;
         if (hasHit && !piercing) return;
 
-        // Xử lý va chạm với các loại Enemy
-        if (collision.CompareTag("Enemy") || collision.CompareTag("Enemy2") ||
-            collision.CompareTag("MeleeEnemy") || collision.CompareTag("Boss") ||
-            collision.CompareTag("LavaEnemy") || collision.CompareTag("ShootingEnemy"))
+        if (collision.CompareTag("Enemy") || collision.CompareTag("MeleeEnemy") ||
+            collision.CompareTag("Boss") || collision.CompareTag("ShootingEnemy"))
         {
-            // Thử lấy component và gây sát thương
             if (collision.TryGetComponent<MeleeEnemy>(out var enemy))
             {
                 enemy.TakeDamage(damage);
             }
-            // Bạn có thể thêm TryGetComponent cho các class enemy khác ở đây tương tự MeleeEnemy
+            // TODO: thêm IEnemyDamageable interface để không cần check từng loại
 
             if (!piercing)
             {
@@ -93,13 +89,10 @@ public class Bullet : NetworkBehaviour
 
     void DestroyBullet()
     {
-        if (NetworkUtils.IsOnline)
+        if (IsServer)
         {
-            if (IsServer) GetComponent<NetworkObject>().Despawn();
-        }
-        else
-        {
-            Destroy(gameObject);
+            if (GetComponent<NetworkObject>().IsSpawned)
+                GetComponent<NetworkObject>().Despawn();
         }
     }
 }

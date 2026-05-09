@@ -8,8 +8,10 @@ using UnityEngine;
 
 /// <summary>
 /// LAN Discovery dùng UDP broadcast.
-/// Host: broadcast RoomInfo định kỳ.
-/// Client: lắng nghe và thu thập danh sách phòng.
+/// Fix:
+/// 1. Dùng DateTime.UtcNow.Ticks / TimeSpan.TicksPerMillisecond thay Time.realtimeSinceStartup trong background thread
+/// 2. Bỏ Thread.Abort() (deprecated .NET 5+), dùng isListening flag + ReceiveTimeout
+/// 3. Fire OnRoomListUpdated ngay khi nhận phòng mới (không chờ CleanupAndNotify)
 /// </summary>
 public class LanDiscovery : MonoBehaviour
 {
@@ -17,28 +19,29 @@ public class LanDiscovery : MonoBehaviour
 
     [Header("UDP Settings")]
     public int broadcastPort = 47777;
-    public float broadcastInterval = 1.5f;  // host broadcast mỗi 1.5s
+    public float broadcastInterval = 1.5f;
 
     // ── State ──────────────────────────────────────────────────────────────
     private UdpClient udpBroadcaster;
     private UdpClient udpListener;
     private Thread listenerThread;
-    private bool isListening = false;
+    private volatile bool isListening = false;  // volatile: đọc/ghi từ 2 thread
     private bool isBroadcasting = false;
 
-    // RoomInfo của host hiện tại (nếu đang host)
     private RoomInfo hostedRoom;
     private float broadcastTimer = 0f;
 
-    // Danh sách phòng tìm được (client side)
-    private readonly Dictionary<string, (RoomInfo info, float timestamp)> discoveredRooms
-        = new Dictionary<string, (RoomInfo, float)>();
+    // Dùng long (milliseconds) thay float để thread-safe
+    private readonly Dictionary<string, (RoomInfo info, long timestamp)> discoveredRooms
+        = new Dictionary<string, (RoomInfo, long)>();
     private readonly object roomLock = new object();
 
-    // Timeout: xóa phòng nếu không nhận broadcast sau 5s
-    private const float ROOM_TIMEOUT = 5f;
+    // Timeout 5 giây = 5000ms
+    private const long ROOM_TIMEOUT_MS = 5000L;
 
-    // Event báo UI cập nhật
+    // Flag báo main thread có phòng mới cần fire event
+    private volatile bool roomListDirty = false;
+
     public event Action<List<RoomInfo>> OnRoomListUpdated;
 
     void Awake()
@@ -61,9 +64,16 @@ public class LanDiscovery : MonoBehaviour
             }
         }
 
-        // Client: dọn phòng timeout + fire event
+        // Client: fire event trên main thread khi background thread báo có data mới
         if (isListening)
-            CleanupAndNotify();
+        {
+            if (roomListDirty)
+            {
+                roomListDirty = false;
+                FireRoomListUpdate();
+            }
+            CleanupTimedOut();
+        }
     }
 
     // ── HOST ───────────────────────────────────────────────────────────────
@@ -72,8 +82,8 @@ public class LanDiscovery : MonoBehaviour
     {
         hostedRoom = room;
         isBroadcasting = true;
-        broadcastTimer = broadcastInterval; // broadcast ngay lập tức lần đầu
-        Debug.Log($"[LAN] Bắt đầu broadcast phòng: {room.roomId}");
+        broadcastTimer = broadcastInterval; // broadcast ngay lần đầu
+        Debug.Log($"[LAN] Bắt đầu broadcast: {room.roomId}");
     }
 
     public void UpdateBroadcastRoom(RoomInfo room)
@@ -104,6 +114,7 @@ public class LanDiscovery : MonoBehaviour
             byte[] data = Encoding.UTF8.GetBytes(json);
             var endpoint = new IPEndPoint(IPAddress.Broadcast, broadcastPort);
             udpBroadcaster.Send(data, data.Length, endpoint);
+            Debug.Log($"[LAN] Broadcast gửi {data.Length} bytes đến port {broadcastPort}");
         }
         catch (Exception e)
         {
@@ -125,10 +136,11 @@ public class LanDiscovery : MonoBehaviour
 
     public void StopListening()
     {
-        isListening = false;
-        udpListener?.Close();
+        isListening = false;        // signal thread tự thoát sau ReceiveTimeout
+        udpListener?.Close();       // unblock Receive() ngay lập tức
         udpListener = null;
-        listenerThread?.Abort();
+        // KHÔNG gọi Thread.Abort() - deprecated và crash trên .NET 5+
+        // Thread sẽ tự thoát sau tối đa 1s (ReceiveTimeout)
         lock (roomLock) discoveredRooms.Clear();
         Debug.Log("[LAN] Dừng lắng nghe");
     }
@@ -138,7 +150,8 @@ public class LanDiscovery : MonoBehaviour
         try
         {
             udpListener = new UdpClient(broadcastPort);
-            udpListener.Client.ReceiveTimeout = 1000;
+            udpListener.Client.ReceiveTimeout = 1000; // 1s timeout để check isListening
+            Debug.Log($"[LAN] Listener đang lắng nghe trên port {broadcastPort}");
 
             while (isListening)
             {
@@ -148,17 +161,25 @@ public class LanDiscovery : MonoBehaviour
                     byte[] data = udpListener.Receive(ref remote);
                     string json = Encoding.UTF8.GetString(data);
                     RoomInfo room = JsonUtility.FromJson<RoomInfo>(json);
+                    Debug.Log($"[LAN] Nhận được packet từ {remote.Address}");
 
                     if (room != null && !string.IsNullOrEmpty(room.roomId))
                     {
-                        // Ghi đè IP thực từ sender (tránh host gửi sai IP)
+                        // Ghi đè IP thực từ sender
                         room.hostIP = remote.Address.ToString();
 
+                        // FIX: dùng DateTime.UtcNow.Ticks / TimeSpan.TicksPerMillisecond thay Time.realtimeSinceStartup
+                        // DateTime.UtcNow.Ticks / TimeSpan.TicksPerMillisecond là thread-safe, không phụ thuộc Unity
+                        long now = DateTime.UtcNow.Ticks / TimeSpan.TicksPerMillisecond;
+
                         lock (roomLock)
-                            discoveredRooms[room.roomId] = (room, Time.realtimeSinceStartup);
+                            discoveredRooms[room.roomId] = (room, now);
+
+                        // Báo main thread có data mới để fire event
+                        roomListDirty = true;
                     }
                 }
-                catch (SocketException) { /* timeout, bình thường */ }
+                catch (SocketException) { /* timeout 1s, bình thường */ }
             }
         }
         catch (Exception e)
@@ -166,19 +187,21 @@ public class LanDiscovery : MonoBehaviour
             if (isListening)
                 Debug.LogWarning($"[LAN] Listener lỗi: {e.Message}");
         }
+        Debug.Log("[LAN] ListenLoop thoát");
     }
 
-    private void CleanupAndNotify()
+    // Dọn phòng timeout trên main thread (an toàn)
+    private void CleanupTimedOut()
     {
+        long now = DateTime.UtcNow.Ticks / TimeSpan.TicksPerMillisecond;
         bool changed = false;
-        float now = Time.realtimeSinceStartup;
 
         lock (roomLock)
         {
             var toRemove = new List<string>();
             foreach (var kv in discoveredRooms)
             {
-                if (now - kv.Value.timestamp > ROOM_TIMEOUT)
+                if (now - kv.Value.timestamp > ROOM_TIMEOUT_MS)
                 {
                     toRemove.Add(kv.Key);
                     changed = true;

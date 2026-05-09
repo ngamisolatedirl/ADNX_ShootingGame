@@ -12,6 +12,7 @@ TagManager:
   - MeleeEnemy
   - ShootingEnemy
   - LavaEnemy
+  - notMainCamera
   layers:
   - Default
   - TransparentFX

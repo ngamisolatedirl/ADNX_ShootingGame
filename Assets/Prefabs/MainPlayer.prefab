@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 6490506754885148272}
   - component: {fileID: 5535631628372392642}
   - component: {fileID: 6745837759956619822}
+  - component: {fileID: 4983851870727876304}
   m_Layer: 0
   m_Name: MainPlayer
   m_TagString: Player
@@ -144,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 2983496104
+  GlobalObjectIdHash: 1505925109
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -212,6 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f1beb04d2797a438634c8c851db6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  ShowTopMostFoldoutHeaderGroup: 1
   maxHealth: 100
 --- !u!70 &5487851377831429673
 CapsuleCollider2D:
@@ -346,7 +348,7 @@ MonoBehaviour:
   RotationMaxInterpolationTime: 0.1
   ScaleLerpSmoothing: 1
   ScaleMaxInterpolationTime: 0.1
-  AuthorityMode: 0
+  AuthorityMode: 1
   TickSyncChildren: 0
   UseUnreliableDeltas: 0
   SyncPositionX: 1
@@ -368,6 +370,21 @@ MonoBehaviour:
   SwitchTransformSpaceWhenParented: 0
   Interpolate: 1
   SlerpPosition: 0
+--- !u!114 &4983851870727876304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088029901387380118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2579af0b06ac1349b2ea0067648f20f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCameraController
+  ShowTopMostFoldoutHeaderGroup: 1
+  cameraPrefab: {fileID: 8062421418458304023, guid: 30ee52193a5b4f3428321924aa9e9641, type: 3}
+  useFallbackSceneCamera: 0
 --- !u!1 &8806457304545246316
 GameObject:
   m_ObjectHideFlags: 0

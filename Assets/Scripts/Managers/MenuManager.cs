@@ -25,6 +25,7 @@ public class MenuManager : MonoBehaviour
     //public void OpenPlay() => SceneManager.LoadScene("LevelSelect");
     public void OpenPlay()
     {
+
         SceneManager.LoadScene("LevelSelect");
     }
     //    public void OpenShop() => Debug.Log("Cua hang chua co!");

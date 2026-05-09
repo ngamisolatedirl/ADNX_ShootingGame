@@ -70,7 +70,7 @@ public class CreateRoomManager : MonoBehaviour
     {
         roomType = type;
         ipInputGroup.SetActive(type == "localhost");
-        roomTypeText.text = "Loại phòng: " + (type == "lan" ? "LAN" : "Localhost");
+        roomTypeText.text = "RoomType: " + (type == "lan" ? "LAN" : "Localhost");
         RefreshUI();
     }
 
@@ -124,17 +124,30 @@ public class CreateRoomManager : MonoBehaviour
         transport.SetConnectionData(hostIP, 7777);
 
         // Start host
-        NetworkManager.Singleton.StartHost();
-
+        //NetworkManager.Singleton.StartHost();
+        bool success = NetworkManager.Singleton.StartHost();
         // Nếu LAN → broadcast
         if (roomType == "lan")
             LanDiscovery.Instance?.StartBroadcast(pendingRoom);
 
-        statusText.text = "Đang tạo phòng...";
+        statusText.text = "creating";
 
+
+       
+
+        if (success)
+        {
+            Debug.Log("Host started successfully on " + hostIP + ":7777");
+        }
+        else
+        {
+            Debug.LogError("Failed to start Host! Check if NetworkManager is configured.");
+        }
         // Đăng ký callback rồi load Room scene qua NetworkManager
         NetworkManager.Singleton.SceneManager.OnLoadComplete += OnRoomSceneLoaded;
         NetworkManager.Singleton.SceneManager.LoadScene(roomScene, UnityEngine.SceneManagement.LoadSceneMode.Single);
+
+
     }
 
     void OnRoomSceneLoaded(ulong clientId, string sceneName, UnityEngine.SceneManagement.LoadSceneMode mode)
@@ -149,10 +162,17 @@ public class CreateRoomManager : MonoBehaviour
         {
             var host = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName());
             foreach (var ip in host.AddressList)
+            {
+                Debug.Log($"[IP] Tìm thấy: {ip} | Family: {ip.AddressFamily}");
                 if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
                     return ip.ToString();
+            }
         }
-        catch { }
+        catch (Exception e)
+        {
+            Debug.LogError($"[IP] Lỗi: {e.Message}");
+        }
+        Debug.LogWarning("[IP] Không tìm được IP LAN, fallback 127.0.0.1");
         return "127.0.0.1";
     }
 }

@@ -181,7 +181,7 @@ public class RoomManager : NetworkBehaviour
         if (!IsHost) return;
         if (syncedPlayerCount.Value < 2)
         {
-            statusText.text = "Cần ít nhất 2 người chơi!";
+            statusText.text = "need atleast 2 players!";
             return;
         }
 
@@ -233,12 +233,12 @@ public class RoomManager : NetworkBehaviour
 
         // Room type
         if (roomTypeText != null && RoomContext.CurrentRoom != null)
-            roomTypeText.text = "Loại phòng: " +
+            roomTypeText.text = "Room Type: " +
                 (RoomContext.CurrentRoom.roomType == "lan" ? "LAN" : "Localhost");
 
         // Player count
         if (playerCountText != null)
-            playerCountText.text = $"Người chơi: {playerCount}/4";
+            playerCountText.text = $"Player : {playerCount}/4";
 
         // Highlight map button được chọn
         for (int i = 0; i < mapButtons.Length; i++)
@@ -256,8 +256,8 @@ public class RoomManager : NetworkBehaviour
         {
             startButton.interactable = playerCount >= 2;
             statusText.text = playerCount < 2
-                ? "Chờ người chơi khác..."
-                : "Sẵn sàng!";
+                ? "Waiting for other players..."
+                : "Ready!";
         }
     }
 
@@ -270,7 +270,7 @@ public class RoomManager : NetworkBehaviour
                 ulong clientId = connectedClientIds[i];
                 bool isMe = clientId == NetworkManager.Singleton.LocalClientId;
                 playerSlots[i].SetOccupied(
-                    isMe ? "Bạn" : $"Player {i + 1}",
+                    isMe ? "You" : $"Player {i + 1}",
                     clientId == NetworkManager.ServerClientId
                 );
             }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2335095190450873095}
   - component: {fileID: 6646522756683134529}
   - component: {fileID: 6933493170611299414}
+  - component: {fileID: 4105277693497465897}
   - component: {fileID: 1378061551931552938}
   m_Layer: 0
   m_Name: Bullet
@@ -171,6 +172,31 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 1
+--- !u!114 &4105277693497465897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5894493915743829760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
+  GlobalObjectIdHash: 2542944819
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
 --- !u!114 &1378061551931552938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,5 +209,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4312d9f2346b7449ac0e77d7cbbef67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
+  ShowTopMostFoldoutHeaderGroup: 1
   speed: 30
   damage: 20

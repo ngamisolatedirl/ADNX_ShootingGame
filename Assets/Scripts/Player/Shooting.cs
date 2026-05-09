@@ -12,14 +12,15 @@ public class Shooting : NetworkBehaviour
     public float fireRate = 3f;
     private float fireTimer = 0f;
 
-    [Header("Gun Stats (set by GunApplier)")]
+    [Header("Gun Stats")]
     public float damage = 10f;
     public bool piercing = false;
 
     void Update()
     {
-        // Nếu đang online mà không phải chủ sở hữu thì không xử lý input
-        if (NetworkUtils.IsOnline && !IsOwner) return;
+        // QUAN TRỌNG: Chỉ chủ sở hữu (Owner) mới được xử lý phím bấm
+        // Dù Offline (Host) hay Online (Client), IsOwner đều sẽ hoạt động đúng
+        if (!IsOwner) return;
 
         var keyboard = Keyboard.current;
         if (keyboard == null) return;
@@ -27,116 +28,66 @@ public class Shooting : NetworkBehaviour
         fireTimer += Time.deltaTime;
         bool canShoot = fireTimer >= 1f / fireRate;
 
-        // Input bắn ngang (Space)
-        if (keyboard.spaceKey.wasPressedThisFrame && canShoot)
+        if (canShoot)
         {
-            ShootHorizontal();
-            ResetTimer();
-        }
-        // Input bắn xuống (S hoặc Down Arrow)
-        else if ((keyboard.sKey.wasPressedThisFrame || keyboard.downArrowKey.wasPressedThisFrame) && canShoot)
-        {
-            ShootDown();
-            ResetTimer();
-        }
-        // Input bắn chéo xuống (X hoặc Ctrl)
-        else if ((keyboard.xKey.wasPressedThisFrame || keyboard.ctrlKey.wasPressedThisFrame) && canShoot)
-        {
-            ShootDiagonalDown();
-            ResetTimer();
+            if (keyboard.spaceKey.wasPressedThisFrame)
+            {
+                Shoot(new Vector2(GetFacingDir(), 0));
+            }
+            else if (keyboard.sKey.wasPressedThisFrame || keyboard.downArrowKey.wasPressedThisFrame)
+            {
+                Shoot(Vector2.down);
+            }
+            else if (keyboard.xKey.wasPressedThisFrame || keyboard.ctrlKey.wasPressedThisFrame)
+            {
+                Shoot(new Vector2(GetFacingDir(), -1f).normalized);
+            }
         }
     }
 
-    void ResetTimer()
+    float GetFacingDir()
+    {
+        // Lấy hướng dựa trên scale của nhân vật
+        return transform.root.localScale.x > 0 ? 1f : -1f;
+    }
+
+    void Shoot(Vector2 dir)
     {
         fireTimer = 0f;
-        // Chạy animation bắn
-        if (TryGetComponent<PlayerAnimator>(out var anim))
-        {
-            anim.PlayShoot();
-        }
-    }
 
-    void ShootHorizontal()
-    {
-        // Xác định hướng dựa trên scale của nhân vật (lấy từ root hoặc chính nó)
-        float dirX = transform.root.localScale.x > 0 ? 1f : -1f;
-        SpawnBullet(new Vector2(dirX, 0));
-    }
-
-    void ShootDown()
-    {
-        SpawnBullet(Vector2.down);
-    }
-
-    void ShootDiagonalDown()
-    {
-        float dirX = transform.root.localScale.x > 0 ? 1f : -1f;
-        SpawnBullet(new Vector2(dirX, -1f).normalized);
-    }
-
-    void SpawnBullet(Vector2 dir)
-    {
-        if (shootingPoint == null)
-        {
-            Debug.LogError("Shooting: Chưa gán shootingPoint trên Inspector!");
-            return;
-        }
-
-        // 1. Tính toán sát thương và Crit từ DataManager
+        // Tính toán sát thương (Tính ở máy khách để phản hồi nhanh, nhưng Server sẽ nhận giá trị này)
         float finalDamage = damage;
         if (DataManager.Instance != null)
         {
             var saveData = DataManager.Instance.GetSaveData();
-            if (saveData != null)
+            BaseStats stats = DataManager.Instance.GetComputedStats(saveData.activeCharacterId);
+            if (stats != null && Random.value < stats.critRate)
             {
-                BaseStats stats = DataManager.Instance.GetComputedStats(saveData.activeCharacterId);
-                if (stats != null && Random.value < stats.critRate)
-                {
-                    finalDamage *= stats.critDamage;
-                    Debug.Log($"<color=red>CRIT!</color> Damage: {finalDamage}");
-                }
+                finalDamage *= stats.critDamage;
             }
         }
 
-        // 2. Thực hiện Spawn theo chế độ chơi
-        if (NetworkUtils.IsOnline)
-        {
-            // Chế độ Online: Gửi yêu cầu lên Server
-            SpawnBulletServerRpc(shootingPoint.position, dir, finalDamage, piercing);
-        }
-        else
-        {
-            // Chế độ Offline: Tạo trực tiếp bằng Instantiate truyền thống
-            LocalSpawn(shootingPoint.position, dir, finalDamage, piercing);
-        }
-    }
+        // Chạy animation local ngay lập tức để không bị delay cảm giác
+        if (TryGetComponent<PlayerAnimator>(out var anim)) anim.PlayShoot();
 
-    // Hàm bổ trợ cho việc spawn máy đơn
-    void LocalSpawn(Vector3 pos, Vector2 dir, float dmg, bool isPiercing)
-    {
-        GameObject bullet = Instantiate(bulletPrefab, pos, Quaternion.identity);
-        if (bullet.TryGetComponent<Bullet>(out var bulletScript))
-        {
-            bulletScript.SetDirection(dir);
-            bulletScript.SetStats(dmg, isPiercing);
-        }
+        // GỬI LỆNH LÊN SERVER (Dù chơi 1 mình hay nhiều mình đều qua đây)
+        SpawnBulletServerRpc(shootingPoint.position, dir, finalDamage, piercing);
     }
 
     [ServerRpc]
     void SpawnBulletServerRpc(Vector3 position, Vector2 dir, float finalDamage, bool isPiercing)
     {
-        // Server tạo object
+        // 1. Server sinh ra viên đạn
         GameObject bullet = Instantiate(bulletPrefab, position, Quaternion.identity);
 
+        // 2. Gán thông số đạn (Server làm việc này)
         if (bullet.TryGetComponent<Bullet>(out var bulletScript))
         {
-            // Set thông số TRƯỚC khi Spawn lên Network
             bulletScript.SetDirection(dir);
             bulletScript.SetStats(finalDamage, isPiercing);
         }
 
-        // Đưa object lên hệ thống Network để đồng bộ với tất cả Client
+        // 3. QUAN TRỌNG: Spawn lên toàn Network
         if (bullet.TryGetComponent<NetworkObject>(out var netObj))
         {
             netObj.Spawn();
