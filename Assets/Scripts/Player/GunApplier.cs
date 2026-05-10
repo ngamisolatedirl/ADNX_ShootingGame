@@ -6,6 +6,7 @@ public class GunApplier : MonoBehaviour
 
     void Start()
     {
+        if (NetworkUtils.IsOnline) return;
         DataManager.EnsureExists(); // ← tự tạo nếu chưa có
         if (DataManager.Instance == null)
         {
