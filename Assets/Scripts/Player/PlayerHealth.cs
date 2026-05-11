@@ -1,25 +1,29 @@
 using UnityEngine;
 using Unity.Netcode;
+using System;
+using System.Collections;
 
 /// <summary>
-/// Quản lý máu player.
-/// - Online: HP sync qua NetworkVariable, damage xử lý trên server.
-/// - Offline: chạy như MonoBehaviour thường.
+/// Fix:
+/// 1. Thanh máu tụt hết: force fire OnHealthChanged(max→0) trong DieClientRpc
+/// 2. Camera không chuyển: DieClientRpc gọi PlayerCameraController.OnPlayerDied() trên owner
+/// 3. Restart bị đơ: OnNetworkSpawn reset isDead, restore visuals, re-enable components
 /// </summary>
 public class PlayerHealth : NetworkBehaviour
 {
     public float maxHealth = 100f;
+    public float deathHideDelay = 1.5f;
 
-    // NetworkVariable để sync HP cho tất cả client (hiển thị UI)
+    public event Action OnDied;
+    public event Action<float, float, float> OnHealthChanged;
+
     private NetworkVariable<float> networkHP = new NetworkVariable<float>(
         100f,
         NetworkVariableReadPermission.Everyone,
         NetworkVariableWritePermission.Server
     );
 
-    // Offline: dùng local field
     private float localHP;
-
     private bool isDead = false;
 
     // ── Lifecycle ──────────────────────────────────────────────────────────
@@ -30,12 +34,27 @@ public class PlayerHealth : NetworkBehaviour
             networkHP.Value = maxHealth;
 
         networkHP.OnValueChanged += OnHPChanged;
+
+        // FIX 3: reset toàn bộ state mỗi lần spawn (kể cả sau restart)
+        isDead = false;
+        RestoreVisuals();
+
+        var move = GetComponent<MovePlayer>();
+        var shoot = GetComponent<Shooting>();
+        if (move != null) move.enabled = true;
+        if (shoot != null) shoot.enabled = true;
+
+        OnHealthChanged?.Invoke(networkHP.Value, networkHP.Value, maxHealth);
     }
 
     void Start()
     {
         if (!NetworkUtils.IsOnline)
+        {
             localHP = maxHealth;
+            isDead = false;
+            OnHealthChanged?.Invoke(maxHealth, maxHealth, maxHealth);
+        }
     }
 
     public override void OnNetworkDespawn()
@@ -45,50 +64,37 @@ public class PlayerHealth : NetworkBehaviour
 
     void OnHPChanged(float oldVal, float newVal)
     {
-        // UI tự cập nhật qua GetHealth()
+        OnHealthChanged?.Invoke(oldVal, newVal, maxHealth);
     }
 
-    // ── Collision Damage ───────────────────────────────────────────────────
+    // ── Damage ─────────────────────────────────────────────────────────────
 
-    void OnCollisionStay2D(Collision2D collision)
-    {
-        // Chỉ owner (hoặc offline) nhận damage từ collision
-        if (NetworkUtils.IsOnline && !IsOwner) return;
-
-        if (collision.gameObject.CompareTag("Enemy") ||
-            collision.gameObject.CompareTag("Enemy2") ||
-            collision.gameObject.CompareTag("MeleeEnemy"))
-        {
-            TakeDamage(5f * Time.deltaTime);
-        }
-    }
-
-    // ── Public API ─────────────────────────────────────────────────────────
-
+    /// <summary>Gọi từ owner (DeathZone, hazard, v.v.)</summary>
     public void TakeDamage(float damage)
     {
         if (isDead) return;
 
         if (NetworkUtils.IsOnline)
         {
-            // Client gửi lên server xử lý
             if (IsOwner)
                 TakeDamageServerRpc(damage);
         }
         else
         {
-            // Offline: xử lý local
-            ApplyDamage(damage);
+            ApplyDamageLocal(damage);
         }
     }
 
-    [ServerRpc]
-    void TakeDamageServerRpc(float damage)
+    /// <summary>Gọi từ Server trực tiếp (MeleeEnemy.AttackPlayer).</summary>
+    public void TakeDamageFromServer(float damage)
     {
+        if (!IsServer) return;
         ApplyDamageServer(damage);
     }
 
-    // Server apply damage
+    [ServerRpc]
+    void TakeDamageServerRpc(float damage) => ApplyDamageServer(damage);
+
     void ApplyDamageServer(float damage)
     {
         if (isDead) return;
@@ -97,17 +103,17 @@ public class PlayerHealth : NetworkBehaviour
             DieServer();
     }
 
-    // Offline apply damage
-    void ApplyDamage(float damage)
+    void ApplyDamageLocal(float damage)
     {
+        float oldHP = localHP;
         localHP = Mathf.Clamp(localHP - damage, 0, maxHealth);
+        OnHealthChanged?.Invoke(oldHP, localHP, maxHealth);
         if (localHP <= 0)
             Die();
     }
 
     // ── Death ──────────────────────────────────────────────────────────────
 
-    /// <summary>Gọi từ DeathZone hoặc bất kỳ external source nào.</summary>
     public void Die()
     {
         if (isDead) return;
@@ -123,6 +129,9 @@ public class PlayerHealth : NetworkBehaviour
     }
 
     [ServerRpc]
+    public void FallDeathServerRpc() => DieServer();
+
+    [ServerRpc]
     void DieServerRpc() => DieServer();
 
     void DieServer()
@@ -131,15 +140,17 @@ public class PlayerHealth : NetworkBehaviour
         isDead = true;
         networkHP.Value = 0;
 
-        ulong clientId = IsHost
-            ? NetworkManager.Singleton.LocalClientId
-            : OwnerClientId;
-
-        // Báo GameManager
-        GameManager.Instance?.ReportPlayerDeath(clientId);
-
-        // Thông báo client play animation chết
+        GameManager.Instance?.ReportPlayerDeath(OwnerClientId);
         DieClientRpc();
+
+        StartCoroutine(DespawnAfterDelay());
+    }
+
+    IEnumerator DespawnAfterDelay()
+    {
+        yield return new WaitForSeconds(deathHideDelay);
+        if (IsSpawned)
+            GetComponent<NetworkObject>().Despawn();
     }
 
     void DieLocal()
@@ -148,7 +159,16 @@ public class PlayerHealth : NetworkBehaviour
         isDead = true;
         localHP = 0;
 
+        OnHealthChanged?.Invoke(maxHealth, 0, maxHealth);
+        OnDied?.Invoke();
         GetComponent<PlayerAnimator>()?.PlayDeath();
+
+        var move = GetComponent<MovePlayer>();
+        var shoot = GetComponent<Shooting>();
+        if (move != null) move.enabled = false;
+        if (shoot != null) shoot.enabled = false;
+
+        StartCoroutine(HideAfterDelay());
         GameManager.Instance?.GameOver();
     }
 
@@ -156,14 +176,49 @@ public class PlayerHealth : NetworkBehaviour
     void DieClientRpc()
     {
         isDead = true;
+
+        // FIX 1: force UI tụt về 0 ngay — NetworkVariable sync có thể đến sau ClientRpc
+        OnHealthChanged?.Invoke(maxHealth, 0, maxHealth);
+
+        OnDied?.Invoke();
         GetComponent<PlayerAnimator>()?.PlayDeath();
 
-        // Disable input chỉ trên owner
         if (IsOwner)
         {
-            GetComponent<MovePlayer>().enabled = false;
-            GetComponent<Shooting>().enabled = false;
+            var move = GetComponent<MovePlayer>();
+            var shoot = GetComponent<Shooting>();
+            if (move != null) move.enabled = false;
+            if (shoot != null) shoot.enabled = false;
+
+            // FIX 2: chuyển camera sang spectate player còn sống
+            GetComponent<PlayerCameraController>()?.OnPlayerDied();
         }
+
+        StartCoroutine(HideAfterDelay());
+    }
+
+    IEnumerator HideAfterDelay()
+    {
+        yield return new WaitForSeconds(deathHideDelay);
+        HideVisuals();
+    }
+
+    // ── Visuals ────────────────────────────────────────────────────────────
+
+    void HideVisuals()
+    {
+        foreach (var r in GetComponentsInChildren<Renderer>())
+            r.enabled = false;
+        foreach (var c in GetComponentsInChildren<Collider2D>())
+            c.enabled = false;
+    }
+
+    void RestoreVisuals()
+    {
+        foreach (var r in GetComponentsInChildren<Renderer>())
+            r.enabled = true;
+        foreach (var c in GetComponentsInChildren<Collider2D>())
+            c.enabled = true;
     }
 
     // ── Reset ──────────────────────────────────────────────────────────────
@@ -171,13 +226,19 @@ public class PlayerHealth : NetworkBehaviour
     public void ResetHealth()
     {
         isDead = false;
+        RestoreVisuals();
+
         if (NetworkUtils.IsOnline)
         {
-            if (IsServer) networkHP.Value = maxHealth;
+            if (IsServer)
+                networkHP.Value = maxHealth;
+            OnHealthChanged?.Invoke(0, maxHealth, maxHealth);
         }
         else
         {
+            float old = localHP;
             localHP = maxHealth;
+            OnHealthChanged?.Invoke(old, maxHealth, maxHealth);
         }
     }
 

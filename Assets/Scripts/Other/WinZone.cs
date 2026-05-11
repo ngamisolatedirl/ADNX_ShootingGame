@@ -6,11 +6,22 @@ using Unity.Netcode;
 /// - Online: gửi lên server, server kiểm tra khi đủ tất cả player còn sống.
 /// - Offline: gọi GameManager.WinLevel() trực tiếp.
 /// Player đã chết không bị tính vào điều kiện.
+///
+/// FIX:
+/// 1. ExitWinZoneServerRpc() — báo server khi player rời zone, tránh đếm sai
+/// 2. FreezePlayerClientRpc() — server điều khiển freeze/unfreeze đồng bộ
+/// 3. Reset glowEffect khi OnNetworkSpawn (tránh stale state sau restart)
 /// </summary>
 public class WinZone : NetworkBehaviour
 {
     [Header("Visual Feedback")]
-    public GameObject glowEffect;           // hiệu ứng khi có player đứng trong zone
+    public GameObject glowEffect; // hiệu ứng khi có player đứng trong zone
+
+    public override void OnNetworkSpawn()
+    {
+        // Reset glow mỗi lần scene load
+        glowEffect?.SetActive(false);
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,21 +32,19 @@ public class WinZone : NetworkBehaviour
 
         if (!NetworkUtils.IsOnline)
         {
-            // Offline: win ngay
             GameManager.Instance?.WinLevel();
             return;
         }
 
-        // Online: chỉ owner mới gửi lên server
+        // Chỉ owner mới gửi lên server
         var nb = collision.GetComponent<NetworkBehaviour>();
         if (nb == null || !nb.IsOwner) return;
 
+        // Báo server enter
         EnterWinZoneServerRpc(nb.OwnerClientId);
 
-        // Local feedback: freeze player tại chỗ
-        var move = collision.GetComponent<MovePlayer>();
-        if (move != null) move.enabled = false;
-
+        // Local: freeze player + hiện glow
+        SetPlayerMovement(collision, false);
         glowEffect?.SetActive(true);
     }
 
@@ -43,18 +52,43 @@ public class WinZone : NetworkBehaviour
     {
         if (!collision.CompareTag("Player")) return;
 
-        // Nếu player rời WinZone (chưa win) → cho di chuyển lại
-        var nb = collision.GetComponent<NetworkBehaviour>();
-        if (nb != null && nb.IsOwner)
+        if (!NetworkUtils.IsOnline)
         {
-            var move = collision.GetComponent<MovePlayer>();
-            if (move != null) move.enabled = true;
+            SetPlayerMovement(collision, true);
+            return;
         }
+
+        var nb = collision.GetComponent<NetworkBehaviour>();
+        if (nb == null || !nb.IsOwner) return;
+
+        // FIX: báo server player rời zone để cập nhật đếm
+        ExitWinZoneServerRpc(nb.OwnerClientId);
+
+        // Local: unfreeze player + tắt glow
+        SetPlayerMovement(collision, true);
+        glowEffect?.SetActive(false);
     }
+
+    // ── ServerRpc ──────────────────────────────────────────────────────────
 
     [ServerRpc(RequireOwnership = false)]
     void EnterWinZoneServerRpc(ulong clientId)
     {
         GameManager.Instance?.ReportPlayerInWinZone(clientId);
+    }
+
+    // FIX: server nhận biết player rời zone
+    [ServerRpc(RequireOwnership = false)]
+    void ExitWinZoneServerRpc(ulong clientId)
+    {
+        GameManager.Instance?.ReportPlayerLeftWinZone(clientId);
+    }
+
+    // ── Helpers ────────────────────────────────────────────────────────────
+
+    void SetPlayerMovement(Collider2D collision, bool enabled)
+    {
+        var move = collision.GetComponent<MovePlayer>();
+        if (move != null) move.enabled = enabled;
     }
 }

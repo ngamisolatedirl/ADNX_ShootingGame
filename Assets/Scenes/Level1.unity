@@ -908,16 +908,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279900244}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.3375, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1784625477}
+  m_Father: {fileID: 904769639}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 206.36365, y: -80.03656}
+  m_AnchoredPosition: {x: 180.00586, y: -72.76788}
   m_SizeDelta: {x: 269.1675, y: 145.5357}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &279900246
@@ -1650,16 +1650,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455460724}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.477876, y: 0.83596104, z: 0.83596104}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1784625477}
+  m_Father: {fileID: 904769639}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 227.2052, y: -85.460144}
+  m_AnchoredPosition: {x: 200.84741, y: -78.19147}
   m_SizeDelta: {x: 98.5573, y: 128.1916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &455460726
@@ -3891,6 +3891,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 891756399}
   m_CullTransparentMesh: 1
+--- !u!1 &904769638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 904769639}
+  - component: {fileID: 904769640}
+  m_Layer: 5
+  m_Name: HealthBarPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &904769639
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904769638}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 279900245}
+  - {fileID: 455460725}
+  m_Father: {fileID: 1784625477}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -747.526, y: 459.96344}
+  m_SizeDelta: {x: 372.23236, y: 145.53574}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &904769640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904769638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b78a68f77ff92a4c9b6be1b7eabb7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthBarUI
+  fillImage: {fileID: 455460726}
+  animDuration: 0.3
+  fullColor: {r: 1, g: 0, b: 0, a: 1}
+  lowColor: {r: 0.9056604, g: 0.5254539, b: 0.5254539, a: 1}
+  lowThreshold: 0.3
 --- !u!1 &930864315
 GameObject:
   m_ObjectHideFlags: 0
@@ -4253,6 +4308,8 @@ MonoBehaviour:
   gameOverUI: {fileID: 1224786488}
   winUI: {fileID: 930963197}
   waitingForTeammatesUI: {fileID: 0}
+  restartButton: {fileID: 0}
+  waitingHostRestartText: {fileID: 0}
   currentLevelIndex: 1
   roomScene: Room
   mainMenuScene: MainMenu
@@ -6748,8 +6805,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 279900245}
-  - {fileID: 455460725}
+  - {fileID: 904769639}
   - {fileID: 1502012158}
   - {fileID: 1224786489}
   - {fileID: 930963198}

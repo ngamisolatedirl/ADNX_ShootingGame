@@ -2,6 +2,20 @@ using System;
 using UnityEngine;
 using Unity.Netcode;
 
+/// <summary>
+/// Fix online:
+/// 1. OnNetworkSpawn: client cũng gọi FindTargetPlayer() để setup IgnoreCollision
+/// 2. AttackPlayer: server dùng ServerRpc-style gọi TakeDamage trực tiếp (đã là server authority)
+///    — nhưng cần target đúng player owner, dùng NetworkObject.OwnerClientId để map
+/// 3. FlipSprite sync qua NetworkVariable để client thấy enemy quay đúng hướng
+///    (NetworkTransform sync position, nhưng localScale.x không sync tự động)
+/// 4. Animation state sync qua ClientRpc khi state thay đổi
+///
+/// LƯU Ý QUAN TRỌNG (làm trong Editor):
+/// - Thêm component NetworkTransform vào Enemy GameObject
+///   → Authority Mode: Server, bỏ tick Sync Rotation + Sync Scale
+/// - Đảm bảo Enemy có NetworkObject component
+/// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 public class MeleeEnemy : NetworkBehaviour
 {
@@ -24,10 +38,15 @@ public class MeleeEnemy : NetworkBehaviour
     [Header("Behaviour")]
     public bool isStationary = false;
 
-    // --- Health Management ---
-    private float localHealth; // Dùng cho Offline
+    // --- Health ---
+    private float localHealth;
     private NetworkVariable<float> currentHealth = new NetworkVariable<float>(
         0f, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+
+    // FIX 3: sync hướng flip để client thấy enemy quay đúng
+    // NetworkTransform không sync localScale, nên cần sync thủ công
+    private NetworkVariable<bool> networkFacingRight = new NetworkVariable<bool>(
+        true, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
 
     private float attackTimer = 0f;
     private bool movingRight = true;
@@ -42,10 +61,12 @@ public class MeleeEnemy : NetworkBehaviour
 
     private enum State { Patrol, Chase, Attack, ReturnToZone }
     private State currentState = State.Patrol;
+    private State lastSyncedState = State.Patrol; // để detect thay đổi state
+
+    // ── Lifecycle ──────────────────────────────────────────────────────────
 
     private void Start()
     {
-        // Khởi tạo các thành phần cơ bản (Luôn chạy dù Online hay Offline)
         animator = GetComponent<Animator>();
         startPosition = transform.position;
         localHealth = maxHealth;
@@ -53,29 +74,87 @@ public class MeleeEnemy : NetworkBehaviour
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null) rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
-        // Nếu chơi Offline, tìm Player ngay lập tức
         if (!NetworkUtils.IsOnline)
-        {
             FindTargetPlayer();
-        }
     }
 
     public override void OnNetworkSpawn()
     {
-        // Chỉ chạy khi có kết nối mạng (Host/Server)
         if (IsServer)
         {
             currentHealth.Value = maxHealth;
-            FindTargetPlayer();
+        }
+
+        // FIX 1: Tất cả (server + client) đều cần FindTargetPlayer
+        // Client cần để setup IgnoreCollision với player của mình
+        FindTargetPlayer();
+
+        // FIX 3: Client lắng nghe thay đổi hướng từ server
+        if (!IsServer)
+        {
+            networkFacingRight.OnValueChanged += OnFacingChanged;
+            // Apply ngay giá trị hiện tại
+            ApplyFacing(networkFacingRight.Value);
         }
     }
 
+    public override void OnNetworkDespawn()
+    {
+        if (!IsServer)
+            networkFacingRight.OnValueChanged -= OnFacingChanged;
+    }
+
+    // FIX 3: callback khi server đổi hướng
+    void OnFacingChanged(bool oldVal, bool newVal) => ApplyFacing(newVal);
+
+    void ApplyFacing(bool facingRight)
+    {
+        Vector3 scale = transform.localScale;
+        scale.x = Mathf.Abs(scale.x) * (facingRight ? 1f : -1f);
+        transform.localScale = scale;
+    }
+
+    // ── Find Player ────────────────────────────────────────────────────────
+
     private void FindTargetPlayer()
     {
-        player = GameObject.FindWithTag("Player")?.transform;
+        // Online: mỗi client/server tìm player của chính mình (owner)
+        // Server cần tìm bất kỳ player nào để chase (dùng player gần nhất)
+        if (NetworkUtils.IsOnline)
+        {
+            // Server: tìm tất cả player, sẽ chase player gần nhất trong Update
+            var players = GameObject.FindGameObjectsWithTag("Player");
+            float minDist = float.MaxValue;
+            foreach (var p in players)
+            {
+                float d = Vector2.Distance(transform.position, p.transform.position);
+                if (d < minDist)
+                {
+                    minDist = d;
+                    player = p.transform;
+                }
+            }
+        }
+        else
+        {
+            player = GameObject.FindWithTag("Player")?.transform;
+        }
+
         uiManager = FindFirstObjectByType<UIManager>();
 
-        if (player != null)
+        // Setup IgnoreCollision với tất cả player colliders
+        if (NetworkUtils.IsOnline)
+        {
+            var players = GameObject.FindGameObjectsWithTag("Player");
+            Collider2D myCol = GetComponent<Collider2D>();
+            foreach (var p in players)
+            {
+                Collider2D playerCol = p.GetComponent<Collider2D>();
+                if (playerCol != null && myCol != null)
+                    Physics2D.IgnoreCollision(myCol, playerCol);
+            }
+        }
+        else if (player != null)
         {
             Collider2D playerCol = player.GetComponent<Collider2D>();
             Collider2D myCol = GetComponent<Collider2D>();
@@ -84,9 +163,10 @@ public class MeleeEnemy : NetworkBehaviour
         }
     }
 
+    // ── Update (chỉ server/offline chạy AI) ───────────────────────────────
+
     void Update()
     {
-        // Kiểm tra quyền điều khiển: Chỉ Server hoặc người chơi Offline mới chạy logic AI
         if (!NetworkUtils.HasServerAuthority) return;
         if (isDead) return;
 
@@ -115,9 +195,19 @@ public class MeleeEnemy : NetworkBehaviour
         }
 
         UpdateAnimation();
+
+        // FIX 4: Sync animation state xuống client khi thay đổi
+        if (NetworkUtils.IsOnline && currentState != lastSyncedState)
+        {
+            lastSyncedState = currentState;
+            SyncAnimationClientRpc(
+                currentState == State.Patrol || currentState == State.Chase || currentState == State.ReturnToZone,
+                currentState == State.Attack
+            );
+        }
     }
 
-    // ── Logic Di Chuyển / AI ────────────────────────────────────────────────
+    // ── AI Logic ───────────────────────────────────────────────────────────
 
     void Patrol()
     {
@@ -129,7 +219,7 @@ public class MeleeEnemy : NetworkBehaviour
 
         float dirX = Mathf.Sign(diff);
         transform.position += new Vector3(dirX * patrolSpeed * Time.deltaTime, 0, 0);
-        FlipSprite(dirX);
+        SetFacing(dirX > 0);
     }
 
     void CheckDetection()
@@ -140,6 +230,9 @@ public class MeleeEnemy : NetworkBehaviour
 
     void ChasePlayer()
     {
+        // Online: chase player gần nhất (có thể đổi target)
+        if (NetworkUtils.IsOnline) UpdateNearestPlayer();
+
         float dist = Vector2.Distance(transform.position, player.position);
         if (dist > detectionRange) { currentState = State.ReturnToZone; return; }
         if (dist <= attackRange) { currentState = State.Attack; return; }
@@ -149,6 +242,9 @@ public class MeleeEnemy : NetworkBehaviour
 
     void AttackPlayer()
     {
+        // Online: chase player gần nhất (có thể đổi target)
+        if (NetworkUtils.IsOnline) UpdateNearestPlayer();
+
         float dist = Vector2.Distance(transform.position, player.position);
 
         if (!isStationary)
@@ -165,8 +261,12 @@ public class MeleeEnemy : NetworkBehaviour
         if (attackTimer >= attackCooldown)
         {
             animator?.SetTrigger("Attack");
-            // Gọi gây sát thương cho Player
-            player.GetComponent<PlayerHealth>()?.TakeDamage(damage);
+            // FIX: dùng TakeDamageFromServer vì đây là server gọi trực tiếp
+            // TakeDamage() yêu cầu IsOwner check nên không hoạt động khi server gọi cho client's player
+            if (NetworkUtils.IsOnline)
+                player.GetComponent<PlayerHealth>()?.TakeDamageFromServer(damage);
+            else
+                player.GetComponent<PlayerHealth>()?.TakeDamage(damage);
             attackTimer = 0f;
         }
     }
@@ -189,10 +289,44 @@ public class MeleeEnemy : NetworkBehaviour
         if (Mathf.Abs(diff) < 0.05f) return;
         float dirX = Mathf.Sign(diff);
         transform.position += new Vector3(dirX * speed * Time.deltaTime, 0, 0);
-        FlipSprite(dirX);
+        SetFacing(dirX > 0);
     }
 
-    // ── Hiển Thị / Animation ────────────────────────────────────────────────
+    // Online: cập nhật target là player gần nhất (multiplayer)
+    void UpdateNearestPlayer()
+    {
+        var players = GameObject.FindGameObjectsWithTag("Player");
+        float minDist = float.MaxValue;
+        foreach (var p in players)
+        {
+            if (p == null) continue;
+            float d = Vector2.Distance(transform.position, p.transform.position);
+            if (d < minDist) { minDist = d; player = p.transform; }
+        }
+    }
+
+    // ── Flip / Facing ──────────────────────────────────────────────────────
+
+    // FIX 3: server set NetworkVariable, client nhận qua OnValueChanged
+    void SetFacing(bool facingRight)
+    {
+        ApplyFacing(facingRight);
+        if (NetworkUtils.IsOnline && networkFacingRight.Value != facingRight)
+            networkFacingRight.Value = facingRight;
+    }
+
+    void FlipSprite(float dirX)
+    {
+        if (dirX == 0) return;
+        SetFacing(dirX > 0);
+    }
+
+    void FacePlayer()
+    {
+        if (player != null) FlipSprite(Mathf.Sign(player.position.x - transform.position.x));
+    }
+
+    // ── Animation ──────────────────────────────────────────────────────────
 
     void UpdateAnimation()
     {
@@ -202,20 +336,17 @@ public class MeleeEnemy : NetworkBehaviour
         animator.SetBool("isAttacking", currentState == State.Attack);
     }
 
-    void FlipSprite(float dirX)
+    // FIX 4: sync animation state xuống tất cả client
+    [ClientRpc]
+    void SyncAnimationClientRpc(bool isWalking, bool isAttacking)
     {
-        if (dirX == 0) return;
-        Vector3 scale = transform.localScale;
-        scale.x = Mathf.Abs(scale.x) * dirX;
-        transform.localScale = scale;
+        if (IsServer) return; // host tự update rồi
+        if (animator == null) return;
+        animator.SetBool("isWalking", isWalking);
+        animator.SetBool("isAttacking", isAttacking);
     }
 
-    void FacePlayer()
-    {
-        if (player != null) FlipSprite(Mathf.Sign(player.position.x - transform.position.x));
-    }
-
-    // ── Hệ Thống Sát Thương / Chết ──────────────────────────────────────────
+    // ── Damage / Death ─────────────────────────────────────────────────────
 
     public void TakeDamage(float dmg, ulong attackerClientId = 0)
     {
@@ -242,10 +373,8 @@ public class MeleeEnemy : NetworkBehaviour
         if (isDead) return;
         isDead = true;
 
-        // Cộng mạng và tiền (CoinManager đã xử lý cả Offline/Online)
         uiManager?.AddKill();
         CoinManager.Instance?.AwardCoin(coinDrop, lastAttackerClientId);
-
         OnDeath?.Invoke();
 
         if (NetworkUtils.IsOnline)
@@ -255,7 +384,6 @@ public class MeleeEnemy : NetworkBehaviour
         }
         else
         {
-            // Offline: Chạy animation rồi biến mất
             animator?.SetBool("isDead", true);
             Destroy(gameObject, 0.5f);
         }
@@ -265,7 +393,6 @@ public class MeleeEnemy : NetworkBehaviour
     void DieClientRpc()
     {
         animator?.SetBool("isDead", true);
-        // Tắt collider để không cản trở player
         GetComponent<Collider2D>().enabled = false;
     }
 
@@ -274,7 +401,8 @@ public class MeleeEnemy : NetworkBehaviour
         if (IsSpawned) GetComponent<NetworkObject>().Despawn();
     }
 
-    // Vẽ vùng tuần tra trong Editor
+    // ── Gizmos ─────────────────────────────────────────────────────────────
+
     void OnDrawGizmos()
     {
         if (zoneStart != null && zoneEnd != null)
