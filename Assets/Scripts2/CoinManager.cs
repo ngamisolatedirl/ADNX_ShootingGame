@@ -27,14 +27,13 @@ public class CoinManager : NetworkBehaviour
 
         if (!NetworkUtils.IsOnline)
         {
-            // Offline: cộng thẳng vào SessionData
             SessionData.Instance?.AddCoins(amount);
             SessionData.Instance?.AddKill();
             Debug.Log($"[Coin] Offline +{amount} coins");
             return;
         }
 
-        // Online: gửi cho đúng client
+        // Online: gửi ClientRpc cho client cộng vào SessionData local
         var clientRpcParams = new ClientRpcParams
         {
             Send = new ClientRpcSendParams
@@ -42,9 +41,32 @@ public class CoinManager : NetworkBehaviour
                 TargetClientIds = new[] { killerClientId }
             }
         };
-
         AwardCoinClientRpc(amount, clientRpcParams);
-        Debug.Log($"[Coin] Gửi {amount} coins → Client {killerClientId}");
+
+        // Nếu đã login → gửi thẳng lên server API luôn
+        // Host biết killerClientId → tra SessionRegistry → lấy userId
+        if (SessionRegistry.Instance != null)
+        {
+            int userId = SessionRegistry.Instance.GetUserId(killerClientId);
+            if (userId > 0)
+                SendCoinToApi(userId, amount);
+        }
+    }
+
+    async void SendCoinToApi(int userId, int amount)
+    {
+        try
+        {
+            // Tạo request với userId cụ thể
+            // Cần thêm endpoint /player/coins trên server
+            var body = new CoinAwardRequest { userId = userId, coinsToAdd = amount };
+            await ApiClient.Instance.Post("/player/coins", body);
+            Debug.Log($"[Coin] Gửi {amount} coins → userId {userId} thành công");
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogWarning("[Coin] Gửi coins API thất bại: " + e.Message);
+        }
     }
 
     [ClientRpc]
@@ -54,4 +76,7 @@ public class CoinManager : NetworkBehaviour
         SessionData.Instance?.AddKill();
         Debug.Log($"[Coin] Nhận {amount} coins!");
     }
+
+    [System.Serializable]
+    class CoinAwardRequest { public int userId; public int coinsToAdd; }
 }

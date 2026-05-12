@@ -45,11 +45,17 @@ public class RoomManager : NetworkBehaviour
 
     // Danh sách client info (tên, slot)
     private NetworkList<ulong> connectedClientIds;
-
+    private NetworkList<Unity.Collections.FixedString64Bytes> playerNames;
     void Awake()
     {
         connectedClientIds = new NetworkList<ulong>(
             new List<ulong>(),
+            NetworkVariableReadPermission.Everyone,
+            NetworkVariableWritePermission.Server
+        );
+
+        playerNames = new NetworkList<Unity.Collections.FixedString64Bytes>(
+            new List<Unity.Collections.FixedString64Bytes>(),
             NetworkVariableReadPermission.Everyone,
             NetworkVariableWritePermission.Server
         );
@@ -115,6 +121,12 @@ public class RoomManager : NetworkBehaviour
             NetworkManager.Singleton.OnClientConnectedCallback -= OnClientConnected;
             NetworkManager.Singleton.OnClientDisconnectCallback -= OnClientDisconnected;
         }
+        // Gửi tên của mình lên host
+        string myName = AuthManager.Instance?.IsLoggedIn == true
+            ? AuthManager.Username
+            : $"Player {NetworkManager.Singleton.LocalClientId}";
+
+        SubmitNameServerRpc(myName, NetworkManager.Singleton.LocalClientId);
     }
 
     // ── Host: quản lý client vào/ra ────────────────────────────────────────
@@ -268,11 +280,14 @@ public class RoomManager : NetworkBehaviour
             if (i < connectedClientIds.Count)
             {
                 ulong clientId = connectedClientIds[i];
-                bool isMe = clientId == NetworkManager.Singleton.LocalClientId;
-                playerSlots[i].SetOccupied(
-                    isMe ? "You" : $"Player {i + 1}",
-                    clientId == NetworkManager.ServerClientId
-                );
+                bool isHost = clientId == NetworkManager.ServerClientId;
+
+                // Lấy tên từ playerNames nếu có
+                string name = i < playerNames.Count
+                    ? playerNames[i].ToString()
+                    : $"Player {i + 1}";
+
+                playerSlots[i].SetOccupied(name, isHost);
             }
             else
             {
@@ -286,5 +301,22 @@ public class RoomManager : NetworkBehaviour
         if (!IsHost || RoomContext.CurrentRoom == null) return;
         RoomContext.CurrentRoom.currentPlayers = connectedClientIds.Count;
         LanDiscovery.Instance?.UpdateBroadcastRoom(RoomContext.CurrentRoom);
+    }
+    [ServerRpc(RequireOwnership = false)]
+    public void SubmitNameServerRpc(string name, ulong clientId)
+    {
+        // Tìm index của clientId trong connectedClientIds
+        for (int i = 0; i < connectedClientIds.Count; i++)
+        {
+            if (connectedClientIds[i] == clientId)
+            {
+                // Đảm bảo playerNames có đủ slot
+                while (playerNames.Count <= i)
+                    playerNames.Add("Player");
+
+                playerNames[i] = name;
+                return;
+            }
+        }
     }
 }

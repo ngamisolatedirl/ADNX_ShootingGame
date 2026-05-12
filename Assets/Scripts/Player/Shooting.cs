@@ -18,8 +18,6 @@ public class Shooting : NetworkBehaviour
 
     void Update()
     {
-        // QUAN TRỌNG: Chỉ chủ sở hữu (Owner) mới được xử lý phím bấm
-        // Dù Offline (Host) hay Online (Client), IsOwner đều sẽ hoạt động đúng
         if (!IsOwner) return;
 
         var keyboard = Keyboard.current;
@@ -31,23 +29,16 @@ public class Shooting : NetworkBehaviour
         if (canShoot)
         {
             if (keyboard.spaceKey.wasPressedThisFrame)
-            {
                 Shoot(new Vector2(GetFacingDir(), 0));
-            }
             else if (keyboard.sKey.wasPressedThisFrame || keyboard.downArrowKey.wasPressedThisFrame)
-            {
                 Shoot(Vector2.down);
-            }
             else if (keyboard.xKey.wasPressedThisFrame || keyboard.ctrlKey.wasPressedThisFrame)
-            {
                 Shoot(new Vector2(GetFacingDir(), -1f).normalized);
-            }
         }
     }
 
     float GetFacingDir()
     {
-        // Lấy hướng dựa trên scale của nhân vật
         return transform.root.localScale.x > 0 ? 1f : -1f;
     }
 
@@ -55,42 +46,35 @@ public class Shooting : NetworkBehaviour
     {
         fireTimer = 0f;
 
-        // Tính toán sát thương (Tính ở máy khách để phản hồi nhanh, nhưng Server sẽ nhận giá trị này)
         float finalDamage = damage;
         if (DataManager.Instance != null)
         {
             var saveData = DataManager.Instance.GetSaveData();
             BaseStats stats = DataManager.Instance.GetComputedStats(saveData.activeCharacterId);
             if (stats != null && Random.value < stats.critRate)
-            {
                 finalDamage *= stats.critDamage;
-            }
         }
 
-        // Chạy animation local ngay lập tức để không bị delay cảm giác
-        if (TryGetComponent<PlayerAnimator>(out var anim)) anim.PlayShoot();
+        if (TryGetComponent<PlayerAnimator>(out var anim))
+            anim.PlayShoot();
 
-        // GỬI LỆNH LÊN SERVER (Dù chơi 1 mình hay nhiều mình đều qua đây)
-        SpawnBulletServerRpc(shootingPoint.position, dir, finalDamage, piercing);
+        // Truyền thêm OwnerClientId để server biết viên đạn này của ai
+        SpawnBulletServerRpc(shootingPoint.position, dir, finalDamage, piercing, OwnerClientId);
     }
 
     [ServerRpc]
-    void SpawnBulletServerRpc(Vector3 position, Vector2 dir, float finalDamage, bool isPiercing)
+    void SpawnBulletServerRpc(Vector3 position, Vector2 dir, float finalDamage, bool isPiercing, ulong ownerClientId)
     {
-        // 1. Server sinh ra viên đạn
         GameObject bullet = Instantiate(bulletPrefab, position, Quaternion.identity);
 
-        // 2. Gán thông số đạn (Server làm việc này)
         if (bullet.TryGetComponent<Bullet>(out var bulletScript))
         {
             bulletScript.SetDirection(dir);
             bulletScript.SetStats(finalDamage, isPiercing);
+            bulletScript.SetOwner(ownerClientId); // ← gán owner
         }
 
-        // 3. QUAN TRỌNG: Spawn lên toàn Network
         if (bullet.TryGetComponent<NetworkObject>(out var netObj))
-        {
             netObj.Spawn();
-        }
     }
 }

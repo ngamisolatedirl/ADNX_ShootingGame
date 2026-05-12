@@ -37,14 +37,49 @@ public class SessionData : MonoBehaviour
     /// </summary>
     public void FlushAndReset()
     {
-        if (DataManager.Instance != null)
+        if (sessionCoins > 0)
         {
-            DataManager.Instance.AddCoins(sessionCoins);
-            Debug.Log($"[Session] Flush {sessionCoins} coins, {sessionKills} kills → DataManager");
+            // Nếu đã login → gửi lên server
+            if (AuthManager.Instance != null && AuthManager.Instance.IsLoggedIn)
+            {
+                SendCoinsToServer(sessionCoins);
+            }
+            else
+            {
+                // Guest / offline → ghi file local như cũ
+                DataManager.Instance?.AddCoins(sessionCoins);
+            }
         }
+
+        Debug.Log($"[Session] Flush {sessionCoins} coins, {sessionKills} kills");
         sessionCoins = 0;
         sessionKills = 0;
     }
+
+    async void SendCoinsToServer(int coins)
+    {
+        // Null check: nếu không có ApiClient (chạy thẳng từ scene khác không qua Login)
+        if (ApiClient.Instance == null)
+        {
+            DataManager.Instance?.AddCoins(coins);
+            return;
+        }
+
+        try
+        {
+            DataManager.Instance?.AddCoins(coins);
+            var body = new CoinsRequest { coinsToAdd = coins };
+            await ApiClient.Instance.Post("/player/save", body);
+            Debug.Log($"[Session] Gửi {coins} coins lên server thành công");
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogWarning("[Session] Gửi coins thất bại: " + e.Message);
+        }
+    }
+
+    [System.Serializable]
+    class CoinsRequest { public int coinsToAdd; }
 
     public void Reset()
     {

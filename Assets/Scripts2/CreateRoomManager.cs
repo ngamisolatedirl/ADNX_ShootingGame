@@ -105,7 +105,9 @@ public class CreateRoomManager : MonoBehaviour
         pendingRoom = new RoomInfo
         {
             roomId       = Guid.NewGuid().ToString(),
-            hostName     = "Host",          // có thể lấy từ PlayerPrefs sau
+            hostName = AuthManager.Instance != null && AuthManager.Instance.IsLoggedIn
+    ? AuthManager.Username
+    : "Host",          
             roomType     = roomType,
             selectedMap  = mapSceneNames[selectedMapIndex],
             mapIndex     = selectedMapIndex + 1,

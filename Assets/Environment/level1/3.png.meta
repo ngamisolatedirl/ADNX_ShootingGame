@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bc0cded09e83702458b5419466d5e0d4
+guid: 0e1c5b58da7be404088e1173d2e08dcb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2015654205072063566
-    second: Background_Level1_0
+      213: -6470460504253458178
+    second: 3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: full
+      name: 3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,81 +121,15 @@ TextureImporter:
         width: 1774
         height: 887
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e4cb753f1da09fb10800000000000000
-      internalID: 2015654205072063566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ground1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1624
-        height: 292
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 34}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91ed09948028fea4d991ae0b11942828
-      internalID: -391365387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Background_Level1_3
-      rect:
-        serializedVersion: 2
-        x: 791
-        y: 469
-        width: 246
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13d3681ef46c3b94fb1cd103001b6858
-      internalID: 703589041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ground2
-      rect:
-        serializedVersion: 2
-        x: 1529
-        y: 380
-        width: 241
-        height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 13, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53ea389cddf45d34fbc7008aea7059ad
-      internalID: -761615287
+      spriteID: ef817ce047e4436a0800000000000000
+      internalID: -6470460504253458178
       vertices: []
       indices: 
       edges: []
@@ -204,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 178e9bddd44623447a2c6051c48a47b9
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -212,15 +146,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":1.0},"gridSpriteSize":{"x":354.0,"y":887.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Background_Level1_2: 1833441675
-      Background_Level1_3: 703589041
-      full: 2015654205072063566
-      ground1: -391365387
-      ground2: -761615287
+      3_0: -6470460504253458178
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

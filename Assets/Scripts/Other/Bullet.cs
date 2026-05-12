@@ -9,23 +9,25 @@ public class Bullet : NetworkBehaviour
     private bool hasHit = false;
     private bool piercing = false;
 
-    // NetworkVariable để sync direction xuống tất cả client
-    // Server gán trước khi Spawn → client nhận đúng giá trị trong OnNetworkSpawn
     private NetworkVariable<Vector2> networkDirection = new NetworkVariable<Vector2>(
         Vector2.zero,
         NetworkVariableReadPermission.Everyone,
         NetworkVariableWritePermission.Server
     );
 
-    // damage và piercing cũng cần sync vì client cần biết để hiển thị đúng
-    // (damage xử lý trên server, nhưng piercing ảnh hưởng visual)
     private NetworkVariable<bool> networkPiercing = new NetworkVariable<bool>(
         false,
         NetworkVariableReadPermission.Everyone,
         NetworkVariableWritePermission.Server
     );
 
-    // Gọi từ server TRƯỚC khi netObj.Spawn()
+    // Owner của viên đạn (client nào bắn ra)
+    private NetworkVariable<ulong> networkOwnerClientId = new NetworkVariable<ulong>(
+        0,
+        NetworkVariableReadPermission.Everyone,
+        NetworkVariableWritePermission.Server
+    );
+
     public void SetDirection(Vector2 dir)
     {
         networkDirection.Value = dir;
@@ -38,30 +40,26 @@ public class Bullet : NetworkBehaviour
         networkPiercing.Value = isPiercing;
     }
 
+    public void SetOwner(ulong clientId)
+    {
+        networkOwnerClientId.Value = clientId;
+    }
+
     public override void OnNetworkSpawn()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        // Lúc này networkDirection đã có giá trị đúng (server gán trước Spawn)
-        // Cả server lẫn client đều chạy đoạn này → đạn bay đúng trên mọi máy
         if (rb != null)
-        {
             rb.linearVelocity = networkDirection.Value * speed;
-        }
 
-        // Sync piercing từ NetworkVariable (server đã set trước Spawn)
         piercing = networkPiercing.Value;
 
-        // Chỉ server đếm ngược tự hủy
         if (IsServer)
-        {
             Invoke(nameof(DestroyBullet), 3f);
-        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // Chỉ server xử lý va chạm và gây sát thương
         if (!IsServer) return;
         if (hasHit && !piercing) return;
 
@@ -70,9 +68,9 @@ public class Bullet : NetworkBehaviour
         {
             if (collision.TryGetComponent<MeleeEnemy>(out var enemy))
             {
-                enemy.TakeDamage(damage);
+                // Truyền ownerClientId → enemy biết ai bắn trúng → coin về đúng người
+                enemy.TakeDamage(damage, networkOwnerClientId.Value);
             }
-            // TODO: thêm IEnemyDamageable interface để không cần check từng loại
 
             if (!piercing)
             {
@@ -89,10 +87,7 @@ public class Bullet : NetworkBehaviour
 
     void DestroyBullet()
     {
-        if (IsServer)
-        {
-            if (GetComponent<NetworkObject>().IsSpawned)
-                GetComponent<NetworkObject>().Despawn();
-        }
+        if (IsServer && GetComponent<NetworkObject>().IsSpawned)
+            GetComponent<NetworkObject>().Despawn();
     }
 }

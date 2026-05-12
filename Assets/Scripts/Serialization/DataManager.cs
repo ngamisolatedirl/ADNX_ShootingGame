@@ -170,7 +170,10 @@ public class DataManager : MonoBehaviour
     public void AddCoins(int amount)
     {
         saveData.coins += amount;
-        SaveGame();
+
+        // Chỉ ghi file nếu chơi offline (guest)
+        if (AuthManager.Instance == null || !AuthManager.Instance.IsLoggedIn)
+            SaveGame();
     }
 
     public bool SpendCoins(int amount)
@@ -331,6 +334,15 @@ public class DataManager : MonoBehaviour
     {
         CharacterSaveData save = GetCharacterSaveData(characterId);
         return save?.activeCostumeId == costumeId;
+    }
+
+    // Gọi từ AuthManager sau khi login thành công
+    // Thay thế việc đọc file local
+    public void LoadFromServer(SaveData data)
+    {
+        if (data == null) return;
+        saveData = data;
+        Debug.Log("[DataManager] Loaded from server, coins: " + saveData.coins);
     }
 
 }
