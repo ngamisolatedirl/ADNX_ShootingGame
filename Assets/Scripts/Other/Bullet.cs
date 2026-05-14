@@ -64,13 +64,18 @@ public class Bullet : NetworkBehaviour
         if (hasHit && !piercing) return;
 
         if (collision.CompareTag("Enemy") || collision.CompareTag("MeleeEnemy") ||
-            collision.CompareTag("Boss") || collision.CompareTag("ShootingEnemy"))
+            collision.CompareTag("Enemy") || collision.CompareTag("ShootingEnemy")||
+            collision.CompareTag("Enemy") || collision.CompareTag("LavaEnemy"))
         {
-            if (collision.TryGetComponent<MeleeEnemy>(out var enemy))
-            {
-                // Truyền ownerClientId → enemy biết ai bắn trúng → coin về đúng người
-                enemy.TakeDamage(damage, networkOwnerClientId.Value);
-            }
+            // MeleeEnemy
+            if (collision.TryGetComponent<MeleeEnemy>(out var melee))
+                melee.TakeDamage(damage, networkOwnerClientId.Value);
+
+            // ShootingEnemy
+            if (collision.TryGetComponent<ShootingEnemy>(out var shooter))
+                shooter.TakeDamage(damage, networkOwnerClientId.Value);
+            if (collision.TryGetComponent<LavaEnemy>(out var lava))
+                lava.TakeDamage(damage, networkOwnerClientId.Value);
 
             if (!piercing)
             {

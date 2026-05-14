@@ -22,13 +22,11 @@ public class MovePlayer : NetworkBehaviour
 
     private Rigidbody2D rb;
     private CapsuleCollider2D col;
-    private Collider2D oneWayCollider;
     private bool isFacingRight = true;
     private float rayDistance = 1.7f;
     private float chargeTimer = 0f;
     private bool isCharging = false;
 
-    // --- Ground Check ---
     bool isGrounded =>
         Physics2D.Raycast(transform.position, Vector2.down, rayDistance, groundLayer | oneWayLayer) ||
         Physics2D.Raycast(transform.position + new Vector3(0.4f, 0, 0), Vector2.down, rayDistance, groundLayer | oneWayLayer) ||
@@ -46,34 +44,16 @@ public class MovePlayer : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         Initialize();
-
         if (NetworkUtils.IsOnline)
         {
-            if (IsOwner)
-            {
-                // Owner: Dynamic → tự tính vật lý
-                rb.bodyType = RigidbodyType2D.Dynamic;
-
-                // Camera được setup bởi PlayerCameraController trên prefab
-                // KHÔNG gọi SetupLocalCamera ở đây nữa
-            }
-            else
-            {
-                // Non-owner: Kinematic → NetworkTransform (Client Authority) điều khiển vị trí
-                rb.bodyType = RigidbodyType2D.Kinematic;
-                rb.gravityScale = 0f;
-            }
+            if (IsOwner) rb.bodyType = RigidbodyType2D.Dynamic;
+            else { rb.bodyType = RigidbodyType2D.Kinematic; rb.gravityScale = 0f; }
         }
-        else
-        {
-            // Offline
-            rb.bodyType = RigidbodyType2D.Dynamic;
-        }
+        else rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
     private void Start()
     {
-        // Fallback cho Offline nếu OnNetworkSpawn chưa chạy
         if (!NetworkUtils.IsOnline) Initialize();
     }
 
@@ -81,24 +61,16 @@ public class MovePlayer : NetworkBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<CapsuleCollider2D>();
-
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"));
-
-        GameObject oneWay = GameObject.Find("Tilemap_OneWay");
-        if (oneWay != null) oneWayCollider = oneWay.GetComponent<Collider2D>();
     }
 
     void Update()
     {
-        // Chỉ owner xử lý input
         if (NetworkUtils.IsOnline && !IsOwner) return;
-
         Move();
         ChargeJump();
-        HandleOneWayPlatform();
     }
 
     void Move()
@@ -160,18 +132,6 @@ public class MovePlayer : NetworkBehaviour
             chargeTimer = 0f;
             isCharging = false;
         }
-    }
-
-    void HandleOneWayPlatform()
-    {
-        if (oneWayCollider == null || col == null) return;
-        bool playerBelowPlatform = col.bounds.max.y < oneWayCollider.bounds.min.y;
-        bool playerAbovePlatform = col.bounds.min.y >= oneWayCollider.bounds.min.y;
-
-        if (rb.linearVelocity.y > 0 && playerBelowPlatform)
-            Physics2D.IgnoreCollision(col, oneWayCollider, true);
-        else if (playerAbovePlatform)
-            Physics2D.IgnoreCollision(col, oneWayCollider, false);
     }
 
     void Flip()

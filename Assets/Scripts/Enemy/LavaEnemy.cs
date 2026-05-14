@@ -1,7 +1,8 @@
 using UnityEngine;
+using Unity.Netcode;
 using System;
 
-public class LavaEnemy : MonoBehaviour
+public class LavaEnemy : NetworkBehaviour
 {
     [Header("Stats")]
     public float maxHealth = 40f;
@@ -14,20 +15,41 @@ public class LavaEnemy : MonoBehaviour
     public float lavaSpeed = 5f;
     public float lavaDamage = 10f;
 
-    private float currentHealth;
+    private float localHealth;
+    private NetworkVariable<float> currentHealth = new NetworkVariable<float>(
+        0f, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+
     private float fireTimer = 0f;
     private UIManager uiManager;
+    private bool isDead = false;
+    private ulong lastAttackerClientId = 0;
 
     public Action OnDeath;
-    private bool isDead = false;
+
+    // ── Lifecycle ──────────────────────────────────────────────────
+
     void Start()
     {
-        currentHealth = maxHealth;
+        localHealth = maxHealth;
         uiManager = FindFirstObjectByType<UIManager>();
+
+        if (!NetworkUtils.IsOnline)
+            localHealth = maxHealth;
     }
+
+    public override void OnNetworkSpawn()
+    {
+        if (IsServer)
+            currentHealth.Value = maxHealth;
+    }
+
+    // ── Update ─────────────────────────────────────────────────────
 
     void Update()
     {
+        if (!NetworkUtils.HasServerAuthority) return;
+        if (isDead) return;
+
         fireTimer += Time.deltaTime;
         if (fireTimer >= fireRate)
         {
@@ -36,25 +58,64 @@ public class LavaEnemy : MonoBehaviour
         }
     }
 
+    // ── Shoot ──────────────────────────────────────────────────────
+
     void ShootLava()
     {
         if (lavaPrefab == null || shootPoint == null) return;
 
-        GameObject lava = Instantiate(lavaPrefab, shootPoint.position, Quaternion.identity);
-        LavaProjectile lavaScript = lava.GetComponent<LavaProjectile>();
-        if (lavaScript != null)
+        if (NetworkUtils.IsOnline)
         {
-            lavaScript.damage = lavaDamage;
-            lavaScript.speed = lavaSpeed;
+            GameObject lava = Instantiate(lavaPrefab, shootPoint.position, Quaternion.identity);
+            LavaProjectile lavaScript = lava.GetComponent<LavaProjectile>();
+
+            if (lavaScript != null)
+            {
+                lavaScript.damage = lavaDamage;
+                lavaScript.speed = lavaSpeed;
+            }
+
+            NetworkObject netObj = lava.GetComponent<NetworkObject>();
+            if (netObj != null)
+            {
+                netObj.Spawn();
+            }
+            else
+            {
+                Debug.LogError("[LavaEnemy] LavaProjectile prefab thiếu NetworkObject!");
+                Destroy(lava);
+            }
+        }
+        else
+        {
+            GameObject lava = Instantiate(lavaPrefab, shootPoint.position, Quaternion.identity);
+            LavaProjectile lavaScript = lava.GetComponent<LavaProjectile>();
+            if (lavaScript != null)
+            {
+                lavaScript.damage = lavaDamage;
+                lavaScript.speed = lavaSpeed;
+            }
         }
     }
 
-    public void TakeDamage(float dmg)
+    // ── Damage / Death ─────────────────────────────────────────────
+
+    public void TakeDamage(float dmg, ulong attackerClientId = 0)
     {
-        if (isDead) return;
-        currentHealth -= dmg;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        if (currentHealth <= 0) Die();
+        if (!NetworkUtils.HasServerAuthority || isDead) return;
+
+        lastAttackerClientId = attackerClientId;
+
+        if (NetworkUtils.IsOnline)
+        {
+            currentHealth.Value -= dmg;
+            if (currentHealth.Value <= 0) Die();
+        }
+        else
+        {
+            localHealth -= dmg;
+            if (localHealth <= 0) Die();
+        }
     }
 
     void Die()
@@ -62,10 +123,29 @@ public class LavaEnemy : MonoBehaviour
         if (isDead) return;
         isDead = true;
 
-        if (uiManager != null) uiManager.AddKill();
-        DataManager.Instance?.AddCoins(coinDrop);
+        uiManager?.AddKill();
+        CoinManager.Instance?.AwardCoin(coinDrop, lastAttackerClientId);
         OnDeath?.Invoke();
 
-        Destroy(gameObject, 0.2f);
+        if (NetworkUtils.IsOnline)
+        {
+            DieClientRpc();
+            Invoke(nameof(DespawnEnemy), 0.5f);
+        }
+        else
+        {
+            Destroy(gameObject, 0.2f);
+        }
+    }
+
+    [ClientRpc]
+    void DieClientRpc()
+    {
+        GetComponent<Collider2D>().enabled = false;
+    }
+
+    void DespawnEnemy()
+    {
+        if (IsSpawned) GetComponent<NetworkObject>().Despawn();
     }
 }
