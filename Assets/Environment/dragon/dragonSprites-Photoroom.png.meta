@@ -1,0 +1,1806 @@
+fileFormatVersion: 2
+guid: 677c2bf49cdd12d49b88e9932de3ff13
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2528539848901720373
+    second: dragonSprites-Photoroom_0
+  - first:
+      213: -3928435363110240720
+    second: dragonSprites-Photoroom_1
+  - first:
+      213: 2980473248622484354
+    second: dragonSprites-Photoroom_2
+  - first:
+      213: 4857783754836972475
+    second: dragonSprites-Photoroom_3
+  - first:
+      213: -1333011342184490087
+    second: dragonSprites-Photoroom_4
+  - first:
+      213: 2749309343815237692
+    second: dragonSprites-Photoroom_5
+  - first:
+      213: 3340868798083132823
+    second: dragonSprites-Photoroom_6
+  - first:
+      213: -8030765020795645213
+    second: dragonSprites-Photoroom_7
+  - first:
+      213: 8035563051217651610
+    second: dragonSprites-Photoroom_8
+  - first:
+      213: 8123182954422069668
+    second: dragonSprites-Photoroom_9
+  - first:
+      213: -1986890455330738634
+    second: dragonSprites-Photoroom_10
+  - first:
+      213: 1108242289875143196
+    second: dragonSprites-Photoroom_11
+  - first:
+      213: 8650446785761771803
+    second: dragonSprites-Photoroom_12
+  - first:
+      213: 168449160298770860
+    second: dragonSprites-Photoroom_13
+  - first:
+      213: 1928093099937319852
+    second: dragonSprites-Photoroom_14
+  - first:
+      213: 6149359313010191248
+    second: dragonSprites-Photoroom_15
+  - first:
+      213: 153265756725170540
+    second: dragonSprites-Photoroom_16
+  - first:
+      213: 1255881752817662688
+    second: dragonSprites-Photoroom_17
+  - first:
+      213: -7282270797980027941
+    second: dragonSprites-Photoroom_18
+  - first:
+      213: -5716394285599718017
+    second: dragonSprites-Photoroom_19
+  - first:
+      213: -4401743401165881606
+    second: dragonSprites-Photoroom_20
+  - first:
+      213: 6397228410341028594
+    second: dragonSprites-Photoroom_21
+  - first:
+      213: -2418649076538955177
+    second: dragonSprites-Photoroom_22
+  - first:
+      213: 5380782195471961139
+    second: dragonSprites-Photoroom_23
+  - first:
+      213: -6177281963095074892
+    second: dragonSprites-Photoroom_24
+  - first:
+      213: -4112414206020981290
+    second: dragonSprites-Photoroom_25
+  - first:
+      213: -4041645508954878314
+    second: dragonSprites-Photoroom_26
+  - first:
+      213: -6607904568133678063
+    second: dragonSprites-Photoroom_27
+  - first:
+      213: -2445143884341353364
+    second: dragonSprites-Photoroom_28
+  - first:
+      213: -4423895850438692426
+    second: dragonSprites-Photoroom_29
+  - first:
+      213: -3367791840673799521
+    second: dragonSprites-Photoroom_30
+  - first:
+      213: -2982685484516784303
+    second: dragonSprites-Photoroom_31
+  - first:
+      213: -3320500159505459747
+    second: dragonSprites-Photoroom_32
+  - first:
+      213: 2219244363094494849
+    second: dragonSprites-Photoroom_33
+  - first:
+      213: 3963530854468165321
+    second: dragonSprites-Photoroom_34
+  - first:
+      213: 3200174921032187829
+    second: dragonSprites-Photoroom_35
+  - first:
+      213: -4928112999819030498
+    second: dragonSprites-Photoroom_36
+  - first:
+      213: -2676384281159945055
+    second: dragonSprites-Photoroom_37
+  - first:
+      213: 9157049751070027750
+    second: dragonSprites-Photoroom_38
+  - first:
+      213: -7622064507775556578
+    second: dragonSprites-Photoroom_39
+  - first:
+      213: 2001867575416407982
+    second: dragonSprites-Photoroom_40
+  - first:
+      213: 4584307125218947333
+    second: dragonSprites-Photoroom_41
+  - first:
+      213: -4694794645472983760
+    second: dragonSprites-Photoroom_42
+  - first:
+      213: -3849672418750874998
+    second: dragonSprites-Photoroom_43
+  - first:
+      213: -6660073921697624983
+    second: dragonSprites-Photoroom_44
+  - first:
+      213: 9143548295076827914
+    second: dragonSprites-Photoroom_45
+  - first:
+      213: 5251704861427029563
+    second: dragonSprites-Photoroom_46
+  - first:
+      213: -160200519010352076
+    second: dragonSprites-Photoroom_47
+  - first:
+      213: -7253331079810848587
+    second: dragonSprites-Photoroom_48
+  - first:
+      213: 456233066501495247
+    second: dragonSprites-Photoroom_49
+  - first:
+      213: -3281772452303795899
+    second: dragonSprites-Photoroom_50
+  - first:
+      213: 5260400618829863212
+    second: dragonSprites-Photoroom_51
+  - first:
+      213: -6896058203574100285
+    second: dragonSprites-Photoroom_52
+  - first:
+      213: 6969432048898600830
+    second: dragonSprites-Photoroom_53
+  - first:
+      213: -4510803824182360807
+    second: dragonSprites-Photoroom_54
+  - first:
+      213: -3205700427310408159
+    second: dragonSprites-Photoroom_55
+  - first:
+      213: 6267068982490102829
+    second: dragonSprites-Photoroom_56
+  - first:
+      213: -1051581851418454888
+    second: dragonSprites-Photoroom_57
+  - first:
+      213: -6178112036943928740
+    second: dragonSprites-Photoroom_58
+  - first:
+      213: -3216056351928751066
+    second: dragonSprites-Photoroom_59
+  - first:
+      213: 4636198130374897993
+    second: dragonSprites-Photoroom_60
+  - first:
+      213: -580418624291519608
+    second: dragonSprites-Photoroom_61
+  - first:
+      213: -3346821670897657940
+    second: dragonSprites-Photoroom_62
+  - first:
+      213: -4257634550103340781
+    second: dragonSprites-Photoroom_63
+  - first:
+      213: 8082402883466143120
+    second: dragonSprites-Photoroom_64
+  - first:
+      213: 2525289927843801678
+    second: dragonSprites-Photoroom_65
+  - first:
+      213: -3213199370982633805
+    second: dragonSprites-Photoroom_66
+  - first:
+      213: 4747637009861921011
+    second: dragonSprites-Photoroom_67
+  - first:
+      213: -6087209739865734386
+    second: dragonSprites-Photoroom_68
+  - first:
+      213: 8659572070184600401
+    second: dragonSprites-Photoroom_69
+  - first:
+      213: -1879371266770084309
+    second: dragonSprites-Photoroom_70
+  - first:
+      213: -5211203483242573764
+    second: dragonSprites-Photoroom_71
+  - first:
+      213: -959152983081943002
+    second: dragonSprites-Photoroom_72
+  - first:
+      213: -5339280670838853997
+    second: dragonSprites-Photoroom_73
+  - first:
+      213: -1108410881358945427
+    second: dragonSprites-Photoroom_74
+  - first:
+      213: 179529308232101469
+    second: dragonSprites-Photoroom_75
+  - first:
+      213: 7502755493940165539
+    second: dragonSprites-Photoroom_76
+  - first:
+      213: -3132982369325349297
+    second: dragonSprites-Photoroom_77
+  - first:
+      213: 1708462247313470189
+    second: dragonSprites-Photoroom_78
+  - first:
+      213: 434942496806739941
+    second: dragonSprites-Photoroom_79
+  - first:
+      213: 6403879076010502307
+    second: dragonSprites-Photoroom_80
+  - first:
+      213: 4996177409846615807
+    second: dragonSprites-Photoroom_81
+  - first:
+      213: -8037256348617957768
+    second: dragonSprites-Photoroom_82
+  - first:
+      213: 4890313565731112152
+    second: dragonSprites-Photoroom_83
+  - first:
+      213: 852630634789146538
+    second: dragonSprites-Photoroom_84
+  - first:
+      213: -5641124149416393807
+    second: dragonSprites-Photoroom_85
+  - first:
+      213: -3873975817677814101
+    second: dragonSprites-Photoroom_86
+  - first:
+      213: -2400440998442335136
+    second: dragonSprites-Photoroom_87
+  - first:
+      213: -5511112044520216992
+    second: dragonSprites-Photoroom_88
+  - first:
+      213: 4377584171701739774
+    second: dragonSprites-Photoroom_89
+  - first:
+      213: -8523865709218206044
+    second: dragonSprites-Photoroom_90
+  - first:
+      213: -5432286235665232352
+    second: dragonSprites-Photoroom_91
+  - first:
+      213: -1894800619288394622
+    second: dragonSprites-Photoroom_92
+  - first:
+      213: 5976274390456828924
+    second: dragonSprites-Photoroom_93
+  - first:
+      213: -2741135774078478460
+    second: dragonSprites-Photoroom_94
+  - first:
+      213: -2998524429142112558
+    second: dragonSprites-Photoroom_95
+  - first:
+      213: -8735872017030778714
+    second: dragonSprites-Photoroom_96
+  - first:
+      213: -9067823849494909017
+    second: dragonSprites-Photoroom_97
+  - first:
+      213: 8013784478368543458
+    second: dragonSprites-Photoroom_98
+  - first:
+      213: -7656688016232997095
+    second: dragonSprites-Photoroom_99
+  - first:
+      213: 7616374147687837999
+    second: dragonSprites-Photoroom_100
+  - first:
+      213: 2833680459470521062
+    second: dragonSprites-Photoroom_101
+  - first:
+      213: 3052401709094746663
+    second: dragonSprites-Photoroom_102
+  - first:
+      213: 129605324002940953
+    second: dragonSprites-Photoroom_103
+  - first:
+      213: -3484336773990714552
+    second: dragonSprites-Photoroom_104
+  - first:
+      213: -1032302901398835595
+    second: dragonSprites-Photoroom_105
+  - first:
+      213: -8112480646178737065
+    second: dragonSprites-Photoroom_106
+  - first:
+      213: -5231907164633260976
+    second: dragonSprites-Photoroom_107
+  - first:
+      213: 4807084332175423190
+    second: dragonSprites-Photoroom_108
+  - first:
+      213: 826313837516011898
+    second: dragonSprites-Photoroom_109
+  - first:
+      213: 3025809938144603615
+    second: dragonSprites-Photoroom_110
+  - first:
+      213: -5914171254048485230
+    second: dragonSprites-Photoroom_111
+  - first:
+      213: 5679023449533278686
+    second: dragonSprites-Photoroom_112
+  - first:
+      213: 3268217443720759498
+    second: dragonSprites-Photoroom_113
+  - first:
+      213: -5135275699763127601
+    second: dragonSprites-Photoroom_114
+  - first:
+      213: -2846295179650819078
+    second: dragonSprites-Photoroom_115
+  - first:
+      213: 2144002847566561397
+    second: dragonSprites-Photoroom_116
+  - first:
+      213: 1207995739883255841
+    second: dragonSprites-Photoroom_117
+  - first:
+      213: 3018691644303447532
+    second: dragonSprites-Photoroom_118
+  - first:
+      213: -1754309786334579489
+    second: dragonSprites-Photoroom_119
+  - first:
+      213: 651821358719680342
+    second: dragonSprites-Photoroom_120
+  - first:
+      213: -8961501245255259699
+    second: dragonSprites-Photoroom_121
+  - first:
+      213: -6903443095369421677
+    second: dragonSprites-Photoroom_122
+  - first:
+      213: 6718260796081501969
+    second: dragonSprites-Photoroom_123
+  - first:
+      213: -9068137283691567125
+    second: dragonSprites-Photoroom_124
+  - first:
+      213: -4296024094723496234
+    second: dragonSprites-Photoroom_125
+  - first:
+      213: 133208319825056942
+    second: dragonSprites-Photoroom_126
+  - first:
+      213: 4344369292981384795
+    second: dragonSprites-Photoroom_127
+  - first:
+      213: 1243372715578083987
+    second: dragonSprites-Photoroom_128
+  - first:
+      213: 1523558969441898053
+    second: dragonSprites-Photoroom_129
+  - first:
+      213: -4869272040320566468
+    second: dragonSprites-Photoroom_130
+  - first:
+      213: -1956671562770425338
+    second: dragonSprites-Photoroom_131
+  - first:
+      213: -8961987850185273820
+    second: dragonSprites-Photoroom_132
+  - first:
+      213: 4433045070317888432
+    second: dragonSprites-Photoroom_133
+  - first:
+      213: 414313587139036530
+    second: dragonSprites-Photoroom_134
+  - first:
+      213: 2058797323987222366
+    second: dragonSprites-Photoroom_135
+  - first:
+      213: -1500910320487633565
+    second: dragonSprites-Photoroom_136
+  - first:
+      213: 3245877376140384292
+    second: dragonSprites-Photoroom_137
+  - first:
+      213: 6506816452773633293
+    second: dragonSprites-Photoroom_138
+  - first:
+      213: 755928196428248122
+    second: dragonSprites-Photoroom_139
+  - first:
+      213: -4532513271269813927
+    second: dragonSprites-Photoroom_140
+  - first:
+      213: 9083765369214927863
+    second: dragonSprites-Photoroom_141
+  - first:
+      213: 1919710446543885039
+    second: dragonSprites-Photoroom_142
+  - first:
+      213: -3135587965388696305
+    second: dragonSprites-Photoroom_143
+  - first:
+      213: 6341383356297470730
+    second: dragonSprites-Photoroom_144
+  - first:
+      213: -4118593331434135327
+    second: dragonSprites-Photoroom_145
+  - first:
+      213: 65682018490383852
+    second: dragonSprites-Photoroom_146
+  - first:
+      213: -5469082480060693831
+    second: dragonSprites-Photoroom_147
+  - first:
+      213: 6283036543129801734
+    second: dragonSprites-Photoroom_148
+  - first:
+      213: 2426930448614743407
+    second: dragonSprites-Photoroom_149
+  - first:
+      213: -2979011411811601585
+    second: dragonSprites-Photoroom_150
+  - first:
+      213: 2823808183506774167
+    second: dragonSprites-Photoroom_151
+  - first:
+      213: -4832737604447492547
+    second: dragonSprites-Photoroom_152
+  - first:
+      213: -1995488467087065344
+    second: dragonSprites-Photoroom_153
+  - first:
+      213: -5696107387348517593
+    second: dragonSprites-Photoroom_154
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 695
+        width: 392
+        height: 294
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99bd6833f31308de0800000000000000
+      internalID: -1333011342184490087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 881
+        width: 121
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca1325a6e93765200800000000000000
+      internalID: 168449160298770860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_22
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 668
+        width: 413
+        height: 299
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75aa19cba7b3f6ed0800000000000000
+      internalID: -2418649076538955177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_23
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 894
+        width: 50
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33c4adee5e06caa40800000000000000
+      internalID: 5380782195471961139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_24
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 890
+        width: 48
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b75a4088c2e54aa0800000000000000
+      internalID: -6177281963095074892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_25
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 884
+        width: 45
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd69d07115cde6c0800000000000000
+      internalID: -4112414206020981290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: head
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 737
+        width: 139
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69e01bab2d039e7c0800000000000000
+      internalID: -4041645508954878314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_35
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 728
+        width: 104
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bfbc3ba22e496c20800000000000000
+      internalID: 3200174921032187829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: horn
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 730
+        width: 100
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a4b5072da29bdad0800000000000000
+      internalID: -2676384281159945055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_38
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 848
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6efab138b30641f70800000000000000
+      internalID: 9157049751070027750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_39
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 850
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e14eceea6bcf83690800000000000000
+      internalID: -7622064507775556578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_47
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 803
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4340e8b0a7ad6cdf0800000000000000
+      internalID: -160200519010352076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_48
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 780
+        width: 49
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b8e29d00ddf65b90800000000000000
+      internalID: -7253331079810848587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_49
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 775
+        width: 49
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9db978e8dd45600800000000000000
+      internalID: 456233066501495247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_50
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 768
+        width: 45
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54905ca975dc472d0800000000000000
+      internalID: -3281772452303795899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_51
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 764
+        width: 44
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c295995fd72b00940800000000000000
+      internalID: 5260400618829863212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_60
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 514
+        width: 125
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 941735dc2a5175040800000000000000
+      internalID: 4636198130374897993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_61
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 506
+        width: 129
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 883451e1650f1f7f0800000000000000
+      internalID: -580418624291519608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neck
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 493
+        width: 143
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca7d09b2c63bd81d0800000000000000
+      internalID: -3346821670897657940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leftwing
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 492
+        width: 343
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31909a14fe7d9e4c0800000000000000
+      internalID: -4257634550103340781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rightwing
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 483
+        width: 327
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f84157d4bef2e140800000000000000
+      internalID: 4747637009861921011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tail
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 311
+        width: 141
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0341063ef2e58ba0800000000000000
+      internalID: -6087209739865734386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_71
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 409
+        width: 142
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c305c09ca061ea7b0800000000000000
+      internalID: -5211203483242573764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_74
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 479
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d632c6f0d222e90f0800000000000000
+      internalID: -1108410881358945427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_76
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 379
+        width: 428
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3abf9e4de542f1860800000000000000
+      internalID: 7502755493940165539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leftlegt
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 288
+        width: 163
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d647a62be91366d0800000000000000
+      internalID: -2998524429142112558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_96
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 298
+        width: 99
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a0fa956fa2f3c680800000000000000
+      internalID: -8735872017030778714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rightleg
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 283
+        width: 126
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f117ce0dafdb590800000000000000
+      internalID: -7656688016232997095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_105
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 288
+        width: 92
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57e64850bf58ca1f0800000000000000
+      internalID: -1032302901398835595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_106
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 289
+        width: 98
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 754f84585ddaa6f80800000000000000
+      internalID: -8112480646178737065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_107
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 302
+        width: 65
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05c963257288467b0800000000000000
+      internalID: -5231907164633260976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_108
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 196
+        width: 205
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d679a82bb136b240800000000000000
+      internalID: 4807084332175423190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_132
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 150
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e075c688f90a380800000000000000
+      internalID: -8961987850185273820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leftlegup
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 53
+        width: 160
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2754a0b2300ffb500800000000000000
+      internalID: 414313587139036530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_135
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 68
+        width: 155
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f78c81241529c10800000000000000
+      internalID: 2058797323987222366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_136
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 97
+        width: 82
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36ded930402bb2be0800000000000000
+      internalID: -1500910320487633565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rightlegup
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 64
+        width: 125
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4281355b64cab0d20800000000000000
+      internalID: 3245877376140384292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_138
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 67
+        width: 147
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d5d36d61bdc4a50800000000000000
+      internalID: 6506816452773633293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_139
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 103
+        width: 79
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a34bec780b89d7a00800000000000000
+      internalID: 755928196428248122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoulderleft
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 153
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe2dad5ea7e24aa10800000000000000
+      internalID: 1919710446543885039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoulderright
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 27
+        width: 115
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f055409cb572c74d0800000000000000
+      internalID: -3135587965388696305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_148
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 42
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 604dc007274d13750800000000000000
+      internalID: 6283036543129801734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_149
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 34
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6dd24472603ea120800000000000000
+      internalID: 2426930448614743407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_150
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 36
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f43722987ec68a6d0800000000000000
+      internalID: -2979011411811601585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_151
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 31
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79823cbe49e203720800000000000000
+      internalID: 2823808183506774167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_152
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 32
+        width: 39
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d362c32f0caaeecb0800000000000000
+      internalID: -4832737604447492547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_153
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 42
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ff2edcfc99e44e0800000000000000
+      internalID: -1995488467087065344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonSprites-Photoroom_154
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 0
+        width: 86
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72dfc9ea28c53f0b0800000000000000
+      internalID: -5696107387348517593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 32381306e92e1d6488c6f2ce294f0caa
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      dragonSprites-Photoroom_0: -2528539848901720373
+      dragonSprites-Photoroom_1: -3928435363110240720
+      dragonSprites-Photoroom_10: -1986890455330738634
+      dragonSprites-Photoroom_100: 7616374147687837999
+      dragonSprites-Photoroom_101: 2833680459470521062
+      dragonSprites-Photoroom_102: 3052401709094746663
+      dragonSprites-Photoroom_103: 129605324002940953
+      dragonSprites-Photoroom_104: -3484336773990714552
+      dragonSprites-Photoroom_105: -1032302901398835595
+      dragonSprites-Photoroom_106: -8112480646178737065
+      dragonSprites-Photoroom_107: -5231907164633260976
+      dragonSprites-Photoroom_108: 4807084332175423190
+      dragonSprites-Photoroom_109: 826313837516011898
+      dragonSprites-Photoroom_11: 1108242289875143196
+      dragonSprites-Photoroom_110: 3025809938144603615
+      dragonSprites-Photoroom_111: -5914171254048485230
+      dragonSprites-Photoroom_112: 5679023449533278686
+      dragonSprites-Photoroom_113: 3268217443720759498
+      dragonSprites-Photoroom_114: -5135275699763127601
+      dragonSprites-Photoroom_115: -2846295179650819078
+      dragonSprites-Photoroom_116: 2144002847566561397
+      dragonSprites-Photoroom_117: 1207995739883255841
+      dragonSprites-Photoroom_118: 3018691644303447532
+      dragonSprites-Photoroom_119: -1754309786334579489
+      dragonSprites-Photoroom_12: 8650446785761771803
+      dragonSprites-Photoroom_120: 651821358719680342
+      dragonSprites-Photoroom_121: -8961501245255259699
+      dragonSprites-Photoroom_122: -6903443095369421677
+      dragonSprites-Photoroom_123: 6718260796081501969
+      dragonSprites-Photoroom_124: -9068137283691567125
+      dragonSprites-Photoroom_125: -4296024094723496234
+      dragonSprites-Photoroom_126: 133208319825056942
+      dragonSprites-Photoroom_127: 4344369292981384795
+      dragonSprites-Photoroom_128: 1243372715578083987
+      dragonSprites-Photoroom_129: 1523558969441898053
+      dragonSprites-Photoroom_13: 168449160298770860
+      dragonSprites-Photoroom_130: -4869272040320566468
+      dragonSprites-Photoroom_131: -1956671562770425338
+      dragonSprites-Photoroom_132: -8961987850185273820
+      dragonSprites-Photoroom_133: 4433045070317888432
+      dragonSprites-Photoroom_135: 2058797323987222366
+      dragonSprites-Photoroom_136: -1500910320487633565
+      dragonSprites-Photoroom_138: 6506816452773633293
+      dragonSprites-Photoroom_139: 755928196428248122
+      dragonSprites-Photoroom_14: 1928093099937319852
+      dragonSprites-Photoroom_140: -4532513271269813927
+      dragonSprites-Photoroom_141: 9083765369214927863
+      dragonSprites-Photoroom_144: 6341383356297470730
+      dragonSprites-Photoroom_145: -4118593331434135327
+      dragonSprites-Photoroom_146: 65682018490383852
+      dragonSprites-Photoroom_147: -5469082480060693831
+      dragonSprites-Photoroom_148: 6283036543129801734
+      dragonSprites-Photoroom_149: 2426930448614743407
+      dragonSprites-Photoroom_15: 6149359313010191248
+      dragonSprites-Photoroom_150: -2979011411811601585
+      dragonSprites-Photoroom_151: 2823808183506774167
+      dragonSprites-Photoroom_152: -4832737604447492547
+      dragonSprites-Photoroom_153: -1995488467087065344
+      dragonSprites-Photoroom_154: -5696107387348517593
+      dragonSprites-Photoroom_16: 153265756725170540
+      dragonSprites-Photoroom_17: 1255881752817662688
+      dragonSprites-Photoroom_18: -7282270797980027941
+      dragonSprites-Photoroom_19: -5716394285599718017
+      dragonSprites-Photoroom_2: 2980473248622484354
+      dragonSprites-Photoroom_20: -4401743401165881606
+      dragonSprites-Photoroom_21: 6397228410341028594
+      dragonSprites-Photoroom_22: -2418649076538955177
+      dragonSprites-Photoroom_23: 5380782195471961139
+      dragonSprites-Photoroom_24: -6177281963095074892
+      dragonSprites-Photoroom_25: -4112414206020981290
+      dragonSprites-Photoroom_27: -6607904568133678063
+      dragonSprites-Photoroom_28: -2445143884341353364
+      dragonSprites-Photoroom_29: -4423895850438692426
+      dragonSprites-Photoroom_3: 4857783754836972475
+      dragonSprites-Photoroom_30: -3367791840673799521
+      dragonSprites-Photoroom_31: -2982685484516784303
+      dragonSprites-Photoroom_32: -3320500159505459747
+      dragonSprites-Photoroom_33: 2219244363094494849
+      dragonSprites-Photoroom_34: 3963530854468165321
+      dragonSprites-Photoroom_35: 3200174921032187829
+      dragonSprites-Photoroom_36: -4928112999819030498
+      dragonSprites-Photoroom_38: 9157049751070027750
+      dragonSprites-Photoroom_39: -7622064507775556578
+      dragonSprites-Photoroom_4: -1333011342184490087
+      dragonSprites-Photoroom_40: 2001867575416407982
+      dragonSprites-Photoroom_41: 4584307125218947333
+      dragonSprites-Photoroom_42: -4694794645472983760
+      dragonSprites-Photoroom_43: -3849672418750874998
+      dragonSprites-Photoroom_44: -6660073921697624983
+      dragonSprites-Photoroom_45: 9143548295076827914
+      dragonSprites-Photoroom_46: 5251704861427029563
+      dragonSprites-Photoroom_47: -160200519010352076
+      dragonSprites-Photoroom_48: -7253331079810848587
+      dragonSprites-Photoroom_49: 456233066501495247
+      dragonSprites-Photoroom_5: 2749309343815237692
+      dragonSprites-Photoroom_50: -3281772452303795899
+      dragonSprites-Photoroom_51: 5260400618829863212
+      dragonSprites-Photoroom_52: -6896058203574100285
+      dragonSprites-Photoroom_53: 6969432048898600830
+      dragonSprites-Photoroom_54: -4510803824182360807
+      dragonSprites-Photoroom_55: -3205700427310408159
+      dragonSprites-Photoroom_56: 6267068982490102829
+      dragonSprites-Photoroom_57: -1051581851418454888
+      dragonSprites-Photoroom_58: -6178112036943928740
+      dragonSprites-Photoroom_59: -3216056351928751066
+      dragonSprites-Photoroom_6: 3340868798083132823
+      dragonSprites-Photoroom_60: 4636198130374897993
+      dragonSprites-Photoroom_61: -580418624291519608
+      dragonSprites-Photoroom_64: 8082402883466143120
+      dragonSprites-Photoroom_65: 2525289927843801678
+      dragonSprites-Photoroom_66: -3213199370982633805
+      dragonSprites-Photoroom_69: 8659572070184600401
+      dragonSprites-Photoroom_7: -8030765020795645213
+      dragonSprites-Photoroom_70: -1879371266770084309
+      dragonSprites-Photoroom_71: -5211203483242573764
+      dragonSprites-Photoroom_72: -959152983081943002
+      dragonSprites-Photoroom_73: -5339280670838853997
+      dragonSprites-Photoroom_74: -1108410881358945427
+      dragonSprites-Photoroom_75: 179529308232101469
+      dragonSprites-Photoroom_76: 7502755493940165539
+      dragonSprites-Photoroom_77: -3132982369325349297
+      dragonSprites-Photoroom_78: 1708462247313470189
+      dragonSprites-Photoroom_79: 434942496806739941
+      dragonSprites-Photoroom_8: 8035563051217651610
+      dragonSprites-Photoroom_80: 6403879076010502307
+      dragonSprites-Photoroom_81: 4996177409846615807
+      dragonSprites-Photoroom_82: -8037256348617957768
+      dragonSprites-Photoroom_83: 4890313565731112152
+      dragonSprites-Photoroom_84: 852630634789146538
+      dragonSprites-Photoroom_85: -5641124149416393807
+      dragonSprites-Photoroom_86: -3873975817677814101
+      dragonSprites-Photoroom_87: -2400440998442335136
+      dragonSprites-Photoroom_88: -5511112044520216992
+      dragonSprites-Photoroom_89: 4377584171701739774
+      dragonSprites-Photoroom_9: 8123182954422069668
+      dragonSprites-Photoroom_90: -8523865709218206044
+      dragonSprites-Photoroom_91: -5432286235665232352
+      dragonSprites-Photoroom_92: -1894800619288394622
+      dragonSprites-Photoroom_93: 5976274390456828924
+      dragonSprites-Photoroom_94: -2741135774078478460
+      dragonSprites-Photoroom_96: -8735872017030778714
+      dragonSprites-Photoroom_97: -9067823849494909017
+      dragonSprites-Photoroom_98: 8013784478368543458
+      head: -4041645508954878314
+      horn: -2676384281159945055
+      leftlegt: -2998524429142112558
+      leftlegup: 414313587139036530
+      leftwing: -4257634550103340781
+      neck: -3346821670897657940
+      rightleg: -7656688016232997095
+      rightlegup: 3245877376140384292
+      rightwing: 4747637009861921011
+      shoulderleft: 1919710446543885039
+      shoulderright: -3135587965388696305
+      tail: -6087209739865734386
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,732 @@
+fileFormatVersion: 2
+guid: 42c745ac469626c4fa0cadf2ed926cdc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5430477105883067487
+    second: dragonFlying-Photoroom_0
+  - first:
+      213: 7337971726099405627
+    second: dragonFlying-Photoroom_1
+  - first:
+      213: -6683663781504420758
+    second: dragonFlying-Photoroom_2
+  - first:
+      213: 6581906592834726889
+    second: dragonFlying-Photoroom_3
+  - first:
+      213: -3398051439474759103
+    second: dragonFlying-Photoroom_4
+  - first:
+      213: -4490466542179472497
+    second: dragonFlying-Photoroom_5
+  - first:
+      213: -8964058618863429826
+    second: dragonFlying-Photoroom_6
+  - first:
+      213: 4148303313214048494
+    second: dragonFlying-Photoroom_7
+  - first:
+      213: -4232414752887790849
+    second: dragonFlying-Photoroom_8
+  - first:
+      213: 5969341916441539712
+    second: dragonFlying-Photoroom_9
+  - first:
+      213: 1990899731623856988
+    second: dragonFlying-Photoroom_10
+  - first:
+      213: -3311685081198845643
+    second: dragonFlying-Photoroom_11
+  - first:
+      213: 1821925698627483225
+    second: dragonFlying-Photoroom_12
+  - first:
+      213: -908044288803032673
+    second: dragonFlying-Photoroom_13
+  - first:
+      213: -1772097795663589185
+    second: dragonFlying-Photoroom_14
+  - first:
+      213: -7587718680825513918
+    second: dragonFlying-Photoroom_15
+  - first:
+      213: 3213219015501941267
+    second: dragonFlying-Photoroom_16
+  - first:
+      213: -1944309874676260945
+    second: dragonFlying-Photoroom_17
+  - first:
+      213: -133985295587499596
+    second: dragonFlying-Photoroom_18
+  - first:
+      213: -8431338007159497169
+    second: dragonFlying-Photoroom_19
+  - first:
+      213: -5193061844534927091
+    second: dragonFlying-Photoroom_20
+  - first:
+      213: 6315975455395731986
+    second: dragonFlying-Photoroom_21
+  - first:
+      213: 4091578113642238530
+    second: dragonFlying-Photoroom_22
+  - first:
+      213: 2294375801658767717
+    second: dragonFlying-Photoroom_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 766
+        width: 150
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3bd30a1866b5d560800000000000000
+      internalID: 7337971726099405627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 764
+        width: 146
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a64f849c33bde33a0800000000000000
+      internalID: -6683663781504420758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 765
+        width: 216
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb27ba7c21a75b50800000000000000
+      internalID: 6581906592834726889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 760
+        width: 102
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14a2a9d2832b7d0d0800000000000000
+      internalID: -3398051439474759103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 741
+        width: 87
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8bad9da878aea1c0800000000000000
+      internalID: -4490466542179472497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 553
+        width: 68
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e37ddd40e24499380800000000000000
+      internalID: -8964058618863429826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 551
+        width: 88
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee803bc72ebb19930800000000000000
+      internalID: 4148303313214048494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 539
+        width: 92
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff22000e4317345c0800000000000000
+      internalID: -4232414752887790849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 549
+        width: 63
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084f85898dc57d250800000000000000
+      internalID: 5969341916441539712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 550
+        width: 113
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5b4cd6f1c811ab10800000000000000
+      internalID: 1990899731623856988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 548
+        width: 104
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 531ae27f6f78a02d0800000000000000
+      internalID: -3311685081198845643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 372
+        width: 85
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 956b8d915c7c84910800000000000000
+      internalID: 1821925698627483225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 360
+        width: 94
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f91b295c78af563f0800000000000000
+      internalID: -908044288803032673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 354
+        width: 97
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb0183e917e3867e0800000000000000
+      internalID: -1772097795663589185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 359
+        width: 85
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 248bccdaf0203b690800000000000000
+      internalID: -7587718680825513918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 369
+        width: 79
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31a06849ba5a79c20800000000000000
+      internalID: 3213219015501941267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_17
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 359
+        width: 58
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faf13aa687c6405e0800000000000000
+      internalID: -1944309874676260945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_18
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 169
+        width: 96
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b1a163651df32ef0800000000000000
+      internalID: -133985295587499596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_19
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 187
+        width: 91
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2e120ee0ceddfa80800000000000000
+      internalID: -8431338007159497169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_20
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 185
+        width: 123
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d016cd334c98ee7b0800000000000000
+      internalID: -5193061844534927091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_21
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 161
+        width: 59
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ad2f4963ad6a750800000000000000
+      internalID: 6315975455395731986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_22
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 170
+        width: 74
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2429862cd9438c830800000000000000
+      internalID: 4091578113642238530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonFlying-Photoroom_23
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 160
+        width: 45
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5697f1fa2a247df10800000000000000
+      internalID: 2294375801658767717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: aab673687099a234bb9cb63faff21f21
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      dragonFlying-Photoroom_0: -5430477105883067487
+      dragonFlying-Photoroom_1: 7337971726099405627
+      dragonFlying-Photoroom_10: 1990899731623856988
+      dragonFlying-Photoroom_11: -3311685081198845643
+      dragonFlying-Photoroom_12: 1821925698627483225
+      dragonFlying-Photoroom_13: -908044288803032673
+      dragonFlying-Photoroom_14: -1772097795663589185
+      dragonFlying-Photoroom_15: -7587718680825513918
+      dragonFlying-Photoroom_16: 3213219015501941267
+      dragonFlying-Photoroom_17: -1944309874676260945
+      dragonFlying-Photoroom_18: -133985295587499596
+      dragonFlying-Photoroom_19: -8431338007159497169
+      dragonFlying-Photoroom_2: -6683663781504420758
+      dragonFlying-Photoroom_20: -5193061844534927091
+      dragonFlying-Photoroom_21: 6315975455395731986
+      dragonFlying-Photoroom_22: 4091578113642238530
+      dragonFlying-Photoroom_23: 2294375801658767717
+      dragonFlying-Photoroom_3: 6581906592834726889
+      dragonFlying-Photoroom_4: -3398051439474759103
+      dragonFlying-Photoroom_5: -4490466542179472497
+      dragonFlying-Photoroom_6: -8964058618863429826
+      dragonFlying-Photoroom_7: 4148303313214048494
+      dragonFlying-Photoroom_8: -4232414752887790849
+      dragonFlying-Photoroom_9: 5969341916441539712
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

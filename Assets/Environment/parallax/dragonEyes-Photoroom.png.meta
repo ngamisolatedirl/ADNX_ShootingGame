@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: e429543d779565f4c9315ebd356d500a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2691641466663028794
+    second: dragonEyes-Photoroom_0
+  - first:
+      213: -9170339495458574297
+    second: dragonEyes-Photoroom_1
+  - first:
+      213: 6751022621214592085
+    second: dragonEyes-Photoroom_2
+  - first:
+      213: -4860031048792293399
+    second: dragonEyes-Photoroom_3
+  - first:
+      213: 476172733498585383
+    second: dragonEyes-Photoroom_4
+  - first:
+      213: 8190606266343437588
+    second: dragonEyes-Photoroom_5
+  - first:
+      213: -3032935502892813708
+    second: dragonEyes-Photoroom_6
+  - first:
+      213: 4508395998476899273
+    second: dragonEyes-Photoroom_7
+  - first:
+      213: -1937112595154264963
+    second: dragonEyes-Photoroom_8
+  - first:
+      213: -4546052123684311394
+    second: dragonEyes-Photoroom_9
+  - first:
+      213: 8847267380651642243
+    second: dragonEyes-Photoroom_10
+  - first:
+      213: 2475803549175390808
+    second: dragonEyes-Photoroom_11
+  - first:
+      213: 2217410579775634235
+    second: dragonEyes-Photoroom_12
+  - first:
+      213: -874977721796172108
+    second: dragonEyes-Photoroom_13
+  - first:
+      213: -394360330463422505
+    second: dragonEyes-Photoroom_14
+  - first:
+      213: -3417709845154449290
+    second: dragonEyes-Photoroom_15
+  - first:
+      213: 1173349002171444665
+    second: dragonEyes-Photoroom_16
+  - first:
+      213: -2335605518609867162
+    second: dragonEyes-Photoroom_17
+  - first:
+      213: 8102294604527413296
+    second: dragonEyes-Photoroom_18
+  - first:
+      213: -4902357102288229104
+    second: dragonEyes-Photoroom_19
+  - first:
+      213: -4059680334725708458
+    second: dragonEyes-Photoroom_20
+  - first:
+      213: 5004394585916263931
+    second: dragonEyes-Photoroom_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 598
+        height: 448
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c7b6d4d85e55aad0800000000000000
+      internalID: -2691641466663028794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 579
+        width: 439
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720f47fb0d86cb080800000000000000
+      internalID: -9170339495458574297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 579
+        width: 485
+        height: 445
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55c4f183e4370bd50800000000000000
+      internalID: 6751022621214592085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 325
+        width: 265
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9efbd5bb283bd8cb0800000000000000
+      internalID: -4860031048792293399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 324
+        width: 259
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721f8e70494bb9600800000000000000
+      internalID: 476172733498585383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 327
+        width: 240
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4153d78e001eaa170800000000000000
+      internalID: 8190606266343437588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 333
+        width: 213
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4723763ba39d8e5d0800000000000000
+      internalID: -3032935502892813708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 341
+        width: 173
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c3120c264a019e30800000000000000
+      internalID: 4508395998476899273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 177
+        width: 175
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7c15e3ab5efd15e0800000000000000
+      internalID: -1937112595154264963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 104
+        width: 44
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9ee265fdad29e0c0800000000000000
+      internalID: -4546052123684311394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 182
+        width: 133
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38d44a0decec7ca70800000000000000
+      internalID: 8847267380651642243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 183
+        width: 122
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 852204ae532db5220800000000000000
+      internalID: 2475803549175390808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 184
+        width: 105
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3b38b88c23d5ce10800000000000000
+      internalID: 2217410579775634235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 186
+        width: 90
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b665f9d5647bd3f0800000000000000
+      internalID: -874977721796172108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 187
+        width: 71
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d7d83d6e53f68af0800000000000000
+      internalID: -394360330463422505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 239
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 678b63ee00bd190d0800000000000000
+      internalID: -3417709845154449290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 35
+        width: 29
+        height: 85
+      alignment: 9
+      pivot: {x: -3.5276163, y: 0.3706699}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bdecf763b2984010800000000000000
+      internalID: 1173349002171444665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_17
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 61
+        width: 25
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66e11d7c723469fd0800000000000000
+      internalID: -2335605518609867162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_18
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 64
+        width: 25
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 038ab68d302217070800000000000000
+      internalID: 8102294604527413296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_19
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 70
+        width: 22
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01d2ff3703457fbb0800000000000000
+      internalID: -4902357102288229104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_20
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 76
+        width: 17
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6550903ae3e19a7c0800000000000000
+      internalID: -4059680334725708458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonEyes-Photoroom_21
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 84
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfd4d698c5e237540800000000000000
+      internalID: 5004394585916263931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8c76427f6e3e393429495948f6174b82
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      1: -9170339495458574297
+      2: -4546052123684311394
+      3: 1173349002171444665
+      dragonEyes-Photoroom_0: -2691641466663028794
+      dragonEyes-Photoroom_10: 8847267380651642243
+      dragonEyes-Photoroom_11: 2475803549175390808
+      dragonEyes-Photoroom_12: 2217410579775634235
+      dragonEyes-Photoroom_13: -874977721796172108
+      dragonEyes-Photoroom_14: -394360330463422505
+      dragonEyes-Photoroom_15: -3417709845154449290
+      dragonEyes-Photoroom_17: -2335605518609867162
+      dragonEyes-Photoroom_18: 8102294604527413296
+      dragonEyes-Photoroom_19: -4902357102288229104
+      dragonEyes-Photoroom_2: 6751022621214592085
+      dragonEyes-Photoroom_20: -4059680334725708458
+      dragonEyes-Photoroom_21: 5004394585916263931
+      dragonEyes-Photoroom_3: -4860031048792293399
+      dragonEyes-Photoroom_4: 476172733498585383
+      dragonEyes-Photoroom_5: 8190606266343437588
+      dragonEyes-Photoroom_6: -3032935502892813708
+      dragonEyes-Photoroom_7: 4508395998476899273
+      dragonEyes-Photoroom_8: -1937112595154264963
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

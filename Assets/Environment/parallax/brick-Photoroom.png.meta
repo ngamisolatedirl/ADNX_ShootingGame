@@ -1,0 +1,1482 @@
+fileFormatVersion: 2
+guid: bcd74142f81410a41a4155d5af1b1f79
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1330640068426963899
+    second: brick-Photoroom_0
+  - first:
+      213: 394846498707352385
+    second: brick-Photoroom_1
+  - first:
+      213: 8881622607935525796
+    second: brick-Photoroom_2
+  - first:
+      213: 4067485545265294633
+    second: brick-Photoroom_3
+  - first:
+      213: -8259921829724814676
+    second: brick-Photoroom_4
+  - first:
+      213: -591088558248863786
+    second: brick-Photoroom_5
+  - first:
+      213: 1418408669160958509
+    second: brick-Photoroom_6
+  - first:
+      213: -6111397332158538243
+    second: brick-Photoroom_7
+  - first:
+      213: -5225953748108901067
+    second: brick-Photoroom_8
+  - first:
+      213: -2446578901080785697
+    second: brick-Photoroom_9
+  - first:
+      213: -6655186835587044870
+    second: brick-Photoroom_10
+  - first:
+      213: 2885098413899331092
+    second: brick-Photoroom_11
+  - first:
+      213: -2064528500136900423
+    second: brick-Photoroom_12
+  - first:
+      213: 1613148469184626133
+    second: brick-Photoroom_13
+  - first:
+      213: 4847154479468921939
+    second: brick-Photoroom_14
+  - first:
+      213: -8084376847280882072
+    second: brick-Photoroom_15
+  - first:
+      213: -5511835457029587532
+    second: brick-Photoroom_16
+  - first:
+      213: -8094109528304937283
+    second: brick-Photoroom_17
+  - first:
+      213: -6492976452422939453
+    second: brick-Photoroom_18
+  - first:
+      213: 7793496190763846140
+    second: brick-Photoroom_19
+  - first:
+      213: -9017212745274371823
+    second: brick-Photoroom_20
+  - first:
+      213: -4408781545836855192
+    second: brick-Photoroom_21
+  - first:
+      213: 7780314663239854725
+    second: brick-Photoroom_22
+  - first:
+      213: -5573418087091680866
+    second: brick-Photoroom_23
+  - first:
+      213: -4655055379606207748
+    second: brick-Photoroom_24
+  - first:
+      213: -2624836535414079655
+    second: brick-Photoroom_25
+  - first:
+      213: -5725798048027658541
+    second: brick-Photoroom_26
+  - first:
+      213: -780288474654103895
+    second: brick-Photoroom_27
+  - first:
+      213: -2544470211117934085
+    second: brick-Photoroom_28
+  - first:
+      213: 6944425625497894498
+    second: brick-Photoroom_29
+  - first:
+      213: -2300832605139918894
+    second: brick-Photoroom_30
+  - first:
+      213: 6782572204316980305
+    second: brick-Photoroom_31
+  - first:
+      213: 7430521381703473575
+    second: brick-Photoroom_32
+  - first:
+      213: -7922194893602384434
+    second: brick-Photoroom_33
+  - first:
+      213: 8739761353485701104
+    second: brick-Photoroom_34
+  - first:
+      213: 1927098685814238508
+    second: brick-Photoroom_35
+  - first:
+      213: -5283057521777064522
+    second: brick-Photoroom_36
+  - first:
+      213: 5148418747537901713
+    second: brick-Photoroom_37
+  - first:
+      213: 3164277106216861573
+    second: brick-Photoroom_38
+  - first:
+      213: -7301568752656536950
+    second: brick-Photoroom_39
+  - first:
+      213: 3189369700166400232
+    second: brick-Photoroom_40
+  - first:
+      213: 1955687679168962497
+    second: brick-Photoroom_41
+  - first:
+      213: 3098513995850172651
+    second: brick-Photoroom_42
+  - first:
+      213: 5030541482246496670
+    second: brick-Photoroom_43
+  - first:
+      213: 1410374694081374595
+    second: brick-Photoroom_44
+  - first:
+      213: -6467011030564141178
+    second: brick-Photoroom_45
+  - first:
+      213: -2635717009078022249
+    second: brick-Photoroom_46
+  - first:
+      213: -536347043581931169
+    second: brick-Photoroom_47
+  - first:
+      213: -6654035271603543145
+    second: brick-Photoroom_48
+  - first:
+      213: -5000195738705962959
+    second: brick-Photoroom_49
+  - first:
+      213: -4680062626276497890
+    second: brick-Photoroom_50
+  - first:
+      213: -8936804303568906876
+    second: brick-Photoroom_51
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: brick-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 649
+        width: 246
+        height: 313
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbb9d7a9712677210800000000000000
+      internalID: 1330640068426963899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 647
+        width: 319
+        height: 306
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14b22407cc6ca7500800000000000000
+      internalID: 394846498707352385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 624
+        width: 256
+        height: 327
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a3531f74bcd14b70800000000000000
+      internalID: 8881622607935525796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 658
+        width: 219
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92de29e8d8c927830800000000000000
+      internalID: 4067485545265294633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 648
+        width: 289
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca202cadbdcde5d80800000000000000
+      internalID: -8259921829724814676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 453
+        width: 305
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d757c686180cc7f0800000000000000
+      internalID: -591088558248863786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 471
+        width: 116
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2a6ca76b233fa310800000000000000
+      internalID: 1418408669160958509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 471
+        width: 117
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfd9b678184ff2ba0800000000000000
+      internalID: -6111397332158538243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 472
+        width: 148
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 535095f11cea977b0800000000000000
+      internalID: -5225953748108901067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 448
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdc3d16b3710c0ed0800000000000000
+      internalID: -2446578901080785697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 458
+        width: 123
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af96afe65d604a3a0800000000000000
+      internalID: -6655186835587044870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 469
+        width: 98
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4163386b8bde90820800000000000000
+      internalID: 2885098413899331092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 456
+        width: 80
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b88ba874425953e0800000000000000
+      internalID: -2064528500136900423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 444
+        width: 64
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ddf6b36cfd036610800000000000000
+      internalID: 1613148469184626133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 447
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3544038515d844340800000000000000
+      internalID: 4847154479468921939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 306
+        width: 129
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86e3e6b17168ecf80800000000000000
+      internalID: -8084376847280882072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 308
+        width: 91
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd3953dad60283b0800000000000000
+      internalID: -5511835457029587532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_17
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 297
+        width: 89
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db69748b442fbaf80800000000000000
+      internalID: -8094109528304937283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_18
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 304
+        width: 106
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ccca5a515054e5a0800000000000000
+      internalID: -6492976452422939453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_19
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 304
+        width: 80
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf9c6d86e7f082c60800000000000000
+      internalID: 7793496190763846140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_20
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 303
+        width: 86
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 111dbcd88cc6cd280800000000000000
+      internalID: -9017212745274371823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_21
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 304
+        width: 78
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860c814fa8cd0d2c0800000000000000
+      internalID: -4408781545836855192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_22
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 304
+        width: 88
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58aac2fd6fa39fb60800000000000000
+      internalID: 7780314663239854725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_23
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 304
+        width: 99
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e99c92e67cd37a2b0800000000000000
+      internalID: -5573418087091680866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_24
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 305
+        width: 65
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf20dc8bbcbe56fb0800000000000000
+      internalID: -4655055379606207748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_25
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 284
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95f3d29f315b29bd0800000000000000
+      internalID: -2624836535414079655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_26
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 181
+        width: 130
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d6bfab0301e980b0800000000000000
+      internalID: -5725798048027658541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_27
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 181
+        width: 75
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a629e534cbdb25f0800000000000000
+      internalID: -780288474654103895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_28
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 183
+        width: 74
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf990ccf2d930bcd0800000000000000
+      internalID: -2544470211117934085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_29
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 182
+        width: 69
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26efbe0305e8f5060800000000000000
+      internalID: 6944425625497894498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_30
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 181
+        width: 78
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df9ffa9fecc110e0800000000000000
+      internalID: -2300832605139918894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_31
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 186
+        width: 65
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15470c5fb79802e50800000000000000
+      internalID: 6782572204316980305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_32
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 185
+        width: 66
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a9516cf3d38e1760800000000000000
+      internalID: 7430521381703473575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_33
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 185
+        width: 64
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec59a65c7b5be0290800000000000000
+      internalID: -7922194893602384434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_34
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 185
+        width: 63
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ffc33055aed94970800000000000000
+      internalID: 8739761353485701104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_35
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 187
+        width: 46
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2d64176b0e6eba10800000000000000
+      internalID: 1927098685814238508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_36
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 187
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b5c58ebc2fcea6b0800000000000000
+      internalID: -5283057521777064522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_37
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 186
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19845f9c29bd27740800000000000000
+      internalID: 5148418747537901713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 180
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58ff4f65345c9eb20800000000000000
+      internalID: 3164277106216861573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_39
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 82
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8aa0d2a7ed9baa90800000000000000
+      internalID: -7301568752656536950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_40
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 83
+        width: 65
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e8ffc328dae24c20800000000000000
+      internalID: 3189369700166400232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_41
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 81
+        width: 67
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf5970259ff32b10800000000000000
+      internalID: 1955687679168962497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_42
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 82
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8c9360012200b20800000000000000
+      internalID: 3098513995850172651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_43
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 80
+        width: 49
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e916b2d33d210d540800000000000000
+      internalID: 5030541482246496670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_44
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 81
+        width: 77
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 389abe0df48a29310800000000000000
+      internalID: 1410374694081374595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_45
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 81
+        width: 56
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68701bc3bbf8046a0800000000000000
+      internalID: -6467011030564141178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_46
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 82
+        width: 36
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79f0379485d0c6bd0800000000000000
+      internalID: -2635717009078022249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_47
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 82
+        width: 36
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f51d7fe94338e88f0800000000000000
+      internalID: -536347043581931169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_48
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 82
+        width: 45
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 793a621dc2e18a3a0800000000000000
+      internalID: -6654035271603543145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_49
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 84
+        width: 40
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1385203c77cbb9ab0800000000000000
+      internalID: -5000195738705962959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_50
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 89
+        width: 40
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16253266d31d0fb0800000000000000
+      internalID: -4680062626276497890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick-Photoroom_51
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 85
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 485d79ac5d71af380800000000000000
+      internalID: -8936804303568906876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e6a0f6ecd981a96409ee7f0fceab1300
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      brick-Photoroom_0: 1330640068426963899
+      brick-Photoroom_1: 394846498707352385
+      brick-Photoroom_10: -6655186835587044870
+      brick-Photoroom_11: 2885098413899331092
+      brick-Photoroom_12: -2064528500136900423
+      brick-Photoroom_13: 1613148469184626133
+      brick-Photoroom_14: 4847154479468921939
+      brick-Photoroom_15: -8084376847280882072
+      brick-Photoroom_16: -5511835457029587532
+      brick-Photoroom_17: -8094109528304937283
+      brick-Photoroom_18: -6492976452422939453
+      brick-Photoroom_19: 7793496190763846140
+      brick-Photoroom_2: 8881622607935525796
+      brick-Photoroom_20: -9017212745274371823
+      brick-Photoroom_21: -4408781545836855192
+      brick-Photoroom_22: 7780314663239854725
+      brick-Photoroom_23: -5573418087091680866
+      brick-Photoroom_24: -4655055379606207748
+      brick-Photoroom_25: -2624836535414079655
+      brick-Photoroom_26: -5725798048027658541
+      brick-Photoroom_27: -780288474654103895
+      brick-Photoroom_28: -2544470211117934085
+      brick-Photoroom_29: 6944425625497894498
+      brick-Photoroom_3: 4067485545265294633
+      brick-Photoroom_30: -2300832605139918894
+      brick-Photoroom_31: 6782572204316980305
+      brick-Photoroom_32: 7430521381703473575
+      brick-Photoroom_33: -7922194893602384434
+      brick-Photoroom_34: 8739761353485701104
+      brick-Photoroom_35: 1927098685814238508
+      brick-Photoroom_36: -5283057521777064522
+      brick-Photoroom_37: 5148418747537901713
+      brick-Photoroom_38: 3164277106216861573
+      brick-Photoroom_39: -7301568752656536950
+      brick-Photoroom_4: -8259921829724814676
+      brick-Photoroom_40: 3189369700166400232
+      brick-Photoroom_41: 1955687679168962497
+      brick-Photoroom_42: 3098513995850172651
+      brick-Photoroom_43: 5030541482246496670
+      brick-Photoroom_44: 1410374694081374595
+      brick-Photoroom_45: -6467011030564141178
+      brick-Photoroom_46: -2635717009078022249
+      brick-Photoroom_47: -536347043581931169
+      brick-Photoroom_48: -6654035271603543145
+      brick-Photoroom_49: -5000195738705962959
+      brick-Photoroom_5: -591088558248863786
+      brick-Photoroom_50: -4680062626276497890
+      brick-Photoroom_51: -8936804303568906876
+      brick-Photoroom_6: 1418408669160958509
+      brick-Photoroom_7: -6111397332158538243
+      brick-Photoroom_8: -5225953748108901067
+      brick-Photoroom_9: -2446578901080785697
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
