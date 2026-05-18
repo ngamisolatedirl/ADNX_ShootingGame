@@ -13,6 +13,7 @@ TagManager:
   - ShootingEnemy
   - LavaEnemy
   - notMainCamera
+  - BreakableObject
   layers:
   - Default
   - TransparentFX

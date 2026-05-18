@@ -1,0 +1,1716 @@
+fileFormatVersion: 2
+guid: 2d379599a39633243ac49750066510cb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4370808635670983505
+    second: dragonTEST-Photoroom_0
+  - first:
+      213: 478618507037671800
+    second: dragonTEST-Photoroom_1
+  - first:
+      213: -8066160908867201866
+    second: dragonTEST-Photoroom_2
+  - first:
+      213: -1406979799575330831
+    second: dragonTEST-Photoroom_3
+  - first:
+      213: -7046080977986990817
+    second: dragonTEST-Photoroom_4
+  - first:
+      213: -8656401022813251292
+    second: dragonTEST-Photoroom_5
+  - first:
+      213: 6309027945403770132
+    second: dragonTEST-Photoroom_6
+  - first:
+      213: -5755920550878227353
+    second: dragonTEST-Photoroom_7
+  - first:
+      213: 4682111927147086435
+    second: dragonTEST-Photoroom_8
+  - first:
+      213: -3507980652488365841
+    second: dragonTEST-Photoroom_9
+  - first:
+      213: 6510040721595944948
+    second: dragonTEST-Photoroom_10
+  - first:
+      213: 7020987473923517181
+    second: dragonTEST-Photoroom_11
+  - first:
+      213: -581976114482425998
+    second: dragonTEST-Photoroom_12
+  - first:
+      213: 6487693792044627612
+    second: dragonTEST-Photoroom_13
+  - first:
+      213: 5097142723353442498
+    second: dragonTEST-Photoroom_14
+  - first:
+      213: 8622544200752441743
+    second: dragonTEST-Photoroom_15
+  - first:
+      213: 8887431042685295203
+    second: dragonTEST-Photoroom_16
+  - first:
+      213: -1390144308052678267
+    second: dragonTEST-Photoroom_17
+  - first:
+      213: -6642829615130323385
+    second: dragonTEST-Photoroom_18
+  - first:
+      213: 8847430556588525903
+    second: dragonTEST-Photoroom_19
+  - first:
+      213: -8963180430419906495
+    second: dragonTEST-Photoroom_20
+  - first:
+      213: 82672011231225670
+    second: dragonTEST-Photoroom_21
+  - first:
+      213: -2031037768417853622
+    second: dragonTEST-Photoroom_22
+  - first:
+      213: -2611832519273300923
+    second: dragonTEST-Photoroom_23
+  - first:
+      213: 1531441726154088590
+    second: dragonTEST-Photoroom_24
+  - first:
+      213: -7655875904189214963
+    second: dragonTEST-Photoroom_25
+  - first:
+      213: 1510328833915137066
+    second: dragonTEST-Photoroom_26
+  - first:
+      213: 8955012133295048881
+    second: dragonTEST-Photoroom_27
+  - first:
+      213: 8481490738440006823
+    second: dragonTEST-Photoroom_28
+  - first:
+      213: -2349125868898512519
+    second: dragonTEST-Photoroom_29
+  - first:
+      213: 223174123956343558
+    second: dragonTEST-Photoroom_30
+  - first:
+      213: 4564026170521950961
+    second: dragonTEST-Photoroom_31
+  - first:
+      213: 7325495927523997602
+    second: dragonTEST-Photoroom_32
+  - first:
+      213: -1119926822351339622
+    second: dragonTEST-Photoroom_33
+  - first:
+      213: -520105670726959762
+    second: dragonTEST-Photoroom_34
+  - first:
+      213: 5138315251493075685
+    second: dragonTEST-Photoroom_35
+  - first:
+      213: -4866320511221122561
+    second: dragonTEST-Photoroom_36
+  - first:
+      213: -1055648114408865853
+    second: dragonTEST-Photoroom_37
+  - first:
+      213: -1063781589152718331
+    second: dragonTEST-Photoroom_38
+  - first:
+      213: 2315446398991700978
+    second: dragonTEST-Photoroom_39
+  - first:
+      213: -3282122547697401046
+    second: dragonTEST-Photoroom_40
+  - first:
+      213: 684245031667444852
+    second: dragonTEST-Photoroom_41
+  - first:
+      213: 5914879807430798405
+    second: dragonTEST-Photoroom_42
+  - first:
+      213: -537814324110744932
+    second: dragonTEST-Photoroom_43
+  - first:
+      213: -4862325910076934644
+    second: dragonTEST-Photoroom_44
+  - first:
+      213: -7968055987833791246
+    second: dragonTEST-Photoroom_45
+  - first:
+      213: -5271971181475235034
+    second: dragonTEST-Photoroom_46
+  - first:
+      213: 3450504657592394662
+    second: dragonTEST-Photoroom_47
+  - first:
+      213: -2617425252208234041
+    second: dragonTEST-Photoroom_48
+  - first:
+      213: 7315802155946956716
+    second: dragonTEST-Photoroom_49
+  - first:
+      213: -217966522404257484
+    second: dragonTEST-Photoroom_50
+  - first:
+      213: 7421882406109437858
+    second: dragonTEST-Photoroom_51
+  - first:
+      213: -2004783511638966612
+    second: dragonTEST-Photoroom_52
+  - first:
+      213: 6538967495486656668
+    second: dragonTEST-Photoroom_53
+  - first:
+      213: 4160639359910953901
+    second: dragonTEST-Photoroom_54
+  - first:
+      213: 2813525680148522029
+    second: dragonTEST-Photoroom_55
+  - first:
+      213: 53717553547121478
+    second: dragonTEST-Photoroom_56
+  - first:
+      213: 7689596987867392801
+    second: dragonTEST-Photoroom_57
+  - first:
+      213: -4802509529855295256
+    second: dragonTEST-Photoroom_58
+  - first:
+      213: -3476934664647884921
+    second: dragonTEST-Photoroom_59
+  - first:
+      213: 2030043962115155889
+    second: dragonTEST-Photoroom_60
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1456
+        width: 205
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fac0f9114b4c753c0800000000000000
+      internalID: -4370808635670983505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1456
+        width: 98
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87188ee0ff464a600800000000000000
+      internalID: 478618507037671800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 1457
+        width: 91
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b414d5c36d3f0090800000000000000
+      internalID: -8066160908867201866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 1219
+        width: 439
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ff7928a357697ce0800000000000000
+      internalID: -1406979799575330831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1203
+        width: 299
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1dc278aeaa473e90800000000000000
+      internalID: -7046080977986990817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 1218
+        width: 383
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42953e122294ed780800000000000000
+      internalID: -8656401022813251292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 1453
+        width: 100
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 415edcb5d7b2e8750800000000000000
+      internalID: 6309027945403770132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 2026
+        y: 1455
+        width: 100
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 764588151ccde10b0800000000000000
+      internalID: -5755920550878227353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 1456
+        width: 250
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362c838adf33af040800000000000000
+      internalID: 4682111927147086435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1373
+        width: 97
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe8ec71ce26215fc0800000000000000
+      internalID: -3507980652488365841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1373
+        width: 97
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ffcd0c6b8f485a50800000000000000
+      internalID: 6510040721595944948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 1374
+        width: 93
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfaada3a8ee8f6160800000000000000
+      internalID: 7020987473923517181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 1369
+        width: 103
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27f438caec76ce7f0800000000000000
+      internalID: -581976114482425998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 1371
+        width: 105
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c96b35e612be80a50800000000000000
+      internalID: 6487693792044627612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1288
+        width: 98
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c8f2f21d40bcb640800000000000000
+      internalID: 5097142723353442498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1289
+        width: 98
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8924f1344e69a770800000000000000
+      internalID: 8622544200752441743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 1289
+        width: 93
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36a5909127f765b70800000000000000
+      internalID: 8887431042685295203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_17
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 1284
+        width: 106
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5892dfbfd1735bce0800000000000000
+      internalID: -1390144308052678267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_18
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 1289
+        width: 93
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74656b609adefc3a0800000000000000
+      internalID: -6642829615130323385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_19
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1161
+        width: 108
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49456c273368ca70800000000000000
+      internalID: 8847430556588525903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_20
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1164
+        width: 96
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 140b61333e26c9380800000000000000
+      internalID: -8963180430419906495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_21
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1177
+        width: 98
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 647ed4691c5b52100800000000000000
+      internalID: 82672011231225670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_22
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 914
+        width: 253
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f3d0819ed40d3e0800000000000000
+      internalID: -2031037768417853622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_23
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 862
+        width: 473
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54cb6eb6928e0cbd0800000000000000
+      internalID: -2611832519273300923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_24
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 899
+        width: 851
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8020a1d226c04510800000000000000
+      internalID: 1531441726154088590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_25
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 995
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0f445e7d6dd0c590800000000000000
+      internalID: -7655875904189214963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_26
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 995
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2caa878214c5f410800000000000000
+      internalID: 1510328833915137066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_27
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 995
+        width: 33
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b84d5ce618964c70800000000000000
+      internalID: 8955012133295048881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_28
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 996
+        width: 42
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac6b76c3ee44b570800000000000000
+      internalID: 8481490738440006823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_29
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 994
+        width: 45
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9719f9be77a366fd0800000000000000
+      internalID: -2349125868898512519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_30
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 993
+        width: 48
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6031a7deeafd81300800000000000000
+      internalID: 223174123956343558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_31
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 580
+        width: 281
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa1c8fee9da65f30800000000000000
+      internalID: 4564026170521950961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_32
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 790
+        width: 132
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a773a3ebb369a560800000000000000
+      internalID: 7325495927523997602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_33
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 671
+        width: 125
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ff05b1d783570f0800000000000000
+      internalID: -1119926822351339622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_34
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 562
+        width: 245
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d37aae5a638c8f0800000000000000
+      internalID: -520105670726959762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_35
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 797
+        width: 94
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ea773d4f76fe4740800000000000000
+      internalID: 5138315251493075685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_36
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 693
+        width: 77
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff9b775274b577cb0800000000000000
+      internalID: -4866320511221122561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_37
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 737
+        width: 104
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cf39dc02a59951f0800000000000000
+      internalID: -1055648114408865853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_38
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 789
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 502a3f3e740bc31f0800000000000000
+      internalID: -1063781589152718331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_39
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 789
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f39b5c6b3e122020800000000000000
+      internalID: 2315446398991700978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_40
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 568
+        width: 214
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a23423baeee8372d0800000000000000
+      internalID: -3282122547697401046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_41
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 744
+        width: 104
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47c2dd32b3dee7900800000000000000
+      internalID: 684245031667444852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_42
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 545
+        width: 200
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54c2b03b8dfd51250800000000000000
+      internalID: 5914879807430798405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_43
+      rect:
+        serializedVersion: 2
+        x: 2038
+        y: 732
+        width: 133
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c922340c8bc4988f0800000000000000
+      internalID: -537814324110744932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_44
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 736
+        width: 97
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c06bfa3b85c858cb0800000000000000
+      internalID: -4862325910076934644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_45
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 734
+        width: 25
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc1ebeab47cb6190800000000000000
+      internalID: -7968055987833791246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_46
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 736
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62b721e742236d6b0800000000000000
+      internalID: -5271971181475235034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_47
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 607
+        width: 72
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a320ab54b7a2ef20800000000000000
+      internalID: 3450504657592394662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_48
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 572
+        width: 139
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c1bdffc9990dabd0800000000000000
+      internalID: -2617425252208234041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_49
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 550
+        width: 120
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca75140dc43f68560800000000000000
+      internalID: 7315802155946956716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_50
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 558
+        width: 123
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 431ca2b4a90a9fcf0800000000000000
+      internalID: -217966522404257484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_51
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 690
+        width: 58
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2afdfdcb9b2dff660800000000000000
+      internalID: 7421882406109437858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_52
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 578
+        width: 109
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caef23994049d24e0800000000000000
+      internalID: -2004783511638966612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_53
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 539
+        width: 103
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90de4eca441fba50800000000000000
+      internalID: 6538967495486656668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_54
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 640
+        width: 47
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da3400e247f8db930800000000000000
+      internalID: 4160639359910953901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_55
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 606
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2421bb03b6ab0720800000000000000
+      internalID: 2813525680148522029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_56
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 598
+        width: 50
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 643116194d7deb000800000000000000
+      internalID: 53717553547121478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1165
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12befbf18bfe6ba60800000000000000
+      internalID: 7689596987867392801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_58
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 0
+        width: 1166
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e00c82070f0a5db0800000000000000
+      internalID: -4802509529855295256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_59
+      rect:
+        serializedVersion: 2
+        x: 2247
+        y: 379
+        width: 101
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78fbb6618527fbfc0800000000000000
+      internalID: -3476934664647884921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragonTEST-Photoroom_60
+      rect:
+        serializedVersion: 2
+        x: 2234
+        y: 73
+        width: 128
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b7ec485a3a2c2c10800000000000000
+      internalID: 2030043962115155889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      dragonTEST-Photoroom_0: -4370808635670983505
+      dragonTEST-Photoroom_1: 478618507037671800
+      dragonTEST-Photoroom_10: 6510040721595944948
+      dragonTEST-Photoroom_11: 7020987473923517181
+      dragonTEST-Photoroom_12: -581976114482425998
+      dragonTEST-Photoroom_13: 6487693792044627612
+      dragonTEST-Photoroom_14: 5097142723353442498
+      dragonTEST-Photoroom_15: 8622544200752441743
+      dragonTEST-Photoroom_16: 8887431042685295203
+      dragonTEST-Photoroom_17: -1390144308052678267
+      dragonTEST-Photoroom_18: -6642829615130323385
+      dragonTEST-Photoroom_19: 8847430556588525903
+      dragonTEST-Photoroom_2: -8066160908867201866
+      dragonTEST-Photoroom_20: -8963180430419906495
+      dragonTEST-Photoroom_21: 82672011231225670
+      dragonTEST-Photoroom_22: -2031037768417853622
+      dragonTEST-Photoroom_23: -2611832519273300923
+      dragonTEST-Photoroom_24: 1531441726154088590
+      dragonTEST-Photoroom_25: -7655875904189214963
+      dragonTEST-Photoroom_26: 1510328833915137066
+      dragonTEST-Photoroom_27: 8955012133295048881
+      dragonTEST-Photoroom_28: 8481490738440006823
+      dragonTEST-Photoroom_29: -2349125868898512519
+      dragonTEST-Photoroom_3: -1406979799575330831
+      dragonTEST-Photoroom_30: 223174123956343558
+      dragonTEST-Photoroom_31: 4564026170521950961
+      dragonTEST-Photoroom_32: 7325495927523997602
+      dragonTEST-Photoroom_33: -1119926822351339622
+      dragonTEST-Photoroom_34: -520105670726959762
+      dragonTEST-Photoroom_35: 5138315251493075685
+      dragonTEST-Photoroom_36: -4866320511221122561
+      dragonTEST-Photoroom_37: -1055648114408865853
+      dragonTEST-Photoroom_38: -1063781589152718331
+      dragonTEST-Photoroom_39: 2315446398991700978
+      dragonTEST-Photoroom_4: -7046080977986990817
+      dragonTEST-Photoroom_40: -3282122547697401046
+      dragonTEST-Photoroom_41: 684245031667444852
+      dragonTEST-Photoroom_42: 5914879807430798405
+      dragonTEST-Photoroom_43: -537814324110744932
+      dragonTEST-Photoroom_44: -4862325910076934644
+      dragonTEST-Photoroom_45: -7968055987833791246
+      dragonTEST-Photoroom_46: -5271971181475235034
+      dragonTEST-Photoroom_47: 3450504657592394662
+      dragonTEST-Photoroom_48: -2617425252208234041
+      dragonTEST-Photoroom_49: 7315802155946956716
+      dragonTEST-Photoroom_5: -8656401022813251292
+      dragonTEST-Photoroom_50: -217966522404257484
+      dragonTEST-Photoroom_51: 7421882406109437858
+      dragonTEST-Photoroom_52: -2004783511638966612
+      dragonTEST-Photoroom_53: 6538967495486656668
+      dragonTEST-Photoroom_54: 4160639359910953901
+      dragonTEST-Photoroom_55: 2813525680148522029
+      dragonTEST-Photoroom_56: 53717553547121478
+      dragonTEST-Photoroom_57: 7689596987867392801
+      dragonTEST-Photoroom_58: -4802509529855295256
+      dragonTEST-Photoroom_59: -3476934664647884921
+      dragonTEST-Photoroom_6: 6309027945403770132
+      dragonTEST-Photoroom_60: 2030043962115155889
+      dragonTEST-Photoroom_7: -5755920550878227353
+      dragonTEST-Photoroom_8: 4682111927147086435
+      dragonTEST-Photoroom_9: -3507980652488365841
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

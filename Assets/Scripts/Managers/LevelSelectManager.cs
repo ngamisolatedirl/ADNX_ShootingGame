@@ -44,10 +44,10 @@ public class LevelSelectManager : MonoBehaviour
             levelButtons[i].onClick.AddListener(() => LoadLevel(idx));
 
             var labelText = levelButtons[i].GetComponentInChildren<TextMeshProUGUI>();
-            if (labelText != null)
-                labelText.text = isUnlocked
-                    ? $"Level {i + 1}"
-                    : $"Level {i + 1} 🔒";
+            //if (labelText != null)
+            //    labelText.text = isUnlocked
+            //        ? $"Level {i + 1}"
+            //        : $"Level {i + 1} 🔒";
         }
 
         backButton.onClick.AddListener(() => SceneManager.LoadScene(mainMenuScene));

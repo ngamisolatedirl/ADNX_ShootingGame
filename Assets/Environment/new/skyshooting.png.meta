@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: f1afc96315dab9547b049618a245f062
+guid: 000b01a8212963448a42205d87e90adc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8225812012031239119
-    second: LevelSelect_0
+      213: -5833854833149522421
+    second: skyshooting_0
+  - first:
+      213: -6607138809066083333
+    second: skyshooting_1
+  - first:
+      213: 4413387243342137134
+    second: skyshooting_2
+  - first:
+      213: -3966658826697739673
+    second: skyshooting_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LevelSelect_0
+      name: skyshooting_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1448
-        height: 1086
+        x: 363
+        y: 394
+        width: 822
+        height: 312
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc363465174f72270800000000000000
-      internalID: 8225812012031239119
+      spriteID: b0e4de630fbf90fa0800000000000000
+      internalID: -5833854833149522421
       vertices: []
       indices: 
       edges: []
@@ -138,7 +147,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2152efd239296b041b9e4280eefa55e5
+    spriteID: db01d2675f717f140b33593b28a7932a
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +157,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LevelSelect_0: 8225812012031239119
+      skyshooting_0: -5833854833149522421
+      skyshooting_1: -6607138809066083333
+      skyshooting_2: 4413387243342137134
+      skyshooting_3: -3966658826697739673
+      skyshooting_4: -1305701464
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

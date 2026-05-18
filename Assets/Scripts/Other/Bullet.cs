@@ -21,7 +21,6 @@ public class Bullet : NetworkBehaviour
         NetworkVariableWritePermission.Server
     );
 
-    // Owner của viên đạn (client nào bắn ra)
     private NetworkVariable<ulong> networkOwnerClientId = new NetworkVariable<ulong>(
         0,
         NetworkVariableReadPermission.Everyone,
@@ -63,19 +62,24 @@ public class Bullet : NetworkBehaviour
         if (!IsServer) return;
         if (hasHit && !piercing) return;
 
-        if (collision.CompareTag("Enemy") || collision.CompareTag("MeleeEnemy") ||
-            collision.CompareTag("Enemy") || collision.CompareTag("ShootingEnemy")||
-            collision.CompareTag("Enemy") || collision.CompareTag("LavaEnemy"))
+        if (collision.CompareTag("Enemy") ||
+            collision.CompareTag("MeleeEnemy") ||
+            collision.CompareTag("ShootingEnemy") ||
+            collision.CompareTag("LavaEnemy") ||
+            collision.CompareTag("BreakableObject"))
         {
-            // MeleeEnemy
             if (collision.TryGetComponent<MeleeEnemy>(out var melee))
                 melee.TakeDamage(damage, networkOwnerClientId.Value);
 
-            // ShootingEnemy
             if (collision.TryGetComponent<ShootingEnemy>(out var shooter))
                 shooter.TakeDamage(damage, networkOwnerClientId.Value);
+
             if (collision.TryGetComponent<LavaEnemy>(out var lava))
                 lava.TakeDamage(damage, networkOwnerClientId.Value);
+
+            // FIX: đổi từ LavaEnemy → BreakableObject
+            if (collision.TryGetComponent<BreakableObject>(out var breakable))
+                breakable.TakeDamage(damage, networkOwnerClientId.Value);
 
             if (!piercing)
             {

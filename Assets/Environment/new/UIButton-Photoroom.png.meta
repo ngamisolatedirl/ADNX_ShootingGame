@@ -1,61 +1,46 @@
 fileFormatVersion: 2
-guid: eca345210068ba44c96095e1be6341bf
+guid: 3a0a1bc80a324fb47abf9f91b96d0db5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7143506193314872610
-    second: testStructure_0
+      213: 1067349958586097314
+    second: UIButton-Photoroom_0
   - first:
-      213: -2285981166953375588
-    second: testStructure_1
+      213: 2679337439387060536
+    second: UIButton-Photoroom_1
   - first:
-      213: 6382747627113966097
-    second: testStructure_2
+      213: -5457115367449249188
+    second: UIButton-Photoroom_2
   - first:
-      213: -1647512587527850069
-    second: testStructure_3
+      213: -7580548351882453343
+    second: UIButton-Photoroom_3
   - first:
-      213: 8635883277952050466
-    second: testStructure_4
+      213: -1985281327257438219
+    second: UIButton-Photoroom_4
   - first:
-      213: -2438442510783450419
-    second: testStructure_5
+      213: 4384777514096713698
+    second: UIButton-Photoroom_5
   - first:
-      213: -3978758294815932230
-    second: testStructure_6
+      213: 7902881841339139324
+    second: UIButton-Photoroom_6
   - first:
-      213: -6460841330584294885
-    second: testStructure_7
+      213: -5245349559558012510
+    second: UIButton-Photoroom_7
   - first:
-      213: -8697034858052191211
-    second: testStructure_8
+      213: 4095584618166099587
+    second: UIButton-Photoroom_8
   - first:
-      213: -8653048392164626734
-    second: testStructure_9
+      213: -4210538064293251925
+    second: UIButton-Photoroom_9
   - first:
-      213: -3829383982159979555
-    second: testStructure_10
+      213: -9038579355710573448
+    second: UIButton-Photoroom_10
   - first:
-      213: -2631022530530910321
-    second: testStructure_11
+      213: -1055530386156689629
+    second: UIButton-Photoroom_11
   - first:
-      213: 7841732893918955603
-    second: testStructure_12
-  - first:
-      213: -638139054584898237
-    second: testStructure_13
-  - first:
-      213: -776812266435785475
-    second: testStructure_14
-  - first:
-      213: 3093401292927169626
-    second: testStructure_15
-  - first:
-      213: 1046926059896874256
-    second: testStructure_16
-  - first:
-      213: -7631398068591867092
-    second: testStructure_17
+      213: -5226370972174343509
+    second: UIButton-Photoroom_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -88,7 +73,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -102,7 +87,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 72
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -164,123 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: testStructure_0
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 1133
-        width: 267
-        height: 305
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed20aa017fa2ddc90800000000000000
-      internalID: -7143506193314872610
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: testStructure_1
-      rect:
-        serializedVersion: 2
-        x: 274
-        y: 1127
-        width: 246
-        height: 334
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c98d2848d309640e0800000000000000
-      internalID: -2285981166953375588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: testStructure_2
-      rect:
-        serializedVersion: 2
-        x: 522
-        y: 1152
-        width: 115
-        height: 326
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11a681d4623149850800000000000000
-      internalID: 6382747627113966097
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: testStructure_3
-      rect:
-        serializedVersion: 2
-        x: 639
-        y: 1213
-        width: 181
-        height: 252
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba7fa61d70cd229e0800000000000000
-      internalID: -1647512587527850069
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: testStructure_4
-      rect:
-        serializedVersion: 2
-        x: 846
-        y: 1162
-        width: 96
-        height: 302
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 22561102612d8d770800000000000000
-      internalID: 8635883277952050466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: testStructure_5
+      name: lobby
       rect:
         serializedVersion: 2
         x: 23
-        y: 790
-        width: 187
-        height: 259
+        y: 810
+        width: 488
+        height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc27a83b479e82ed0800000000000000
-      internalID: -2438442510783450419
+      spriteID: 2ae5d8cd12dffce00800000000000000
+      internalID: 1067349958586097314
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_6
+      name: level1
       rect:
         serializedVersion: 2
-        x: 219
-        y: 829
-        width: 211
-        height: 219
+        x: 549
+        y: 706
+        width: 459
+        height: 154
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab08b56496c98c8c0800000000000000
-      internalID: -3978758294815932230
+      spriteID: 8390214943bee2520800000000000000
+      internalID: 2679337439387060536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_7
+      name: gun
       rect:
         serializedVersion: 2
-        x: 439
-        y: 873
-        width: 119
-        height: 157
+        x: 1037
+        y: 709
+        width: 468
+        height: 155
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -333,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b1a6c547a0b7656a0800000000000000
-      internalID: -6460841330584294885
+      spriteID: c5abcd08c7e6444b0800000000000000
+      internalID: -5457115367449249188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_8
+      name: play
       rect:
         serializedVersion: 2
-        x: 579
-        y: 895
-        width: 115
-        height: 139
+        x: 24
+        y: 628
+        width: 488
+        height: 156
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,20 +230,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51cfb9e10eced4780800000000000000
-      internalID: -8697034858052191211
+      spriteID: 1ae9f5bff6b7cc690800000000000000
+      internalID: -7580548351882453343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_9
+      name: level2
       rect:
         serializedVersion: 2
-        x: 770
-        y: 801
-        width: 242
-        height: 247
+        x: 548
+        y: 528
+        width: 457
+        height: 152
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -377,20 +252,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2de23c845523ae780800000000000000
-      internalID: -8653048392164626734
+      spriteID: 5f7ba9db62dd274e0800000000000000
+      internalID: -1985281327257438219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_10
+      name: characters
       rect:
         serializedVersion: 2
-        x: 23
-        y: 397
-        width: 160
-        height: 313
+        x: 1038
+        y: 528
+        width: 467
+        height: 153
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,20 +274,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ddb98c2ae8b4bdac0800000000000000
-      internalID: -3829383982159979555
+      spriteID: 2efdad2eaebd9dc30800000000000000
+      internalID: 4384777514096713698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_11
+      name: shop
       rect:
         serializedVersion: 2
-        x: 231
-        y: 397
-        width: 197
-        height: 214
+        x: 24
+        y: 444
+        width: 487
+        height: 156
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -421,20 +296,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f8fd7afb2fabc7bd0800000000000000
-      internalID: -2631022530530910321
+      spriteID: cf487e6d92dacad60800000000000000
+      internalID: 7902881841339139324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_12
+      name: level3
       rect:
         serializedVersion: 2
-        x: 492
-        y: 397
-        width: 181
-        height: 286
+        x: 548
+        y: 345
+        width: 461
+        height: 153
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -443,20 +318,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 358098d058e63dc60800000000000000
-      internalID: 7841732893918955603
+      spriteID: 2a10bcbdd56c437b0800000000000000
+      internalID: -5245349559558012510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sword
+      name: costumes
       rect:
         serializedVersion: 2
-        x: 722
-        y: 347
-        width: 302
-        height: 264
+        x: 1038
+        y: 346
+        width: 470
+        height: 152
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -465,20 +340,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 34dd92e29efd427f0800000000000000
-      internalID: -638139054584898237
+      spriteID: 38e1859c28076d830800000000000000
+      internalID: 4095584618166099587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_14
+      name: options
       rect:
         serializedVersion: 2
-        x: 314
-        y: 8
-        width: 107
-        height: 285
+        x: 24
+        y: 263
+        width: 487
+        height: 154
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -487,20 +362,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dfccde10c553835f0800000000000000
-      internalID: -776812266435785475
+      spriteID: ba43a8c50f92195c0800000000000000
+      internalID: -4210538064293251925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_15
+      name: upgrades
       rect:
         serializedVersion: 2
-        x: 20
-        y: 108
-        width: 130
-        height: 217
+        x: 1037
+        y: 161
+        width: 473
+        height: 156
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -509,20 +384,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5478ac1618fdea20800000000000000
-      internalID: 3093401292927169626
+      spriteID: 87431b4e6f3809280800000000000000
+      internalID: -9038579355710573448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_16
+      name: credits
       rect:
         serializedVersion: 2
-        x: 189
-        y: 80
-        width: 86
-        height: 194
+        x: 21
+        y: 76
+        width: 490
+        height: 159
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -531,20 +406,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 015a04264bd678e00800000000000000
-      internalID: 1046926059896874256
+      spriteID: 327ef7bc4b00a51f0800000000000000
+      internalID: -1055530386156689629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_17
+      name: back
       rect:
         serializedVersion: 2
-        x: 469
-        y: 53
-        width: 155
-        height: 204
+        x: 567
+        y: 121
+        width: 420
+        height: 135
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -553,8 +428,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2bcaf5b3e3d71690800000000000000
-      internalID: -7631398068591867092
+      spriteID: ba2a2239a433877b0800000000000000
+      internalID: -5226370972174343509
       vertices: []
       indices: 
       edges: []
@@ -563,7 +438,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ffcd1d6ae98503147bdcf4d1e0286512
+    spriteID: bdefec0747942f345b8f184d7eb72ecd
     internalID: 0
     vertices: []
     indices: 
@@ -573,24 +448,19 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sword: -638139054584898237
-      testStructure_0: -7143506193314872610
-      testStructure_1: -2285981166953375588
-      testStructure_10: -3829383982159979555
-      testStructure_11: -2631022530530910321
-      testStructure_12: 7841732893918955603
-      testStructure_14: -776812266435785475
-      testStructure_15: 3093401292927169626
-      testStructure_16: 1046926059896874256
-      testStructure_17: -7631398068591867092
-      testStructure_2: 6382747627113966097
-      testStructure_3: -1647512587527850069
-      testStructure_4: 8635883277952050466
-      testStructure_5: -2438442510783450419
-      testStructure_6: -3978758294815932230
-      testStructure_7: -6460841330584294885
-      testStructure_8: -8697034858052191211
-      testStructure_9: -8653048392164626734
+      back: -5226370972174343509
+      characters: 4384777514096713698
+      costumes: 4095584618166099587
+      credits: -1055530386156689629
+      gun: -5457115367449249188
+      level1: 2679337439387060536
+      level2: -1985281327257438219
+      level3: -5245349559558012510
+      lobby: 1067349958586097314
+      options: -4210538064293251925
+      play: -7580548351882453343
+      shop: 7902881841339139324
+      upgrades: -9038579355710573448
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

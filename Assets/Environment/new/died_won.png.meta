@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: f1afc96315dab9547b049618a245f062
+guid: 64dd4ce9ad3af5a418de8aad75b6d6bf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8225812012031239119
-    second: LevelSelect_0
+      213: 146620960369822866
+    second: died_won_0
+  - first:
+      213: 6506552754766407148
+    second: died_won_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LevelSelect_0
+      name: died
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1448
-        height: 1086
+        x: 341
+        y: 681
+        width: 852
+        height: 262
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc363465174f72270800000000000000
-      internalID: 8225812012031239119
+      spriteID: 29c48739cf6e80200800000000000000
+      internalID: 146620960369822866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: won
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 251
+        width: 850
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce5e03cd14beb4a50800000000000000
+      internalID: 6506552754766407148
       vertices: []
       indices: 
       edges: []
@@ -138,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2152efd239296b041b9e4280eefa55e5
+    spriteID: a2e6026301086eb49bf35edea0ee2819
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +173,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LevelSelect_0: 8225812012031239119
+      died: 146620960369822866
+      died_won_2: 317795573
+      won: 6506552754766407148
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

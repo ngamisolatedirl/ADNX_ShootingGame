@@ -248,4 +248,35 @@ public class PlayerHealth : NetworkBehaviour
         NetworkUtils.IsOnline ? networkHP.Value : localHP;
 
     public bool IsDead => isDead;
+
+    // ════════════════════════════════════════════════════════════════════════
+    // PATCH — Thêm vào class PlayerHealth (sau phần // ── Damage ──)
+    // ════════════════════════════════════════════════════════════════════════
+
+    // ── Heal (offline) ──────────────────────────────────────────────────────
+
+    /// <summary>Hồi máu offline, gọi trực tiếp trên client.</summary>
+    public void Heal(float amount)
+    {
+        if (isDead) return;
+
+        float oldHP = localHP;
+        localHP = Mathf.Clamp(localHP + amount, 0f, maxHealth);
+        OnHealthChanged?.Invoke(oldHP, localHP, maxHealth);
+    }
+
+    // ── Heal (online, server gọi trực tiếp) ────────────────────────────────
+
+    /// <summary>
+    /// Server gọi để hồi máu cho player bất kỳ (ví dụ: HealPickup).
+    /// Tương tự TakeDamageFromServer nhưng cộng máu.
+    /// </summary>
+    public void HealFromServer(float amount)
+    {
+        if (!IsServer || isDead) return;
+
+        float oldHP = networkHP.Value;
+        networkHP.Value = Mathf.Clamp(networkHP.Value + amount, 0f, maxHealth);
+        // OnHPChanged sẽ tự fire vì networkHP thay đổi → UI tự cập nhật
+    }
 }

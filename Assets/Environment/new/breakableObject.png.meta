@@ -1,61 +1,49 @@
 fileFormatVersion: 2
-guid: eca345210068ba44c96095e1be6341bf
+guid: 1971e4d99c2b411408a5796db31f35de
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7143506193314872610
-    second: testStructure_0
+      213: 7447325882745882837
+    second: breakableObject_0
   - first:
-      213: -2285981166953375588
-    second: testStructure_1
+      213: -5568238374990348336
+    second: breakableObject_1
   - first:
-      213: 6382747627113966097
-    second: testStructure_2
+      213: -466128077946534661
+    second: breakableObject_2
   - first:
-      213: -1647512587527850069
-    second: testStructure_3
+      213: -5269479794396526250
+    second: breakableObject_3
   - first:
-      213: 8635883277952050466
-    second: testStructure_4
+      213: 4452857693485418876
+    second: breakableObject_4
   - first:
-      213: -2438442510783450419
-    second: testStructure_5
+      213: -2716251339192825322
+    second: breakableObject_5
   - first:
-      213: -3978758294815932230
-    second: testStructure_6
+      213: 8382035249363213518
+    second: breakableObject_6
   - first:
-      213: -6460841330584294885
-    second: testStructure_7
+      213: 4067171204410890559
+    second: breakableObject_7
   - first:
-      213: -8697034858052191211
-    second: testStructure_8
+      213: 2896486574939143021
+    second: breakableObject_8
   - first:
-      213: -8653048392164626734
-    second: testStructure_9
+      213: -2496145299268291541
+    second: breakableObject_9
   - first:
-      213: -3829383982159979555
-    second: testStructure_10
+      213: -6405734783404999795
+    second: breakableObject_10
   - first:
-      213: -2631022530530910321
-    second: testStructure_11
+      213: 8411685556389198727
+    second: breakableObject_11
   - first:
-      213: 7841732893918955603
-    second: testStructure_12
+      213: 2544138449741937190
+    second: breakableObject_12
   - first:
-      213: -638139054584898237
-    second: testStructure_13
-  - first:
-      213: -776812266435785475
-    second: testStructure_14
-  - first:
-      213: 3093401292927169626
-    second: testStructure_15
-  - first:
-      213: 1046926059896874256
-    second: testStructure_16
-  - first:
-      213: -7631398068591867092
-    second: testStructure_17
+      213: -1186484450111805790
+    second: breakableObject_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -88,7 +76,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -102,7 +90,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 72
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,7 +114,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -164,320 +152,240 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: testStructure_0
+      name: barrels
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1133
-        width: 267
-        height: 305
+        x: 96
+        y: 733
+        width: 284
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 142, y: -97.5}
+        - {x: 142, y: 21.5}
+        - {x: 134, y: 90.5}
+        - {x: -138, y: 90.5}
+        - {x: -142, y: 1.5}
+        - {x: -142, y: -94.5}
+        - {x: -85, y: -108.5}
+        - {x: 84, y: -108.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d804a7ce673a5760800000000000000
+      internalID: 7447325882745882837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: breakableObject_1
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 683
+        width: 217
+        height: 337
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ed20aa017fa2ddc90800000000000000
-      internalID: -7143506193314872610
+      spriteID: 0df700223b4a9b2b0800000000000000
+      internalID: -5568238374990348336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_1
+      name: breakableObject_2
       rect:
         serializedVersion: 2
-        x: 274
-        y: 1127
-        width: 246
-        height: 334
+        x: 670
+        y: 806
+        width: 75
+        height: 138
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c98d2848d309640e0800000000000000
-      internalID: -2285981166953375588
+      spriteID: bf449269bfaf789f0800000000000000
+      internalID: -466128077946534661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_2
+      name: breakableObject_3
       rect:
         serializedVersion: 2
-        x: 522
-        y: 1152
-        width: 115
-        height: 326
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11a681d4623149850800000000000000
-      internalID: 6382747627113966097
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: testStructure_3
-      rect:
-        serializedVersion: 2
-        x: 639
-        y: 1213
-        width: 181
-        height: 252
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba7fa61d70cd229e0800000000000000
-      internalID: -1647512587527850069
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: testStructure_4
-      rect:
-        serializedVersion: 2
-        x: 846
-        y: 1162
-        width: 96
-        height: 302
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 22561102612d8d770800000000000000
-      internalID: 8635883277952050466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: testStructure_5
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 790
-        width: 187
-        height: 259
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dc27a83b479e82ed0800000000000000
-      internalID: -2438442510783450419
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: testStructure_6
-      rect:
-        serializedVersion: 2
-        x: 219
-        y: 829
+        x: 726
+        y: 657
         width: 211
-        height: 219
+        height: 362
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ab08b56496c98c8c0800000000000000
-      internalID: -3978758294815932230
+      spriteID: 65985efbb0c0fd6b0800000000000000
+      internalID: -5269479794396526250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_7
+      name: breakableObject_4
       rect:
         serializedVersion: 2
-        x: 439
-        y: 873
-        width: 119
-        height: 157
+        x: 742
+        y: 903
+        width: 6
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b1a6c547a0b7656a0800000000000000
-      internalID: -6460841330584294885
+      spriteID: c79409fda7abbcd30800000000000000
+      internalID: 4452857693485418876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_8
+      name: breakableObject_5
       rect:
         serializedVersion: 2
-        x: 579
-        y: 895
-        width: 115
-        height: 139
+        x: 933
+        y: 651
+        width: 353
+        height: 373
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 51cfb9e10eced4780800000000000000
-      internalID: -8697034858052191211
+      spriteID: 61a8bbe5ccfed4ad0800000000000000
+      internalID: -2716251339192825322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_9
+      name: breakableObject_6
       rect:
         serializedVersion: 2
-        x: 770
-        y: 801
-        width: 242
-        height: 247
+        x: 1311
+        y: 683
+        width: 154
+        height: 287
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2de23c845523ae780800000000000000
-      internalID: -8653048392164626734
+      spriteID: eccd81d36a8f25470800000000000000
+      internalID: 8382035249363213518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_10
+      name: breakableObject_7
       rect:
         serializedVersion: 2
-        x: 23
-        y: 397
-        width: 160
-        height: 313
+        x: 11
+        y: 464
+        width: 515
+        height: 232
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ddb98c2ae8b4bdac0800000000000000
-      internalID: -3829383982159979555
+      spriteID: f39db9f59ae717830800000000000000
+      internalID: 4067171204410890559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_11
+      name: breakableObject_8
       rect:
         serializedVersion: 2
-        x: 231
-        y: 397
-        width: 197
-        height: 214
+        x: 445
+        y: 344
+        width: 663
+        height: 360
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f8fd7afb2fabc7bd0800000000000000
-      internalID: -2631022530530910321
+      spriteID: d6b7fe39133623820800000000000000
+      internalID: 2896486574939143021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_12
+      name: breakableObject_9
       rect:
         serializedVersion: 2
-        x: 492
-        y: 397
-        width: 181
-        height: 286
+        x: 1111
+        y: 323
+        width: 394
+        height: 327
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 358098d058e63dc60800000000000000
-      internalID: 7841732893918955603
+      spriteID: b243a515319eb5dd0800000000000000
+      internalID: -2496145299268291541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sword
+      name: breakableObject_10
       rect:
         serializedVersion: 2
-        x: 722
-        y: 347
-        width: 302
-        height: 264
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 34dd92e29efd427f0800000000000000
-      internalID: -638139054584898237
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: testStructure_14
-      rect:
-        serializedVersion: 2
-        x: 314
-        y: 8
-        width: 107
+        x: 0
+        y: 0
+        width: 1265
         height: 285
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -485,76 +393,84 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dfccde10c553835f0800000000000000
-      internalID: -776812266435785475
+      spriteID: d8bf7cd47224a17a0800000000000000
+      internalID: -6405734783404999795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_15
+      name: chest
       rect:
         serializedVersion: 2
-        x: 20
-        y: 108
-        width: 130
-        height: 217
+        x: 84
+        y: 293
+        width: 269
+        height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
-      tessellationDetail: -1
+      physicsShape:
+      - - {x: 134.5, y: 30}
+        - {x: 110.5, y: 77}
+        - {x: -113.5, y: 77}
+        - {x: -127.5, y: 26}
+        - {x: -134.5, y: -51}
+        - {x: -134.5, y: -71}
+        - {x: -117.5, y: -78}
+        - {x: 134.5, y: -78}
+      tessellationDetail: 0
       bones: []
-      spriteID: a5478ac1618fdea20800000000000000
-      internalID: 3093401292927169626
+      spriteID: 78bbcde427f4cb470800000000000000
+      internalID: 8411685556389198727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: testStructure_16
+      name: breakableObject_12
       rect:
         serializedVersion: 2
-        x: 189
-        y: 80
-        width: 86
-        height: 194
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 015a04264bd678e00800000000000000
-      internalID: 1046926059896874256
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: testStructure_17
-      rect:
-        serializedVersion: 2
-        x: 469
+        x: 1231
         y: 53
-        width: 155
-        height: 204
+        width: 284
+        height: 220
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c2bcaf5b3e3d71690800000000000000
-      internalID: -7631398068591867092
+      spriteID: 62af74cc0789e4320800000000000000
+      internalID: 2544138449741937190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: breakableObject_13
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 100
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a6af8bcda2c88fe0800000000000000
+      internalID: -1186484450111805790
       vertices: []
       indices: 
       edges: []
@@ -563,7 +479,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ffcd1d6ae98503147bdcf4d1e0286512
+    spriteID: 978c20ba1f365d849b5644954d617206
     internalID: 0
     vertices: []
     indices: 
@@ -573,24 +489,20 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sword: -638139054584898237
-      testStructure_0: -7143506193314872610
-      testStructure_1: -2285981166953375588
-      testStructure_10: -3829383982159979555
-      testStructure_11: -2631022530530910321
-      testStructure_12: 7841732893918955603
-      testStructure_14: -776812266435785475
-      testStructure_15: 3093401292927169626
-      testStructure_16: 1046926059896874256
-      testStructure_17: -7631398068591867092
-      testStructure_2: 6382747627113966097
-      testStructure_3: -1647512587527850069
-      testStructure_4: 8635883277952050466
-      testStructure_5: -2438442510783450419
-      testStructure_6: -3978758294815932230
-      testStructure_7: -6460841330584294885
-      testStructure_8: -8697034858052191211
-      testStructure_9: -8653048392164626734
+      barrels: 7447325882745882837
+      breakableObject_1: -5568238374990348336
+      breakableObject_10: -6405734783404999795
+      breakableObject_12: 2544138449741937190
+      breakableObject_13: -1186484450111805790
+      breakableObject_2: -466128077946534661
+      breakableObject_3: -5269479794396526250
+      breakableObject_4: 4452857693485418876
+      breakableObject_5: -2716251339192825322
+      breakableObject_6: 8382035249363213518
+      breakableObject_7: 4067171204410890559
+      breakableObject_8: 2896486574939143021
+      breakableObject_9: -2496145299268291541
+      chest: 8411685556389198727
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

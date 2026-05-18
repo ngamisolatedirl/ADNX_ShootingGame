@@ -45,6 +45,17 @@ public class LoginManager : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (usernameInput.isFocused)
+                passwordInput.Select();
+            else if (passwordInput.isFocused)
+                usernameInput.Select();
+        }
+    }
+
     void OnLogin()
     {
         string username = usernameInput.text.Trim();

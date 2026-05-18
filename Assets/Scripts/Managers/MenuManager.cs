@@ -11,24 +11,21 @@ public class MenuManager : MonoBehaviour
     public Button caiDatButton;
     public Button creditsButton;
     public Button lobbyButton;
-    //public Button GunShopButton;
-    //public Button CharactersShopButton;
-    //public Button CostumesShopButton;
-    //public Button UpgradesShopButton;
-    //public Button BackButton;
+    
     void Start()
     {
-        
-        
+        bool isLoggedIn = AuthManager.Instance != null && AuthManager.Instance.IsLoggedIn;
+        if (choiButton != null) choiButton.interactable = !isLoggedIn;
+        if (lobbyButton != null) lobbyButton.interactable = isLoggedIn;
+
     }
 
-    //public void OpenPlay() => SceneManager.LoadScene("LevelSelect");
+
     public void OpenPlay()
     {
 
         SceneManager.LoadScene("LevelSelect");
     }
-    //    public void OpenShop() => Debug.Log("Cua hang chua co!");
     public void OpenSettings()
     {
         SceneManager.LoadScene("Options");
@@ -45,13 +42,13 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Lobby");
     }
-    //public void OpenGunShop()
-    //{
-    //    SceneManager.LoadScene("ShopGunsScene");
-    //}
-    //public void BackMenu()
-    //{
-    //    SceneManager.LoadScene("MainMenu");
-    //}
+    public void ExitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false; // dừng play mode trong Editor
+#else
+    Application.Quit(); // thoát build thật
+#endif
+    }
 
 }

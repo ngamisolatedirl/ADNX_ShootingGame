@@ -154,11 +154,12 @@ public class GameManager : NetworkBehaviour
 
     // ── Win Zone ───────────────────────────────────────────────────────────
 
-    public void ReportPlayerInWinZone(ulong clientId)
+    // ĐỔI void → bool, thêm return true/false
+    public bool ReportPlayerInWinZone(ulong clientId)
     {
-        if (!NetworkUtils.HasServerAuthority) return;
-        if (isGameOver || isWon) return;
-        if (deadPlayers.Contains(clientId)) return;  // người chết không tính
+        if (!NetworkUtils.HasServerAuthority) return false;
+        if (isGameOver || isWon) return false;
+        if (deadPlayers.Contains(clientId)) return false;
 
         winZonePlayers.Add(clientId);
 
@@ -171,7 +172,12 @@ public class GameManager : NetworkBehaviour
             NotifyWaitingClientRpc(inZone, needed);
 
         if (inZone >= needed)
+        {
             TriggerWin();
+            return true;  // ← đủ điều kiện
+        }
+
+        return false;  // ← chưa đủ
     }
 
     // FIX: player rời WinZone → remove khỏi winZonePlayers, cập nhật UI chờ

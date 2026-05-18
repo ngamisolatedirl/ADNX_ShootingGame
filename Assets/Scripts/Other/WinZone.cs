@@ -6,21 +6,19 @@ using Unity.Netcode;
 /// - Online: gửi lên server, server kiểm tra khi đủ tất cả player còn sống.
 /// - Offline: gọi GameManager.WinLevel() trực tiếp.
 /// Player đã chết không bị tính vào điều kiện.
-///
-/// FIX:
-/// 1. ExitWinZoneServerRpc() — báo server khi player rời zone, tránh đếm sai
-/// 2. FreezePlayerClientRpc() — server điều khiển freeze/unfreeze đồng bộ
-/// 3. Reset glowEffect khi OnNetworkSpawn (tránh stale state sau restart)
 /// </summary>
 public class WinZone : NetworkBehaviour
 {
     [Header("Visual Feedback")]
-    public GameObject glowEffect; // hiệu ứng khi có player đứng trong zone
+    public GameObject glowEffect;
+
+    // Đếm số player đang đứng trong zone (chỉ dùng để toggle glow)
+    private int playersInZone = 0;
 
     public override void OnNetworkSpawn()
     {
-        // Reset glow mỗi lần scene load
         glowEffect?.SetActive(false);
+        playersInZone = 0;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -36,37 +34,24 @@ public class WinZone : NetworkBehaviour
             return;
         }
 
-        // Chỉ owner mới gửi lên server
         var nb = collision.GetComponent<NetworkBehaviour>();
         if (nb == null || !nb.IsOwner) return;
 
-        // Báo server enter
+        // Chỉ báo server — KHÔNG freeze ở đây
+        // Server sẽ freeze tất cả qua ClientRpc khi đủ điều kiện win
         EnterWinZoneServerRpc(nb.OwnerClientId);
-
-        // Local: freeze player + hiện glow
-        SetPlayerMovement(collision, false);
-        glowEffect?.SetActive(true);
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player")) return;
 
-        if (!NetworkUtils.IsOnline)
-        {
-            SetPlayerMovement(collision, true);
-            return;
-        }
+        if (!NetworkUtils.IsOnline) return;
 
         var nb = collision.GetComponent<NetworkBehaviour>();
         if (nb == null || !nb.IsOwner) return;
 
-        // FIX: báo server player rời zone để cập nhật đếm
         ExitWinZoneServerRpc(nb.OwnerClientId);
-
-        // Local: unfreeze player + tắt glow
-        SetPlayerMovement(collision, true);
-        glowEffect?.SetActive(false);
     }
 
     // ── ServerRpc ──────────────────────────────────────────────────────────
@@ -74,21 +59,48 @@ public class WinZone : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     void EnterWinZoneServerRpc(ulong clientId)
     {
-        GameManager.Instance?.ReportPlayerInWinZone(clientId);
+        bool allIn = GameManager.Instance?.ReportPlayerInWinZone(clientId) ?? false;
+
+        // Cập nhật glow cho tất cả client
+        UpdateGlowClientRpc(true);
+
+        // Chỉ freeze khi đủ điều kiện win
+        if (allIn)
+            FreezeAllPlayersClientRpc(true);
     }
 
-    // FIX: server nhận biết player rời zone
     [ServerRpc(RequireOwnership = false)]
     void ExitWinZoneServerRpc(ulong clientId)
     {
         GameManager.Instance?.ReportPlayerLeftWinZone(clientId);
+        UpdateGlowClientRpc(false);
     }
 
-    // ── Helpers ────────────────────────────────────────────────────────────
+    // ── ClientRpc ──────────────────────────────────────────────────────────
 
-    void SetPlayerMovement(Collider2D collision, bool enabled)
+    /// <summary>
+    /// Server gọi để freeze/unfreeze tất cả player khi win.
+    /// Mỗi client tự tìm player của mình (IsOwner) để xử lý.
+    /// </summary>
+    [ClientRpc]
+    void FreezeAllPlayersClientRpc(bool freeze)
     {
-        var move = collision.GetComponent<MovePlayer>();
-        if (move != null) move.enabled = enabled;
+        // Mỗi client chỉ freeze player của chính mình
+        var players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (var p in players)
+        {
+            var nb = p.GetComponent<NetworkBehaviour>();
+            if (nb == null || !nb.IsOwner) continue;
+
+            var move = p.GetComponent<MovePlayer>();
+            if (move != null) move.enabled = !freeze;
+        }
+    }
+
+    /// <summary>Sync glow effect cho tất cả client.</summary>
+    [ClientRpc]
+    void UpdateGlowClientRpc(bool active)
+    {
+        glowEffect?.SetActive(active);
     }
 }
