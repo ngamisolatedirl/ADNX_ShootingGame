@@ -6,13 +6,6 @@ using System.Text;
 using System.Threading;
 using UnityEngine;
 
-/// <summary>
-/// LAN Discovery dùng UDP broadcast.
-/// Fix:
-/// 1. Dùng DateTime.UtcNow.Ticks / TimeSpan.TicksPerMillisecond thay Time.realtimeSinceStartup trong background thread
-/// 2. Bỏ Thread.Abort() (deprecated .NET 5+), dùng isListening flag + ReceiveTimeout
-/// 3. Fire OnRoomListUpdated ngay khi nhận phòng mới (không chờ CleanupAndNotify)
-/// </summary>
 public class LanDiscovery : MonoBehaviour
 {
     public static LanDiscovery Instance { get; private set; }
@@ -25,7 +18,7 @@ public class LanDiscovery : MonoBehaviour
     private UdpClient udpBroadcaster;
     private UdpClient udpListener;
     private Thread listenerThread;
-    private volatile bool isListening = false;  // volatile: đọc/ghi từ 2 thread
+    private volatile bool isListening = false;  
     private bool isBroadcasting = false;
 
     private RoomInfo hostedRoom;
@@ -139,7 +132,7 @@ public class LanDiscovery : MonoBehaviour
         isListening = false;        // signal thread tự thoát sau ReceiveTimeout
         udpListener?.Close();       // unblock Receive() ngay lập tức
         udpListener = null;
-        // KHÔNG gọi Thread.Abort() - deprecated và crash trên .NET 5+
+        
         // Thread sẽ tự thoát sau tối đa 1s (ReceiveTimeout)
         lock (roomLock) discoveredRooms.Clear();
         Debug.Log("[LAN] Dừng lắng nghe");
@@ -167,9 +160,6 @@ public class LanDiscovery : MonoBehaviour
                     {
                         // Ghi đè IP thực từ sender
                         room.hostIP = remote.Address.ToString();
-
-                        // FIX: dùng DateTime.UtcNow.Ticks / TimeSpan.TicksPerMillisecond thay Time.realtimeSinceStartup
-                        // DateTime.UtcNow.Ticks / TimeSpan.TicksPerMillisecond là thread-safe, không phụ thuộc Unity
                         long now = DateTime.UtcNow.Ticks / TimeSpan.TicksPerMillisecond;
 
                         lock (roomLock)

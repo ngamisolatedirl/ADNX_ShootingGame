@@ -8,14 +8,14 @@ using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Màn hình danh sách phòng (Join).
-/// Client tìm phòng LAN qua UDP broadcast.
-/// Attach vào RoomListScene.
+/// Fix: Chỉ xóa ConnectionApprovalCallback (không đụng NetworkConfig flag),
+///      Shutdown sạch trước StartClient.
 /// </summary>
 public class RoomListManager : MonoBehaviour
 {
     [Header("UI")]
-    public Transform roomListContainer;     // ScrollView Content
-    public GameObject roomItemPrefab;       // prefab mỗi dòng phòng
+    public Transform roomListContainer;
+    public GameObject roomItemPrefab;
     public Button refreshButton;
     public Button backButton;
     public TextMeshProUGUI statusText;
@@ -28,13 +28,25 @@ public class RoomListManager : MonoBehaviour
 
     [Header("Scenes")]
     public string lobbyScene = "Lobby";
-    public string roomScene  = "Room";
+    public string roomScene = "Room";
 
     private List<RoomInfo> currentRooms = new List<RoomInfo>();
     private bool manualMode = false;
+    private bool isConnecting = false;
 
     void Start()
     {
+        // Shutdown nếu còn từ session trước
+        if (NetworkManager.Singleton != null && NetworkManager.Singleton.IsListening)
+        {
+            NetworkManager.Singleton.Shutdown();
+            Debug.Log("[RoomList] Shutdown session cũ");
+        }
+
+        // Xóa approval callback — không đụng vào NetworkConfig.ConnectionApproval flag
+        if (NetworkManager.Singleton != null)
+            NetworkManager.Singleton.ConnectionApprovalCallback = null;
+
         refreshButton.onClick.AddListener(Refresh);
         backButton.onClick.AddListener(OnBack);
         manualJoinButton.onClick.AddListener(OnManualJoin);
@@ -43,10 +55,8 @@ public class RoomListManager : MonoBehaviour
         manualIPInput.text = "127.0.0.1";
         manualJoinGroup.SetActive(false);
 
-        // Subscribe LAN discovery
         LanDiscovery.Instance.OnRoomListUpdated += OnRoomListUpdated;
         LanDiscovery.Instance.StartListening();
-
         statusText.text = "Đang tìm phòng...";
     }
 
@@ -81,7 +91,6 @@ public class RoomListManager : MonoBehaviour
 
     void RefreshRoomListUI()
     {
-        // Xóa các item cũ
         foreach (Transform child in roomListContainer)
             Destroy(child.gameObject);
 
@@ -92,7 +101,6 @@ public class RoomListManager : MonoBehaviour
         }
 
         statusText.text = $"Tìm thấy {currentRooms.Count} phòng:";
-
         foreach (var room in currentRooms)
         {
             var item = Instantiate(roomItemPrefab, roomListContainer);
@@ -104,17 +112,14 @@ public class RoomListManager : MonoBehaviour
 
     void JoinRoom(RoomInfo room)
     {
-        if (room.IsFull)
-        {
-            statusText.text = "Phòng đã đầy!";
-            return;
-        }
-
+        if (isConnecting) return;
+        if (room.IsFull) { statusText.text = "Phòng đã đầy!"; return; }
         ConnectToRoom(room.hostIP, room.port, room);
     }
 
     void OnManualJoin()
     {
+        if (isConnecting) return;
         string ip = manualIPInput.text;
         if (string.IsNullOrEmpty(ip)) return;
 
@@ -131,6 +136,19 @@ public class RoomListManager : MonoBehaviour
 
     void ConnectToRoom(string ip, ushort port, RoomInfo room)
     {
+        isConnecting = true;
+
+        // Shutdown nếu còn sót (ví dụ lần join trước fail giữa chừng)
+        if (NetworkManager.Singleton.IsListening)
+        {
+            NetworkManager.Singleton.Shutdown();
+            // Không dùng WaitUntil ở đây — Shutdown() của Netcode là gần-đồng-bộ
+            // khi gọi từ ngoài game loop, IsListening về false ngay frame tiếp
+        }
+
+        // Xóa approval callback (không set flag)
+        NetworkManager.Singleton.ConnectionApprovalCallback = null;
+
         RoomContext.CurrentRoom = room;
         RoomContext.IsHost = false;
 
@@ -139,7 +157,16 @@ public class RoomListManager : MonoBehaviour
 
         NetworkManager.Singleton.OnClientConnectedCallback += OnConnected;
         NetworkManager.Singleton.OnClientDisconnectCallback += OnDisconnected;
-        NetworkManager.Singleton.StartClient();
+
+        bool ok = NetworkManager.Singleton.StartClient();
+        if (!ok)
+        {
+            statusText.text = "StartClient thất bại. Thử lại.";
+            isConnecting = false;
+            NetworkManager.Singleton.OnClientConnectedCallback -= OnConnected;
+            NetworkManager.Singleton.OnClientDisconnectCallback -= OnDisconnected;
+            return;
+        }
 
         statusText.text = $"Đang kết nối tới {ip}:{port}...";
     }
@@ -148,7 +175,7 @@ public class RoomListManager : MonoBehaviour
     {
         NetworkManager.Singleton.OnClientConnectedCallback -= OnConnected;
         NetworkManager.Singleton.OnClientDisconnectCallback -= OnDisconnected;
-        // RoomScene sẽ được load bởi host qua NetworkManager.SceneManager
+        isConnecting = false;
         statusText.text = "Đã kết nối! Chờ vào phòng...";
     }
 
@@ -156,14 +183,21 @@ public class RoomListManager : MonoBehaviour
     {
         NetworkManager.Singleton.OnClientConnectedCallback -= OnConnected;
         NetworkManager.Singleton.OnClientDisconnectCallback -= OnDisconnected;
+        isConnecting = false;
+        NetworkManager.Singleton.ConnectionApprovalCallback = null;
         statusText.text = "Kết nối thất bại. Thử lại?";
     }
 
     void OnBack()
     {
         LanDiscovery.Instance?.StopListening();
-        if (NetworkManager.Singleton.IsClient)
+
+        if (NetworkManager.Singleton != null && NetworkManager.Singleton.IsListening)
             NetworkManager.Singleton.Shutdown();
+
+        if (NetworkManager.Singleton != null)
+            NetworkManager.Singleton.ConnectionApprovalCallback = null;
+
         SceneManager.LoadScene(lobbyScene);
     }
 }

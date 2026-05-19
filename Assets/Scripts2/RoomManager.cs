@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,20 +7,22 @@ using Unity.Netcode;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// Room Scene: nơi host và client chờ nhau trước khi vào game.
-/// - Host thấy nút Start Game và dropdown đổi map.
-/// - Client chỉ thấy thông tin phòng.
-/// - Khi host Start → tất cả load Level cùng lúc qua NetworkManager.SceneManager.
-/// Attach vào RoomScene.
+/// Room Scene.
+///
+/// Về ConnectionApproval:
+/// - NetworkConfig.ConnectionApproval = true phải được tick trong Unity Inspector
+/// - Ở runtime chỉ gán/xóa ConnectionApprovalCallback
+/// - Khi callback = null → Netcode tự approve tất cả (nếu flag = true trong Inspector)
+///   hoặc không dùng approval (nếu flag = false)
 /// </summary>
 public class RoomManager : NetworkBehaviour
 {
     [Header("Player Slots UI")]
-    public PlayerSlotUI[] playerSlots;      // 4 slot UI
+    public PlayerSlotUI[] playerSlots;
 
     [Header("Map Selection (Host only)")]
-    public GameObject mapSelectGroup;       // ẩn với client
-    public Button[] mapButtons;             // 4 nút chọn map
+    public GameObject mapSelectGroup;
+    public Button[] mapButtons;
     public string[] mapSceneNames = { "Level1", "Level2", "Level3", "Level4" };
     public string[] mapDisplayNames = { "Forest", "Desert", "Snow", "Volcano" };
 
@@ -30,81 +33,94 @@ public class RoomManager : NetworkBehaviour
     public TextMeshProUGUI statusText;
 
     [Header("Buttons")]
-    public Button startButton;              // chỉ host thấy
+    public Button startButton;
     public Button leaveButton;
 
     [Header("Scenes")]
     public string lobbyScene = "Lobby";
 
-    // ── NetworkVariables (sync host → tất cả client) ──────────────────────
+    // ── NetworkVariables ──────────────────────────────────────────────────
     private NetworkVariable<int> syncedMapIndex = new NetworkVariable<int>(
         0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
 
     private NetworkVariable<int> syncedPlayerCount = new NetworkVariable<int>(
         0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
 
-    // Danh sách client info (tên, slot)
     private NetworkList<ulong> connectedClientIds;
     private NetworkList<Unity.Collections.FixedString64Bytes> playerNames;
+
+    private bool gameStarted = false;
+
     void Awake()
     {
         connectedClientIds = new NetworkList<ulong>(
             new List<ulong>(),
             NetworkVariableReadPermission.Everyone,
-            NetworkVariableWritePermission.Server
-        );
+            NetworkVariableWritePermission.Server);
 
         playerNames = new NetworkList<Unity.Collections.FixedString64Bytes>(
             new List<Unity.Collections.FixedString64Bytes>(),
             NetworkVariableReadPermission.Everyone,
-            NetworkVariableWritePermission.Server
-        );
+            NetworkVariableWritePermission.Server);
     }
 
     public override void OnNetworkSpawn()
     {
-        // Subscribe sync events
         syncedMapIndex.OnValueChanged += OnMapChanged;
         syncedPlayerCount.OnValueChanged += OnPlayerCountChanged;
         connectedClientIds.OnListChanged += OnClientListChanged;
 
-        // Host setup
         if (IsHost)
         {
             mapSelectGroup?.SetActive(true);
             startButton?.gameObject.SetActive(true);
 
-            // Set map từ RoomContext (chọn lúc tạo phòng)
+            // Thay thế callback tạm từ CreateRoomManager bằng callback thật
+            // có logic kiểm soát full/gameStarted
+            NetworkManager.Singleton.ConnectionApprovalCallback = ApproveConnection;
+
             int initialMap = 0;
             if (RoomContext.CurrentRoom != null)
                 initialMap = Mathf.Clamp(RoomContext.CurrentRoom.mapIndex - 1, 0, 3);
             syncedMapIndex.Value = initialMap;
 
-            // Đăng ký callback client connect/disconnect
             NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
             NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnected;
 
-            // Host tự thêm vào list
-            connectedClientIds.Add(NetworkManager.Singleton.LocalClientId);
-            syncedPlayerCount.Value = connectedClientIds.Count;
+            if (!connectedClientIds.Contains(NetworkManager.Singleton.LocalClientId))
+                connectedClientIds.Add(NetworkManager.Singleton.LocalClientId);
 
+            string hostName = (AuthManager.Instance != null && AuthManager.Instance.IsLoggedIn)
+                ? AuthManager.Username : "Host";
+            EnsureNameSlot(0);
+            playerNames[0] = hostName;
+
+            syncedPlayerCount.Value = connectedClientIds.Count;
             UpdateBroadcastInfo();
         }
         else
         {
             mapSelectGroup?.SetActive(false);
             startButton?.gameObject.SetActive(false);
+
+            string myName = (AuthManager.Instance?.IsLoggedIn == true)
+                ? AuthManager.Username
+                : $"Player {NetworkManager.Singleton.LocalClientId}";
+            SubmitNameServerRpc(myName, NetworkManager.Singleton.LocalClientId);
         }
 
-        // Setup map buttons
         for (int i = 0; i < mapButtons.Length; i++)
         {
             int idx = i;
+            mapButtons[i].onClick.RemoveAllListeners();
             mapButtons[i].onClick.AddListener(() => OnMapButtonClicked(idx));
             mapButtons[i].interactable = IsHost;
         }
 
+        startButton?.onClick.RemoveAllListeners();
         startButton?.onClick.AddListener(OnStartClicked);
+
+        leaveButton?.onClick.RemoveAllListeners();
         leaveButton?.onClick.AddListener(OnLeaveClicked);
 
         RefreshUI();
@@ -120,16 +136,12 @@ public class RoomManager : NetworkBehaviour
         {
             NetworkManager.Singleton.OnClientConnectedCallback -= OnClientConnected;
             NetworkManager.Singleton.OnClientDisconnectCallback -= OnClientDisconnected;
+            // Xóa callback khi rời scene
+            NetworkManager.Singleton.ConnectionApprovalCallback = null;
         }
-        // Gửi tên của mình lên host
-        string myName = AuthManager.Instance?.IsLoggedIn == true
-            ? AuthManager.Username
-            : $"Player {NetworkManager.Singleton.LocalClientId}";
-
-        SubmitNameServerRpc(myName, NetworkManager.Singleton.LocalClientId);
     }
 
-    // ── Host: quản lý client vào/ra ────────────────────────────────────────
+    // ── Client connect/disconnect (server only) ───────────────────────────
 
     void OnClientConnected(ulong clientId)
     {
@@ -143,13 +155,18 @@ public class RoomManager : NetworkBehaviour
     void OnClientDisconnected(ulong clientId)
     {
         if (!IsServer) return;
-        if (connectedClientIds.Contains(clientId))
+        int idx = IndexOf(clientId);
+        if (idx >= 0)
+        {
             connectedClientIds.Remove(clientId);
+            if (idx < playerNames.Count)
+                playerNames.RemoveAt(idx);
+        }
         syncedPlayerCount.Value = connectedClientIds.Count;
         UpdateBroadcastInfo();
     }
 
-    // ── Map selection ──────────────────────────────────────────────────────
+    // ── Map selection ─────────────────────────────────────────────────────
 
     void OnMapButtonClicked(int index)
     {
@@ -161,8 +178,6 @@ public class RoomManager : NetworkBehaviour
     void ChangeMapServerRpc(int mapIndex)
     {
         syncedMapIndex.Value = mapIndex;
-
-        // Cập nhật RoomContext và broadcast LAN
         if (RoomContext.CurrentRoom != null)
         {
             RoomContext.CurrentRoom.selectedMap = mapSceneNames[mapIndex];
@@ -171,88 +186,111 @@ public class RoomManager : NetworkBehaviour
         UpdateBroadcastInfo();
     }
 
-    void OnMapChanged(int oldVal, int newVal)
-    {
-        RefreshUI();
-    }
+    void OnMapChanged(int o, int n) => RefreshUI();
+    void OnPlayerCountChanged(int o, int n) => RefreshUI();
+    void OnClientListChanged(NetworkListEvent<ulong> e) => RefreshUI();
 
-    void OnPlayerCountChanged(int oldVal, int newVal)
-    {
-        RefreshUI();
-    }
-
-    void OnClientListChanged(NetworkListEvent<ulong> changeEvent)
-    {
-        RefreshUI();
-    }
-
-    // ── Start Game ─────────────────────────────────────────────────────────
+    // ── Start Game ────────────────────────────────────────────────────────
 
     void OnStartClicked()
     {
         if (!IsHost) return;
         if (syncedPlayerCount.Value < 2)
         {
-            statusText.text = "need atleast 2 players!";
+            statusText.text = "Cần ít nhất 2 người chơi!";
             return;
         }
 
         string targetScene = mapSceneNames[syncedMapIndex.Value];
-
-        // Lưu map đã chọn vào RoomContext để GameManager biết
         if (RoomContext.CurrentRoom != null)
             RoomContext.CurrentRoom.selectedMap = targetScene;
 
-        // Reset session data
         SessionData.Instance?.Reset();
-
-        // Dừng broadcast vì không cần tìm phòng nữa
+        gameStarted = true;
         LanDiscovery.Instance?.StopBroadcast();
 
-        // Load scene đồng bộ cho tất cả client
-        NetworkManager.Singleton.SceneManager.LoadScene(
-            targetScene, LoadSceneMode.Single);
+        NetworkManager.Singleton.SceneManager.LoadScene(targetScene, LoadSceneMode.Single);
     }
 
-    // ── Leave ──────────────────────────────────────────────────────────────
+    // ── Leave ─────────────────────────────────────────────────────────────
 
     void OnLeaveClicked()
     {
+        leaveButton.interactable = false;
         if (IsHost)
-        {
-            LanDiscovery.Instance?.StopBroadcast();
-            NetworkManager.Singleton.Shutdown();
-        }
+            StartCoroutine(HostLeaveRoutine());
         else
-        {
+            StartCoroutine(ClientLeaveRoutine());
+    }
+
+    IEnumerator HostLeaveRoutine()
+    {
+        // Gửi RPC cho client biết host rời
+        KickAllClientsToLobbyClientRpc();
+        LanDiscovery.Instance?.StopBroadcast();
+
+        // Đợi 2 frame để RPC kịp gửi trước khi Shutdown
+        yield return null;
+        yield return null;
+
+        DoShutdown();
+        SceneManager.LoadScene(lobbyScene);
+    }
+
+    IEnumerator ClientLeaveRoutine()
+    {
+        LanDiscovery.Instance?.StopListening();
+        yield return null;
+        DoShutdown();
+        SceneManager.LoadScene(lobbyScene);
+    }
+
+    void DoShutdown()
+    {
+        if (NetworkManager.Singleton != null && NetworkManager.Singleton.IsListening)
             NetworkManager.Singleton.Shutdown();
-        }
+
+        // Xóa callback sau shutdown — không được reset NetworkConfig flag
+        if (NetworkManager.Singleton != null)
+            NetworkManager.Singleton.ConnectionApprovalCallback = null;
+
+        RoomContext.Clear();
+    }
+
+    [ClientRpc]
+    private void KickAllClientsToLobbyClientRpc()
+    {
+        if (IsHost) return;
+        Debug.Log("[RoomManager] Host rời → về lobby");
+        LanDiscovery.Instance?.StopListening();
+
+        if (NetworkManager.Singleton != null && NetworkManager.Singleton.IsListening)
+            NetworkManager.Singleton.Shutdown();
+
+        if (NetworkManager.Singleton != null)
+            NetworkManager.Singleton.ConnectionApprovalCallback = null;
 
         RoomContext.Clear();
         SceneManager.LoadScene(lobbyScene);
     }
 
-    // ── UI Refresh ─────────────────────────────────────────────────────────
+    // ── UI ────────────────────────────────────────────────────────────────
 
     void RefreshUI()
     {
         int mapIdx = syncedMapIndex.Value;
         int playerCount = syncedPlayerCount.Value;
 
-        // Map info
         if (selectedMapText != null && mapIdx < mapDisplayNames.Length)
             selectedMapText.text = "Map: " + mapDisplayNames[mapIdx];
 
-        // Room type
         if (roomTypeText != null && RoomContext.CurrentRoom != null)
             roomTypeText.text = "Room Type: " +
                 (RoomContext.CurrentRoom.roomType == "lan" ? "LAN" : "Localhost");
 
-        // Player count
         if (playerCountText != null)
-            playerCountText.text = $"Player : {playerCount}/4";
+            playerCountText.text = $"Players: {playerCount}/4";
 
-        // Highlight map button được chọn
         for (int i = 0; i < mapButtons.Length; i++)
         {
             var colors = mapButtons[i].colors;
@@ -260,17 +298,15 @@ public class RoomManager : NetworkBehaviour
             mapButtons[i].colors = colors;
         }
 
-        // Player slots
         RefreshSlots();
 
-        // Start button: chỉ active khi đủ ≥2 người
         if (startButton != null)
-        {
-            startButton.interactable = playerCount >= 2;
-            statusText.text = playerCount < 2
-                ? "Waiting for other players..."
-                : "Ready!";
-        }
+            startButton.interactable = IsHost && playerCount >= 2;
+
+        if (statusText != null)
+            statusText.text = IsHost
+                ? (playerCount < 2 ? "Waiting for players..." : "Ready!")
+                : "Waiting for host to start...";
     }
 
     void RefreshSlots()
@@ -279,14 +315,11 @@ public class RoomManager : NetworkBehaviour
         {
             if (i < connectedClientIds.Count)
             {
-                ulong clientId = connectedClientIds[i];
-                bool isHost = clientId == NetworkManager.ServerClientId;
-
-                // Lấy tên từ playerNames nếu có
-                string name = i < playerNames.Count
+                ulong cid = connectedClientIds[i];
+                bool isHost = cid == NetworkManager.ServerClientId;
+                string name = (i < playerNames.Count)
                     ? playerNames[i].ToString()
                     : $"Player {i + 1}";
-
                 playerSlots[i].SetOccupied(name, isHost);
             }
             else
@@ -302,21 +335,51 @@ public class RoomManager : NetworkBehaviour
         RoomContext.CurrentRoom.currentPlayers = connectedClientIds.Count;
         LanDiscovery.Instance?.UpdateBroadcastRoom(RoomContext.CurrentRoom);
     }
+
     [ServerRpc(RequireOwnership = false)]
     public void SubmitNameServerRpc(string name, ulong clientId)
     {
-        // Tìm index của clientId trong connectedClientIds
-        for (int i = 0; i < connectedClientIds.Count; i++)
-        {
-            if (connectedClientIds[i] == clientId)
-            {
-                // Đảm bảo playerNames có đủ slot
-                while (playerNames.Count <= i)
-                    playerNames.Add("Player");
+        int idx = IndexOf(clientId);
+        if (idx < 0) return;
+        EnsureNameSlot(idx);
+        playerNames[idx] = name;
+    }
 
-                playerNames[i] = name;
-                return;
-            }
+    // ── Connection Approval ───────────────────────────────────────────────
+
+    private void ApproveConnection(
+        NetworkManager.ConnectionApprovalRequest request,
+        NetworkManager.ConnectionApprovalResponse response)
+    {
+        if (gameStarted)
+        {
+            response.Approved = false;
+            response.Reason = "Game đã bắt đầu.";
+            return;
         }
+        if (connectedClientIds.Count >= 4)
+        {
+            response.Approved = false;
+            response.Reason = "Phòng đã đầy.";
+            return;
+        }
+        response.Approved = true;
+        response.CreatePlayerObject = false;
+        Debug.Log($"[Room] Approved {request.ClientNetworkId}");
+    }
+
+    // ── Helpers ───────────────────────────────────────────────────────────
+
+    int IndexOf(ulong clientId)
+    {
+        for (int i = 0; i < connectedClientIds.Count; i++)
+            if (connectedClientIds[i] == clientId) return i;
+        return -1;
+    }
+
+    void EnsureNameSlot(int index)
+    {
+        while (playerNames.Count <= index)
+            playerNames.Add("Player");
     }
 }

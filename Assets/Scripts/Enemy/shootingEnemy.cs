@@ -27,22 +27,24 @@ public class ShootingEnemy : NetworkBehaviour
     [Header("Behaviour")]
     public bool isStationary = false;
 
-    // Health
-    private float localHealth;
+    // ── Network Variables ──────────────────────────────────────────
     private NetworkVariable<float> currentHealth = new NetworkVariable<float>(
         0f, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
 
-    private float fireTimer = 0f;
+    // ── Private State ──────────────────────────────────────────────
+    private float localHealth;
+    private float fireTimer;
     private bool movingRight = true;
+    private bool isDead;
+    private ulong lastAttackerClientId;
+
     private Transform player;
     private UIManager uiManager;
-    private bool isDead = false;
-    private ulong lastAttackerClientId = 0;
 
     public Action OnDeath;
 
     private enum State { Patrol, Chase, Shoot, ReturnToZone }
-    private State currentState = State.Patrol;
+    private State currentState;
 
     // ── Lifecycle ──────────────────────────────────────────────────
 
@@ -50,39 +52,47 @@ public class ShootingEnemy : NetworkBehaviour
     {
         localHealth = maxHealth;
         uiManager = FindFirstObjectByType<UIManager>();
-
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        if (rb != null) rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
 
         if (!NetworkUtils.IsOnline)
-            FindTargetPlayer();
+        {
+            player = GameObject.FindWithTag("Player")?.transform;
+            SetupCollisionIgnore();
+        }
     }
 
     public override void OnNetworkSpawn()
     {
-        if (IsServer)
-        {
-            currentHealth.Value = maxHealth;
-            FindTargetPlayer();
-        }
+        if (IsServer) currentHealth.Value = maxHealth;
+        uiManager = FindFirstObjectByType<UIManager>();
+        SetupCollisionIgnore();
     }
 
-    void FindTargetPlayer()
+    void SetupCollisionIgnore()
     {
-        player = GameObject.FindWithTag("Player")?.transform;
-        uiManager = FindFirstObjectByType<UIManager>();
+        Collider2D myCol = GetComponent<Collider2D>();
+        if (myCol == null) return;
+        foreach (var p in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            Collider2D c = p.GetComponent<Collider2D>();
+            if (c != null) Physics2D.IgnoreCollision(myCol, c);
+        }
     }
 
     // ── Update / AI ────────────────────────────────────────────────
 
     void Update()
     {
-        if (!NetworkUtils.HasServerAuthority) return;
-        if (isDead) return;
-
-        if (player == null) { FindTargetPlayer(); return; }
+        if (!NetworkUtils.HasServerAuthority || isDead) return;
 
         fireTimer += Time.deltaTime;
+
+        if (NetworkUtils.IsOnline)
+        {
+            UpdateNearestPlayer();
+            if (player == null) return;
+        }
+        else if (player == null) return;
 
         if (isStationary)
         {
@@ -103,50 +113,36 @@ public class ShootingEnemy : NetworkBehaviour
     void Patrol()
     {
         if (zoneStart == null || zoneEnd == null) return;
-
         float targetX = movingRight ? zoneEnd.position.x : zoneStart.position.x;
         float diff = targetX - transform.position.x;
-
         if (Mathf.Abs(diff) < 0.05f) { movingRight = !movingRight; return; }
-
-        float dirX = Mathf.Sign(diff);
-        transform.position += new Vector3(dirX * patrolSpeed * Time.deltaTime, 0, 0);
-        FlipSprite(dirX);
+        MoveTowardsX(targetX, patrolSpeed);
     }
 
     void CheckDetection()
     {
-        if (player == null) return;
-        if (currentState != State.Patrol) return;
-
-        float dist = Vector2.Distance(transform.position, player.position);
-        if (dist <= detectionRange)
+        if (Vector2.Distance(transform.position, player.position) <= detectionRange)
             currentState = isStationary ? State.Shoot : State.Chase;
     }
 
     void ChasePlayer()
     {
-        if (player == null) return;
         float dist = Vector2.Distance(transform.position, player.position);
-
         if (dist > detectionRange) { currentState = State.ReturnToZone; return; }
         if (dist <= shootRange) { currentState = State.Shoot; return; }
-
         MoveTowardsX(player.position.x, moveSpeed);
     }
 
     void ShootPlayer()
     {
-        if (player == null) return;
         float dist = Vector2.Distance(transform.position, player.position);
-
         if (!isStationary)
         {
             if (dist > shootRange * 1.2f) { currentState = State.Chase; return; }
             if (dist > detectionRange) { currentState = State.ReturnToZone; return; }
         }
 
-        FacePlayer();
+        FaceTarget(player.position.x);
 
         if (fireTimer >= fireRate)
         {
@@ -155,30 +151,72 @@ public class ShootingEnemy : NetworkBehaviour
         }
     }
 
+    void ReturnToZone()
+    {
+        if (zoneStart == null || zoneEnd == null) return;
+        float centerX = (zoneStart.position.x + zoneEnd.position.x) / 2f;
+        MoveTowardsX(centerX, moveSpeed);
+        bool inZone = transform.position.x >= zoneStart.position.x
+                   && transform.position.x <= zoneEnd.position.x;
+        if (inZone) currentState = State.Patrol;
+    }
+
+    // ── Helpers ────────────────────────────────────────────────────
+
+    void MoveTowardsX(float targetX, float speed)
+    {
+        float diff = targetX - transform.position.x;
+        if (Mathf.Abs(diff) < 0.05f) return;
+        float dirX = Mathf.Sign(diff);
+        transform.position += new Vector3(dirX * speed * Time.deltaTime, 0, 0);
+        SetFacing(dirX > 0);
+    }
+
+    void FaceTarget(float targetX) => SetFacing(targetX > transform.position.x);
+
+    void SetFacing(bool facingRight)
+    {
+        Vector3 s = transform.localScale;
+        s.x = Mathf.Abs(s.x) * (facingRight ? 1f : -1f);
+        transform.localScale = s;
+    }
+
+    void UpdateNearestPlayer()
+    {
+        float minDist = float.MaxValue;
+        Transform nearest = null;
+        foreach (var p in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            if (p == null) continue;
+            float d = Vector2.Distance(transform.position, p.transform.position);
+            if (d < minDist) { minDist = d; nearest = p.transform; }
+        }
+        if (nearest != null) player = nearest;
+    }
+
+    // ── Shoot ──────────────────────────────────────────────────────
+
     void Shoot()
     {
         if (bulletPrefab == null || shootPoint == null) return;
 
-        float dirX = Mathf.Sign(player.position.x - transform.position.x);
-        Vector2 direction = new Vector2(dirX, 0);
+        Vector2 direction = new Vector2(
+            Mathf.Sign(player.position.x - transform.position.x), 0);
+
+        GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
+        EnemyBullet bs = bullet.GetComponent<EnemyBullet>();
+        if (bs != null)
+        {
+            bs.damage = bulletDamage;
+            bs.speed = bulletSpeed;
+        }
 
         if (NetworkUtils.IsOnline)
         {
-            GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
-            EnemyBullet bulletScript = bullet.GetComponent<EnemyBullet>();
-
-            if (bulletScript != null)
-            {
-                bulletScript.damage = bulletDamage;
-                bulletScript.speed = bulletSpeed;
-            }
-
             NetworkObject netObj = bullet.GetComponent<NetworkObject>();
             if (netObj != null)
             {
-                // Set direction TRƯỚC khi Spawn
-                // giống pattern trong Shooting.cs của player
-                bulletScript?.SetDirection(direction);
+                bs?.SetDirection(direction);
                 netObj.Spawn();
             }
             else
@@ -189,51 +227,8 @@ public class ShootingEnemy : NetworkBehaviour
         }
         else
         {
-            GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
-            EnemyBullet bulletScript = bullet.GetComponent<EnemyBullet>();
-            if (bulletScript != null)
-            {
-                bulletScript.damage = bulletDamage;
-                bulletScript.speed = bulletSpeed;
-                bulletScript.SetDirection(direction);
-            }
+            bs?.SetDirection(direction);
         }
-    }
-
-    void ReturnToZone()
-    {
-        if (zoneStart == null || zoneEnd == null) return;
-
-        float centerX = (zoneStart.position.x + zoneEnd.position.x) / 2f;
-        MoveTowardsX(centerX, moveSpeed);
-
-        bool inZone = transform.position.x >= zoneStart.position.x
-                   && transform.position.x <= zoneEnd.position.x;
-        if (inZone) currentState = State.Patrol;
-    }
-
-    void MoveTowardsX(float targetX, float speed)
-    {
-        float diff = targetX - transform.position.x;
-        if (Mathf.Abs(diff) < 0.05f) return;
-
-        float dirX = Mathf.Sign(diff);
-        transform.position += new Vector3(dirX * speed * Time.deltaTime, 0, 0);
-        FlipSprite(dirX);
-    }
-
-    void FlipSprite(float dirX)
-    {
-        if (dirX == 0) return;
-        Vector3 scale = transform.localScale;
-        scale.x = Mathf.Abs(scale.x) * dirX;
-        transform.localScale = scale;
-    }
-
-    void FacePlayer()
-    {
-        if (player != null)
-            FlipSprite(Mathf.Sign(player.position.x - transform.position.x));
     }
 
     // ── Damage / Death ─────────────────────────────────────────────
@@ -241,7 +236,6 @@ public class ShootingEnemy : NetworkBehaviour
     public void TakeDamage(float dmg, ulong attackerClientId = 0)
     {
         if (!NetworkUtils.HasServerAuthority || isDead) return;
-
         lastAttackerClientId = attackerClientId;
 
         if (NetworkUtils.IsOnline)
@@ -255,6 +249,8 @@ public class ShootingEnemy : NetworkBehaviour
             if (localHealth <= 0) Die();
         }
     }
+
+    public void TakeDamage(float dmg) => TakeDamage(dmg, 0);
 
     void Die()
     {
@@ -277,10 +273,7 @@ public class ShootingEnemy : NetworkBehaviour
     }
 
     [ClientRpc]
-    void DieClientRpc()
-    {
-        GetComponent<Collider2D>().enabled = false;
-    }
+    void DieClientRpc() => GetComponent<Collider2D>().enabled = false;
 
     void DespawnEnemy()
     {

@@ -6,24 +6,20 @@ using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using UnityEngine.SceneManagement;
 
-/// <summary>
-/// Màn hình tạo phòng (Host).
-/// Host chọn loại phòng (LAN / Localhost) và map, rồi Start Host.
-/// Attach vào CreateRoomScene.
-/// </summary>
+
 public class CreateRoomManager : MonoBehaviour
 {
     [Header("Room Type")]
     public Button btnLAN;
     public Button btnLocalhost;
-    public TMP_InputField ipInput;          // chỉ hiện khi chọn Localhost
-    public GameObject ipInputGroup;         // group chứa label + input IP
+    public TMP_InputField ipInput;
+    public GameObject ipInputGroup;
 
     [Header("Map Selection")]
-    public Button[] mapButtons;             // 4 nút map (Level1~4)
+    public Button[] mapButtons;
     public string[] mapSceneNames = { "Level1", "Level2", "Level3", "Level4" };
     public string[] mapDisplayNames = { "Forest", "Desert", "Snow", "Volcano" };
-    public Image mapPreviewImage;           // (optional) preview ảnh map
+    public Image mapPreviewImage;
     public Sprite[] mapPreviews;
 
     [Header("Room Info Display")]
@@ -36,17 +32,25 @@ public class CreateRoomManager : MonoBehaviour
     public Button backButton;
 
     [Header("Scenes")]
-    public string lobbyScene  = "Lobby";
-    public string roomScene   = "Room";
+    public string lobbyScene = "Lobby";
+    public string roomScene = "Room";
 
-    // ── Internal state ─────────────────────────────────────────────────────
-    private string roomType   = "lan";      // "lan" | "localhost"
+    private string roomType = "lan";
     private int selectedMapIndex = 0;
-    private RoomInfo pendingRoom;
 
     void Start()
     {
-        // Default
+        // Shutdown sạch nếu còn sót từ session trước
+        if (NetworkManager.Singleton != null && NetworkManager.Singleton.IsListening)
+        {
+            NetworkManager.Singleton.Shutdown();
+            Debug.Log("[CreateRoom] Shutdown session cũ");
+        }
+
+        // Xóa callback để không còn approval logic từ session host trước
+        if (NetworkManager.Singleton != null)
+            NetworkManager.Singleton.ConnectionApprovalCallback = null;
+
         ipInput.text = "127.0.0.1";
         ipInputGroup.SetActive(false);
 
@@ -71,7 +75,6 @@ public class CreateRoomManager : MonoBehaviour
         roomType = type;
         ipInputGroup.SetActive(type == "localhost");
         roomTypeText.text = "RoomType: " + (type == "lan" ? "LAN" : "Localhost");
-        RefreshUI();
     }
 
     void SelectMap(int index)
@@ -82,7 +85,6 @@ public class CreateRoomManager : MonoBehaviour
         if (mapPreviewImage != null && mapPreviews != null && index < mapPreviews.Length)
             mapPreviewImage.sprite = mapPreviews[index];
 
-        // Highlight nút được chọn
         for (int i = 0; i < mapButtons.Length; i++)
         {
             var colors = mapButtons[i].colors;
@@ -91,71 +93,72 @@ public class CreateRoomManager : MonoBehaviour
         }
     }
 
-    void RefreshUI()
-    {
-        // Có thể thêm logic disable/enable tùy state
-    }
-
     void OnCreateRoom()
     {
-        string hostIP = roomType == "localhost"
-            ? ipInput.text
-            : GetLocalIP();
-
-        pendingRoom = new RoomInfo
+        if (NetworkManager.Singleton.IsListening)
         {
-            roomId       = Guid.NewGuid().ToString(),
-            hostName = AuthManager.Instance != null && AuthManager.Instance.IsLoggedIn
-    ? AuthManager.Username
-    : "Host",          
-            roomType     = roomType,
-            selectedMap  = mapSceneNames[selectedMapIndex],
-            mapIndex     = selectedMapIndex + 1,
+            statusText.text = "Đang chờ shutdown...";
+            return; 
+        }
+
+        createButton.interactable = false;
+        statusText.text = "Đang tạo phòng...";
+
+        string hostIP = roomType == "localhost" ? ipInput.text : GetLocalIP();
+
+        var pendingRoom = new RoomInfo
+        {
+            roomId = Guid.NewGuid().ToString(),
+            hostName = (AuthManager.Instance != null && AuthManager.Instance.IsLoggedIn)
+                                 ? AuthManager.Username : "Host",
+            roomType = roomType,
+            selectedMap = mapSceneNames[selectedMapIndex],
+            mapIndex = selectedMapIndex + 1,
             currentPlayers = 1,
-            maxPlayers   = 4,
-            hostIP       = hostIP,
-            port         = 7777
+            maxPlayers = 4,
+            hostIP = hostIP,
+            port = 7777
         };
 
-        // Lưu room info để RoomScene dùng
         RoomContext.CurrentRoom = pendingRoom;
         RoomContext.IsHost = true;
 
-        // Setup transport
         var transport = NetworkManager.Singleton.GetComponent<UnityTransport>();
         transport.SetConnectionData(hostIP, 7777);
 
-        // Start host
-        //NetworkManager.Singleton.StartHost();
+        // Gán approval callback TRƯỚC StartHost
+        // (NetworkConfig.ConnectionApproval phải được tick trong Inspector)
+        NetworkManager.Singleton.ConnectionApprovalCallback = ApproveAllConnections;
+
         bool success = NetworkManager.Singleton.StartHost();
-        // Nếu LAN → broadcast
+
+        if (!success)
+        {
+            Debug.LogError("[CreateRoom] StartHost thất bại!");
+            statusText.text = "Tạo phòng thất bại. Thử lại.";
+            createButton.interactable = true;
+            RoomContext.Clear();
+            NetworkManager.Singleton.ConnectionApprovalCallback = null;
+            return;
+        }
+
+        Debug.Log($"[CreateRoom] Host OK: {hostIP}:7777");
+
         if (roomType == "lan")
             LanDiscovery.Instance?.StartBroadcast(pendingRoom);
 
-        statusText.text = "creating";
-
-
-       
-
-        if (success)
-        {
-            Debug.Log("Host started successfully on " + hostIP + ":7777");
-        }
-        else
-        {
-            Debug.LogError("Failed to start Host! Check if NetworkManager is configured.");
-        }
-        // Đăng ký callback rồi load Room scene qua NetworkManager
-        NetworkManager.Singleton.SceneManager.OnLoadComplete += OnRoomSceneLoaded;
-        NetworkManager.Singleton.SceneManager.LoadScene(roomScene, UnityEngine.SceneManagement.LoadSceneMode.Single);
-
-
+        NetworkManager.Singleton.SceneManager.LoadScene(roomScene, LoadSceneMode.Single);
     }
 
-    void OnRoomSceneLoaded(ulong clientId, string sceneName, UnityEngine.SceneManagement.LoadSceneMode mode)
+    // Callback tạm thời: chấp nhận tất cả kết nối
+    // RoomManager sẽ thay thế callback này bằng ApproveConnection() sau khi spawn
+    void ApproveAllConnections(
+        NetworkManager.ConnectionApprovalRequest req,
+        NetworkManager.ConnectionApprovalResponse res)
     {
-        if (sceneName == roomScene)
-            NetworkManager.Singleton.SceneManager.OnLoadComplete -= OnRoomSceneLoaded;
+        res.Approved = true;
+        res.CreatePlayerObject = false;
+        Debug.Log($"[CreateRoom] Pre-approve client {req.ClientNetworkId}");
     }
 
     string GetLocalIP()
@@ -165,16 +168,17 @@ public class CreateRoomManager : MonoBehaviour
             var host = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName());
             foreach (var ip in host.AddressList)
             {
-                Debug.Log($"[IP] Tìm thấy: {ip} | Family: {ip.AddressFamily}");
                 if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                {
+                    Debug.Log($"[CreateRoom] Local IP: {ip}");
                     return ip.ToString();
+                }
             }
         }
         catch (Exception e)
         {
-            Debug.LogError($"[IP] Lỗi: {e.Message}");
+            Debug.LogError($"[CreateRoom] GetLocalIP error: {e.Message}");
         }
-        Debug.LogWarning("[IP] Không tìm được IP LAN, fallback 127.0.0.1");
         return "127.0.0.1";
     }
 }
