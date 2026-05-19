@@ -158,6 +158,12 @@ public class RoomListManager : MonoBehaviour
         NetworkManager.Singleton.OnClientConnectedCallback += OnConnected;
         NetworkManager.Singleton.OnClientDisconnectCallback += OnDisconnected;
 
+        string playerName = (AuthManager.Instance != null && AuthManager.Instance.IsLoggedIn)
+            ? AuthManager.Username
+            : $"Guest_{SystemInfo.deviceUniqueIdentifier.Substring(0, 6)}";
+        NetworkManager.Singleton.NetworkConfig.ConnectionData =
+            System.Text.Encoding.UTF8.GetBytes(playerName);
+
         bool ok = NetworkManager.Singleton.StartClient();
         if (!ok)
         {
@@ -185,7 +191,11 @@ public class RoomListManager : MonoBehaviour
         NetworkManager.Singleton.OnClientDisconnectCallback -= OnDisconnected;
         isConnecting = false;
         NetworkManager.Singleton.ConnectionApprovalCallback = null;
-        statusText.text = "Kết nối thất bại. Thử lại?";
+
+        string reason = NetworkManager.Singleton.DisconnectReason;
+        statusText.text = string.IsNullOrEmpty(reason)
+            ? "Kết nối thất bại. Thử lại?"
+            : reason;
     }
 
     void OnBack()

@@ -46,9 +46,9 @@ public class CreateRoomManager : MonoBehaviour
             NetworkManager.Singleton.Shutdown();
             Debug.Log("[CreateRoom] Shutdown session cũ");
         }
-
+        RoomLock.Unlock();
         // Xóa callback để không còn approval logic từ session host trước
-        if (NetworkManager.Singleton != null)
+        if (NetworkManager.Singleton != null && !RoomLock.IsLocked)
             NetworkManager.Singleton.ConnectionApprovalCallback = null;
 
         ipInput.text = "127.0.0.1";

@@ -75,8 +75,7 @@ public class RoomManager : NetworkBehaviour
             mapSelectGroup?.SetActive(true);
             startButton?.gameObject.SetActive(true);
 
-            // Thay thế callback tạm từ CreateRoomManager bằng callback thật
-            // có logic kiểm soát full/gameStarted
+            // Gán callback Room — kiểm soát full/gameStarted khi đang ở Room scene
             NetworkManager.Singleton.ConnectionApprovalCallback = ApproveConnection;
 
             int initialMap = 0;
@@ -97,6 +96,10 @@ public class RoomManager : NetworkBehaviour
 
             syncedPlayerCount.Value = connectedClientIds.Count;
             UpdateBroadcastInfo();
+
+            // LOG-A
+            Debug.Log($"[LOG-A] OnNetworkSpawn done. " +
+                      $"callback={NetworkManager.Singleton.ConnectionApprovalCallback?.Method.Name ?? "null"}");
         }
         else
         {
@@ -136,8 +139,19 @@ public class RoomManager : NetworkBehaviour
         {
             NetworkManager.Singleton.OnClientConnectedCallback -= OnClientConnected;
             NetworkManager.Singleton.OnClientDisconnectCallback -= OnClientDisconnected;
-            // Xóa callback khi rời scene
-            NetworkManager.Singleton.ConnectionApprovalCallback = null;
+
+            // Chỉ null callback nếu chưa lock
+            // Nếu đã lock → RoomLock đang giữ callback → không được null
+            if (!RoomLock.IsLocked)
+            {
+                NetworkManager.Singleton.ConnectionApprovalCallback = null;
+                Debug.Log("[LOG-C] OnNetworkDespawn — NOT locked, callback cleared");
+            }
+            else
+            {
+                Debug.Log($"[LOG-C] OnNetworkDespawn — IsLocked=True, keeping callback. " +
+                          $"callback={NetworkManager.Singleton.ConnectionApprovalCallback?.Method.Name ?? "null"}");
+            }
         }
     }
 
@@ -146,8 +160,11 @@ public class RoomManager : NetworkBehaviour
     void OnClientConnected(ulong clientId)
     {
         if (!IsServer) return;
+
+        // Guard tránh double-add (OnClientDisconnected chạy thủ công trước DisconnectClient)
         if (!connectedClientIds.Contains(clientId))
             connectedClientIds.Add(clientId);
+
         syncedPlayerCount.Value = connectedClientIds.Count;
         UpdateBroadcastInfo();
     }
@@ -155,6 +172,10 @@ public class RoomManager : NetworkBehaviour
     void OnClientDisconnected(ulong clientId)
     {
         if (!IsServer) return;
+
+        // Guard tránh crash khi đã bị xóa thủ công trước đó
+        if (!connectedClientIds.Contains(clientId)) return;
+
         int idx = IndexOf(clientId);
         if (idx >= 0)
         {
@@ -162,6 +183,7 @@ public class RoomManager : NetworkBehaviour
             if (idx < playerNames.Count)
                 playerNames.RemoveAt(idx);
         }
+
         syncedPlayerCount.Value = connectedClientIds.Count;
         UpdateBroadcastInfo();
     }
@@ -209,6 +231,9 @@ public class RoomManager : NetworkBehaviour
         gameStarted = true;
         LanDiscovery.Instance?.StopBroadcast();
 
+        // Lock trước LoadScene — callback persist qua mọi scene
+        RoomLock.Lock();
+
         NetworkManager.Singleton.SceneManager.LoadScene(targetScene, LoadSceneMode.Single);
     }
 
@@ -225,11 +250,9 @@ public class RoomManager : NetworkBehaviour
 
     IEnumerator HostLeaveRoutine()
     {
-        // Gửi RPC cho client biết host rời
         KickAllClientsToLobbyClientRpc();
         LanDiscovery.Instance?.StopBroadcast();
 
-        // Đợi 2 frame để RPC kịp gửi trước khi Shutdown
         yield return null;
         yield return null;
 
@@ -240,9 +263,27 @@ public class RoomManager : NetworkBehaviour
     IEnumerator ClientLeaveRoutine()
     {
         LanDiscovery.Instance?.StopListening();
+
+        if (IsClient && NetworkManager.Singleton.IsConnectedClient)
+            RequestKickSelfServerRpc(NetworkManager.Singleton.LocalClientId);
+
         yield return null;
+        yield return null;
+
         DoShutdown();
         SceneManager.LoadScene(lobbyScene);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    void RequestKickSelfServerRpc(ulong clientId)
+    {
+        if (!IsServer) return;
+        Debug.Log($"[RoomManager] Client {clientId} yêu cầu tự kick");
+
+        OnClientDisconnected(clientId);
+
+        if (clientId != NetworkManager.ServerClientId)
+            NetworkManager.Singleton.DisconnectClient(clientId, "Bạn đã thoát khỏi phòng.");
     }
 
     void DoShutdown()
@@ -250,10 +291,7 @@ public class RoomManager : NetworkBehaviour
         if (NetworkManager.Singleton != null && NetworkManager.Singleton.IsListening)
             NetworkManager.Singleton.Shutdown();
 
-        // Xóa callback sau shutdown — không được reset NetworkConfig flag
-        if (NetworkManager.Singleton != null)
-            NetworkManager.Singleton.ConnectionApprovalCallback = null;
-
+        RoomLock.Unlock();
         RoomContext.Clear();
     }
 
@@ -267,9 +305,7 @@ public class RoomManager : NetworkBehaviour
         if (NetworkManager.Singleton != null && NetworkManager.Singleton.IsListening)
             NetworkManager.Singleton.Shutdown();
 
-        if (NetworkManager.Singleton != null)
-            NetworkManager.Singleton.ConnectionApprovalCallback = null;
-
+        // Client side: không cần null callback — không phải host
         RoomContext.Clear();
         SceneManager.LoadScene(lobbyScene);
     }
@@ -345,7 +381,7 @@ public class RoomManager : NetworkBehaviour
         playerNames[idx] = name;
     }
 
-    // ── Connection Approval ───────────────────────────────────────────────
+    // ── Connection Approval (Room scene only) ─────────────────────────────
 
     private void ApproveConnection(
         NetworkManager.ConnectionApprovalRequest request,
@@ -355,17 +391,19 @@ public class RoomManager : NetworkBehaviour
         {
             response.Approved = false;
             response.Reason = "Game đã bắt đầu.";
+            Debug.Log($"[RoomManager] Rejected {request.ClientNetworkId} — game started");
             return;
         }
         if (connectedClientIds.Count >= 4)
         {
             response.Approved = false;
             response.Reason = "Phòng đã đầy.";
+            Debug.Log($"[RoomManager] Rejected {request.ClientNetworkId} — room full");
             return;
         }
         response.Approved = true;
         response.CreatePlayerObject = false;
-        Debug.Log($"[Room] Approved {request.ClientNetworkId}");
+        Debug.Log($"[RoomManager] Approved {request.ClientNetworkId}");
     }
 
     // ── Helpers ───────────────────────────────────────────────────────────

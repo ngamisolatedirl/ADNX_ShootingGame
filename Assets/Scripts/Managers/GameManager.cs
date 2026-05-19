@@ -1,21 +1,9 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unity.Netcode;
 
-/// <summary>
-/// Quản lý trạng thái ván game (win/lose).
-/// - Offline: 1 player chết → game over. Vào WinZone → win.
-/// - Online:  1 người chết → chuyển cam sang người còn sống.
-///            Tất cả chết → game over.
-///            Chỉ Host mới thấy nút Restart/Return.
-///
-/// FIX:
-/// 1. ResetTimeScaleClientRpc() — reset Time.timeScale = 1 trên tất cả client khi restart
-/// 2. OnClientConnected callback — rebuild allPlayers đúng sau scene reload
-/// 3. ReportPlayerLeftWinZone() — player rời zone thì remove khỏi winZonePlayers
-/// 4. AlivePlayerCount tách riêng — tránh nhầm với ActivePlayerCount
-/// </summary>
 public class GameManager : NetworkBehaviour
 {
     public static GameManager Instance { get; private set; }
@@ -36,12 +24,15 @@ public class GameManager : NetworkBehaviour
     public string roomScene = "Room";
     public string mainMenuScene = "MainMenu";
 
-    // ── Internal tracking ──────────────────────────────────────────────────
+    // ── Internal tracking ─────────────────────────────────────────────────
     private HashSet<ulong> deadPlayers = new HashSet<ulong>();
     private HashSet<ulong> winZonePlayers = new HashSet<ulong>();
     private HashSet<ulong> allPlayers = new HashSet<ulong>();
     private bool isGameOver = false;
     private bool isWon = false;
+
+    // Guard tránh ClientLeaveToMenu chạy 2 lần
+    private bool _leaving = false;
 
     void Awake()
     {
@@ -53,7 +44,6 @@ public class GameManager : NetworkBehaviour
     {
         if (IsServer)
         {
-            // Reset state mỗi lần scene load (quan trọng khi restart)
             allPlayers.Clear();
             deadPlayers.Clear();
             winZonePlayers.Clear();
@@ -63,11 +53,16 @@ public class GameManager : NetworkBehaviour
             foreach (var client in NetworkManager.Singleton.ConnectedClientsList)
                 allPlayers.Add(client.ClientId);
 
-            // FIX: lắng nghe thêm client kết nối muộn sau scene load
             NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnected;
             NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDropped;
 
+            // Re-attach sau scene load — Netcode có thể reset callback trong quá trình scene sync
+            if (RoomLock.IsLocked)
+                RoomLock.Lock();
+
             Debug.Log($"[GameManager] OnNetworkSpawn — {allPlayers.Count} players");
+            Debug.Log($"[LOG-D] GameManager spawned. IsLocked={RoomLock.IsLocked}, " +
+                      $"callback={NetworkManager.Singleton.ConnectionApprovalCallback?.Method.Name ?? "null"}");
         }
     }
 
@@ -91,12 +86,61 @@ public class GameManager : NetworkBehaviour
 
     // ── Player Connect / Disconnect ────────────────────────────────────────
 
-    // FIX: client kết nối sau khi scene đã load (thường gặp khi restart)
     void OnClientConnected(ulong clientId)
     {
         if (!IsServer) return;
-        allPlayers.Add(clientId);
+
+        if (!allPlayers.Contains(clientId))
+        {
+            Debug.LogWarning($"[GameManager] Kick client lạ {clientId} — game đã bắt đầu");
+
+            // Báo client về menu TRƯỚC khi kick
+            NotifyLateJoinClientRpc(new ClientRpcParams
+            {
+                Send = new ClientRpcSendParams
+                {
+                    TargetClientIds = new[] { clientId }
+                }
+            });
+
+            // Đợi RPC gửi xong rồi mới kick
+            StartCoroutine(DelayedKick(clientId));
+            return;
+        }
+
         Debug.Log($"[GameManager] Client {clientId} connected, total: {allPlayers.Count}");
+    }
+
+    [ClientRpc]
+    void NotifyLateJoinClientRpc(ClientRpcParams rpcParams = default)
+    {
+        if (IsHost) return;
+        Debug.Log("[GameManager] Bị từ chối — game đã bắt đầu, về menu");
+
+        // Hiện thông báo nếu có UI, hoặc về thẳng menu
+        StartCoroutine(ShowMessageAndLeave());
+    }
+
+    IEnumerator ShowMessageAndLeave()
+    {
+        // Nếu có UI thông báo thì bật lên đây
+        // statusUI?.SetActive(true);
+        // statusText.text = "Game đã bắt đầu!";
+
+        yield return new WaitForSecondsRealtime(2f); // đợi 2 giây cho người chơi đọc
+
+        if (NetworkManager.Singleton != null && NetworkManager.Singleton.IsListening)
+            NetworkManager.Singleton.Shutdown();
+
+        RoomContext.Clear();
+        SceneManager.LoadScene(mainMenuScene);
+    }
+
+    IEnumerator DelayedKick(ulong clientId)
+    {
+        yield return new WaitForSecondsRealtime(0.2f); // đợi RPC gửi đi
+        if (NetworkManager.Singleton != null)
+            NetworkManager.Singleton.DisconnectClient(clientId, "Game đã bắt đầu.");
     }
 
     void OnClientDropped(ulong clientId)
@@ -107,10 +151,14 @@ public class GameManager : NetworkBehaviour
         deadPlayers.Discard(clientId);
         winZonePlayers.Discard(clientId);
 
-        if (allPlayers.Count > 0 && deadPlayers.Count >= allPlayers.Count)
-            TriggerGameOver();
-        else if (allPlayers.Count > 0 && winZonePlayers.Count >= AlivePlayerCount)
-            TriggerWin();
+        Debug.Log($"[GameManager] Client {clientId} dropped. Còn {allPlayers.Count} người.");
+
+        if (isGameOver) { GameOverClientRpc(); return; }
+        if (isWon) { WinClientRpc(); return; }
+
+        if (allPlayers.Count == 0) { TriggerGameOver(); return; }
+        if (deadPlayers.Count >= allPlayers.Count) TriggerGameOver();
+        else if (allPlayers.Count > 0 && winZonePlayers.Count >= AlivePlayerCount) TriggerWin();
     }
 
     // ── Player Death ───────────────────────────────────────────────────────
@@ -121,7 +169,7 @@ public class GameManager : NetworkBehaviour
         if (isGameOver || isWon) return;
 
         deadPlayers.Add(clientId);
-        winZonePlayers.Discard(clientId); // chết thì không tính trong winzone nữa
+        winZonePlayers.Discard(clientId);
         Debug.Log($"[GameManager] Player {clientId} chết. Dead: {deadPlayers.Count}/{allPlayers.Count}");
 
         if (NetworkUtils.IsOnline)
@@ -133,28 +181,21 @@ public class GameManager : NetworkBehaviour
 
     public void GameOver()
     {
-        if (!NetworkUtils.IsOnline)
-            TriggerGameOver();
-        else
-            ReportPlayerDeath(0);
+        if (!NetworkUtils.IsOnline) TriggerGameOver();
+        else ReportPlayerDeath(0);
     }
 
     private void TriggerGameOver()
     {
         if (isGameOver) return;
         isGameOver = true;
-
         Debug.Log("[GameManager] GAME OVER");
-
-        if (NetworkUtils.IsOnline)
-            GameOverClientRpc();
-        else
-            ShowGameOverUI();
+        if (NetworkUtils.IsOnline) GameOverClientRpc();
+        else ShowGameOverUI();
     }
 
     // ── Win Zone ───────────────────────────────────────────────────────────
 
-    // ĐỔI void → bool, thêm return true/false
     public bool ReportPlayerInWinZone(ulong clientId)
     {
         if (!NetworkUtils.HasServerAuthority) return false;
@@ -162,7 +203,6 @@ public class GameManager : NetworkBehaviour
         if (deadPlayers.Contains(clientId)) return false;
 
         winZonePlayers.Add(clientId);
-
         int inZone = winZonePlayers.Count;
         int needed = AlivePlayerCount;
 
@@ -171,45 +211,34 @@ public class GameManager : NetworkBehaviour
         if (NetworkUtils.IsOnline)
             NotifyWaitingClientRpc(inZone, needed);
 
-        if (inZone >= needed)
-        {
-            TriggerWin();
-            return true;  // ← đủ điều kiện
-        }
-
-        return false;  // ← chưa đủ
+        if (inZone >= needed) { TriggerWin(); return true; }
+        return false;
     }
 
-    // FIX: player rời WinZone → remove khỏi winZonePlayers, cập nhật UI chờ
     public void ReportPlayerLeftWinZone(ulong clientId)
     {
         if (!NetworkUtils.HasServerAuthority) return;
         if (isGameOver || isWon) return;
 
         winZonePlayers.Discard(clientId);
-
         int inZone = winZonePlayers.Count;
         int needed = AlivePlayerCount;
 
         Debug.Log($"[GameManager] Rời WinZone: {inZone}/{needed}");
-
         if (NetworkUtils.IsOnline)
             NotifyWaitingClientRpc(inZone, needed);
     }
 
     public void WinLevel()
     {
-        if (!NetworkUtils.IsOnline)
-            TriggerWin();
-        else
-            ReportPlayerInWinZone(0);
+        if (!NetworkUtils.IsOnline) TriggerWin();
+        else ReportPlayerInWinZone(0);
     }
 
     private void TriggerWin()
     {
         if (isWon) return;
         isWon = true;
-
         Debug.Log("[GameManager] WIN!");
 
         int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
@@ -221,10 +250,93 @@ public class GameManager : NetworkBehaviour
 
         SessionData.Instance?.FlushAndReset();
 
-        if (NetworkUtils.IsOnline)
-            WinClientRpc();
+        if (NetworkUtils.IsOnline) WinClientRpc();
+        else ShowWinUI();
+    }
+
+    // ── Client chủ động thoát về menu ─────────────────────────────────────
+
+    public void ClientLeaveToMenu()
+    {
+        if (_leaving) return;
+
+        if (IsHost)
+            StartCoroutine(HostLeaveToMenuRoutine());
         else
-            ShowWinUI();
+            StartCoroutine(ClientLeaveToMenuRoutine());
+    }
+
+    private IEnumerator HostLeaveToMenuRoutine()
+    {
+        _leaving = true;
+        Time.timeScale = 1f;
+
+        ForceClientsToMenuClientRpc();
+
+        yield return null;
+        yield return null;
+
+        DoLocalLeave();
+    }
+
+    private IEnumerator ClientLeaveToMenuRoutine()
+    {
+        _leaving = true;
+        Time.timeScale = 1f;
+
+        if (NetworkManager.Singleton != null && NetworkManager.Singleton.IsConnectedClient)
+            RequestLeaveServerRpc(NetworkManager.Singleton.LocalClientId);
+
+        yield return new WaitForSecondsRealtime(0.1f);
+
+        DoLocalLeave();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void RequestLeaveServerRpc(ulong clientId)
+    {
+        if (!IsServer) return;
+        Debug.Log($"[GameManager] Client {clientId} yêu cầu thoát về menu.");
+
+        allPlayers.Remove(clientId);
+        deadPlayers.Discard(clientId);
+        winZonePlayers.Discard(clientId);
+
+        if (clientId != NetworkManager.ServerClientId)
+            NetworkManager.Singleton.DisconnectClient(clientId, "Người chơi tự thoát về menu.");
+
+        if (!isGameOver && !isWon)
+        {
+            if (allPlayers.Count == 0)
+                TriggerGameOver();
+            else if (deadPlayers.Count >= allPlayers.Count)
+                TriggerGameOver();
+        }
+    }
+
+    [ClientRpc]
+    private void ForceClientsToMenuClientRpc()
+    {
+        if (IsHost) return;
+        if (_leaving) return;
+        _leaving = true;
+        Debug.Log("[GameManager] Host thoát → client về main menu.");
+        DoLocalLeave();
+    }
+
+    private void DoLocalLeave()
+    {
+        LanDiscovery.Instance?.StopBroadcast();
+        LanDiscovery.Instance?.StopListening();
+        SessionData.Instance?.Reset();
+        RoomContext.Clear();
+
+        RoomLock.Unlock();
+
+        if (NetworkManager.Singleton != null && NetworkManager.Singleton.IsListening)
+            NetworkManager.Singleton.Shutdown();
+
+        SceneManager.LoadScene(mainMenuScene);
     }
 
     // ── ClientRpc ──────────────────────────────────────────────────────────
@@ -233,24 +345,16 @@ public class GameManager : NetworkBehaviour
     void GameOverClientRpc()
     {
         ShowGameOverUI();
-
-        if (restartButton != null)
-            restartButton.SetActive(NetworkUtils.IsHost);
-
-        if (waitingHostRestartText != null)
-            waitingHostRestartText.SetActive(!NetworkUtils.IsHost);
+        if (restartButton != null) restartButton.SetActive(NetworkUtils.IsHost);
+        if (waitingHostRestartText != null) waitingHostRestartText.SetActive(!NetworkUtils.IsHost);
     }
 
     [ClientRpc]
     void WinClientRpc()
     {
         ShowWinUI();
-
-        if (restartButton != null)
-            restartButton.SetActive(NetworkUtils.IsHost);
-
-        if (waitingHostRestartText != null)
-            waitingHostRestartText.SetActive(!NetworkUtils.IsHost);
+        if (restartButton != null) restartButton.SetActive(NetworkUtils.IsHost);
+        if (waitingHostRestartText != null) waitingHostRestartText.SetActive(!NetworkUtils.IsHost);
     }
 
     [ClientRpc]
@@ -265,16 +369,13 @@ public class GameManager : NetworkBehaviour
     void NotifyWaitingClientRpc(int inZone, int total)
     {
         if (waitingForTeammatesUI == null) return;
-
         bool waiting = inZone < total;
         waitingForTeammatesUI.SetActive(waiting);
-
         var txt = waitingForTeammatesUI.GetComponentInChildren<TMPro.TextMeshProUGUI>();
         if (txt != null)
             txt.text = $"Chờ đồng đội... ({inZone}/{total})";
     }
 
-    // FIX: reset Time.timeScale trên tất cả client trước khi load scene
     [ClientRpc]
     void ResetTimeScaleClientRpc()
     {
@@ -295,25 +396,56 @@ public class GameManager : NetworkBehaviour
         winUI?.SetActive(true);
     }
 
-    // ── Buttons ────────────────────────────────────────────────────────────
+    // ── Restart / Return (Host only) ───────────────────────────────────────
 
     public void RestartGame()
     {
         if (NetworkUtils.IsOnline && !NetworkUtils.IsHost) return;
+        StartCoroutine(RestartRoutine());
+    }
 
+    private IEnumerator RestartRoutine()
+    {
         Time.timeScale = 1f;
+
+        if (NetworkUtils.IsOnline)
+        {
+            KickGhostClients();
+            yield return null;
+            yield return null;
+        }
+
         SessionData.Instance?.Reset();
 
         var healthBar = FindObjectOfType<HealthBarUI>();
         healthBar?.ResetToFull();
 
-        // FIX: reset timeScale trên tất cả client TRƯỚC khi load scene
         if (NetworkUtils.IsOnline)
             ResetTimeScaleClientRpc();
 
         NetworkManager.Singleton.SceneManager.LoadScene(
             SceneManager.GetActiveScene().name,
             LoadSceneMode.Single);
+    }
+
+    private void KickGhostClients()
+    {
+        if (!IsServer) return;
+        var toKick = new List<ulong>();
+
+        foreach (var client in NetworkManager.Singleton.ConnectedClientsList)
+        {
+            ulong cid = client.ClientId;
+            if (cid == NetworkManager.ServerClientId) continue;
+            if (!allPlayers.Contains(cid))
+                toKick.Add(cid);
+        }
+
+        foreach (var cid in toKick)
+        {
+            Debug.Log($"[GameManager] Kick ghost client {cid} trước khi restart");
+            NetworkManager.Singleton.DisconnectClient(cid, "Bạn đã thoát khỏi ván game này.");
+        }
     }
 
     public void ReturnToLobby()
@@ -325,7 +457,8 @@ public class GameManager : NetworkBehaviour
 
         if (NetworkUtils.IsOnline)
         {
-            // FIX: reset timeScale client trước khi chuyển scene
+            // Unlock để Room scene có thể gán lại ApproveConnection
+            RoomLock.Unlock();
             ResetTimeScaleClientRpc();
             NetworkManager.Singleton.SceneManager.LoadScene(roomScene, LoadSceneMode.Single);
         }
@@ -338,13 +471,11 @@ public class GameManager : NetworkBehaviour
 
     // ── Helpers ────────────────────────────────────────────────────────────
 
-    /// Số player còn sống (chưa chết) — dùng cho điều kiện WinZone
     private int AlivePlayerCount =>
         Mathf.Max(1, allPlayers.Count - deadPlayers.Count);
 
     public bool IsGameOver => isGameOver;
     public bool IsWon => isWon;
-
     public bool IsPlayerDead(ulong clientId) => deadPlayers.Contains(clientId);
 }
 

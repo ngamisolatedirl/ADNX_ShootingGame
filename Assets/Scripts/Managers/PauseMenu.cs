@@ -10,10 +10,8 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
-                Resume();
-            else
-                Pause();
+            if (isPaused) Resume();
+            else Pause();
         }
     }
 
@@ -36,6 +34,26 @@ public class PauseMenu : MonoBehaviour
     public void GoToMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+
+        if (NetworkUtils.IsOnline)
+        {
+            // Uỷ cho GameManager xử lý: báo server → kick → shutdown → load scene
+            if (GameManager.Instance != null)
+                GameManager.Instance.ClientLeaveToMenu();
+            else
+            {
+                // Fallback nếu GameManager chưa spawn
+                if (Unity.Netcode.NetworkManager.Singleton != null &&
+                    Unity.Netcode.NetworkManager.Singleton.IsListening)
+                    Unity.Netcode.NetworkManager.Singleton.Shutdown();
+
+                RoomContext.Clear();
+                SceneManager.LoadScene("MainMenu");
+            }
+        }
+        else
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }
